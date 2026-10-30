@@ -9,6 +9,7 @@
 	import { button } from '#lib/components/button';
 	import EmptyState from '#lib/components/EmptyState.svelte';
 	import PageHeader from '#lib/components/PageHeader.svelte';
+	import Seo from '#lib/components/Seo.svelte';
 	import SongPanel from '#lib/components/SongPanel.svelte';
 	import { SONGBOOK_SHORT, SONGBOOKS, Songbook } from '#lib/songbooks';
 
@@ -24,9 +25,13 @@
 	);
 </script>
 
-<svelte:head>
-	<title>{slug ? name : 'Artist'} | KaraokeDex</title>
-</svelte:head>
+<Seo
+	title={slug ? name : 'Artist'}
+	description={slug
+		? `Platinum Karaoke song codes for ${name}.`
+		: 'Platinum Karaoke song codes by artist.'}
+	path="/artist"
+/>
 
 <div class="flex flex-col gap-6">
 	{#if slug}

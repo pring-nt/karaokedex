@@ -8,6 +8,7 @@
 	import PageHeader from '#lib/components/PageHeader.svelte';
 	import ResultsSkeleton from '#lib/components/ResultsSkeleton.svelte';
 	import SelectField from '#lib/components/SelectField.svelte';
+	import Seo from '#lib/components/Seo.svelte';
 	import SongPanel from '#lib/components/SongPanel.svelte';
 	import type { ReleaseSummary } from '#lib/search/engine';
 	import { SONGBOOKS } from '#lib/songbooks';
@@ -40,9 +41,11 @@
 	}
 </script>
 
-<svelte:head>
-	<title>New songs | KaraokeDex</title>
-</svelte:head>
+<Seo
+	title="New songs"
+	description="The latest songs added to Platinum Karaoke machines, with their codes, for every update list."
+	path="/new"
+/>
 
 <div class="flex flex-col gap-6">
 	<PageHeader

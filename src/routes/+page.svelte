@@ -17,6 +17,7 @@
 	import EmptyState from '#lib/components/EmptyState.svelte';
 	import PageHeader from '#lib/components/PageHeader.svelte';
 	import SearchBar from '#lib/components/SearchBar.svelte';
+	import Seo from '#lib/components/Seo.svelte';
 	import type { PanelHandle } from '#lib/components/panel';
 	import SongPanel from '#lib/components/SongPanel.svelte';
 
@@ -120,10 +121,7 @@
 	] as const);
 </script>
 
-<svelte:head>
-	<title>KaraokeDex</title>
-	<meta name="description" content="A fast, searchable songbook for Platinum Karaoke song codes." />
-</svelte:head>
+<Seo path="/" />
 <svelte:window onkeydown={onWindowKeydown} />
 
 <div class="flex flex-col gap-3 md:gap-6">

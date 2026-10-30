@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Seo from '#lib/components/Seo.svelte';
 	import { onMount } from 'svelte';
 	import { CatalogManifest } from '#lib/catalog/schema';
 	import CoverageNotice from '#lib/components/CoverageNotice.svelte';
@@ -19,9 +20,11 @@
 	});
 </script>
 
-<svelte:head>
-	<title>About | KaraokeDex</title>
-</svelte:head>
+<Seo
+	title="About"
+	description="How KaraokeDex builds its Platinum Karaoke songbook, which machines it covers, and what is still missing."
+	path="/about"
+/>
 
 <div class="flex max-w-180 flex-col gap-8">
 	<PageHeader eyebrow="About" title="Where the codes come from" compact />

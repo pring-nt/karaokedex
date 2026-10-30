@@ -3,7 +3,7 @@
 	import MicrophoneStageIcon from 'phosphor-svelte/lib/MicrophoneStageIcon';
 	import { onMount } from 'svelte';
 	import { browser } from '$app/env';
-	import { resolve } from '$app/paths';
+	import { asset, resolve } from '$app/paths';
 	import { page } from '$app/state';
 	import { catalog } from '#lib/app/catalog.svelte';
 	import { patchSearch } from '#lib/app/navigate';
@@ -53,7 +53,9 @@
 </script>
 
 <svelte:head>
-	<link rel="icon" href={favicon} />
+	<link rel="icon" href={favicon} type="image/svg+xml" />
+	<link rel="apple-touch-icon" href={asset('apple-touch-icon.png')} />
+	<link rel="manifest" href={asset('manifest.webmanifest')} />
 </svelte:head>
 
 <Aurora />
