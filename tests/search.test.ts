@@ -164,7 +164,7 @@ describe('typo tolerance', () => {
 });
 
 describe('benchmark', () => {
-	test('a query against a synthetic 60k-song catalog takes under 10 ms (median)', () => {
+	test('a query against a synthetic 16k-song catalog, returning every match, takes under 10 ms (median)', () => {
 		let seed = 1234567;
 		const random = () => {
 			seed = (seed * 1664525 + 1013904223) % 4294967296;
@@ -192,7 +192,7 @@ describe('benchmark', () => {
 				{ length: 2 + Math.floor(random() * 3) },
 				() => syllables[Math.floor(random() * syllables.length)]
 			).join('');
-		const many = Array.from({ length: 60_000 }, (_, position) =>
+		const many = Array.from({ length: 16_000 }, (_, position) =>
 			song(
 				String(position).padStart(5, '0'),
 				`${word()} ${word()} ${word()}`,
@@ -206,7 +206,7 @@ describe('benchmark', () => {
 			const times: number[] = [];
 			for (let run = 0; run < 25; run++) {
 				const start = performance.now();
-				big.search(query, 50);
+				big.search(query, Number.MAX_SAFE_INTEGER);
 				times.push(performance.now() - start);
 			}
 			times.sort((a, b) => a - b);

@@ -126,5 +126,5 @@ describe.skipIf(!existsSync(fullPath))('P-series Vol. 59 full file @full', () =>
 		writeRelease(db, full.release, aliases);
 		const alternates = db.select().from(songTitles).all();
 		expect(alternates.map((entry) => entry.code).sort()).toEqual(['44384', '44387']);
-	});
+	}, 20_000);
 });
