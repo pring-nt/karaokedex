@@ -24,6 +24,8 @@ export interface ParseReleaseResult {
 	/** Hard errors. A non-empty list means the release must not be imported. */
 	errors: string[];
 	warnings: string[];
+	/** Corrections that matched a row in this release, as `songbook:code` keys. */
+	appliedCorrections: string[];
 }
 
 function finish(
@@ -31,13 +33,17 @@ function finish(
 	parsedRows: readonly ParsedRow[],
 	profile: 'monthly-new-songs' | 'full-list',
 	errors: string[]
-): ParsedRelease {
+): { release: ParsedRelease; applied: string[] } {
 	const corrected = applyCorrections(input.songbook, parsedRows, input.corrections ?? {});
 	errors.push(
 		...corrected.ambiguous.map((key) => `correction ${key} matches several rows; add ifTitle`)
 	);
+	const unmatched = new Set([...corrected.missing, ...corrected.ambiguous]);
+	const applied = Object.keys(input.corrections ?? {}).filter(
+		(key) => key.startsWith(`${input.songbook}:`) && !unmatched.has(key)
+	);
 	const sorted = [...corrected.rows].sort((a, b) => Number(a.code) - Number(b.code));
-	return ParsedRelease.parse({
+	const release = ParsedRelease.parse({
 		songbook: input.songbook,
 		label: input.label,
 		kind: profile === 'full-list' ? 'full' : 'monthly',
@@ -47,6 +53,7 @@ function finish(
 		codeMax: sorted.at(-1)?.code,
 		rows: sorted
 	});
+	return { release, applied };
 }
 
 /** Picks the parser profile from the songbook and parses one PDF into a validated release. */
@@ -62,11 +69,13 @@ export async function parseRelease(input: ParseReleaseInput): Promise<ParseRelea
 				`${String(parsed.anchors)} code anchors but ${String(parsed.entries.length)} rows`
 			);
 		}
+		const { release, applied } = finish(input, merged.rows, 'full-list', errors);
 		return {
-			release: finish(input, merged.rows, 'full-list', errors),
+			release,
 			columns: Math.max(...parsed.columns),
 			errors,
-			warnings: alphabeticalWarnings(parsed.entries)
+			warnings: alphabeticalWarnings(parsed.entries),
+			appliedCorrections: applied
 		};
 	}
 
@@ -75,7 +84,13 @@ export async function parseRelease(input: ParseReleaseInput): Promise<ParseRelea
 	if (parsed.label !== input.label) {
 		errors.push(`file is labelled ${input.label} but the page header says ${parsed.label}`);
 	}
-	const release = finish(input, parsed.rows, 'monthly-new-songs', errors);
+	const { release, applied } = finish(input, parsed.rows, 'monthly-new-songs', errors);
 	errors.push(...validateMonthlyRelease(release));
-	return { release, columns: parsed.columns, errors, warnings: runWarnings(release) };
+	return {
+		release,
+		columns: parsed.columns,
+		errors,
+		warnings: runWarnings(release),
+		appliedCorrections: applied
+	};
 }

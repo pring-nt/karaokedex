@@ -5,7 +5,7 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build",
+		"build": "bun run catalog:build && vite build",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
 		"format": "prettier --write .",
@@ -17,6 +17,7 @@
 		"import": "bun scripts/import.ts",
 		"sources:check": "bun scripts/sources-check.ts",
 		"sources:status": "bun scripts/sources-status.ts",
+		"catalog:build": "bun scripts/build-catalog.ts",
 		"knip": "knip",
 		"test": "bun test",
 		"test:e2e": "playwright test",

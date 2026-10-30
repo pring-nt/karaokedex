@@ -1,6 +1,6 @@
 {
 	"$schema": "https://unpkg.com/knip@6/schema.json",
-	"entry": ["scripts/*.ts", "tests/**/*.test.ts"],
+	"entry": ["scripts/*.ts", "tests/**/*.test.ts", "src/lib/search/worker.ts"],
 	// Stack from PLAN.md that no phase has used yet. Remove each entry in the phase that first imports it.
 	"ignore": ["src/lib/utils.ts", "tests/fixtures/**"],
 	"ignoreDependencies": [
