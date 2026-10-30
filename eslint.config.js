@@ -38,6 +38,12 @@ export default defineConfig(
 		}
 	},
 	{
+		// patchSearch rewrites the query string of the URL the router already resolved, so it is
+		// base-path safe by construction; there is no route to pass to resolve().
+		files: ['src/lib/app/navigate.ts'],
+		rules: { 'svelte/no-navigation-without-resolve': ['error', { ignoreGoto: true }] }
+	},
+	{
 		files: ['**/*.js'],
 		extends: [ts.configs.disableTypeChecked]
 	}

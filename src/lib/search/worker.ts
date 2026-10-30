@@ -30,8 +30,14 @@ scope.onmessage = ({ data }) => {
 		return;
 	}
 	try {
-		const { hits, total } = engine.search(data.query, data.limit);
-		scope.postMessage({ type: 'results', id: data.id, total, hits });
+		if (data.type === 'search') {
+			const { hits, total } = engine.search(data.query, data.options);
+			scope.postMessage({ type: 'results', id: data.id, total, hits });
+		} else if (data.type === 'codes') {
+			scope.postMessage({ type: 'songs', id: data.id, songs: engine.songsByCodes(data.codes) });
+		} else {
+			scope.postMessage({ type: 'releases', id: data.id, releases: engine.releases() });
+		}
 	} catch (error) {
 		scope.postMessage({ type: 'error', id: data.id, message: String(error) });
 	}

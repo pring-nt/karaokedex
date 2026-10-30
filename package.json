@@ -23,6 +23,9 @@
 		"test:e2e": "playwright test",
 		"verify": "bun run format:check && bun run lint && bun run check && bun run check:tokens && bun run knip && bun run test && bun run build"
 	},
+	"imports": {
+		"#lib/*": "./src/lib/*"
+	},
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
 		"@fontsource-variable/jetbrains-mono": "^5.3.0",
@@ -33,9 +36,11 @@
 		"@sveltejs/kit": "^3.0.0",
 		"@sveltejs/vite-plugin-svelte": "^7.2.0",
 		"@tailwindcss/vite": "^4.3.0",
+		"@tanstack/svelte-table": "^9.3.1",
 		"@types/bun": "^1.4.4",
 		"@types/node": "^24",
 		"acorn": "^8.19.0",
+		"bits-ui": "^2.20.2",
 		"cn": "^0.5.0",
 		"drizzle-kit": "^0.31.11",
 		"drizzle-orm": "^0.45.4",
@@ -59,9 +64,6 @@
 		"typescript-eslint": "^8.60.1",
 		"unpdf": "^2.1.0",
 		"vite": "^8.3.0"
-	},
-	"imports": {
-		"#lib/*": "./src/lib/*"
 	},
 	"dependencies": {
 		"@tanstack/svelte-virtual": "^3.13.50",

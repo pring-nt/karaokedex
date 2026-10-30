@@ -25,6 +25,9 @@ interface Hit {
 	tier: number;
 }
 
+/** Restricts a search to some songs, by position in the list the index was built from. */
+export type SongFilter = (index: number) => boolean;
+
 export interface SearchResult {
 	hits: Hit[];
 	total: number;
@@ -109,22 +112,22 @@ export class SearchIndex {
 		return this.entries.length;
 	}
 
-	search(rawQuery: string, limit = 50): SearchResult {
+	search(rawQuery: string, limit = 50, filter?: SongFilter): SearchResult {
 		const query = parseQuery(rawQuery);
 		if (query.mode === 'empty') return { hits: [], total: 0 };
 		if (query.mode === 'code') {
-			const codeResult = this.searchCode(query.digits, limit);
+			const codeResult = this.searchCode(query.digits, limit, filter);
 			if (codeResult.total > 0) return codeResult;
-			return this.searchText(normalize(query.digits), 'both', limit);
+			return this.searchText(normalize(query.digits), 'both', limit, filter);
 		}
-		return this.searchText(query.text, query.mode, limit);
+		return this.searchText(query.text, query.mode, limit, filter);
 	}
 
-	private searchCode(digits: string, limit: number): SearchResult {
+	private searchCode(digits: string, limit: number, filter?: SongFilter): SearchResult {
 		const hits: Hit[] = [];
 		const taken = new Set<number>();
 		const take = (index: number, tier: number) => {
-			if (taken.has(index)) return;
+			if (taken.has(index) || (filter && !filter(index))) return;
 			taken.add(index);
 			hits.push({ index, tier });
 		};
@@ -186,7 +189,7 @@ export class SearchIndex {
 		return entry.numeric < other.numeric;
 	}
 
-	private searchText(text: string, mode: Mode, limit: number): SearchResult {
+	private searchText(text: string, mode: Mode, limit: number, filter?: SongFilter): SearchResult {
 		const query = prepare(text);
 		const terms = query.terms;
 		const entries = this.entries;
@@ -194,6 +197,7 @@ export class SearchIndex {
 		let total = 0;
 
 		for (let index = 0; index < entries.length; index++) {
+			if (filter && !filter(index)) continue;
 			const entry = entries[index];
 			const hay =
 				mode === 'artist' ? entry.artistHay : mode === 'title' ? entry.titleHay : entry.haystack;
@@ -223,14 +227,20 @@ export class SearchIndex {
 				total
 			};
 		}
-		return this.searchFuzzy(terms, mode, limit);
+		return this.searchFuzzy(terms, mode, limit, filter);
 	}
 
 	/** Typo tolerance for when nothing matched: every term of 5+ letters may be one edit away from a word. */
-	private searchFuzzy(terms: readonly string[], mode: Mode, limit: number): SearchResult {
+	private searchFuzzy(
+		terms: readonly string[],
+		mode: Mode,
+		limit: number,
+		filter?: SongFilter
+	): SearchResult {
 		if (!terms.some((term) => term.length >= FUZZY_MIN_LENGTH)) return { hits: [], total: 0 };
 		const hits: Hit[] = [];
 		this.entries.forEach((entry, index) => {
+			if (filter && !filter(index)) return;
 			const hay =
 				mode === 'artist' ? entry.artistHay : mode === 'title' ? entry.titleHay : entry.haystack;
 			const words = hay.split(/[ |]/);

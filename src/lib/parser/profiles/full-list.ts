@@ -12,6 +12,10 @@ const PAGE_CHROME =
 const TABLE_CHROME =
 	/^(?:Song Title|Code|Popularized By:?|Featured Artists|Browse, Reserve, Controls songs\.|Transform your smartphone to a|karaoke monitor\.?|Instantly hear and feel our karaoke music produced as in the original recording\.|.+ Playlist|2015 Hit Songs|130|(?:Kapampangan|Ilocano|Visayan) Songs)$/i;
 
+/** A small `July 2021` stamp printed beside artists that a later list added again. */
+const MONTH_STAMP = /^(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]* \d{4}$/;
+const STAMP_TYPE = 8;
+
 /** Section headers and page banners are set in much larger type than the 8-14 pt cells. */
 const LARGE_TYPE = 15;
 const CHROME_MARGIN = 12;
@@ -140,7 +144,13 @@ export function parseFullList(
 				if (SECTION_HEADER.test(text)) section = text;
 				continue;
 			}
-			if (PAGE_CHROME.test(text) || (options.dropTableChrome && TABLE_CHROME.test(text))) continue;
+			if (PAGE_CHROME.test(text)) continue;
+			if (
+				options.dropTableChrome &&
+				(TABLE_CHROME.test(text) || (item.fontSize < STAMP_TYPE && MONTH_STAMP.test(text)))
+			) {
+				continue;
+			}
 			if (index < firstCode && item.y > firstY + CHROME_MARGIN) continue;
 
 			if (isCode(item)) {

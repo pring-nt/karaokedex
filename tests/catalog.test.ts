@@ -262,6 +262,59 @@ describe('SearchEngine', () => {
 	});
 });
 
+describe('SearchEngine filters and lists', () => {
+	async function loaded() {
+		const served = new Map<string, string>([
+			['/catalog-manifest.json', JSON.stringify(built.manifest)],
+			...built.catalogs.map(({ file, json }): [string, string] => [`/${file}`, json])
+		]);
+		const engine = new SearchEngine({
+			fetchText: (url) => {
+				const body = served.get(url);
+				return body === undefined ? Promise.reject(new Error(`404 ${url}`)) : Promise.resolve(body);
+			},
+			cache: { get: () => Promise.resolve(undefined), put: () => Promise.resolve() }
+		});
+		await engine.load('hdd');
+		return engine;
+	}
+
+	test('an artist filter keeps only that artist, with or without a query', async () => {
+		const engine = await loaded();
+		const all = engine.search('', { artist: 'cup-of-joe', limit: 500 });
+		expect(all.total).toBeGreaterThan(0);
+		expect(all.hits.every((hit) => hit.song.artists.some((a) => a.name === 'Cup of Joe'))).toBe(
+			true
+		);
+
+		const narrowed = engine.search('bagyo', { artist: 'cup-of-joe' });
+		expect(narrowed.hits.map((hit) => hit.song.title)).toEqual(['Bagyo']);
+		expect(engine.search('bagyo', { artist: 'bini' }).total).toBe(0);
+		expect(engine.search('', { artist: 'nobody-at-all' })).toEqual({ hits: [], total: 0 });
+	});
+
+	test('a release filter lists that release by code, and releases come newest first', async () => {
+		const engine = await loaded();
+		const releases = engine.releases();
+		expect(releases.map((release) => release.label)).toEqual(['2026-08', '2026-07', '2026-06']);
+		expect(releases.map((release) => release.count)).toEqual([70, 70, 80]);
+
+		const june = engine.search('', { release: '2026-06', limit: 500 });
+		expect(june.total).toBe(80);
+		const numbers = june.hits.map((hit) => Number(hit.song.code));
+		expect(numbers).toEqual([...numbers].sort((a, b) => a - b));
+		expect(engine.search('', { release: '2026-06', limit: 5 }).hits).toHaveLength(5);
+	});
+
+	test('songsByCodes keeps the order asked for and skips unknown codes', async () => {
+		const engine = await loaded();
+		expect(engine.songsByCodes(['42289', '00000', '42227']).map((song) => song.code)).toEqual([
+			'42289',
+			'42227'
+		]);
+	});
+});
+
 const real = existsSync(join(dataDir, 'pdfs', 'hdd', '2026-05.pdf'));
 describe.skipIf(!real)('real data @full', () => {
 	test('42195 is Zero Pressure in the real 2026-05 release', async () => {

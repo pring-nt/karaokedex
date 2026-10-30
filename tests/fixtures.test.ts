@@ -174,6 +174,10 @@ describe('older HDD layouts', () => {
 		expect(row('2021-07.pdf', '07898').creditRaw).toBe('Michael Learns To Rock');
 	});
 
+	test('a small month stamp beside a re-added artist is not part of the artist', () => {
+		expect(row('2021-07.pdf', '08415').creditRaw).toBe('Janno Gibbs');
+	});
+
 	test('a release that mixes a new block with earlier codes is a run report, not an error', () => {
 		const result = parsed.get('2021-07.pdf');
 		expect(result?.errors).toEqual([]);

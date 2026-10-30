@@ -1,0 +1,79 @@
+<script lang="ts">
+	import { browser } from '$app/env';
+	import { page } from '$app/state';
+	import { catalog } from '#lib/app/catalog.svelte';
+	import { patchSearch } from '#lib/app/navigate';
+	import { preferences } from '#lib/app/preferences.svelte';
+	import { parseParams } from '#lib/app/url';
+	import PageHeader from '#lib/components/PageHeader.svelte';
+	import ResultsSkeleton from '#lib/components/ResultsSkeleton.svelte';
+	import SongPanel from '#lib/components/SongPanel.svelte';
+	import type { ReleaseSummary } from '#lib/search/engine';
+	import { SONGBOOKS } from '#lib/songbooks';
+
+	const params = $derived(browser ? parseParams(page.url.searchParams) : {});
+	const songbook = $derived(params.book ?? preferences.songbook);
+
+	let releases = $state<ReleaseSummary[]>([]);
+	let loadedFor = $state('');
+
+	$effect(() => {
+		const book = catalog.songbook;
+		if (!book || catalog.status !== 'ready') return;
+		void catalog.releases().then((result) => {
+			if (result.songbook !== catalog.songbook) return;
+			releases = result.releases;
+			loadedFor = result.songbook;
+		});
+	});
+
+	const available = $derived(loadedFor === songbook ? releases : []);
+	const selected = $derived(
+		params.release && available.some((release) => release.label === params.release)
+			? params.release
+			: available.find((release) => release.count > 0)?.label
+	);
+
+	function choose(label: string): void {
+		patchSearch(page.url, { release: label });
+	}
+</script>
+
+<svelte:head>
+	<title>New songs | KaraokeDex</title>
+</svelte:head>
+
+<div class="flex flex-col gap-6">
+	<PageHeader
+		eyebrow="New songs"
+		title={selected ?? 'Latest release'}
+		subhead={`Songs first listed in this release of ${SONGBOOKS[songbook].name}`}
+		compact
+	/>
+
+	{#if available.length > 1}
+		<label class="flex flex-col gap-1 self-start text-xs text-subtle">
+			<span class="eyebrow">Release</span>
+			<select
+				class="min-h-11 rounded-md border border-highlight-med bg-highlight-low px-3 text-[length:var(--text-base)] text-text md:min-h-10"
+				value={selected}
+				onchange={(event) => {
+					choose(event.currentTarget.value);
+				}}
+			>
+				{#each available as release (release.label)}
+					<option value={release.label}>
+						{release.label} ({release.count}
+						{release.count === 1 ? 'song' : 'songs'})
+					</option>
+				{/each}
+			</select>
+		</label>
+	{/if}
+
+	<SongPanel release={selected} listId="new-results" label="New songs">
+		{#snippet idle()}
+			<ResultsSkeleton />
+		{/snippet}
+	</SongPanel>
+</div>

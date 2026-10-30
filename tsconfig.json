@@ -2,7 +2,10 @@
 	"extends": "$app/tsconfig",
 	"compilerOptions": {
 		"strict": true,
-		"types": ["$app/types", "node", "bun"]
+		"types": ["$app/types", "node", "bun"],
+		"paths": {
+			"#lib/*": ["./src/lib/*"]
+		}
 	},
 	"include": [
 		"src",

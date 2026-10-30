@@ -1,0 +1,159 @@
+@layer components {
+	.aurora-bg {
+		position: fixed;
+		inset: 0;
+		z-index: var(--z-background);
+		background-color: var(--base);
+		overflow: hidden;
+		pointer-events: none;
+	}
+
+	.aurora-bg::before,
+	.aurora-bg::after {
+		content: '';
+		position: absolute;
+		border-radius: 50%;
+		filter: blur(120px);
+		animation: drift 25s var(--ease-ambient) infinite;
+	}
+
+	.aurora-bg::before {
+		width: 70vw;
+		height: 70vw;
+		top: -20%;
+		left: -10%;
+		background: radial-gradient(
+			circle,
+			color-mix(in srgb, var(--accent) 8%, transparent) 0%,
+			transparent 70%
+		);
+		animation-duration: 20s;
+	}
+
+	.aurora-bg::after {
+		width: 60vw;
+		height: 60vw;
+		bottom: -15%;
+		right: -10%;
+		background: radial-gradient(
+			circle,
+			color-mix(in srgb, var(--accent-2) 6%, transparent) 0%,
+			transparent 70%
+		);
+		animation-duration: 28s;
+		animation-direction: reverse;
+	}
+
+	@keyframes drift {
+		0%,
+		100% {
+			transform: translate(0, 0) scale(1);
+		}
+		33% {
+			transform: translate(40px, -60px) scale(1.08);
+		}
+		66% {
+			transform: translate(-30px, 40px) scale(0.95);
+		}
+	}
+
+	.glass {
+		background: color-mix(in srgb, var(--surface) 60%, transparent);
+		backdrop-filter: blur(var(--glass-blur)) saturate(160%);
+		-webkit-backdrop-filter: blur(var(--glass-blur)) saturate(160%);
+		border: 1px solid color-mix(in srgb, var(--subtle) 15%, transparent);
+		box-shadow:
+			0 1px 0 0 color-mix(in srgb, var(--text) 6%, transparent) inset,
+			var(--shadow-3);
+	}
+
+	.glass:focus-within {
+		border-color: color-mix(in srgb, var(--accent) 50%, transparent);
+	}
+
+	@supports not (backdrop-filter: blur(1px)) {
+		.glass {
+			background: var(--surface);
+		}
+	}
+
+	@media (prefers-contrast: more), (prefers-reduced-transparency: reduce) {
+		.glass {
+			background: var(--surface);
+			backdrop-filter: none;
+			-webkit-backdrop-filter: none;
+			border-color: var(--highlight-high);
+		}
+	}
+
+	.card {
+		position: relative;
+		overflow: hidden;
+		background: var(--surface);
+		box-shadow: var(--shadow-1);
+	}
+
+	.scrim {
+		background: color-mix(in srgb, var(--base) 60%, transparent);
+		backdrop-filter: blur(4px);
+		-webkit-backdrop-filter: blur(4px);
+	}
+
+	.blob {
+		position: absolute;
+		width: 176px;
+		height: 176px;
+		border-radius: 50%;
+		background: color-mix(in srgb, var(--accent) 15%, transparent);
+		filter: blur(64px);
+		pointer-events: none;
+	}
+
+	.lift {
+		transition: transform var(--dur-base) var(--ease-snappy);
+	}
+
+	.lift:hover {
+		transform: translateY(-2.5px);
+	}
+
+	.lift:active {
+		transform: translateY(1px) scale(0.98);
+	}
+
+	.shimmer {
+		position: relative;
+		overflow: hidden;
+		background: var(--highlight-low);
+	}
+
+	.shimmer::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(
+			90deg,
+			transparent 0%,
+			color-mix(in srgb, var(--accent) 11%, transparent) 40%,
+			color-mix(in srgb, var(--text) 15%, transparent) 50%,
+			color-mix(in srgb, var(--accent) 11%, transparent) 60%,
+			transparent 100%
+		);
+		transform: translateX(-100%);
+		animation: shimmer 2s var(--ease-ambient) infinite;
+	}
+
+	@keyframes shimmer {
+		to {
+			transform: translateX(100%);
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.aurora-bg::before,
+		.aurora-bg::after,
+		.shimmer::after {
+			animation: none;
+		}
+	}
+}

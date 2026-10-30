@@ -1,0 +1,142 @@
+import { describe, expect, test } from 'bun:test';
+import {
+	clearQueue,
+	clearRecents,
+	emptyLibrary,
+	isFavorite,
+	isQueued,
+	Library,
+	listFor,
+	pushRecent,
+	toggleFavorite,
+	toggleQueued
+} from '../src/lib/app/library';
+import { browserStorage, readJson, writeJson, type KeyValueStore } from '../src/lib/app/storage';
+import { buildSearch, parseParams } from '../src/lib/app/url';
+import { artistSlug } from '../src/lib/catalog/slug';
+
+function params(query: string) {
+	return parseParams(new URLSearchParams(query));
+}
+
+describe('URL params', () => {
+	test('valid params round-trip in a fixed order', () => {
+		const parsed = params('q=cup%20of%20joe&book=hdd&release=2026-05&artist=cup-of-joe');
+		expect(parsed).toEqual({
+			book: 'hdd',
+			q: 'cup of joe',
+			release: '2026-05',
+			artist: 'cup-of-joe'
+		});
+		expect(buildSearch(parsed)).toBe('?book=hdd&q=cup+of+joe&artist=cup-of-joe&release=2026-05');
+	});
+
+	test('anything invalid is dropped, never thrown', () => {
+		expect(params('book=unknown&q=ok')).toEqual({ q: 'ok' });
+		expect(params(`q=${'x'.repeat(201)}`)).toEqual({});
+		expect(params('artist=has%20spaces&release=a%2Fb')).toEqual({});
+		expect(params('book=&q=')).toEqual({});
+	});
+
+	test('artist slugs may contain letters from any script', () => {
+		expect(params('artist=%E3%81%82%E3%81%84')).toEqual({ artist: 'あい' });
+	});
+
+	test('no params give an empty query string', () => {
+		expect(buildSearch({})).toBe('');
+		expect(buildSearch({ book: 'p-series' })).toBe('?book=p-series');
+	});
+});
+
+describe('artistSlug', () => {
+	test('is the normalized name with hyphens', () => {
+		expect(artistSlug('Cup of Joe')).toBe('cup-of-joe');
+		expect(artistSlug('Beyoncé')).toBe('beyonce');
+		expect(artistSlug("Guns N' Roses")).toBe('guns-n-roses');
+		expect(artistSlug('!!!')).toBe('unknown');
+	});
+});
+
+describe('library', () => {
+	test('favorites and the queue are per songbook and toggle', () => {
+		let library = emptyLibrary();
+		library = toggleFavorite(library, 'hdd', '42195');
+		library = toggleQueued(library, 'hdd', '42195');
+		library = toggleQueued(library, 'hdd', '42196');
+		expect(isFavorite(library, 'hdd', '42195')).toBe(true);
+		expect(isFavorite(library, 'p-series', '42195')).toBe(false);
+		expect(listFor(library, 'queue', 'hdd')).toEqual(['42195', '42196']);
+		expect(listFor(library, 'queue', 'p-series')).toEqual([]);
+
+		library = toggleQueued(library, 'hdd', '42195');
+		library = toggleFavorite(library, 'hdd', '42195');
+		expect(isQueued(library, 'hdd', '42195')).toBe(false);
+		expect(isFavorite(library, 'hdd', '42195')).toBe(false);
+		expect(listFor(clearQueue(library, 'hdd'), 'queue', 'hdd')).toEqual([]);
+	});
+
+	test('codes stay strings with their leading zeros', () => {
+		const library = toggleFavorite(emptyLibrary(), 'p-series', '0088');
+		expect(listFor(library, 'favorites', 'p-series')).toEqual(['0088']);
+	});
+
+	test('recent searches are newest first, case-insensitively unique, capped, and never blank', () => {
+		let library = emptyLibrary();
+		for (const query of ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']) {
+			library = pushRecent(library, 'hdd', query);
+		}
+		expect(listFor(library, 'recents', 'hdd')).toEqual(['j', 'i', 'h', 'g', 'f', 'e', 'd', 'c']);
+		library = pushRecent(library, 'hdd', '  H  ');
+		expect(listFor(library, 'recents', 'hdd').slice(0, 2)).toEqual(['H', 'j']);
+		expect(pushRecent(library, 'hdd', '   ')).toBe(library);
+		expect(listFor(clearRecents(library, 'hdd'), 'recents', 'hdd')).toEqual([]);
+	});
+
+	test('a stored library validates, and missing sections default to empty', () => {
+		expect(Library.parse({})).toEqual({ favorites: {}, queue: {}, recents: {} });
+		expect(Library.safeParse({ favorites: { hdd: [1] } }).success).toBe(false);
+		expect(Library.safeParse({ favorites: { nope: ['1'] } }).success).toBe(false);
+	});
+});
+
+describe('storage', () => {
+	function memory(initial: Record<string, string> = {}): KeyValueStore {
+		const data = new Map(Object.entries(initial));
+		return {
+			getItem: (key) => data.get(key) ?? null,
+			setItem: (key, value) => {
+				data.set(key, value);
+			}
+		};
+	}
+
+	test('reads and validates, falling back on anything wrong', () => {
+		const fallback = emptyLibrary();
+		const good = memory({ k: JSON.stringify({ favorites: { hdd: ['1'] } }) });
+		expect(readJson(good, 'k', Library, fallback).favorites).toEqual({ hdd: ['1'] });
+		expect(readJson(memory({ k: '{not json' }), 'k', Library, fallback)).toBe(fallback);
+		expect(readJson(memory({ k: '{"favorites":{"hdd":[1]}}' }), 'k', Library, fallback)).toBe(
+			fallback
+		);
+		expect(readJson(memory(), 'k', Library, fallback)).toBe(fallback);
+		expect(readJson(null, 'k', Library, fallback)).toBe(fallback);
+	});
+
+	test('writing reports failure instead of throwing', () => {
+		const store = memory();
+		expect(writeJson(store, 'k', { a: 1 })).toBe(true);
+		expect(store.getItem('k')).toBe('{"a":1}');
+		expect(writeJson(null, 'k', {})).toBe(false);
+		const full: KeyValueStore = {
+			getItem: () => null,
+			setItem: () => {
+				throw new Error('quota');
+			}
+		};
+		expect(writeJson(full, 'k', {})).toBe(false);
+	});
+
+	test('there is no browser storage outside a browser', () => {
+		expect(browserStorage()).toBeNull();
+	});
+});

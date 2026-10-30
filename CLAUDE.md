@@ -10,11 +10,13 @@ KaraokeDex is a searchable web songbook for **Platinum Karaoke only**. Song code
 
 ## Current state
 
-Phases 0 to 4 are implemented. Tokens and the `verify` gate; the monthly "New Songs" parser (all layouts, 2015 to 2026) and the P-series full-list parser; normalization, validation, corrections, the SQLite writer, `bun run import <pdf>`; the source watcher (`bun run sources:check [--write]`, exit 10 on changes; `bun run sources:status [--songbook hdd] [--write]`; manifest in `data/sources.json`); and the catalog build and search core. `playwright test` has no tests until Phase 6.
+Phases 0 to 5 are implemented. Tokens and the `verify` gate; the monthly "New Songs" parser (all layouts, 2015 to 2026) and the P-series full-list parser; normalization, validation, corrections, the SQLite writer, `bun run import <pdf>`; the source watcher (`bun run sources:check [--write]`, exit 10 on changes; `bun run sources:status [--songbook hdd] [--write]`; manifest in `data/sources.json`); and the catalog build and search core. `playwright test` has no tests until Phase 6.
 
 `bun run catalog:build` (also the first half of `bun run build`) parses every listed PDF that exists, writes them to an in-memory database in songbook then label order, and emits `static/catalog.<songbook>.<hash8>.json` plus `static/catalog-manifest.json` (both gitignored, regenerated each build). The hash covers the data, not `generatedAt`. A release with errors is left out and fails the build, and so does a correction that matches no row. With no PDFs present it writes an empty manifest and succeeds. The compact catalog format and its Zod schema are in `src/lib/catalog/schema.ts`; the same schema validates on write and on load.
 
 Search (`src/lib/search`) is framework-free: `parseQuery` (digits are a code, `a:` artist, `t:` title), `SearchIndex` (linear scan over normalized strings with a cheap substring reject, tiered ranking, one-edit typo fallback), `SearchEngine` (manifest, then catalog from an injected cache, validate, index) and `worker.ts` (the web worker around the engine, with an IndexedDB cache in `cache.ts`; nothing imports it until the UI exists). A query over 60k synthetic songs takes 3-6 ms; very broad ones (several short, common terms) take up to about 16 ms.
+
+The UI (Phase 5) is client-side over the prerendered shell. `src/lib/app/catalog.svelte.ts` talks to the search worker (created lazily, browser only) and tags every answer with its songbook, so a slow answer for the previous songbook is never shown after a switch. `src/lib/app/preferences.svelte.ts` keeps theme, songbook, favorites, tonight's queue and recent searches in `localStorage` (all wrapped, per songbook). The URL carries `?book=&q=&artist=&release=`, validated by `src/lib/app/url.ts` (invalid values are dropped); `patchSearch` updates it in place. `SongPanel` runs a search (or a fixed code list) and renders skeleton, error, empty and results states; `ResultsTable` is TanStack Table plus a window virtualizer; `SongCard` is a bits-ui dialog, a bottom sheet on mobile. `/artist/[slug]` is prerendered for every artist in the built catalogs (`entries()` reads `static/`), about 6,800 pages, which is most of the build time.
 
 Both profiles share one row assembler (`profiles/full-list.ts`): rows are built in content-stream order, code anchors are found by font, and chrome is dropped by type size, position and (monthly only) a short list of in-table headers, advert lines and playlist headings. An artist cell merged over several rows is printed once, after the last row, and is shared back to the preceding rows that have no artist. Fragments are joined with a space, except a 1-2 character lowercase line start, which is a word broken mid-word and is joined without one and flagged `short-continuation`.
 
@@ -58,12 +60,14 @@ The user's shell is Windows cmd: any command you present for the user must be cm
 
 ## Code conventions specific to this repo
 
-- Import from `src/lib` through the `#lib/*` alias (defined in `package.json` `imports`, also used by `components.json`), not relative paths or `$lib`.
+- Import from `src/lib` through the `#lib/*` alias (defined in `package.json` `imports` and mirrored in `tsconfig.json` `paths`, also used by `components.json`) in Svelte files and routes. SvelteKit 3 has no `$lib`, and `$app/env` replaces `$app/environment`.
 - SvelteKit config is inline in `vite.config.ts` (there is no `svelte.config.js`); runes mode is forced for everything outside `node_modules`.
 - Svelte 5 runes only (`$state`, `$derived`, `$effect`, `$props`); no legacy `export let` or stores for component state.
 - TypeScript strict, no `any`, no `!` outside tests. Zod validates every boundary (parsed rows, catalog JSON on write and load, URL params, corrections/aliases/sources JSON, remote `songList`).
 - Tokens, never raw values: no hex/rgb literals, raw px radii or raw ms durations in `src/lib/components/**` or `src/routes/**`. Raw values live only in `src/lib/styles/tokens.css` (three layers: primitives, semantic roles, optional component aliases; Tailwind `@theme` maps to the semantic tokens). `src/lib/styles/base.css` holds the base and typography classes (also unscanned); `src/routes/layout.css` only imports them.
 - Prettier uses tabs, single quotes, no trailing commas, width 100, and the Svelte and Tailwind plugins (Tailwind stylesheet is `src/routes/layout.css`).
+- In Tailwind `text-base` is both the font size and the page-background colour (`--color-base`), so it makes text invisible. Use `text-[length:var(--text-base)]` for the size and `text-[color:var(--base)]` for the colour.
+- Links must pass `svelte/no-navigation-without-resolve`: write `href={resolve(`/new?book=${songbook}`)}` with the query inside the route string. The one exemption is `src/lib/app/navigate.ts`, which rewrites the query of the URL the router already resolved.
 - UI primitives come from shadcn-svelte (style `lyra`, Phosphor icons) under `#lib/components/ui`.
 
 ## Workflow rules from PLAN.md

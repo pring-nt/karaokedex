@@ -23,3 +23,6 @@ export const SONGBOOKS: Record<Songbook, SongbookInfo> = {
 		kind: 'volume'
 	}
 };
+
+/** Short names for tight spaces: the switcher and the eyebrow of a song card. */
+export const SONGBOOK_SHORT: Record<Songbook, string> = { hdd: 'HDD', 'p-series': 'P-Series' };
