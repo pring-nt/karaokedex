@@ -8,12 +8,9 @@
 		"@tanstack/table-core",
 		"animejs",
 		"cn",
-		"drizzle-kit",
-		"drizzle-orm",
 		"minisearch",
 		"phosphor-svelte",
 		"tailwind-variants",
-		"unpdf",
-		"zod"
+		"unpdf"
 	]
 }

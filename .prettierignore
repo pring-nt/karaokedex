@@ -11,3 +11,4 @@ bun.lockb
 # Specs and machine-written data
 /PLAN.md
 /data/
+/drizzle/
