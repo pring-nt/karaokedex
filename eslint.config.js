@@ -10,6 +10,7 @@ const gitignorePath = path.resolve(import.meta.dirname, '.gitignore');
 
 export default defineConfig(
 	includeIgnoreFile(gitignorePath),
+	{ ignores: ['tests/fixtures/**'] },
 	js.configs.recommended,
 	ts.configs.strictTypeChecked,
 	svelte.configs.recommended,

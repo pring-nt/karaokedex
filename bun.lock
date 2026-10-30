@@ -23,6 +23,7 @@
         "@tailwindcss/vite": "^4.3.0",
         "@types/bun": "^1.4.4",
         "@types/node": "^24",
+        "acorn": "^8.19.0",
         "cn": "^0.5.0",
         "drizzle-kit": "^0.31.11",
         "drizzle-orm": "^0.45.4",

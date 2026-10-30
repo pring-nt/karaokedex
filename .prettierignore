@@ -12,3 +12,4 @@ bun.lockb
 /PLAN.md
 /data/
 /drizzle/
+/tests/fixtures/
