@@ -6,7 +6,8 @@ import { loadAliases, loadCorrections } from '../src/lib/data/load';
 import { sourceSongbook, type Songbook } from '../src/lib/songbooks';
 import { SourcesFile } from '../src/lib/sources/manifest';
 
-const STATIC_DIR = 'static';
+/** Committed, so a deploy needs no PDFs. `catalog:copy` serves them from `static/`. */
+const OUTPUT_DIR = join('data', 'catalogs');
 
 /** PDFs the build uses: present files of every parsed list, plus any full list placed by hand. */
 async function collectInputs(): Promise<PdfInput[]> {
@@ -38,6 +39,10 @@ async function collectInputs(): Promise<PdfInput[]> {
 }
 
 const inputs = await collectInputs();
+if (inputs.length === 0) {
+	console.error('catalog:update found no PDFs under data/pdfs; the catalogs were left as they are');
+	process.exit(1);
+}
 const [aliases, corrections] = await Promise.all([
 	loadAliases('data/aliases.json'),
 	loadCorrections('data/corrections.json')
@@ -57,23 +62,16 @@ const flagged = result.reports.reduce((sum, report) => sum + report.needsReview,
 
 if (result.errors.length > 0) {
 	for (const error of result.errors) console.error(error);
-	console.error(`\ncatalog:build failed with ${String(result.errors.length)} error(s)`);
+	console.error(`\ncatalog:update failed with ${String(result.errors.length)} error(s)`);
 	process.exit(1);
 }
 
-await mkdir(STATIC_DIR, { recursive: true });
-for (const name of await readdir(STATIC_DIR)) {
-	if (/^catalog\..+\.json$/.test(name) || name === 'catalog-manifest.json') {
-		await rm(join(STATIC_DIR, name));
-	}
-}
-for (const { file, json } of result.catalogs) await writeFile(join(STATIC_DIR, file), json);
-if (result.shared) await writeFile(join(STATIC_DIR, result.shared.file), result.shared.json);
-await writeFile(join(STATIC_DIR, 'catalog-manifest.json'), JSON.stringify(result.manifest));
+await rm(OUTPUT_DIR, { recursive: true, force: true });
+await mkdir(OUTPUT_DIR, { recursive: true });
+for (const { file, json } of result.catalogs) await writeFile(join(OUTPUT_DIR, file), json);
+if (result.shared) await writeFile(join(OUTPUT_DIR, result.shared.file), result.shared.json);
+await writeFile(join(OUTPUT_DIR, 'catalog-manifest.json'), JSON.stringify(result.manifest));
 
-if (inputs.length === 0) {
-	console.warn('catalog:build found no PDFs under data/pdfs; wrote an empty catalog manifest');
-}
 for (const entry of result.manifest.songbooks) {
 	console.log(
 		`${entry.slug}: ${String(entry.count)} songs, version ${entry.version}, ${entry.file}`

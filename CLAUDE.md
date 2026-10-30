@@ -12,7 +12,7 @@ KaraokeDex is a searchable web songbook for **Platinum Karaoke only**. Song code
 
 Phases 0 to 5 are implemented. Tokens and the `verify` gate; the monthly "New Songs" parser (all layouts, 2015 to 2026) and the P-series full-list parser; normalization, validation, corrections, the SQLite writer, `bun run import <pdf>`; the source watcher (`bun run sources:check [--write]`, exit 10 on changes; `bun run sources:status [--songbook hdd] [--write]`; manifest in `data/sources.json`); and the catalog build and search core. `playwright test` has no tests until Phase 6.
 
-`bun run catalog:build` (also the first half of `bun run build`) parses every listed PDF that exists, writes them to an in-memory database in songbook then label order, and emits `static/catalog.<songbook>.<hash8>.json` plus `static/catalog-manifest.json` (both gitignored, regenerated each build). The hash covers the data, not `generatedAt`. A release with errors is left out and fails the build, and so does a correction that matches no row. With no PDFs present it writes an empty manifest and succeeds. The compact catalog format and its Zod schema are in `src/lib/catalog/schema.ts`; the same schema validates on write and on load.
+`bun run catalog:update` parses every listed PDF that exists, writes them to an in-memory database in songbook then label order, and emits `data/catalogs/catalog.<songbook>.<hash8>.json` plus `catalog-manifest.json`. Those files are committed; `data/pdfs/` is gitignored and never deployed. `bun run dev` and `bun run build` run `catalog:copy`, which copies them to `static/` (gitignored), so neither needs PDFs. To add a release: `sources:check --write`, download the PDF to the listed path, `sources:status --write`, `catalog:update`, then commit `data/`. The hash covers the data, not `generatedAt`. A release with errors is left out and fails the build, and so does a correction that matches no row. With no PDFs present `catalog:update` fails and leaves the committed catalogs alone. The compact catalog format and its Zod schema are in `src/lib/catalog/schema.ts`; the same schema validates on write and on load.
 
 Search (`src/lib/search`) is framework-free: `parseQuery` (digits are a code, `a:` artist, `t:` title), `SearchIndex` (linear scan over normalized strings with a cheap substring reject, tiered ranking, one-edit typo fallback), `SearchEngine` (manifest, then catalog from an injected cache, validate, index) and `worker.ts` (the web worker around the engine, with an IndexedDB cache in `cache.ts`; nothing imports it until the UI exists). Results are unbounded, because the table sorts and pages them client-side, so a search sorts every match. The largest catalog is about 16k songs and the benchmark holds that under 10 ms.
 
@@ -37,7 +37,8 @@ Use **bun**, not npm/pnpm/yarn (`.npmrc` sets `engine-strict=true`; do not add o
 ```bash
 bun install
 bun run dev            # vite dev
-bun run build          # vite build
+bun run build          # copy committed catalogs, then vite build
+bun run catalog:update # reparse local PDFs into data/catalogs (commit the result)
 bun run check          # svelte-kit sync && svelte-check
 bun run lint           # eslint . --max-warnings 0
 bun run format         # prettier --write .
@@ -55,7 +56,7 @@ The user's shell is Windows cmd: any command you present for the user must be cm
 
 ## Architecture (planned, see PLAN.md for detail)
 
-- **Build-time database, static site.** Source of truth is `data/pdfs/**` + `data/sources.json` + `data/corrections.json` + `data/aliases.json`. Every build recreates an ephemeral SQLite file (Drizzle + `bun:sqlite`, gitignored) and emits one content-hashed `static/catalog.<songbook>.<hash>.json` per songbook plus `static/catalog-manifest.json`. SvelteKit prerenders every route (`export const prerender = true` in `+layout.ts`) on Vercel; the browser fetches the selected songbook's catalog and searches it locally in a Web Worker. No server functions on normal use.
+- **Build-time database, static site.** Source of truth is `data/pdfs/**` (local only) + `data/sources.json` + `data/corrections.json` + `data/aliases.json`. `catalog:update` recreates an ephemeral SQLite file (Drizzle + `bun:sqlite`, gitignored) and emits one content-hashed catalog per songbook to `data/catalogs/`, which `catalog:copy` serves from `static/`. SvelteKit prerenders every route (`export const prerender = true` in `+layout.ts`) on Vercel; the browser fetches the selected songbook's catalog and searches it locally in a Web Worker. No server functions on normal use.
 - **Songbooks.** Platinum publishes separate songlists per player family; each is a "songbook" (`ks` is the default). A song code is only meaningful within its songbook, and the UI must never show a code without its songbook. Never merge P-series into the shared numbering: its codes differ.
 - **Parser pipeline** (`src/lib/parser`): `extract.ts` pulls text items with geometry and font via `unpdf` (text layer, not the image). Profiles (`monthly-new-songs`, `full-list`) anchor on the bold code font, classify items by x-position, and assemble rows in **content-stream order, not by geometry**. Profile is chosen explicitly from songbook + filename, and each profile asserts its page signature.
 - **Identity.** The song code is the only identity within a songbook: never dedupe on title or artist. Codes are **strings** (leading zeros like `0088` must survive end to end).

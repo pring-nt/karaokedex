@@ -24,6 +24,9 @@ vite.config.ts.timestamp-*
 # Playwright
 test-results
 
+# Songlist PDFs: re-downloadable from data/sources.json. Deploys use data/catalogs.
+/data/pdfs/
+
 # Generated catalog
 *.sqlite
 /static/catalog.*.json
