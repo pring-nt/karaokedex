@@ -36,7 +36,7 @@ export function buildCatalog(db: Db, songbook: Songbook, generatedAt: string): C
 		.from(releases)
 		.where(eq(releases.songbook, songbook))
 		.all()
-		.sort((a, b) => a.label.localeCompare(b.label));
+		.sort((a, b) => a.label.localeCompare(b.label, undefined, { numeric: true }));
 	const releaseIndex = new Map(releaseRows.map((row, index) => [row.id, index]));
 
 	const names = new Map(

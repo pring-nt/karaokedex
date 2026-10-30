@@ -53,7 +53,7 @@ export const CatalogManifest = z.object({
 			slug: Songbook,
 			name: z.string().min(1),
 			models: z.array(z.string().min(1)),
-			file: z.string().regex(/^catalog\.[a-z-]+\.[0-9a-f]{8}\.json$/),
+			file: z.string().regex(/^catalog\.[a-z0-9-]+\.[0-9a-f]{8}\.json$/),
 			version: z.string().min(1),
 			count: Index,
 			/** Spans of codes in use, with runs closer than 100 codes merged. */

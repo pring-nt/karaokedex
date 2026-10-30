@@ -18,7 +18,7 @@ const PRODUCT_SONGBOOKS: Record<string, string> = {
 };
 
 /** Songbooks that are parsed. The rest are tracked so new volumes stay visible. */
-const IN_SCOPE = new Set(['hdd', 'p-series']);
+const IN_SCOPE = new Set(['hdd', 'p-series', 'ks-40']);
 
 const MONTHS = [
 	'january',

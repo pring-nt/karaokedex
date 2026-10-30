@@ -3,6 +3,7 @@ import { applyCorrections, type CorrectionsFile } from '../data/corrections';
 import { extractPages } from './extract';
 import { alphabeticalWarnings, mergeDuplicateCodes, sectionErrors } from './full-list-rules';
 import { parseFullList } from './profiles/full-list';
+import { parseKsVolume } from './profiles/ks-volume';
 import { parseMonthlyNewSongs } from './profiles/monthly-new-songs';
 import { ParsedRelease, type ParsedRow } from './schema';
 import { runWarnings, validateMonthlyRelease } from './validate';
@@ -31,7 +32,7 @@ export interface ParseReleaseResult {
 function finish(
 	input: ParseReleaseInput,
 	parsedRows: readonly ParsedRow[],
-	profile: 'monthly-new-songs' | 'full-list',
+	profile: ParsedRelease['profile'],
 	errors: string[]
 ): { release: ParsedRelease; applied: string[] } {
 	const corrected = applyCorrections(input.songbook, parsedRows, input.corrections ?? {});
@@ -46,7 +47,7 @@ function finish(
 	const release = ParsedRelease.parse({
 		songbook: input.songbook,
 		label: input.label,
-		kind: profile === 'full-list' ? 'full' : 'monthly',
+		kind: RELEASE_KIND[profile],
 		profile,
 		fileHash: createHash('sha256').update(input.data).digest('hex'),
 		codeMin: sorted[0]?.code,
@@ -55,6 +56,12 @@ function finish(
 	});
 	return { release, applied };
 }
+
+const RELEASE_KIND = {
+	'monthly-new-songs': 'monthly',
+	'full-list': 'full',
+	'ks-volume': 'volume'
+} as const;
 
 /** Picks the parser profile from the songbook and parses one PDF into a validated release. */
 export async function parseRelease(input: ParseReleaseInput): Promise<ParseReleaseResult> {
@@ -75,6 +82,20 @@ export async function parseRelease(input: ParseReleaseInput): Promise<ParseRelea
 			columns: Math.max(...parsed.columns),
 			errors,
 			warnings: alphabeticalWarnings(parsed.entries),
+			appliedCorrections: applied
+		};
+	}
+
+	if (input.songbook === 'ks-40') {
+		const parsed = parseKsVolume(pages);
+		const errors: string[] = [];
+		const { release, applied } = finish(input, parsed.rows, 'ks-volume', errors);
+		errors.push(...validateMonthlyRelease(release));
+		return {
+			release,
+			columns: parsed.columns,
+			errors,
+			warnings: runWarnings(release),
 			appliedCorrections: applied
 		};
 	}

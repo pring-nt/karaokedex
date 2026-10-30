@@ -15,6 +15,7 @@ import {
 	columnFiltersFor,
 	initial,
 	nextSort,
+	releaseKey,
 	releaseYears,
 	sortingFor,
 	sortKey
@@ -183,6 +184,15 @@ describe('browsing', () => {
 		expect(columnFiltersFor({ year: '2024', versions: true }, undefined)).toEqual([
 			{ id: 'release', value: '2024' },
 			{ id: 'version', value: true }
+		]);
+	});
+
+	test('volume labels sort by number', () => {
+		const labels = ['vol-35', 'vol-9', 'vol-31-32'];
+		expect(labels.sort((a, b) => releaseKey(a).localeCompare(releaseKey(b)))).toEqual([
+			'vol-9',
+			'vol-31-32',
+			'vol-35'
 		]);
 	});
 

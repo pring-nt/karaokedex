@@ -15,7 +15,7 @@
 </script>
 
 <section class="flex flex-col gap-2" aria-label="Songbook">
-	<div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 md:items-end">
+	<div class="flex flex-wrap items-center justify-between gap-x-2 gap-y-2 md:items-end md:gap-x-6">
 		<SongbookSwitcher value={songbook} {onchange} />
 		{#if ready}
 			<p class="text-micro tracking-wider text-subtle uppercase max-md:hidden">{summary}</p>

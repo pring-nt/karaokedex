@@ -68,7 +68,9 @@ export function runWarnings(release: ParsedRelease): string[] {
 
 /** Warnings where a release's main run does not start right after the previous release's main run. */
 export function crossReleaseWarnings(releases: readonly ParsedRelease[]): string[] {
-	const sorted = [...releases].sort((a, b) => a.label.localeCompare(b.label));
+	const sorted = [...releases].sort((a, b) =>
+		a.label.localeCompare(b.label, undefined, { numeric: true })
+	);
 	const warnings: string[] = [];
 	for (let i = 1; i < sorted.length; i++) {
 		const previous = sorted[i - 1];

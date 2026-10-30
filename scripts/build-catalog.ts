@@ -31,9 +31,10 @@ async function collectInputs(): Promise<PdfInput[]> {
 		if (!existsSync(dir)) continue;
 		for (const name of await readdir(dir)) {
 			const label = name.replace(/\.pdf$/i, '');
-			if (songbook === 'p-series' && /^full-vol-\d+$/.test(label)) {
-				await add(songbook, label, join(dir, name));
-			}
+			const parseable =
+				(songbook === 'p-series' && /^full-vol-\d+$/.test(label)) ||
+				(songbook === 'ks-40' && /^vol-\d+(?:-\d+)?$/.test(label));
+			if (parseable) await add(songbook, label, join(dir, name));
 		}
 	}
 	return inputs;

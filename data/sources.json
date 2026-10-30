@@ -2431,7 +2431,9 @@
       "label": "vol-10",
       "url": "https://www.mediafire.com/file/gsg019aofu4otd1/KS-10-__Vol_10_Additional_List_-_6pp.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-40/vol-10.pdf",
+      "sha256": "0a32fc00370096cb0916b9e84a185c30debb1b80c285155343bed810fbbef04c"
     },
     {
       "songbook": "ks-40",
@@ -2440,7 +2442,9 @@
       "label": "vol-11",
       "url": "https://www.mediafire.com/file/sd84ciiz5fxw437/KS-40_-_Volume_11_Additional_pp_1-3_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-40/vol-11.pdf",
+      "sha256": "27e8db0c93dcab11d6e58b120c323903dfd8ba0b482512ba5ee29c2013f69e27"
     },
     {
       "songbook": "ks-40",
@@ -2449,7 +2453,9 @@
       "label": "vol-12",
       "url": "https://www.mediafire.com/file/b3859k77v3dgczu/KS-40_-_Volume_12_Additional_pp_1-8_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-40/vol-12.pdf",
+      "sha256": "05384e02f1ccfb4b2689739a3dada56d9b92e92c79172d3466c566b46b291c69"
     },
     {
       "songbook": "ks-40",
@@ -2458,7 +2464,9 @@
       "label": "vol-14",
       "url": "https://www.mediafire.com/file/7fovc471yb8w9co/KS-40_-_Volume_14_Additional_pp_1-8_only_%25281%2529.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-40/vol-14.pdf",
+      "sha256": "d2de317853e0190e3effd029730d6cb32eeecc1740ba4ba8c8831e940dd3dede"
     },
     {
       "songbook": "ks-40",
@@ -2467,7 +2475,9 @@
       "label": "vol-15",
       "url": "https://www.mediafire.com/file/l5wv7ez9xooye4i/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-40/vol-15.pdf",
+      "sha256": "f1ec6051c39c2293b13998ddd9431cfe1b2f137a9fa562cfe983c967c838f3b2"
     },
     {
       "songbook": "ks-40",
@@ -2476,7 +2486,9 @@
       "label": "vol-16",
       "url": "https://www.mediafire.com/file/ebnvpruk2ipdpor/KS-40_-_Volume_16_Additional_pp_1-3_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-40/vol-16.pdf",
+      "sha256": "e5df39028be78ac662446831826f28561455ee530e7c1d1b9400d42fa78508e3"
     },
     {
       "songbook": "ks-40",
@@ -2485,7 +2497,9 @@
       "label": "vol-17",
       "url": "https://www.mediafire.com/file/1m3x8rv4csqf08k/KS-40_-_Volume_17_Additional_pp_1-4_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-40/vol-17.pdf",
+      "sha256": "909109bd57027138cae37a02cab7566b9fd9e58714962f6a01a30a30205d6f93"
     },
     {
       "songbook": "ks-40",
@@ -2494,7 +2508,9 @@
       "label": "vol-18",
       "url": "https://www.mediafire.com/file/ni1p2q3r0bvjs64/KS-40_-_Volume_18_Additional_pp_1-6_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-40/vol-18.pdf",
+      "sha256": "61139f2dd329314d24b7bf3e469b38c51e77786d2770c7cb5da85fb3dd7d7f31"
     },
     {
       "songbook": "ks-40",
@@ -2503,7 +2519,9 @@
       "label": "vol-19",
       "url": "https://www.mediafire.com/file/g30qwhtde0ah000/KS-40+-+Volume+19+Additional+pp+1-5+only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-40/vol-19.pdf",
+      "sha256": "843ef5828fdbc580801a4e175d17fb2702fb31746feccd2a1012e285335083d0"
     },
     {
       "songbook": "ks-40",
@@ -2512,7 +2530,9 @@
       "label": "vol-2",
       "url": "https://www.mediafire.com/file/pdlzmtuk4ciasmx/KS-10_-_Volume_2_Additional_List_-_4pp_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-40/vol-2.pdf",
+      "sha256": "9ba5c789c030f8d7a38d3e4dd4d406e7c8de812be3cd47948552584d2156f7ae"
     },
     {
       "songbook": "ks-40",
@@ -2521,7 +2541,9 @@
       "label": "vol-20",
       "url": "https://www.mediafire.com/file/yoz35go3bdxaeus/KS-40_-_Volume_20_Additional_pp_1-4_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-40/vol-20.pdf",
+      "sha256": "b950f787cace9276aaff18d61fdc8b8a27ecb7fd3204c2a80647cf8fc8e09f52"
     },
     {
       "songbook": "ks-40",
@@ -2530,7 +2552,9 @@
       "label": "vol-21",
       "url": "https://www.mediafire.com/file/jaai6xgcppa3vap/KS-40_-_Volume_21_Additional_pp_1-4_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-40/vol-21.pdf",
+      "sha256": "409d8d678125a802995827837c2a814c986c0afe31670a7c8742306f790eedb8"
     },
     {
       "songbook": "ks-40",
@@ -2539,7 +2563,9 @@
       "label": "vol-22",
       "url": "https://www.mediafire.com/file_premium/7ot5wf691fo1z1x/KS-40_-_Volume_22_Additional_pp_1-4_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-40/vol-22.pdf",
+      "sha256": "c36f7a5d917b8f0404740fc5b2b1b25e23308b7dd9c228fbc979dfbe8845a46a"
     },
     {
       "songbook": "ks-40",
@@ -2548,7 +2574,9 @@
       "label": "vol-23",
       "url": "https://www.mediafire.com/file_premium/ui4xxlgqirs1b0h/KS-40_-_Volume_23_Additional_pp_1-3_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-40/vol-23.pdf",
+      "sha256": "0af6b5167db77a8dbe84a6cd9db7ef35ffe265d25d25a98978a8d9c99eb99c13"
     },
     {
       "songbook": "ks-40",
@@ -2557,7 +2585,9 @@
       "label": "vol-24",
       "url": "https://www.mediafire.com/file_premium/50onpp4nc4f9fjs/KS-40_-_Volume_24_Additional_List_-_pages_1-3_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-40/vol-24.pdf",
+      "sha256": "8e624d0e54b8110a3341e3b3d8f59cd6e6caabab33dad38e91af770f448bcf61"
     },
     {
       "songbook": "ks-40",
@@ -2566,7 +2596,9 @@
       "label": "vol-25",
       "url": "https://www.mediafire.com/file_premium/ixrkdnhypahqg22/KS-40_-_Volume_25_Additional_List_-_pages_1-3_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-40/vol-25.pdf",
+      "sha256": "9d1aa7e3b64c046b0e5ec6f1fb14ff7144f1b60967211bde3a624ee4ca6b672f"
     },
     {
       "songbook": "ks-40",
@@ -2575,7 +2607,9 @@
       "label": "vol-26",
       "url": "https://www.mediafire.com/file_premium/un2474checc3agm/KS-40_-_Volume_26_Additional_List_-_pages_1-2_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-40/vol-26.pdf",
+      "sha256": "e56a2a65540138f782ad9ffad646f97252841b3a488ff4813a2fcc095f8e8cba"
     },
     {
       "songbook": "ks-40",
@@ -2584,7 +2618,9 @@
       "label": "vol-27",
       "url": "https://www.mediafire.com/file_premium/y4ch9kmworu3hqc/KS-40_-_Volume_27_Additional_List_-_pages_1-2_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-40/vol-27.pdf",
+      "sha256": "6248e0b0752d3c576aad4623ac93cee8a3a130cdb62feac429b0ee1dbb84a875"
     },
     {
       "songbook": "ks-40",
@@ -2593,7 +2629,9 @@
       "label": "vol-28",
       "url": "https://www.mediafire.com/file_premium/ukckus2vp6uv2lz/KS-40_-_Volume_28_Additional_List_-_page_1_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-40/vol-28.pdf",
+      "sha256": "e93a337dc891573971445e8c38729f44bc3a2fb829f2da29f3a4b04d4502edc4"
     },
     {
       "songbook": "ks-40",
@@ -2602,7 +2640,9 @@
       "label": "vol-29",
       "url": "https://www.mediafire.com/file_premium/auw1qe598thwod6/KS-40_-_Volume_29_Additional_List_-_page_1_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-40/vol-29.pdf",
+      "sha256": "f07e001f8eb325f22438b6666495572beb28e26ec112203b5fbeecea8849bead"
     },
     {
       "songbook": "ks-40",
@@ -2611,7 +2651,9 @@
       "label": "vol-3",
       "url": "https://www.mediafire.com/file/jg1kgxwcttmt6dg/KS-10_-_Volume_3_Additional_List_-_4pp_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-40/vol-3.pdf",
+      "sha256": "d00667537211cf4e8df4647c46ed763fd154554c9a0c3d6526b8da59d8665b37"
     },
     {
       "songbook": "ks-40",
@@ -2620,7 +2662,9 @@
       "label": "vol-30",
       "url": "https://www.mediafire.com/file_premium/52st2njktx3d1km/KS-40_-_Volume_30_Additional_List_-_pages_1-2_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-40/vol-30.pdf",
+      "sha256": "afa47e392e0ef493f2eb547fdae59e59f01beb4e4ce0f41141d69b3d467f1c8b"
     },
     {
       "songbook": "ks-40",
@@ -2629,7 +2673,9 @@
       "label": "vol-31-32",
       "url": "https://www.mediafire.com/file_premium/dvedjgv9i8y58kx/KS-40_-_Volume_31-32_Additional_List_-_pages_1-3_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-40/vol-31-32.pdf",
+      "sha256": "d33e46f249c099a61a25dd89b43d19bf5d0f2d6b7cb1cd09c1714274495f6cce"
     },
     {
       "songbook": "ks-40",
@@ -2638,7 +2684,9 @@
       "label": "vol-33",
       "url": "https://www.mediafire.com/file_premium/8qwkyxj1np4zb8r/KS-40_-_Volume_33_Additional_List_pp_1-2_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-40/vol-33.pdf",
+      "sha256": "d81c24f861ab5d43f987e9e7afb9531f207d73de5917dc28a03dba964bc2ca59"
     },
     {
       "songbook": "ks-40",
@@ -2647,7 +2695,9 @@
       "label": "vol-35",
       "url": "https://www.mediafire.com/file_premium/ggwf8wlic12cvx5/KS-40_-_Volume_35_Additional_List__yellow__pp__260923_103502.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-40/vol-35.pdf",
+      "sha256": "05a8c4bf45b71f55429079ae1e3b54c9e6b450b93d377c02d21be81525c5052a"
     },
     {
       "songbook": "ks-40",
@@ -2656,7 +2706,9 @@
       "label": "vol-4",
       "url": "https://www.mediafire.com/file/xl3dl2al21tl88v/KS-10_-_Volume_4_Additional_List_-_3pp_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-40/vol-4.pdf",
+      "sha256": "fc5c399043d53bfeb91e4ee8db78a4059f4d45e7c88ad9c2a054afad1bba86f2"
     },
     {
       "songbook": "ks-40",
@@ -2665,7 +2717,9 @@
       "label": "vol-5",
       "url": "https://www.mediafire.com/file/abez12bxqjcl0z1/KS-10_-_Volume_5_Additional_List_-_4pp_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-40/vol-5.pdf",
+      "sha256": "ce7e71fe7bbeb5a6d4194387fc073d1e40f44c8e99a43a6dfead002315b09edb"
     },
     {
       "songbook": "ks-40",
@@ -2674,7 +2728,9 @@
       "label": "vol-6",
       "url": "https://www.mediafire.com/file/xqbf5w4qnnkq6wj/KS-10_-_Volume_6_Additional_List_-_7pp_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-40/vol-6.pdf",
+      "sha256": "303f856a426164e75f2566f83994aa6a98c451b6ffaf77bc3d83331529f50345"
     },
     {
       "songbook": "ks-40",
@@ -2683,7 +2739,9 @@
       "label": "vol-7",
       "url": "https://www.mediafire.com/file/10lb3143i6106p6/KS-10_-_Volume_7_Additional_List_-_10pp_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-40/vol-7.pdf",
+      "sha256": "9758c839ccba13d0759650d2997f6b6b8e37353f8fc1a952596638c647fb7557"
     },
     {
       "songbook": "ks-40",
@@ -2692,7 +2750,9 @@
       "label": "vol-8",
       "url": "https://www.mediafire.com/file/6rhixtyxijn6cb6/KS-10_-_Volume_8_Additional_List_-_6pp_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-40/vol-8.pdf",
+      "sha256": "1d3a0aec0b7014478ec4911c46a948ad57f9ef9c88963cbab483ea90220dbe4c"
     },
     {
       "songbook": "ks-40",
@@ -2701,7 +2761,9 @@
       "label": "vol-9",
       "url": "https://www.mediafire.com/file/eo5eq4hhshtmbi9/KS-10_and_KS-40_Volume_9_Additional_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-40/vol-9.pdf",
+      "sha256": "bb914d4df5ab1268fe3d5a07a9cf4834b91c45ec132812c370a87ca61fe5f360"
     },
     {
       "songbook": "ks-5",

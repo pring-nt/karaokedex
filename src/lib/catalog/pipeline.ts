@@ -57,7 +57,9 @@ export async function buildCatalogs(
 	const written = new Set<Songbook>();
 
 	const ordered = [...inputs].sort(
-		(a, b) => a.songbook.localeCompare(b.songbook) || a.label.localeCompare(b.label)
+		(a, b) =>
+			a.songbook.localeCompare(b.songbook) ||
+			a.label.localeCompare(b.label, undefined, { numeric: true })
 	);
 	for (const input of ordered) {
 		const result = await parseRelease({ ...input, corrections: options.corrections });

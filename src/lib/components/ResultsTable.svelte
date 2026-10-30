@@ -27,6 +27,7 @@
 		columnFiltersFor,
 		initial,
 		nextSort,
+		releaseKey,
 		sortingFor,
 		sortKey,
 		type SortColumn,
@@ -108,7 +109,7 @@
 	const byLetter: FilterFn<Features, Song> = (row, id, letter) =>
 		initial(row.getValue<string>(id)) === letter;
 	const byYear: FilterFn<Features, Song> = (row, id, year: string) =>
-		row.getValue<string>(id).startsWith(`${year}-`);
+		row.original.release.startsWith(`${year}-`);
 	const hasVersion: FilterFn<Features, Song> = (row, id) => row.getValue(id) !== null;
 
 	const columns: ColumnDef<Features, Song>[] = [
@@ -129,7 +130,7 @@
 		},
 		{
 			id: 'release',
-			accessorKey: 'release',
+			accessorFn: (song) => releaseKey(song.release),
 			header: 'Added',
 			sortFn: byValue,
 			filterFn: byYear

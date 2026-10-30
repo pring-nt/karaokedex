@@ -117,7 +117,7 @@ export class SearchEngine {
 				codeMax,
 				count: counts.get(label) ?? 0
 			}))
-			.sort((a, b) => b.label.localeCompare(a.label));
+			.sort((a, b) => b.label.localeCompare(a.label, undefined, { numeric: true }));
 		this.index = new SearchIndex(songs);
 		this.current = songbook;
 		return { songbook, version: catalog.version, count: songs.length, fromCache };

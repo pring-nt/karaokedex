@@ -51,6 +51,11 @@ export function sortKey(text: string): string {
 	return normalize(text);
 }
 
+/** Sorts `vol-9` before `vol-35`, as well as dated labels. */
+export function releaseKey(label: string): string {
+	return label.replace(/\d+/g, (digits) => digits.padStart(6, '0'));
+}
+
 /** Years of dated releases, newest first. Full-list labels such as `full-vol-59` have none. */
 export function releaseYears(releases: Iterable<string>): string[] {
 	const years = new Set<string>();

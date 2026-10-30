@@ -1,3 +1,92 @@
 {
-  "hdd:29386": { "ifTitle": "Ako Ang Namingwit", "code": "29369" }
+  "hdd:29386": {
+    "ifTitle": "Ako Ang Namingwit",
+    "code": "29369"
+  },
+  "hdd:16982": {
+    "title": "Metalingus",
+    "creditRaw": "Alter Bridge"
+  },
+  "ks-40:16568": {
+    "title": "I Wish That I Was Making Love To You Tonight"
+  },
+  "ks-40:16660": {
+    "title": "I Didn't Know I Was Looking For Love"
+  },
+  "ks-40:16925": {
+    "title": "I Don't Want To Live Without Your Love"
+  },
+  "ks-40:16983": {
+    "title": "Golden Slumbers, Carry That Weight, The End"
+  },
+  "ks-40:17133": {
+    "title": "Love Me Like You Mean It"
+  },
+  "ks-40:18318": {
+    "title": "I'm Not Supposed To Love You Anymore"
+  },
+  "ks-40:18367": {
+    "title": "The Adventures Of Raindance Maggie"
+  },
+  "ks-40:18568": {
+    "title": "The Way You Do The Things You Do"
+  },
+  "ks-40:16639": {
+    "title": "Bagong Umaga (Strawberry Lane OST)"
+  },
+  "ks-40:27626": {
+    "title": "I Went To Your Wedding"
+  },
+  "ks-40:10952": {
+    "title": "Bisaya Ko Irespeto Ko"
+  },
+  "ks-40:27843": {
+    "title": "Gitik-Gitik Labyog-Labyog abyog"
+  },
+  "ks-40:28772": {
+    "title": "Dahil Sa 'Yo Natutong Magmahal"
+  },
+  "ks-40:29505": {
+    "title": "Let Me Reintroduce Myself"
+  },
+  "ks-40:38020": {
+    "title": "All We Ever Find"
+  },
+  "ks-40:38199": {
+    "title": "Nothing's Gonna Change My Love For You"
+  },
+  "ks-40:40670": {
+    "title": "Nangako Ka, Sa Iba Mo Lang Tinupad"
+  },
+  "ks-40:40687": {
+    "title": "Turn the Lights Back On"
+  },
+  "ks-40:40729": {
+    "title": "My House Is Not A Home"
+  },
+  "ks-40:40802": {
+    "title": "Nagmamahal Kahit Bawal"
+  },
+  "ks-40:41636": {
+    "title": "Hanggang Sa Magsawa"
+  },
+  "ks-40:41937": {
+    "title": "Grandma Calls The Boy Bad News"
+  },
+  "ks-40:42243": {
+    "title": "Huwag Na Huwag Mong Sasabihin",
+    "versionNote": "R&B Cover"
+  },
+  "ks-40:42244": {
+    "title": "Muntik na Kitang Minahal",
+    "versionNote": "R&B Cover"
+  },
+  "ks-40:42352": {
+    "title": "Paligaw-Ligaw Tingin",
+    "versionNote": "Rock Cover"
+  },
+  "ks-40:40953": {
+    "title": "Kyrie & Luka",
+    "creditRaw": "Eminem ft. 2 Chainz"
+  }
 }

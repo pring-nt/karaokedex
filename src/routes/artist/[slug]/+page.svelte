@@ -10,12 +10,12 @@
 	import EmptyState from '#lib/components/EmptyState.svelte';
 	import PageHeader from '#lib/components/PageHeader.svelte';
 	import SongPanel from '#lib/components/SongPanel.svelte';
-	import { SONGBOOKS, Songbook } from '#lib/songbooks';
+	import { SONGBOOK_SHORT, SONGBOOKS, Songbook } from '#lib/songbooks';
 
 	const slug = $derived(page.params.slug ?? '');
 	const params = $derived(browser ? parseParams(page.url.searchParams) : {});
 	const songbook = $derived(params.book ?? preferences.songbook);
-	const other = $derived(Songbook.options.find((option) => option !== songbook) ?? songbook);
+	const others = $derived(Songbook.options.filter((option) => option !== songbook));
 
 	let songs = $state<Song[]>([]);
 	const name = $derived(
@@ -47,12 +47,14 @@
 			<EmptyState
 				eyebrow="Artist"
 				title="No songs in this songbook"
-				subhead="This artist may be listed in the other songbook."
+				subhead="This artist may be listed in another songbook."
 			>
-				<div>
-					<a class={button()} href={resolve(`/artist/[slug]?book=${other}`, { slug })}>
-						Look in {SONGBOOKS[other].name}
-					</a>
+				<div class="flex flex-wrap gap-2">
+					{#each others as other (other)}
+						<a class={button()} href={resolve(`/artist/[slug]?book=${other}`, { slug })}>
+							Look in {SONGBOOK_SHORT[other]}
+						</a>
+					{/each}
 				</div>
 			</EmptyState>
 		{/snippet}
