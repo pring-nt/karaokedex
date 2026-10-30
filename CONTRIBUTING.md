@@ -49,6 +49,8 @@ bun run verify
 
 It runs formatting, lint, type checks, the design token check, an unused code check, the tests and a build, and it must pass with no warnings. Please don't silence a check with `eslint-disable`, `@ts-ignore` or `@ts-expect-error`. Open the pull request and ask for help instead.
 
+Tests that read real songlist PDFs are skipped unless you have local copies in `tests/fixtures/` and `data/pdfs/`, so CI covers less of the parser than a maintainer's machine. If you change a parser, say what you tested it against.
+
 UI changes must be tested at phone width first (375 px), because most people use this at a venue, on a phone. Include a note on what you tested.
 
 ## Project rules

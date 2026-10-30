@@ -1,3 +1,4 @@
+import { existsSync } from 'node:fs';
 import { describe, expect, test } from 'bun:test';
 import { readdir, readFile } from 'node:fs/promises';
 import { join } from 'node:path';
@@ -8,7 +9,10 @@ import type { ParsedRelease } from '../src/lib/parser/schema';
 import { crossReleaseWarnings } from '../src/lib/parser/validate';
 
 const dir = join(import.meta.dir, 'fixtures', 'hdd');
-const files = (await readdir(dir)).filter((name) => /^\d{4}-\d{2}\.pdf$/.test(name)).sort();
+/** Songlist PDFs are not in the repo. Without local copies, these tests skip. */
+const files = existsSync(dir)
+	? (await readdir(dir)).filter((name) => /^\d{4}-\d{2}\.pdf$/.test(name)).sort()
+	: [];
 const RECENT = ['2026-06.pdf', '2026-07.pdf', '2026-08.pdf', '2026-09.pdf', '2026-10.pdf'];
 /** Platinum prints code 29386 twice in this release, for two different songs. */
 const KNOWN_INVALID = ['2021-03.pdf'];
@@ -22,7 +26,7 @@ const parsed = new Map(
 	await Promise.all(files.map(async (name) => [name, await parse(name)] as const))
 );
 
-describe('HDD monthly fixtures', () => {
+describe.skipIf(files.length === 0)('HDD monthly fixtures', () => {
 	test('every fixture parses with no errors', () => {
 		expect(files.length).toBeGreaterThan(0);
 		for (const [name, result] of parsed) {
@@ -126,7 +130,7 @@ describe('HDD monthly fixtures', () => {
 	});
 });
 
-describe('older HDD layouts', () => {
+describe.skipIf(files.length === 0)('older HDD layouts', () => {
 	function row(name: string, code: string) {
 		const found = parsed.get(name)?.release.rows.find((entry) => entry.code === code);
 		if (!found) throw new Error(`${code} missing from ${name}`);

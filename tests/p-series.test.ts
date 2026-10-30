@@ -5,7 +5,7 @@ import { join } from 'node:path';
 import { createDb } from '../src/lib/db';
 import { songs, songTitles } from '../src/lib/db/schema';
 import { writeRelease } from '../src/lib/db/write';
-import { parseRelease } from '../src/lib/parser/parse-release';
+import { parseRelease, type ParseReleaseResult } from '../src/lib/parser/parse-release';
 import type { ParsedRow } from '../src/lib/parser/schema';
 
 const samplePath = join(import.meta.dir, 'fixtures', 'p-series', 'full-vol-59-sample.pdf');
@@ -16,7 +16,11 @@ async function parse(path: string, label: string) {
 	return parseRelease({ songbook: 'p-series', label, data: new Uint8Array(await readFile(path)) });
 }
 
-const sample = await parse(samplePath, 'full-vol-59-sample');
+/** Songlist PDFs are not in the repo. Without local copies, these tests skip. */
+const hasSample = existsSync(samplePath);
+const sample = hasSample
+	? await parse(samplePath, 'full-vol-59-sample')
+	: (null as unknown as ParseReleaseResult);
 const full = existsSync(fullPath) ? await parse(fullPath, 'full-vol-59') : null;
 
 function row(rows: readonly ParsedRow[], code: string): ParsedRow {
@@ -25,7 +29,7 @@ function row(rows: readonly ParsedRow[], code: string): ParsedRow {
 	return found;
 }
 
-describe('P-series Vol. 59 sample (pages 1, 10, 40, 70, 78)', () => {
+describe.skipIf(!hasSample)('P-series Vol. 59 sample (pages 1, 10, 40, 70, 78)', () => {
 	test('is a full-list release with three code columns and no errors beyond missing section headers', () => {
 		expect(sample.release).toMatchObject({
 			songbook: 'p-series',

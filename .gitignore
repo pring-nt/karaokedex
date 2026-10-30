@@ -26,6 +26,7 @@ test-results
 
 # Songlist PDFs: re-downloadable from data/sources.json. Deploys use data/catalogs.
 /data/pdfs/
+/tests/fixtures/**/*.pdf
 
 # Generated catalog
 *.sqlite

@@ -3,7 +3,7 @@ import { existsSync } from 'node:fs';
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { buildShared, catalogFileName } from '../src/lib/catalog/build';
-import { buildCatalogs, type PdfInput } from '../src/lib/catalog/pipeline';
+import { buildCatalogs, type PdfInput, type PipelineResult } from '../src/lib/catalog/pipeline';
 import { Catalog, CatalogManifest, expandCatalog } from '../src/lib/catalog/schema';
 import { SearchIndex } from '../src/lib/search';
 import type { Songbook } from '../src/lib/songbooks';
@@ -18,17 +18,22 @@ async function pdf(songbook: PdfInput['songbook'], label: string, path: string):
 	return { songbook, label, data: new Uint8Array(await readFile(path)) };
 }
 
-const hdd = await Promise.all(
-	['2026-06', '2026-07', '2026-08'].map((label) =>
-		pdf('hdd', label, join(fixtures, 'hdd', `${label}.pdf`))
-	)
-);
-const sample = await pdf(
-	'p-series',
-	'full-vol-59',
-	join(fixtures, 'p-series', 'full-vol-59-start.pdf')
-);
-const built = await buildCatalogs([...hdd, sample], { aliases, corrections: {}, generatedAt: NOW });
+const hasPdfs = existsSync(join(fixtures, 'hdd', '2026-06.pdf'));
+
+/** Songlist PDFs are not in the repo. Without local copies, the tests that read them skip. */
+const hdd = hasPdfs
+	? await Promise.all(
+			['2026-06', '2026-07', '2026-08'].map((label) =>
+				pdf('hdd', label, join(fixtures, 'hdd', `${label}.pdf`))
+			)
+		)
+	: [];
+const sample = hasPdfs
+	? await pdf('p-series', 'full-vol-59', join(fixtures, 'p-series', 'full-vol-59-start.pdf'))
+	: { songbook: 'p-series' as const, label: '', data: new Uint8Array() };
+const built: PipelineResult = hasPdfs
+	? await buildCatalogs([...hdd, sample], { aliases, corrections: {}, generatedAt: NOW })
+	: { catalogs: [], shared: null, manifest: { songbooks: [] }, reports: [], errors: [] };
 
 function catalogFor(slug: 'hdd' | 'p-series') {
 	const found = built.catalogs.find((entry) => entry.catalog.songbook === slug);
@@ -36,7 +41,7 @@ function catalogFor(slug: 'hdd' | 'p-series') {
 	return found;
 }
 
-describe('buildCatalogs', () => {
+describe.skipIf(!hasPdfs)('buildCatalogs', () => {
 	test('emits one validated catalog per songbook and a matching manifest', () => {
 		expect(built.errors).toEqual([]);
 		expect(built.catalogs.map((entry) => entry.catalog.songbook)).toEqual(['hdd', 'p-series']);
@@ -165,7 +170,7 @@ async function failure(promise: Promise<unknown>): Promise<string> {
 	return '';
 }
 
-describe('SearchEngine', () => {
+describe.skipIf(!hasPdfs)('SearchEngine', () => {
 	function memoryCache() {
 		const store = new Map<string, string>();
 		const stats = { reads: 0, writes: 0 };
@@ -264,7 +269,7 @@ describe('SearchEngine', () => {
 	});
 });
 
-describe('SearchEngine filters and lists', () => {
+describe.skipIf(!hasPdfs)('SearchEngine filters and lists', () => {
 	async function loaded() {
 		const served = new Map<string, string>([
 			['/catalog-manifest.json', JSON.stringify(built.manifest)],

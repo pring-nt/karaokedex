@@ -30,6 +30,8 @@ All lists except P-Series share one numbering. `buildShared` merges them into `c
 
 `knip.jsonc` ignores dependencies from the planned stack that no code imports yet (and the vendored shadcn code, `src/lib/utils.ts` and `src/lib/components/ui`); delete each entry in the phase that first uses it.
 
+No songlist PDF is tracked, including `tests/fixtures/{hdd,p-series}/*.pdf`, which are local copies (HDD files come from `data/pdfs/hdd`, P-Series samples from `scripts/make-fixtures.ts`). Tests that need them skip without them, as they do in CI, so run the suite locally when changing a parser.
+
 ## Commands
 
 Use **bun**, not npm/pnpm/yarn (`.npmrc` sets `engine-strict=true`; do not add other lockfiles).
