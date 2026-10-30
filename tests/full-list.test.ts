@@ -86,7 +86,9 @@ describe('hasAccentMojibake', () => {
 		expect(hasAccentMojibake('Jos`E Maria')).toBe(true);
 		expect(hasAccentMojibake("G'omez")).toBe(true);
 		expect(hasAccentMojibake("Ang Awit Ko Sa 'Yo")).toBe(false);
-		expect(hasAccentMojibake("Don't Stop")).toBe(true);
+		expect(hasAccentMojibake("Sa'yo Lamang, Ngayo'y Ikaw, I'm Here")).toBe(false);
+		expect(hasAccentMojibake("Don't Stop")).toBe(false);
+		expect(hasAccentMojibake("I've Had It, She'll Know, Rock'n'Roll")).toBe(false);
 	});
 });
 

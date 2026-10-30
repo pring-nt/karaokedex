@@ -1,5 +1,6 @@
 import { extractVersionNote } from '../../normalize/version';
 import type { PdfPage, TextItem } from '../extract';
+import { isBrokenWordTail, joinFragments } from '../join';
 import { lintRow } from '../lint';
 import type { ParsedRow, ReviewReason } from '../schema';
 
@@ -38,29 +39,6 @@ interface RowDraft {
 	title: TextItem[];
 	code: TextItem | null;
 	credit: TextItem[];
-}
-
-function joinFragments(items: readonly TextItem[]): { text: string; continuations: string[] } {
-	let text = '';
-	let previous: TextItem | null = null;
-	let pendingSpace = false;
-	const continuations: string[] = [];
-	for (const item of items) {
-		if (item.str === '') continue;
-		if (item.str.trim() === '') {
-			pendingSpace = text.length > 0;
-			continue;
-		}
-		if (previous) {
-			const gap = pendingSpace || previous.hasEOL || /\s$/.test(previous.str);
-			text += gap ? ' ' : '';
-			if (previous.hasEOL) continuations.push(item.str.trim());
-		}
-		text += item.str.trim();
-		previous = item;
-		pendingSpace = false;
-	}
-	return { text: text.replace(/\s+/g, ' ').trim(), continuations };
 }
 
 function detectLabel(items: readonly TextItem[]): string {
@@ -160,7 +138,7 @@ export function parseMonthlyNewSongs(pages: readonly PdfPage[]): MonthlyParse {
 
 		const { title, versionNote } = extractVersionNote(rawTitle);
 		const reviewReasons: ReviewReason[] = lintRow(rawTitle, creditRaw);
-		if ([...titleWraps, ...creditWraps].some((fragment) => fragment.length <= 2)) {
+		if ([...titleWraps, ...creditWraps].some(isBrokenWordTail)) {
 			reviewReasons.push('short-continuation');
 		}
 		return {

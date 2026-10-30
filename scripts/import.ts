@@ -9,11 +9,13 @@ import { writeRelease } from '../src/lib/db/write';
 import { parseRelease } from '../src/lib/parser/parse-release';
 import type { ParsedRelease } from '../src/lib/parser/schema';
 import { crossReleaseWarnings } from '../src/lib/parser/validate';
-import { Songbook } from '../src/lib/songbooks';
+import { splitCredit } from '../src/lib/normalize/credit';
+import { normalize } from '../src/lib/normalize/text';
+import { nearDuplicateArtists } from '../src/lib/parser/full-list-rules';
+import { SONGBOOKS, Songbook } from '../src/lib/songbooks';
 
 const USAGE =
 	'usage: bun run import <pdf> [--songbook hdd] [--label YYYY-MM] [--db data/karaokedex.sqlite] [--yes]';
-const LABEL = /^\d{4}-\d{2}$/;
 
 const { values, positionals } = parseArgs({
 	allowPositionals: true,
@@ -38,10 +40,15 @@ const songbook = Songbook.safeParse(values.songbook ?? basename(dirname(pdfPath)
 if (!songbook.success) fail(`cannot infer the songbook from the path; pass --songbook\n${USAGE}`);
 const book = songbook.data;
 
+const monthly = SONGBOOKS[book].kind === 'monthly';
+const LABEL = monthly ? /^\d{4}-\d{2}$/ : /^(?:full-)?vol-\d+(?:-\d+)?$/;
 const stem = basename(pdfPath).replace(/\.pdf$/i, '');
 const label = values.label ?? stem;
-if (!LABEL.test(label))
-	fail(`"${stem}" is not a YYYY-MM file name; pass --label YYYY-MM\n${USAGE}`);
+if (!LABEL.test(label)) {
+	fail(
+		`"${stem}" is not a ${monthly ? 'YYYY-MM' : 'full-vol-N'} file name; pass --label\n${USAGE}`
+	);
+}
 
 const data = new Uint8Array(await readFile(pdfPath));
 const result = await parseRelease({ songbook: book, label, data });
@@ -55,6 +62,7 @@ const release: ParsedRelease = { ...result.release, rows: corrected.rows };
 
 async function siblingReleases(): Promise<ParsedRelease[]> {
 	const siblings: ParsedRelease[] = [];
+	if (!monthly) return siblings;
 	for (const name of await readdir(dirname(pdfPath))) {
 		const siblingLabel = name.replace(/\.pdf$/i, '');
 		if (!LABEL.test(siblingLabel) || siblingLabel === label) continue;
@@ -71,16 +79,41 @@ const gapWarnings = crossReleaseWarnings([...(await siblingReleases()), release]
 );
 const flagged = release.rows.filter((row) => row.needsReview);
 
+const byReason = new Map<string, typeof flagged>();
+for (const row of flagged) {
+	for (const reason of row.reviewReasons)
+		byReason.set(reason, [...(byReason.get(reason) ?? []), row]);
+}
+const alias = (name: string) => aliases.map[normalize(name)] ?? name;
+const artistNames = release.rows.flatMap((row) =>
+	splitCredit(row.creditRaw, aliases).map((artist) => artist.name)
+);
+const nearDuplicates = nearDuplicateArtists(artistNames, alias);
+
 console.log(`songbook   ${release.songbook}`);
 console.log(`release    ${release.label} (${release.profile}, ${String(result.columns)} columns)`);
 console.log(`rows       ${String(release.rows.length)}`);
 console.log(`range      ${release.codeMin}-${release.codeMax}`);
-console.log(`contiguous ${result.errors.length === 0 ? 'yes' : 'NO'}`);
+console.log(
+	`alt titles ${String(release.rows.filter((row) => row.altTitles.length > 0).length)} songs`
+);
+if (monthly) console.log(`contiguous ${result.errors.length === 0 ? 'yes' : 'NO'}`);
 for (const error of result.errors) console.log(`  error: ${error}`);
-for (const warning of gapWarnings) console.log(`  warning: ${warning}`);
+for (const warning of [...gapWarnings, ...result.warnings].slice(0, 20)) {
+	console.log(`  warning: ${warning}`);
+}
+if (result.warnings.length > 20)
+	console.log(`  ... ${String(result.warnings.length - 20)} more warnings`);
 console.log(`needs review: ${String(flagged.length)}`);
-for (const row of flagged) {
-	console.log(`  ${row.code} [${row.reviewReasons.join(', ')}] ${row.title} | ${row.creditRaw}`);
+for (const [reason, rows] of byReason) {
+	console.log(`  ${reason} (${String(rows.length)})`);
+	for (const row of rows) console.log(`    ${row.code} ${row.title} | ${row.creditRaw}`);
+}
+if (nearDuplicates.length > 0) {
+	console.log(
+		`near-duplicate artists (${String(nearDuplicates.length)}), add aliases if they are the same:`
+	);
+	for (const [a, b] of nearDuplicates) console.log(`  ${a} / ${b}`);
 }
 
 if (result.errors.length > 0) fail('\nrefusing to import a release with errors');

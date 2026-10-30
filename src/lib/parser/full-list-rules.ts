@@ -107,13 +107,16 @@ export function alphabeticalWarnings(entries: readonly FullListEntry[]): string[
 	return warnings;
 }
 
-/** Accent mojibake like `Jos``E` or `G'omez`: a backtick, or a quote before a lowercase letter inside a word. */
+/**
+ * Accent mojibake like `Jos`E` or `G'omez`: a backtick, or a capital letter followed by a quote and
+ * a lowercase letter. Filipino contractions (`Sa'yo`) and English ones (`I'm`, `n't`) are not flagged.
+ */
 export function hasAccentMojibake(text: string): boolean {
-	return /`|\p{L}'\p{Ll}/u.test(text);
+	return /`|\p{Lu}'(?!(?:t|s|m|d|n|ll|re|ve)\b)\p{Ll}/u.test(text);
 }
 
 /**
- * Pairs of artist names within `maxDistance` edits after normalization. Pairs already mapped to
+ * Pairs of artist names within `maxDistance` edits after normalization, and within 15% of the shorter name's length so short names do not pair up by chance. Pairs already mapped to
  * the same canonical name are ignored, so the report only lists spellings still to be aliased.
  */
 export function nearDuplicateArtists(
@@ -130,7 +133,11 @@ export function nearDuplicateArtists(
 			const [aNorm, aName] = unique[i] ?? ['', ''];
 			const [bNorm, bName] = unique[j] ?? ['', ''];
 			if (Math.min(aNorm.length, bNorm.length) < 5) continue;
-			if (boundedEditDistance(aNorm, bNorm, maxDistance) <= maxDistance) pairs.push([aName, bName]);
+			const allowed = Math.min(
+				maxDistance,
+				Math.floor(Math.min(aNorm.length, bNorm.length) * 0.15)
+			);
+			if (boundedEditDistance(aNorm, bNorm, allowed) <= allowed) pairs.push([aName, bName]);
 		}
 	}
 	return pairs;
