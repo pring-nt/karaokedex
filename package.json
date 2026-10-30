@@ -14,6 +14,7 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --fail-on-warnings",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"check:tokens": "bun scripts/check-tokens.ts",
+		"import": "bun scripts/import.ts",
 		"knip": "knip",
 		"test": "bun test",
 		"test:e2e": "playwright test",

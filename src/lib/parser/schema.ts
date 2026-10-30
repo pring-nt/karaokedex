@@ -7,7 +7,7 @@ export const ReviewReason = z.enum([
 	'unbalanced-brackets',
 	'dangling-credit',
 	'empty-credit',
-	'near-capacity'
+	'short-continuation'
 ]);
 export type ReviewReason = z.infer<typeof ReviewReason>;
 

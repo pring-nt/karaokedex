@@ -10,7 +10,9 @@ KaraokeDex is a searchable web songbook for **Platinum Karaoke only**. Song code
 
 ## Current state
 
-Phase 0 (scaffold and tooling) is done on `feat/phase-0-scaffold`: tokens, base CSS, a placeholder page, and the `verify` gate. `scripts/` holds only `check-tokens.ts` and `tests/` only its test. The scripts from PLAN.md section 0.3 that belong to later phases (`import`, `catalog:build`, `sources:check`, `sources:status`) do not exist yet, and `build` is plain `vite build` until the catalog build lands in Phase 4. `playwright test` has no tests until Phase 6.
+Phases 0 and 1 are implemented: tokens and the `verify` gate, plus the monthly "New Songs" parser, normalization, validation, corrections, the SQLite writer and `bun run import <pdf>`. The scripts from PLAN.md section 0.3 that belong to later phases (`catalog:build`, `sources:check`, `sources:status`) do not exist yet, and `build` is plain `vite build` until the catalog build lands in Phase 4. `playwright test` has no tests until Phase 6.
+
+Fixtures in `tests/fixtures/hdd/` are `2026-06` to `2026-10` (not the months PLAN.md lists), so PLAN.md's per-code assertions (41807, 41967, ...) are not covered. In these files wrapped lines break between words with no trailing space, so fragments are joined with a space; rows with a 1-2 character continuation are flagged `short-continuation` instead of being joined silently.
 
 `knip.jsonc` ignores dependencies from the planned stack that no code imports yet (and `src/lib/utils.ts`, the shadcn `cn` helper); delete each entry in the phase that first uses it.
 
@@ -27,6 +29,7 @@ bun run lint           # eslint . --max-warnings 0
 bun run format         # prettier --write .
 bun run test           # bun test (tests/**/*.test.ts)
 bun run test:e2e       # playwright test (e2e files: **/*.e2e.{ts,js})
+bun run import <pdf>   # parse, preview and write one release to data/karaokedex.sqlite
 bun run verify         # the full gate
 ```
 

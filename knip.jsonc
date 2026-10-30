@@ -10,7 +10,6 @@
 		"cn",
 		"minisearch",
 		"phosphor-svelte",
-		"tailwind-variants",
-		"unpdf"
+		"tailwind-variants"
 	]
 }
