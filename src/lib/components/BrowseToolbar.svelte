@@ -1,4 +1,5 @@
 <script lang="ts">
+	import FunnelIcon from 'phosphor-svelte/lib/FunnelIcon';
 	import { LETTERS, SORTS, sortingFor, type SortId, type TableFilters } from '#lib/app/browse';
 	import Button from './Button.svelte';
 	import SelectField from './SelectField.svelte';
@@ -32,7 +33,11 @@
 	} = $props();
 
 	const byArtist = $derived(sortingFor(sort).at(0)?.id === 'artists');
-	const filtered = $derived(Boolean(filters.letter || filters.year || filters.versions));
+	let filtersOpen = $state(false);
+	const activeCount = $derived(
+		[filters.letter, filters.year, filters.versions].filter(Boolean).length
+	);
+	const filtered = $derived(activeCount > 0);
 	const sortOptions = $derived([
 		...(relevance ? [{ value: RELEVANCE, label: 'Best match' }] : []),
 		...SORTS.map((entry) => ({ value: entry.id, label: entry.label }))
@@ -48,46 +53,62 @@
 			onsort(SORTS.find((entry) => entry.id === value)?.id);
 		}}
 	/>
-	<SelectField
-		label={byArtist ? 'Artist starts with' : 'Title starts with'}
-		value={filters.letter ?? ANY}
-		options={letterOptions}
-		onchange={(value: string) => {
-			onfilter({ letter: value === ANY ? undefined : value });
-		}}
-	/>
-	{#if years.length > 1}
-		<SelectField
-			label="Added in"
-			value={filters.year ?? ANY}
-			options={[
-				{ value: ANY, label: 'Any year' },
-				...years.map((year) => ({ value: year, label: year }))
-			]}
-			onchange={(value: string) => {
-				onfilter({ year: value === ANY ? undefined : value });
+	<div class="md:hidden">
+		<Button
+			variant="outline"
+			aria-expanded={filtersOpen}
+			onclick={() => {
+				filtersOpen = !filtersOpen;
 			}}
-		/>
-	{/if}
-	{#if hasVersions}
-		<label class="flex min-h-11 cursor-pointer items-center gap-2 text-sm text-subtle md:min-h-9">
-			<input
-				type="checkbox"
-				class="accent-accent"
-				checked={filters.versions === true}
-				onchange={(event) => {
-					onfilter({ versions: event.currentTarget.checked || undefined });
+		>
+			<FunnelIcon size={16} aria-hidden="true" />
+			Filters{activeCount > 0 ? ` (${String(activeCount)})` : ''}
+		</Button>
+	</div>
+	<div class={filtersOpen ? 'contents' : 'contents max-md:hidden'}>
+		{#if !relevance}
+			<SelectField
+				label={byArtist ? 'Artist starts with' : 'Title starts with'}
+				value={filters.letter ?? ANY}
+				options={letterOptions}
+				onchange={(value: string) => {
+					onfilter({ letter: value === ANY ? undefined : value });
 				}}
 			/>
-			Covers and remixes only
-		</label>
-	{/if}
-	{#if filtered}
-		<Button
-			variant="ghost"
-			onclick={() => {
-				onfilter({ letter: undefined, year: undefined, versions: undefined });
-			}}>Clear filters</Button
-		>
-	{/if}
+		{/if}
+		{#if years.length > 1}
+			<SelectField
+				label="Added in"
+				value={filters.year ?? ANY}
+				options={[
+					{ value: ANY, label: 'Any year' },
+					...years.map((year) => ({ value: year, label: year }))
+				]}
+				onchange={(value: string) => {
+					onfilter({ year: value === ANY ? undefined : value });
+				}}
+			/>
+		{/if}
+		{#if hasVersions}
+			<label class="flex min-h-11 cursor-pointer items-center gap-2 text-sm text-subtle md:min-h-9">
+				<input
+					type="checkbox"
+					class="accent-accent"
+					checked={filters.versions === true}
+					onchange={(event) => {
+						onfilter({ versions: event.currentTarget.checked || undefined });
+					}}
+				/>
+				Covers and remixes only
+			</label>
+		{/if}
+		{#if filtered}
+			<Button
+				variant="ghost"
+				onclick={() => {
+					onfilter({ letter: undefined, year: undefined, versions: undefined });
+				}}>Clear filters</Button
+			>
+		{/if}
+	</div>
 </div>

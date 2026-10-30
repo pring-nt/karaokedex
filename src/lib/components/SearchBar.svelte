@@ -15,6 +15,7 @@
 		value = $bindable(''),
 		field = 'all',
 		onfield,
+		onfocus,
 		listId,
 		activeId,
 		onmove,
@@ -24,6 +25,7 @@
 		value?: string;
 		field?: SearchField;
 		onfield: (field: SearchField) => void;
+		onfocus?: () => void;
 		listId: string;
 		activeId?: string;
 		onmove: (delta: 1 | -1) => void;
@@ -76,6 +78,7 @@
 			bind:this={element}
 			bind:value
 			{onkeydown}
+			{onfocus}
 			type="search"
 			role="combobox"
 			aria-label="Search songs"

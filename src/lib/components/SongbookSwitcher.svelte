@@ -27,7 +27,7 @@
 			</label>
 		{/each}
 	</div>
-	<p class="truncate text-micro tracking-wider text-subtle uppercase">
+	<p class="truncate text-micro tracking-wider text-subtle uppercase max-md:hidden">
 		{SONGBOOKS[value].models.join(' · ')}
 	</p>
 </fieldset>

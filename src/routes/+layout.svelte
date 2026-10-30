@@ -95,7 +95,7 @@
 	</header>
 
 	<main
-		class="mx-auto flex w-full max-w-300 flex-1 flex-col gap-6 px-4 pt-6 pb-28 md:px-8 md:pb-12"
+		class="mx-auto flex w-full max-w-300 flex-1 flex-col gap-3 px-4 pt-3 pb-28 md:gap-6 md:px-8 md:pt-6 md:pb-12"
 	>
 		<BookBar {songbook} onchange={switchBook} />
 		{@render children()}

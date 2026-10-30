@@ -4,6 +4,7 @@
 	import { afterNavigate } from '$app/navigation';
 	import { page } from '$app/state';
 	import type { SortId, TableFilters } from '#lib/app/browse';
+	import { aboveKeyboard } from '#lib/app/keyboard';
 	import { listFor } from '#lib/app/library';
 	import { patchSearch } from '#lib/app/navigate';
 	import { preferences } from '#lib/app/preferences.svelte';
@@ -19,6 +20,7 @@
 
 	const DEBOUNCE_MS = 150;
 	const LIST_ID = 'results';
+	const PHONE_QUERY = '(width < 48rem)';
 
 	type View = 'search' | 'queue' | 'favorites';
 
@@ -27,6 +29,7 @@
 	let view = $state<View>('search');
 	let input = $state<HTMLInputElement | null>(null);
 	let panel = $state<PanelHandle | null>(null);
+	let results = $state<HTMLElement | null>(null);
 	let mounted = $state(false);
 	let lastWritten: string | undefined;
 
@@ -42,8 +45,9 @@
 	const sort = $derived<SortId | undefined>(
 		params.sort ?? (debounced.trim() === '' ? 'title' : undefined)
 	);
+	/** The letter is a browsing shortcut: left on during a search it would hide matches. */
 	const filters = $derived<TableFilters>({
-		letter: params.letter,
+		letter: debounced.trim() === '' ? params.letter : undefined,
 		year: params.year,
 		versions: params.versions === '1'
 	});
@@ -85,6 +89,11 @@
 		patchSearch(page.url, { [name]: value });
 	}
 
+	/** On a phone the keyboard leaves little room, so results move up to meet the search bar. */
+	function showResults(): void {
+		if (window.matchMedia(PHONE_QUERY).matches) results?.scrollIntoView({ block: 'start' });
+	}
+
 	function onWindowKeydown(event: KeyboardEvent): void {
 		if (event.key !== '/' || event.ctrlKey || event.metaKey || event.altKey) return;
 		const target = event.target;
@@ -112,9 +121,9 @@
 </svelte:head>
 <svelte:window onkeydown={onWindowKeydown} />
 
-<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-3 md:gap-6">
 	<div
-		class="flex flex-wrap gap-1 self-start rounded-xl bg-highlight-low p-1"
+		class="flex gap-1 rounded-xl bg-highlight-low p-1 md:self-start"
 		role="tablist"
 		aria-label="View"
 	>
@@ -123,7 +132,7 @@
 				type="button"
 				role="tab"
 				aria-selected={view === tab.id}
-				class="min-h-11 rounded-lg px-3 text-sm transition-colors duration-(--dur-fast) md:min-h-9 {view ===
+				class="min-h-11 flex-1 rounded-lg px-3 text-sm transition-colors duration-(--dur-fast) md:min-h-9 md:flex-none {view ===
 				tab.id
 					? 'bg-accent/15 text-accent'
 					: 'text-subtle hover:text-text'}"
@@ -138,6 +147,7 @@
 
 	{#if view === 'search'}
 		<div
+			use:aboveKeyboard
 			class="fixed inset-x-0 bottom-0 z-10 p-4 pb-[max(1rem,env(safe-area-inset-bottom))] md:sticky md:top-14 md:bottom-auto md:p-0 md:py-2"
 		>
 			<SearchBar
@@ -148,6 +158,7 @@
 					patchSearch(page.url, { field: next === 'all' ? undefined : next });
 				}}
 				listId={LIST_ID}
+				onfocus={showResults}
 				activeId={panel?.activeId()}
 				onmove={(delta: 1 | -1) => panel?.move(delta)}
 				onactivate={() => {
@@ -182,61 +193,65 @@
 			</div>
 		{/if}
 
-		<SongPanel
-			bind:this={panel}
-			query={debounced}
-			{field}
-			artist={artistFilter}
-			release={releaseFilter}
-			browse
-			{sort}
-			{filters}
-			onsort={(next: SortId | undefined) => {
-				patchSearch(page.url, { sort: next });
-			}}
-			onfilter={(changes: TableFilters) => {
-				patchSearch(page.url, { ...changes, versions: changes.versions ? '1' : undefined });
-			}}
-			listId={LIST_ID}
-			label="Search results"
-			onopen={() => {
-				preferences.addRecent(debounced);
-			}}
-		>
-			{#snippet idle()}
-				<PageHeader
-					eyebrow="Platinum Karaoke songbook"
-					title="Find any song code, fast."
-					subhead="Browse the whole songbook below, or pick code, title or artist and search. Press / to jump to the search box."
-				/>
-				{#if recents.length > 0}
-					<section class="flex flex-col gap-2" aria-label="Recent searches">
-						<div class="flex items-center justify-between">
-							<h2 class="eyebrow">Recent searches</h2>
-							<Button
-								variant="ghost"
-								onclick={() => {
-									preferences.clearRecents();
-								}}>Clear</Button
-							>
-						</div>
-						<ul class="flex flex-wrap gap-2">
-							{#each recents as recent (recent)}
-								<li>
-									<Button
-										variant="secondary"
-										onclick={() => {
-											text = recent;
-											input?.focus();
-										}}>{recent}</Button
-									>
-								</li>
-							{/each}
-						</ul>
-					</section>
-				{/if}
-			{/snippet}
-		</SongPanel>
+		<div bind:this={results} class="scroll-mt-3">
+			<SongPanel
+				bind:this={panel}
+				query={debounced}
+				{field}
+				artist={artistFilter}
+				release={releaseFilter}
+				browse
+				{sort}
+				{filters}
+				onsort={(next: SortId | undefined) => {
+					patchSearch(page.url, { sort: next });
+				}}
+				onfilter={(changes: TableFilters) => {
+					patchSearch(page.url, { ...changes, versions: changes.versions ? '1' : undefined });
+				}}
+				listId={LIST_ID}
+				label="Search results"
+				onopen={() => {
+					preferences.addRecent(debounced);
+				}}
+			>
+				{#snippet idle()}
+					<div class="max-md:sr-only">
+						<PageHeader
+							eyebrow="Platinum Karaoke songbook"
+							title="Find any song code, fast."
+							subhead="Browse the whole songbook below, or pick code, title or artist and search. Press / to jump to the search box."
+						/>
+					</div>
+					{#if recents.length > 0}
+						<section class="flex flex-col gap-2" aria-label="Recent searches">
+							<div class="flex items-center justify-between">
+								<h2 class="eyebrow">Recent searches</h2>
+								<Button
+									variant="ghost"
+									onclick={() => {
+										preferences.clearRecents();
+									}}>Clear</Button
+								>
+							</div>
+							<ul class="flex gap-2 overflow-x-auto md:flex-wrap">
+								{#each recents as recent (recent)}
+									<li class="shrink-0">
+										<Button
+											variant="secondary"
+											onclick={() => {
+												text = recent;
+												input?.focus();
+											}}>{recent}</Button
+										>
+									</li>
+								{/each}
+							</ul>
+						</section>
+					{/if}
+				{/snippet}
+			</SongPanel>
+		</div>
 	{:else if view === 'queue'}
 		<div class="flex items-center justify-between">
 			<h2 class="eyebrow">Tonight's queue</h2>

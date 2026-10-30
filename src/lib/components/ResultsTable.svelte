@@ -42,6 +42,7 @@
 	import XIcon from 'phosphor-svelte/lib/XIcon';
 	import Badge from './Badge.svelte';
 	import Button from './Button.svelte';
+	import EmptyState from './EmptyState.svelte';
 	import SelectField from './SelectField.svelte';
 
 	const ROW_HEIGHT = 64;
@@ -251,7 +252,7 @@
 	</nav>
 {/snippet}
 
-<div bind:this={top} class="flex scroll-mt-48 flex-col gap-2">
+<div bind:this={top} class="flex scroll-mt-3 flex-col gap-2 md:scroll-mt-48">
 	<div class="flex flex-wrap items-center justify-between gap-2 px-4">
 		<p class="text-xs text-subtle tabular-nums" aria-live="polite">
 			{#if total > pageSize}
@@ -274,6 +275,13 @@
 			/>
 		{/if}
 	</div>
+	{#if total === 0}
+		<EmptyState
+			eyebrow="Filtered out"
+			title="No songs match these filters"
+			subhead="Clear the filters to see everything again."
+		/>
+	{/if}
 	<div
 		class="hidden gap-4 {desktopColumns} border-b border-highlight-low px-4 py-2 text-micro tracking-[0.15em] text-subtle uppercase md:grid"
 	>
