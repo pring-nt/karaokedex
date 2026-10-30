@@ -10,7 +10,9 @@ KaraokeDex is a searchable web songbook for **Platinum Karaoke only**. Song code
 
 ## Current state
 
-The repo is at the Phase 0 scaffold stage: an `sv create` SvelteKit app plus Tailwind v4, shadcn-svelte and adapter-vercel. `scripts/`, `tests/`, `.github/` and `data/pdfs/` exist but are empty, and `src/routes/+page.svelte`, `src/routes/demo/**` and the `DemoLinks` import in `+layout.svelte` are stock scaffold that will be replaced. `package.json` scripts are still the `sv` defaults. The scripts in PLAN.md section 0.3 (`verify`, `check:tokens`, `knip`, `import`, `catalog:build`, `sources:check`, `sources:status`, `format:check`) and `knip.json` do not exist yet, so do not assume they run. The ESLint config is not yet strict type-checked and `playwright.config.ts` still shells out to `npm`; PLAN.md says to fix both.
+Phase 0 (scaffold and tooling) is done on `feat/phase-0-scaffold`: tokens, base CSS, a placeholder page, and the `verify` gate. `scripts/` holds only `check-tokens.ts` and `tests/` only its test. The scripts from PLAN.md section 0.3 that belong to later phases (`import`, `catalog:build`, `sources:check`, `sources:status`) do not exist yet, and `build` is plain `vite build` until the catalog build lands in Phase 4. `playwright test` has no tests until Phase 6.
+
+`knip.jsonc` ignores dependencies from the planned stack that no code imports yet (and `src/lib/utils.ts`, the shadcn `cn` helper); delete each entry in the phase that first uses it.
 
 ## Commands
 
@@ -21,14 +23,16 @@ bun install
 bun run dev            # vite dev
 bun run build          # vite build
 bun run check          # svelte-kit sync && svelte-check
-bun run lint           # prettier --check . && eslint .
+bun run lint           # eslint . --max-warnings 0
 bun run format         # prettier --write .
-bun run test:e2e       # playwright install && playwright test (e2e files: **/*.e2e.{ts,js})
+bun run test           # bun test (tests/**/*.test.ts)
+bun run test:e2e       # playwright test (e2e files: **/*.e2e.{ts,js})
+bun run verify         # the full gate
 ```
 
-Run a single Playwright test: `bunx playwright test path/to/file.e2e.ts -g "test name"`.
+Run a single unit test: `bun test tests/check-tokens.test.ts -t "name"`. Run a single Playwright test: `bunx playwright test path/to/file.e2e.ts -g "test name"`.
 
-Once added, the end-of-phase gate is `bun run verify` (format, lint with `--max-warnings 0`, svelte-check with `--fail-on-warnings`, token check, knip, `bun test`, build) and must pass with zero warnings. Never disable rules or add `eslint-disable`, `@ts-ignore` or `@ts-expect-error` to get it green; ask instead.
+The end-of-phase gate is `bun run verify` (format check, lint with `--max-warnings 0`, svelte-check with `--fail-on-warnings`, token check, knip, `bun test`, build) and must pass with zero warnings. Never disable rules or add `eslint-disable`, `@ts-ignore` or `@ts-expect-error` to get it green; ask instead.
 
 The user's shell is Windows cmd: any command you present for the user must be cmd-compatible (no `\` line continuations, `mkdir -p`, `cp`, `rm`, brace expansion). `package.json` scripts must be cross-platform (`bun scripts/x.ts`).
 
@@ -43,11 +47,11 @@ The user's shell is Windows cmd: any command you present for the user must be cm
 
 ## Code conventions specific to this repo
 
-- Import from `src/lib` through the `#lib` / `#lib/*` aliases (defined in `package.json` `imports`, also used by `components.json`), not relative paths or `$lib`.
+- Import from `src/lib` through the `#lib/*` alias (defined in `package.json` `imports`, also used by `components.json`), not relative paths or `$lib`.
 - SvelteKit config is inline in `vite.config.ts` (there is no `svelte.config.js`); runes mode is forced for everything outside `node_modules`.
 - Svelte 5 runes only (`$state`, `$derived`, `$effect`, `$props`); no legacy `export let` or stores for component state.
 - TypeScript strict, no `any`, no `!` outside tests. Zod validates every boundary (parsed rows, catalog JSON on write and load, URL params, corrections/aliases/sources JSON, remote `songList`).
-- Tokens, never raw values: no hex/rgb literals, raw px radii or raw ms durations in `src/lib/components/**` or `src/routes/**`. Raw values live only in `src/lib/styles/tokens.css` (three layers: primitives, semantic roles, optional component aliases; Tailwind `@theme` maps to the semantic tokens). Currently `src/routes/layout.css` holds the stock shadcn neutral oklch theme, which PLAN.md replaces with the Appendix A palette.
+- Tokens, never raw values: no hex/rgb literals, raw px radii or raw ms durations in `src/lib/components/**` or `src/routes/**`. Raw values live only in `src/lib/styles/tokens.css` (three layers: primitives, semantic roles, optional component aliases; Tailwind `@theme` maps to the semantic tokens). `src/lib/styles/base.css` holds the base and typography classes (also unscanned); `src/routes/layout.css` only imports them.
 - Prettier uses tabs, single quotes, no trailing commas, width 100, and the Svelte and Tailwind plugins (Tailwind stylesheet is `src/routes/layout.css`).
 - UI primitives come from shadcn-svelte (style `lyra`, Phosphor icons) under `#lib/components/ui`.
 
