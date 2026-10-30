@@ -8,16 +8,22 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
-		"test:e2e": "playwright install && playwright test",
-		"test": "npm run test:e2e"
+		"format:check": "prettier --check .",
+		"lint": "eslint . --max-warnings 0",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --fail-on-warnings",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"check:tokens": "bun scripts/check-tokens.ts",
+		"knip": "knip",
+		"test": "bun test",
+		"test:e2e": "playwright test",
+		"verify": "bun run format:check && bun run lint && bun run check && bun run check:tokens && bun run knip && bun run test && bun run build"
 	},
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
 		"@fontsource-variable/jetbrains-mono": "^5.3.0",
+		"@fontsource/dm-mono": "^5.3.0",
+		"@fontsource/instrument-serif": "^5.3.0",
 		"@playwright/test": "^1.60.0",
 		"@sveltejs/adapter-vercel": "^7.0.0",
 		"@sveltejs/kit": "^3.0.0",
@@ -49,7 +55,6 @@
 		"vite": "^8.3.0"
 	},
 	"imports": {
-		"#lib": "./src/lib/index.js",
 		"#lib/*": "./src/lib/*"
 	},
 	"dependencies": {
