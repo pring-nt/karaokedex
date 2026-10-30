@@ -12,8 +12,8 @@
 	import SongPanel from '#lib/components/SongPanel.svelte';
 	import { SONGBOOK_SHORT, SONGBOOKS, Songbook } from '#lib/songbooks';
 
-	const slug = $derived(page.params.slug ?? '');
 	const params = $derived(browser ? parseParams(page.url.searchParams) : {});
+	const slug = $derived(params.artist ?? '');
 	const songbook = $derived(params.book ?? preferences.songbook);
 	const others = $derived(Songbook.options.filter((option) => option !== songbook).slice(0, 3));
 
@@ -25,38 +25,49 @@
 </script>
 
 <svelte:head>
-	<title>{name} | KaraokeDex</title>
+	<title>{slug ? name : 'Artist'} | KaraokeDex</title>
 </svelte:head>
 
 <div class="flex flex-col gap-6">
-	<PageHeader
-		eyebrow="Artist"
-		title={name}
-		subhead={`${String(songs.length)} ${songs.length === 1 ? 'song' : 'songs'} in ${SONGBOOKS[songbook].name}`}
-		compact
-	/>
-	<SongPanel
-		artist={slug}
-		listId="artist-results"
-		label={`Songs by ${name}`}
-		onshown={(shown: Song[]) => {
-			songs = shown;
-		}}
-	>
-		{#snippet noResults()}
-			<EmptyState
-				eyebrow="Artist"
-				title="No songs in this songbook"
-				subhead="This artist may be listed in another songbook."
-			>
-				<div class="flex flex-wrap gap-2">
-					{#each others as other (other)}
-						<a class={button()} href={resolve(`/artist/[slug]?book=${other}`, { slug })}>
-							Look in {SONGBOOK_SHORT[other]}
-						</a>
-					{/each}
-				</div>
-			</EmptyState>
-		{/snippet}
-	</SongPanel>
+	{#if slug}
+		<PageHeader
+			eyebrow="Artist"
+			title={name}
+			subhead={`${String(songs.length)} ${songs.length === 1 ? 'song' : 'songs'} in ${SONGBOOKS[songbook].name}`}
+			compact
+		/>
+		<SongPanel
+			artist={slug}
+			listId="artist-results"
+			label={`Songs by ${name}`}
+			onshown={(shown: Song[]) => {
+				songs = shown;
+			}}
+		>
+			{#snippet noResults()}
+				<EmptyState
+					eyebrow="Artist"
+					title="No songs in this songbook"
+					subhead="This artist may be listed in another songbook."
+				>
+					<div class="flex flex-wrap gap-2">
+						{#each others as other (other)}
+							<a
+								class={button()}
+								href={resolve(`/artist?book=${other}&artist=${encodeURIComponent(slug)}`)}
+							>
+								Look in {SONGBOOK_SHORT[other]}
+							</a>
+						{/each}
+					</div>
+				</EmptyState>
+			{/snippet}
+		</SongPanel>
+	{:else}
+		<EmptyState
+			eyebrow="Artist"
+			title="No artist chosen"
+			subhead="Pick an artist from a song to see all of their songs."
+		/>
+	{/if}
 </div>

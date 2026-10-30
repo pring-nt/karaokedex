@@ -78,9 +78,10 @@
 							<span class="flex flex-wrap gap-x-3 gap-y-1 text-sm">
 								{#each song.artists as artist (artist.name)}
 									<a
-										href={resolve(`/artist/[slug]?book=${songbook}`, {
-											slug: artistSlug(artist.name)
-										})}
+										href={resolve(
+											`/artist?book=${songbook}&artist=${encodeURIComponent(artistSlug(artist.name))}`
+										)}
+										onclick={onclose}
 										class="text-subtle underline-offset-4 hover:text-accent hover:underline"
 									>
 										{#if artist.role === 'featured'}<span class="text-muted"

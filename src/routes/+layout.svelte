@@ -38,7 +38,7 @@
 	function switchBook(next: Songbook): void {
 		patchSearch(page.url, {
 			book: next,
-			artist: undefined,
+			artist: page.url.pathname === resolve('/artist') ? params.artist : undefined,
 			release: undefined,
 			year: undefined,
 			versions: undefined

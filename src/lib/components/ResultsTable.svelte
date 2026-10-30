@@ -385,7 +385,9 @@
 					<span class="hidden min-w-0 truncate text-sm text-subtle md:order-3 md:block">
 						{#each song.artists as artist, position (artist.name)}
 							<a
-								href={resolve(`/artist/[slug]?book=${songbook}`, { slug: artistSlug(artist.name) })}
+								href={resolve(
+									`/artist?book=${songbook}&artist=${encodeURIComponent(artistSlug(artist.name))}`
+								)}
 								class="underline-offset-4 hover:text-accent hover:underline"
 								onclick={(event) => {
 									event.stopPropagation();
