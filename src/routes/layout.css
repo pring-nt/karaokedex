@@ -10,4 +10,4 @@
 @import '../lib/styles/base.css';
 @import '../lib/styles/effects.css';
 
-@custom-variant dark (&:not(:where([data-theme='light'], [data-theme='light'] *)));
+@custom-variant dark (&:not(:where([data-mode='light'], [data-mode='light'] *)));

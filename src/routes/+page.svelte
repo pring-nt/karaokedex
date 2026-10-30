@@ -6,6 +6,7 @@
 	import { patchSearch } from '#lib/app/navigate';
 	import { preferences } from '#lib/app/preferences.svelte';
 	import { parseParams } from '#lib/app/url';
+	import type { Song } from '#lib/catalog/schema';
 	import Button from '#lib/components/Button.svelte';
 	import EmptyState from '#lib/components/EmptyState.svelte';
 	import PageHeader from '#lib/components/PageHeader.svelte';
@@ -220,7 +221,14 @@
 				>
 			{/if}
 		</div>
-		<SongPanel codes={queue} listId="queue" label="Tonight's queue">
+		<SongPanel
+			codes={queue}
+			listId="queue"
+			label="Tonight's queue"
+			onremove={(song: Song) => {
+				preferences.toggleQueued(song.code);
+			}}
+		>
 			{#snippet noResults()}
 				<EmptyState
 					eyebrow="Tonight's queue"

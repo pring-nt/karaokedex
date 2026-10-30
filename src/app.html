@@ -1,21 +1,37 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="rose-pine" data-mode="dark">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="text-scale" content="scale" />
 		<script>
 			(function () {
+				// Keep in sync with THEMES in src/lib/app/themes.ts
+				var modes = {
+					'rose-pine': 'dark',
+					'rose-pine-moon': 'dark',
+					'rose-pine-dawn': 'light',
+					'catppuccin-mocha': 'dark',
+					'catppuccin-latte': 'light',
+					'tokyo-night': 'dark',
+					'gruvbox-dark': 'dark',
+					nord: 'dark'
+				};
+				var legacy = { dark: 'rose-pine', light: 'rose-pine-dawn' };
 				var theme = null;
 				try {
 					theme = localStorage.getItem('karaokedex:theme');
 				} catch (error) {
 					theme = null;
 				}
-				if (theme !== 'light' && theme !== 'dark') {
-					theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+				theme = legacy[theme] || theme;
+				if (!modes[theme]) {
+					theme = window.matchMedia('(prefers-color-scheme: light)').matches
+						? 'rose-pine-dawn'
+						: 'rose-pine';
 				}
 				document.documentElement.setAttribute('data-theme', theme);
+				document.documentElement.setAttribute('data-mode', modes[theme]);
 			})();
 		</script>
 		%sveltekit.head%

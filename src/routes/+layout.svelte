@@ -11,7 +11,7 @@
 	import favicon from '#lib/assets/favicon.svg';
 	import Aurora from '#lib/components/Aurora.svelte';
 	import BookBar from '#lib/components/BookBar.svelte';
-	import ThemeToggle from '#lib/components/ThemeToggle.svelte';
+	import ThemeMenu from '#lib/components/ThemeMenu.svelte';
 	import type { Songbook } from '#lib/songbooks';
 	import type { LayoutProps } from './$types';
 
@@ -79,7 +79,7 @@
 				{/each}
 			</nav>
 			<div class="ml-auto">
-				<ThemeToggle />
+				<ThemeMenu />
 			</div>
 		</div>
 	</header>

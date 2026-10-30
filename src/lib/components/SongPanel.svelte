@@ -26,7 +26,8 @@
 		idle,
 		noResults,
 		onopen,
-		onshown
+		onshown,
+		onremove
 	}: {
 		query?: string;
 		artist?: string;
@@ -41,6 +42,8 @@
 		onopen?: (song: Song) => void;
 		/** Called with the songs on screen whenever a new result set arrives. */
 		onshown?: (songs: Song[]) => void;
+		/** Adds a remove button to each row. */
+		onremove?: (song: Song) => void;
 	} = $props();
 
 	interface Shown {
@@ -181,6 +184,7 @@
 				{listId}
 				{activeIndex}
 				{label}
+				{onremove}
 				onopen={(song: Song, index: number) => {
 					activeIndex = index;
 					open(song);

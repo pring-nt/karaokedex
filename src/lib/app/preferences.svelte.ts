@@ -8,9 +8,8 @@ import {
 	toggleFavorite,
 	toggleQueued
 } from './library';
+import { parseThemePreference, resolveTheme, themeMode, type ThemePreference } from './themes';
 import { browserStorage, readJson, writeJson, type KeyValueStore } from './storage';
-
-type Theme = 'dark' | 'light';
 
 const THEME_KEY = 'karaokedex:theme';
 const SONGBOOK_KEY = 'karaokedex:songbook';
@@ -18,24 +17,44 @@ const LIBRARY_KEY = 'karaokedex:library';
 
 /** Everything the app remembers in this browser. Call `init()` once on the client. */
 class Preferences {
-	theme = $state<Theme>('dark');
+	themePreference = $state<ThemePreference>('system');
 	songbook = $state<Songbook>('hdd');
 	library = $state<Library>(emptyLibrary());
 	private store: KeyValueStore | null = null;
+	private systemLight = false;
 
 	init(): void {
 		this.store = browserStorage();
-		const attribute = document.documentElement.getAttribute('data-theme');
-		this.theme = attribute === 'light' ? 'light' : 'dark';
+		const lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+		this.systemLight = lightQuery.matches;
+		this.themePreference = parseThemePreference(this.readTheme());
+		lightQuery.addEventListener('change', (event) => {
+			this.systemLight = event.matches;
+			this.applyTheme();
+		});
 		this.songbook = readJson(this.store, SONGBOOK_KEY, Songbook, 'hdd');
 		this.library = readJson(this.store, LIBRARY_KEY, Library, emptyLibrary());
 	}
 
-	setTheme(theme: Theme): void {
-		this.theme = theme;
-		document.documentElement.setAttribute('data-theme', theme);
+	private readTheme(): string | null {
 		try {
-			this.store?.setItem(THEME_KEY, theme);
+			return this.store?.getItem(THEME_KEY) ?? null;
+		} catch {
+			return null;
+		}
+	}
+
+	private applyTheme(): void {
+		const theme = resolveTheme(this.themePreference, this.systemLight);
+		document.documentElement.setAttribute('data-theme', theme);
+		document.documentElement.setAttribute('data-mode', themeMode(theme));
+	}
+
+	setThemePreference(preference: ThemePreference): void {
+		this.themePreference = preference;
+		this.applyTheme();
+		try {
+			this.store?.setItem(THEME_KEY, preference);
 		} catch {
 			return;
 		}

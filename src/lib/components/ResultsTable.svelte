@@ -11,7 +11,9 @@
 	import { artistSlug } from '#lib/catalog/slug';
 	import type { Song } from '#lib/catalog/schema';
 	import type { Songbook } from '#lib/songbooks';
+	import XIcon from 'phosphor-svelte/lib/XIcon';
 	import Badge from './Badge.svelte';
+	import Button from './Button.svelte';
 
 	const ROW_HEIGHT = 64;
 
@@ -21,6 +23,7 @@
 		listId,
 		activeIndex = -1,
 		onopen,
+		onremove,
 		label
 	}: {
 		songs: Song[];
@@ -28,8 +31,19 @@
 		listId: string;
 		activeIndex?: number;
 		onopen: (song: Song, index: number) => void;
+		/** When given, every row gets a remove button that does not open the song. */
+		onremove?: (song: Song) => void;
 		label: string;
 	} = $props();
+
+	const mobileColumns = $derived(
+		onremove ? 'grid-cols-[minmax(0,1fr)_auto_auto]' : 'grid-cols-[minmax(0,1fr)_auto]'
+	);
+	const desktopColumns = $derived(
+		onremove
+			? 'md:grid md:grid-cols-[6rem_minmax(0,1.4fr)_minmax(0,1fr)_auto]'
+			: 'md:grid md:grid-cols-[6rem_minmax(0,1.4fr)_minmax(0,1fr)]'
+	);
 
 	const features = tableFeatures({});
 	const columns: ColumnDef<typeof features, Song>[] = [
@@ -81,7 +95,7 @@
 
 <div class="flex flex-col">
 	<div
-		class="hidden grid-cols-[6rem_minmax(0,1.4fr)_minmax(0,1fr)] gap-4 border-b border-highlight-low px-4 py-2 text-micro tracking-[0.15em] text-subtle uppercase md:grid"
+		class="hidden gap-4 {desktopColumns} border-b border-highlight-low px-4 py-2 text-micro tracking-[0.15em] text-subtle uppercase md:grid"
 		aria-hidden="true"
 	>
 		{#each headers as header (header.id)}
@@ -109,7 +123,7 @@
 					role="option"
 					tabindex="-1"
 					aria-selected={active}
-					class="absolute top-0 left-0 grid w-full cursor-pointer grid-cols-[minmax(0,1fr)_auto] items-center gap-x-4 border-b border-highlight-low px-4 transition-colors duration-(--dur-fast) hover:bg-highlight-med/40 md:grid-cols-[6rem_minmax(0,1.4fr)_minmax(0,1fr)] {active
+					class="absolute top-0 left-0 grid w-full cursor-pointer items-center gap-x-4 border-b border-highlight-low px-4 transition-colors duration-(--dur-fast) hover:bg-highlight-med/40 {mobileColumns} {desktopColumns} {active
 						? 'bg-accent/8 shadow-[inset_2px_0_0_var(--accent)]'
 						: ''}"
 					style:height={`${String(item.size)}px`}
@@ -160,6 +174,24 @@
 							>{position < song.artists.length - 1 ? ', ' : ''}
 						{/each}
 					</span>
+					{#if onremove}
+						<span class="md:order-4">
+							<Button
+								variant="ghost"
+								size="icon"
+								aria-label={`Remove ${song.title} from the queue`}
+								onclick={(event: MouseEvent) => {
+									event.stopPropagation();
+									onremove(song);
+								}}
+								onkeydown={(event: KeyboardEvent) => {
+									event.stopPropagation();
+								}}
+							>
+								<XIcon size={16} aria-hidden="true" />
+							</Button>
+						</span>
+					{/if}
 				</div>
 			{/if}
 		{/each}

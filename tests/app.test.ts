@@ -11,6 +11,7 @@ import {
 	toggleFavorite,
 	toggleQueued
 } from '../src/lib/app/library';
+import { parseThemePreference, resolveTheme, THEMES, themeMode } from '../src/lib/app/themes';
 import { browserStorage, readJson, writeJson, type KeyValueStore } from '../src/lib/app/storage';
 import { buildSearch, parseParams } from '../src/lib/app/url';
 import { artistSlug } from '../src/lib/catalog/slug';
@@ -96,6 +97,35 @@ describe('library', () => {
 		expect(Library.parse({})).toEqual({ favorites: {}, queue: {}, recents: {} });
 		expect(Library.safeParse({ favorites: { hdd: [1] } }).success).toBe(false);
 		expect(Library.safeParse({ favorites: { nope: ['1'] } }).success).toBe(false);
+	});
+});
+
+describe('themes', () => {
+	test('a saved value is a known theme, a legacy value, or falls back to system', () => {
+		expect(parseThemePreference('nord')).toBe('nord');
+		expect(parseThemePreference('system')).toBe('system');
+		expect(parseThemePreference('dark')).toBe('rose-pine');
+		expect(parseThemePreference('light')).toBe('rose-pine-dawn');
+		expect(parseThemePreference('nope')).toBe('system');
+		expect(parseThemePreference('constructor')).toBe('system');
+		expect(parseThemePreference(null)).toBe('system');
+	});
+
+	test('system follows the device, a chosen theme ignores it', () => {
+		expect(resolveTheme('system', true)).toBe('rose-pine-dawn');
+		expect(resolveTheme('system', false)).toBe('rose-pine');
+		expect(resolveTheme('nord', true)).toBe('nord');
+		expect(themeMode('catppuccin-latte')).toBe('light');
+		expect(themeMode('tokyo-night')).toBe('dark');
+	});
+
+	test('every theme has a palette and is known to the pre-paint script', async () => {
+		const tokens = await Bun.file('src/lib/styles/tokens.css').text();
+		const html = await Bun.file('src/app.html').text();
+		for (const { id, mode } of THEMES) {
+			expect(tokens).toContain(`[data-theme='${id}']`);
+			expect(html).toMatch(new RegExp(`'?${id}'?: '${mode}'`));
+		}
 	});
 });
 
