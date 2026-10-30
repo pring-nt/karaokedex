@@ -70,3 +70,15 @@ export const songArtists = sqliteTable(
 	},
 	(table) => [primaryKey({ columns: [table.songbook, table.code, table.position] })]
 );
+
+export const songReleases = sqliteTable(
+	'song_releases',
+	{
+		songbook: text('songbook').notNull(),
+		code: text('code').notNull(),
+		releaseId: integer('release_id')
+			.notNull()
+			.references(() => releases.id)
+	},
+	(table) => [primaryKey({ columns: [table.songbook, table.code, table.releaseId] })]
+);

@@ -2,7 +2,6 @@ import { mkdir, readdir, readFile, rename } from 'node:fs/promises';
 import { basename, dirname, join, resolve } from 'node:path';
 import { createInterface } from 'node:readline/promises';
 import { parseArgs } from 'node:util';
-import { applyCorrections } from '../src/lib/data/corrections';
 import { loadAliases, loadCorrections } from '../src/lib/data/load';
 import { createDb } from '../src/lib/db';
 import { writeRelease } from '../src/lib/db/write';
@@ -51,14 +50,12 @@ if (!LABEL.test(label)) {
 }
 
 const data = new Uint8Array(await readFile(pdfPath));
-const result = await parseRelease({ songbook: book, label, data });
-
 const [aliases, corrections] = await Promise.all([
 	loadAliases('data/aliases.json'),
 	loadCorrections('data/corrections.json')
 ]);
-const corrected = applyCorrections(book, result.release.rows, corrections);
-const release: ParsedRelease = { ...result.release, rows: corrected.rows };
+const result = await parseRelease({ songbook: book, label, data, corrections });
+const release = result.release;
 
 async function siblingReleases(): Promise<ParsedRelease[]> {
 	const siblings: ParsedRelease[] = [];
@@ -68,7 +65,8 @@ async function siblingReleases(): Promise<ParsedRelease[]> {
 		if (!LABEL.test(siblingLabel) || siblingLabel === label) continue;
 		const bytes = new Uint8Array(await readFile(join(dirname(pdfPath), name)));
 		siblings.push(
-			(await parseRelease({ songbook: book, label: siblingLabel, data: bytes })).release
+			(await parseRelease({ songbook: book, label: siblingLabel, data: bytes, corrections }))
+				.release
 		);
 	}
 	return siblings;

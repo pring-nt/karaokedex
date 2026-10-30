@@ -579,7 +579,7 @@
       "label": "2015-01",
       "url": "https://www.mediafire.com/file/x5hzr3t9f3d4x1l/HDD_2015_January_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2015-01.pdf",
       "sha256": "3b838851b689d2b4bcfca1ed7ec419d5322b1e41808940d9340b9d7ba1f177b0"
     },
@@ -590,7 +590,7 @@
       "label": "2015-02",
       "url": "https://www.mediafire.com/file/0cvadg7ch6mnyxe/HDD_2015_February_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2015-02.pdf",
       "sha256": "b72db9964252e52c57428645a0e8fae801de3b30a57560a0bb76d5ff69bf597f"
     },
@@ -601,7 +601,7 @@
       "label": "2015-03",
       "url": "https://www.mediafire.com/file/2ba6ojy5i6ppw54/HDD_2015_March_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2015-03.pdf",
       "sha256": "b8d04d2b43e5231d27ae3dcfd8f6708c71bd708df68c2f1f93599bb1a3beaefc"
     },
@@ -612,7 +612,7 @@
       "label": "2015-04",
       "url": "https://www.mediafire.com/file/8zh4a0zs39vk62o/HDD_2015_April_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2015-04.pdf",
       "sha256": "47a30eeefbe15436c61b23d9e47d7e059bb8648aa4dd12efcbbae4b581ada53a"
     },
@@ -623,7 +623,7 @@
       "label": "2015-05",
       "url": "https://www.mediafire.com/file/86ki3gik9n9exbd/HDD_2015_May_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2015-05.pdf",
       "sha256": "3978320ed3d93917431e2f2c364ed752d953499ecf943aa288c448abc965062f"
     },
@@ -634,7 +634,7 @@
       "label": "2015-06",
       "url": "https://www.mediafire.com/file/sfyzwyldkxgyvmb/HDD_2015_June_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2015-06.pdf",
       "sha256": "e924517559db404bea0eb50e2805765b08a2f96099c63fd63f288151b675e9ee"
     },
@@ -645,7 +645,7 @@
       "label": "2015-07",
       "url": "https://www.mediafire.com/file/ignkbir1ulrqp46/HDD_2015_July_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2015-07.pdf",
       "sha256": "32943d26a47912a7eef94fba085d3ba4a8aad8ebdaf72f42b02b3df729f22efc"
     },
@@ -656,7 +656,7 @@
       "label": "2015-08",
       "url": "https://www.mediafire.com/file/mpvd4377se2mcl1/HDD_2015_August_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2015-08.pdf",
       "sha256": "7573bee4859edfc3cc2cb15f2464b33dc839c0ff040c8499f8de9973b33f09e3"
     },
@@ -667,7 +667,7 @@
       "label": "2015-09",
       "url": "https://www.mediafire.com/file/h1g0me22t3x80x3/HDD_2015_September_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2015-09.pdf",
       "sha256": "ffc1899ac2fe6f7396003c34bec334a714e3f55e2564cdc85feb4f67c5689e5a"
     },
@@ -678,7 +678,7 @@
       "label": "2015-10",
       "url": "https://www.mediafire.com/file/h0uw3jeu88hniyu/HDD_2015_October_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2015-10.pdf",
       "sha256": "191084d91d7de597e95a6ea7aa7f6780132cad4c7c7f86275cf24bd9ff7f394a"
     },
@@ -689,7 +689,7 @@
       "label": "2015-11",
       "url": "https://www.mediafire.com/file/4tofqzivfcz2fu6/HDD_2015_November_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2015-11.pdf",
       "sha256": "8c258dd1a17aa07b70a8bbd13657391ae7066586311df01448369c10df47962f"
     },
@@ -700,7 +700,7 @@
       "label": "2015-12",
       "url": "https://www.mediafire.com/file/lfm7185zhtrmb7d/HDD_2015_December_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2015-12.pdf",
       "sha256": "3ff7fc0d2472829e8bfc763e5ccfbbc869f6718a8c839761e8c12332ae4684f3"
     },
@@ -711,7 +711,7 @@
       "label": "2016-01",
       "url": "https://www.mediafire.com/file/sqtimq7e6pmc68x/HDD_2016_January_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2016-01.pdf",
       "sha256": "53777aeb21d30fd92a61a26fe29359c609c90be452ad1f3c24d5d424a08e08d1"
     },
@@ -722,7 +722,7 @@
       "label": "2016-02",
       "url": "https://www.mediafire.com/file/9lx5xbc6cc6u1jc/HDD_2016_February_Additional_Song_List_I.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2016-02.pdf",
       "sha256": "07921d52f842347eecf2e94a84c0b05a5e78c88197ab3f2609d65243fc3994fd"
     },
@@ -733,7 +733,7 @@
       "label": "2016-03",
       "url": "https://www.mediafire.com/file/oyqz07d8y3wswcc/HDD_2016_March_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2016-03.pdf",
       "sha256": "10e7fae1075f172e534d8a6feb4575b99d82e7290ba5659f3f221b1b6b1fb120"
     },
@@ -744,7 +744,7 @@
       "label": "2016-04",
       "url": "https://www.mediafire.com/file/8e42nee0wo91w3g/HDD_2016_April_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2016-04.pdf",
       "sha256": "6b6a6a34ff0c506781259f358540ae49390623985821fd4e2f26c39a6ce726fd"
     },
@@ -755,7 +755,7 @@
       "label": "2016-05",
       "url": "https://www.mediafire.com/file/57jysac44il510m/HDD_2016_May_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2016-05.pdf",
       "sha256": "4ed9564b638456e13e66788dabc3c3d4254b0e928d2c4e55ad34371a426c2048"
     },
@@ -766,7 +766,7 @@
       "label": "2016-06",
       "url": "https://www.mediafire.com/file/g8g9jtee9w7q2td/HDD_2016_June_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2016-06.pdf",
       "sha256": "cd9a17c76c2288e50715b68f3ff8001938e40e59083602854cb3a5c9795a9fcd"
     },
@@ -777,7 +777,7 @@
       "label": "2016-07",
       "url": "https://www.mediafire.com/file/e95vp888oamtldh/HDD_2016_July_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2016-07.pdf",
       "sha256": "cecd948f726e7a02f89b6e05be7e0be0f185aed96e26e1bd94afde6078de04c0"
     },
@@ -788,7 +788,7 @@
       "label": "2016-08",
       "url": "https://www.mediafire.com/file/js8qasgimq949hl/HDD_2016_Aug_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2016-08.pdf",
       "sha256": "5aeabd7b9822ea4f6bcfaf4383f5028157f26e67853f034827a10e298109c11a"
     },
@@ -799,7 +799,7 @@
       "label": "2016-09",
       "url": "https://www.mediafire.com/file/c4k6l3r83xank0c/HDD_2016_September_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2016-09.pdf",
       "sha256": "bf6e11e0ea59d20ce80d71f558137b21066ec24e6fc99725eac1c4bdbe18e199"
     },
@@ -810,7 +810,7 @@
       "label": "2016-10",
       "url": "https://www.mediafire.com/file/ymm3a0kuulxwayn/HDD_2016_October_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2016-10.pdf",
       "sha256": "824031be81290ac08176c6dba318d587d69a74ddd877f0757db455c72b2d7cd3"
     },
@@ -821,7 +821,7 @@
       "label": "2016-11",
       "url": "https://www.mediafire.com/file/t6mw1gba6cnmmlw/HDD_2016_November_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2016-11.pdf",
       "sha256": "25ddadb2a42ca9700fe020ae7bbe0a86604cd6406200735f83a509c81ea2ae64"
     },
@@ -832,7 +832,7 @@
       "label": "2016-12",
       "url": "https://www.mediafire.com/file/p1bv9zaj5ub7378/HDD_2016_December_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2016-12.pdf",
       "sha256": "fb8cb964141c64ba8c0297a1a3c622f692204052bdbf665fd94eebff946cd4a4"
     },
@@ -843,7 +843,7 @@
       "label": "2017-01",
       "url": "https://www.mediafire.com/file/cy7x9esyp8dq586/HDD_2017_January_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2017-01.pdf",
       "sha256": "69c2e237ea9e25fb840f2add00fffccfd174b546a0a7cc78b25e559a5c1cae03"
     },
@@ -854,7 +854,7 @@
       "label": "2017-02",
       "url": "https://www.mediafire.com/file/3kpcwxch99vld6o/HDD_2017_February_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2017-02.pdf",
       "sha256": "cac5689a59662b22ecc60e70d3f58f649fca00120c659a9262c7eff675958e0a"
     },
@@ -865,7 +865,7 @@
       "label": "2017-03",
       "url": "https://www.mediafire.com/file/kdeqxbv5mo14pq8/HDD_2017_March_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2017-03.pdf",
       "sha256": "599f4947599b48ee719bf280f4382b21ea425aa57d8de8c9e5192da33815d0bb"
     },
@@ -876,7 +876,7 @@
       "label": "2017-04",
       "url": "https://www.mediafire.com/file/g5utfdzcza329as/HDD_2017_April_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2017-04.pdf",
       "sha256": "b9f9fd160ba26a6270789529a08d62f76cf12b65153e3a6f6a2fa8f95139b92e"
     },
@@ -887,7 +887,7 @@
       "label": "2017-05",
       "url": "https://www.mediafire.com/file/bm3was9zmqy2ys8/HDD_2017_May_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2017-05.pdf",
       "sha256": "c24b215665da00e6ca33e3a691c4875413a6370180d54b5a882e92f768ae4770"
     },
@@ -898,7 +898,7 @@
       "label": "2017-06",
       "url": "https://www.mediafire.com/file/9l94qi849ih90i3/HDD_2017_June_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2017-06.pdf",
       "sha256": "98e23dafa4210d093da0170117e1cbb938730c63a6ccd3b37ffbb323f0c35901"
     },
@@ -909,7 +909,7 @@
       "label": "2017-07",
       "url": "https://www.mediafire.com/file/dwlv3x6852dzupm/HDD_2017_July_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2017-07.pdf",
       "sha256": "b524a6e1354f834b62f5b217677a2743eb4ded0b68aa94ad6d043487a487144e"
     },
@@ -920,7 +920,7 @@
       "label": "2017-08",
       "url": "https://www.mediafire.com/file/rbi980uzr8087wa/HDD_2017_Aug_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2017-08.pdf",
       "sha256": "8930c92d0d412c9e5c339a8beefbd4aa6af2047144def89b362a5da08d247371"
     },
@@ -931,7 +931,7 @@
       "label": "2017-09",
       "url": "https://www.mediafire.com/file/7na7iqhzyst4ftj/HDD_2017_September_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2017-09.pdf",
       "sha256": "3a30b56807c82fff3f9d2dadc8a40622d3e7687c89df89b9376d3ed40db398f4"
     },
@@ -942,7 +942,7 @@
       "label": "2017-10",
       "url": "https://www.mediafire.com/file/21v5c565u7wmw71/HDD_2017_October_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2017-10.pdf",
       "sha256": "bd1fe144b981f4039388c96c5dab8333e64bf6eb127a315953cb446047fbc5a5"
     },
@@ -953,7 +953,7 @@
       "label": "2017-11",
       "url": "https://www.mediafire.com/file/b0mkq1y785qkkkv/HDD_2017_November_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2017-11.pdf",
       "sha256": "8f0a894ebf9a0efb2e95cdb281572bbdba35330cf3e545434e0af7629cdcbb2b"
     },
@@ -964,7 +964,7 @@
       "label": "2017-12",
       "url": "https://www.mediafire.com/file/rwwree448nllrg9/HDD_2017_December_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2017-12.pdf",
       "sha256": "8252fa0ae47416715b38d13cd0ccef84410826e52eb321c611a1d185da069104"
     },
@@ -975,7 +975,7 @@
       "label": "2018-01",
       "url": "https://www.mediafire.com/file/dhq6d6yhdepfvye/HDD_2018_January_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2018-01.pdf",
       "sha256": "38d1200dc5501b6e6571e537220f578d95c4fd2b554a375cca1907b6951fd436"
     },
@@ -986,7 +986,7 @@
       "label": "2018-02",
       "url": "https://www.mediafire.com/file/jbeqkmxkzt59zj7/HDD_2018_February_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2018-02.pdf",
       "sha256": "900d935ed1a331f5b1f9fb5964370fad429e73a8cd9ab60047ba448267dd01bb"
     },
@@ -997,7 +997,7 @@
       "label": "2018-03",
       "url": "https://www.mediafire.com/file/5a91zc6ei60cpcd/HDD_2018_March_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2018-03.pdf",
       "sha256": "734c80075931bbad6065deccca325a2e73054f3a1295e8c565c25415b095f126"
     },
@@ -1008,7 +1008,7 @@
       "label": "2018-04",
       "url": "https://www.mediafire.com/file/zf9oh0zanbavbau/HDD_2018_April_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2018-04.pdf",
       "sha256": "0f9f8d3f532d50ec5db075463b8fd39e963a3d1d714a30492d79148842f4f449"
     },
@@ -1019,7 +1019,7 @@
       "label": "2018-05",
       "url": "https://www.mediafire.com/file/y06c22e8363aq2r/HDD_2018_May_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2018-05.pdf",
       "sha256": "2a8f801d2466c042dfbb37402babf086d2385070ec70af6ffd53c9101c48d3fb"
     },
@@ -1030,7 +1030,7 @@
       "label": "2018-06",
       "url": "https://www.mediafire.com/file/3ic6vo06zeefrwa/HDD_2018_June_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2018-06.pdf",
       "sha256": "d4d8524e7214891a508a2ecd2ffb9522c7bd8add2f4b8f76c90ad13a0ac43172"
     },
@@ -1041,7 +1041,7 @@
       "label": "2018-07",
       "url": "https://www.mediafire.com/file/lml85bf46a9tcyj/HDD_2018_July_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2018-07.pdf",
       "sha256": "aa0e11ef682eb02ac30f5c0419eb904df4b6c993c1cb59d3b8d4677b4b2af492"
     },
@@ -1052,7 +1052,7 @@
       "label": "2018-08",
       "url": "https://www.mediafire.com/file/m2ma49cp1lza7si/HDD_2018_August_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2018-08.pdf",
       "sha256": "60ca1eada2b3e200ffdbdd27b429fb8a8cf6a3cfc1293f83eec959f3bcd38b23"
     },
@@ -1063,7 +1063,7 @@
       "label": "2018-09",
       "url": "https://www.mediafire.com/file/9lyb1z2s66y7dcz/HDD_2018_September_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2018-09.pdf",
       "sha256": "aeb68a61fa7bbcf532bcfd10b08c6b21816a296eb802b37c21b0b928898483da"
     },
@@ -1074,7 +1074,7 @@
       "label": "2018-10",
       "url": "https://www.mediafire.com/file/on6b7frzy2cv64i/HDD_2018_October_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2018-10.pdf",
       "sha256": "c9104ea283944f14f417bf5309c509d4412c2584fc71b5889c0cf03928562128"
     },
@@ -1085,7 +1085,7 @@
       "label": "2018-11",
       "url": "https://www.mediafire.com/file/u4vtudr744s1k8d/HDD_2018_November_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2018-11.pdf",
       "sha256": "74246877427fe7338dd8a9a3dc21b0b108e8a3f71cba78d6946b455b6f605328"
     },
@@ -1096,7 +1096,7 @@
       "label": "2018-12",
       "url": "https://www.mediafire.com/file/jw3jsawtwneclcr/HDD_2018_December_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2018-12.pdf",
       "sha256": "81ec7cae2cc449f0174df8b2ca4a06091676dfb827f0928bdf2a5291c37b9f3d"
     },
@@ -1107,7 +1107,7 @@
       "label": "2019-01",
       "url": "https://www.mediafire.com/file/hs4jnkbj54hd0n7/HDD_2019_January_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2019-01.pdf",
       "sha256": "1daf0020f7f3af22365e691307a26d6c97529e9f8fa8df13f1b217bee68115ad"
     },
@@ -1118,7 +1118,7 @@
       "label": "2019-02",
       "url": "https://www.mediafire.com/file/zbfkcxo0mmwhwjj/HDD_2019_February_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2019-02.pdf",
       "sha256": "aadb8531cb436e566274dc09bbbef821b87b5b9c949b92cb684f71782f298455"
     },
@@ -1129,7 +1129,7 @@
       "label": "2019-03",
       "url": "https://www.mediafire.com/file/3wttpfmnnydhtn5/HDD_2019_March_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2019-03.pdf",
       "sha256": "cf4902c6696eb32354ed6501fef7349b9fc9e75e11f832bf0a8c137d761855e7"
     },
@@ -1140,7 +1140,7 @@
       "label": "2019-04",
       "url": "https://www.mediafire.com/file/4akdr4aqv4zh4mu/HDD_2019_April_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2019-04.pdf",
       "sha256": "c70d0747fd12d39533c7f6b9238943fa240b7f753964cb662a44455b7ee00fec"
     },
@@ -1151,7 +1151,7 @@
       "label": "2019-05",
       "url": "https://www.mediafire.com/file/kyxrnj6c1txapz9/HDD_2019_May_Additional_Song_List_Alpha_Major_Cello_X3.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2019-05.pdf",
       "sha256": "7ff03fd172b01e7768891fa05ee40ae0dca90247a1f1083cea5693746aaae74b"
     },
@@ -1162,7 +1162,7 @@
       "label": "2019-06",
       "url": "https://www.mediafire.com/file/y63tgqniuqj9f0t/HDD_2019_June_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2019-06.pdf",
       "sha256": "7d4ba52c35dde5f21b9c1a16adb38b38779eadefc76e681743eaa9b89126a5e4"
     },
@@ -1173,7 +1173,7 @@
       "label": "2019-07",
       "url": "https://www.mediafire.com/file/ia5oy76si3itsug/HDD_2019_July_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2019-07.pdf",
       "sha256": "a8e7839695f25e011099ba148166ca2508bb480546ec0d7202586fca4d80973c"
     },
@@ -1184,7 +1184,7 @@
       "label": "2019-08",
       "url": "https://www.mediafire.com/file/m4diek6cios42la/HDD_2019_August_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2019-08.pdf",
       "sha256": "a2c2178d0fe8abcdec6b927f8c4cef144853fdc76d3877d30eee11db7725e80e"
     },
@@ -1195,7 +1195,7 @@
       "label": "2019-09",
       "url": "https://www.mediafire.com/file/u7g89fqxyyt2i5g/HDD_2019_September_Additional_Song_List_%25282%2529.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2019-09.pdf",
       "sha256": "b617ecaea5d7bb89e7aeef3c83811e34d5ed14fcbd121f58c5669d048eb46eee"
     },
@@ -1206,7 +1206,7 @@
       "label": "2019-10",
       "url": "https://www.mediafire.com/file/lh1tlmjpiltdy9v/HDD_2019_October_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2019-10.pdf",
       "sha256": "a9f62f8e6360a5bc921695b0edb0350f36e7d8005e8a16124d859209a7235676"
     },
@@ -1217,7 +1217,7 @@
       "label": "2019-11",
       "url": "https://www.mediafire.com/file/yzn2nfpqr9lkzpb/HDD_2019_November_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2019-11.pdf",
       "sha256": "38b4a4d63ad52599cf872b241005541c9d829e000b9ff66de1336f833c156704"
     },
@@ -1228,7 +1228,7 @@
       "label": "2019-12",
       "url": "https://www.mediafire.com/file/gcpl3qsj4i7wamk/HDD_2019_December_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2019-12.pdf",
       "sha256": "43230ec4d1413e574192cbdf0fed1299d5b87f23124e57beb0a5a4915db0ef36"
     },
@@ -1239,7 +1239,7 @@
       "label": "2020-01",
       "url": "https://www.mediafire.com/file/a0yyw4ckj9bk62f/HDD_2020_January_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2020-01.pdf",
       "sha256": "10f429d785e7ef996b12832f1fd66e60aeb2c3779affe4edee11c01fb1900842"
     },
@@ -1250,7 +1250,7 @@
       "label": "2020-02",
       "url": "https://www.mediafire.com/file/7n52v783c9tdxq4/HDD_2020_February_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2020-02.pdf",
       "sha256": "e3d342062d847c181a42b9160b9d6bca4f3763dd9e5b979679bfdae835395e15"
     },
@@ -1261,7 +1261,7 @@
       "label": "2020-03",
       "url": "https://www.mediafire.com/file/hhqseij6k036oxo/HDD_2020_March_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2020-03.pdf",
       "sha256": "e2b2174c44c5fc3f97e88b93bb4a09771413c93770cd7085f1e2c903f5eda6f3"
     },
@@ -1272,7 +1272,7 @@
       "label": "2020-04",
       "url": "https://www.mediafire.com/file/51xnwlzxt1miqia/HDD_2020_April_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2020-04.pdf",
       "sha256": "7ee191a8f7d80edf8e6bc2fc397a4a90eb0c6d448bbd0da115dc78d1f28444fc"
     },
@@ -1305,7 +1305,7 @@
       "label": "2020-07",
       "url": "https://www.mediafire.com/file/kaog5il8olhv5w9/HDD_2020_July_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2020-07.pdf",
       "sha256": "6270585fb01be1c85c59ab38236a6fc38a21fa60e87033b89649f86c060c334f"
     },
@@ -1316,7 +1316,7 @@
       "label": "2020-08",
       "url": "https://www.mediafire.com/file/pyfbwaa8iavkmv2/HDD_2020_August_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2020-08.pdf",
       "sha256": "9012cf931fd4d7be8f6bd55df3686c58e5663acfd5a890281548139babcc1b8f"
     },
@@ -1327,7 +1327,7 @@
       "label": "2020-09",
       "url": "https://www.mediafire.com/file/esn8fr9wlt2twwy/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2020-09.pdf",
       "sha256": "d3939e2656649cf395f3332f49965d3ddc33ba03c016e793ef179ebde949ed03"
     },
@@ -1426,7 +1426,7 @@
       "label": "2021-06",
       "url": "https://cdn.shopify.com/s/files/1/2581/7224/files/HDD_2021_June_Additional_Song_List.pdf?v=1622446880",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2021-06.pdf",
       "sha256": "9229a6f94edae163a760350eb16c42e4abbf85d3327a64eb25842e8cbb405f25"
     },
@@ -1437,7 +1437,7 @@
       "label": "2021-07",
       "url": "https://www.mediafire.com/file/11uap7xwtpi04wt/HDD_2021_July_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2021-07.pdf",
       "sha256": "d160e5269cf4564c3417cd8692c973c8eb3b453116cb51c93b2ddd3d08bc85ff"
     },
@@ -1448,7 +1448,7 @@
       "label": "2021-08",
       "url": "https://www.mediafire.com/file/hqaoglbbjvbexd2/HDD_2021_August_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2021-08.pdf",
       "sha256": "02345f5b03f851084a1d49a395a2bc262afb35aa23491eb374a9036bbb48d4b2"
     },
@@ -1459,7 +1459,7 @@
       "label": "2021-09",
       "url": "https://www.mediafire.com/file/0vw9xdydsh99mad/HDD_2021_September_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2021-09.pdf",
       "sha256": "09fc938d40058911aa92566295cb498f42237a9ddfecd81fd8f5de6d72bb9a30"
     },
@@ -1470,7 +1470,7 @@
       "label": "2021-10",
       "url": "https://www.mediafire.com/file/0w111jnqegpft66/HDD_2021_October_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2021-10.pdf",
       "sha256": "cff6876461dd19a635e376c66d57b47b9d1ab3fd1009d23792e4ff4341b6df7b"
     },
@@ -1481,7 +1481,7 @@
       "label": "2021-11",
       "url": "https://www.mediafire.com/file/r479ma2epa8genp/HDD_2021_November_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2021-11.pdf",
       "sha256": "fcf8674aeb69f008133ba5c0cbe206eca5012afc2178f5a2a6f152901e04a863"
     },
@@ -1492,7 +1492,7 @@
       "label": "2021-12",
       "url": "https://www.mediafire.com/file/n6hanasgjmavjti/HDD_2021_December_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2021-12.pdf",
       "sha256": "890e234ce4839e250b1f455564bdfaa36b8dfb7011b2ea9b2c3420b8ab98a843"
     },
@@ -1503,7 +1503,7 @@
       "label": "2022-01",
       "url": "https://www.mediafire.com/file/qs0pfvzysqmhyjp/HDD_2022_January_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2022-01.pdf",
       "sha256": "ef830dfe6a72da758350624d93070e2f085826f853383655c08d69bc6dc95967"
     },
@@ -1547,7 +1547,7 @@
       "label": "2022-05",
       "url": "https://www.mediafire.com/file/sstzr42w2196c84/2022_May_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2022-05.pdf",
       "sha256": "4cef6f1796f4716d2a0f79a423d70d3a4c305ba4035d2a1f8d0f27430802d0d8"
     },
@@ -1591,7 +1591,7 @@
       "label": "2022-09",
       "url": "https://www.mediafire.com/file/wme0t583fba09rw/HDD_2022_September_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2022-09.pdf",
       "sha256": "6ff57eb099350429bb353124309493c3b2f02dc627e90d33d0acd1db56a05445"
     },
@@ -1657,7 +1657,7 @@
       "label": "2023-03",
       "url": "https://www.mediafire.com/file/b6vape6vd65nzv1/HDD_2023_March_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2023-03.pdf",
       "sha256": "d3a1ac08b1b9c1022b8c810569dee9d2ca556f17d9ee1d8a7e94e197d169fd4d"
     },
@@ -1690,7 +1690,7 @@
       "label": "2023-06",
       "url": "https://www.mediafire.com/file_premium/59eyehql9rrwtts/HDD_2023_June_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2023-06.pdf",
       "sha256": "4f1ee73e4de9b4f045b57e0ab8dae2466b4c2291b5ffdc36eab9bcc1643ae9e7"
     },
@@ -1701,7 +1701,7 @@
       "label": "2023-07",
       "url": "https://www.mediafire.com/file_premium/v10509a5d2bcm1i/HDD_2023_July_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2023-07.pdf",
       "sha256": "da7f76c6df783c9ae0e1f8bd357e824af5c0cb4a3704dafff3a24c42db448c7f"
     },
@@ -1723,7 +1723,7 @@
       "label": "2023-09",
       "url": "https://www.mediafire.com/file_premium/qleuoaff6v6nm95/HDD_2023_September_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2023-09.pdf",
       "sha256": "eb34bb92d87caa34cd8dedebee59880612a5db453f15bfd059b8b006752b5512"
     },
@@ -1734,7 +1734,7 @@
       "label": "2023-10",
       "url": "https://www.mediafire.com/file_premium/5qjhfbnuhc0kiwh/HDD_2023_October_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2023-10.pdf",
       "sha256": "d60e73487313fa987feddac1d81ae08ee2934b333764aa3465f8e40652a6598d"
     },
@@ -1745,7 +1745,7 @@
       "label": "2023-11",
       "url": "https://www.mediafire.com/file_premium/7wv0jubgghnigj5/HDD_2023_November_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2023-11.pdf",
       "sha256": "0a6a1eb83309b7c2e1f188c53d0616d16cd9cb513cc594b76628db3a43361ad2"
     },
@@ -1756,7 +1756,7 @@
       "label": "2023-12",
       "url": "https://www.mediafire.com/file_premium/nbi0t0k4iferdog/HDD_2023_December_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2023-12.pdf",
       "sha256": "8ea86ec3a9626ae3d8feaeb2b9de55e7c912751059eb9720cc5e253f24113312"
     },
@@ -1767,7 +1767,7 @@
       "label": "2024-01",
       "url": "https://www.mediafire.com/file_premium/9oaye2rvylkn3dx/HDD_2024_January_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2024-01.pdf",
       "sha256": "322e5f95fca78a801cb960b2b04b5e14dc7503806e3ce1d43d86f6710d91b55f"
     },
@@ -1778,7 +1778,7 @@
       "label": "2024-02",
       "url": "https://www.mediafire.com/file_premium/29cgp0mfdz9ikm0/HDD_2024_February_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2024-02.pdf",
       "sha256": "502765eaa7249e541f5b6915a69d90930d8f4162aaf707416d8ad3a15f62b534"
     },
@@ -1789,7 +1789,7 @@
       "label": "2024-03",
       "url": "https://www.mediafire.com/file_premium/17qb643ssunpbzq/HDD_2024_March_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2024-03.pdf",
       "sha256": "8b2e3d60430d2f8c4ab49060ef6b8a08067a32698680bd557ddf874e8f2b73a5"
     },
@@ -1800,7 +1800,7 @@
       "label": "2024-04",
       "url": "https://www.mediafire.com/file_premium/zyzih7t38genk67/HDD_2024_April_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2024-04.pdf",
       "sha256": "420f814f064d22a508d9bc71886e7f844cc71f315cc6a3127d98559931a97df0"
     },
@@ -1811,7 +1811,7 @@
       "label": "2024-05",
       "url": "https://www.mediafire.com/file_premium/6bqctt8niyt6q7m/HDD_2024_May_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2024-05.pdf",
       "sha256": "8e1c8f91d645ad0bf9656c6b20eb89386e4789ebc01b20fe1b94af58bc972127"
     },
@@ -1844,7 +1844,7 @@
       "label": "2024-08",
       "url": "https://www.mediafire.com/file_premium/mi160g1iin3bxui/HDD_2024_August_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2024-08.pdf",
       "sha256": "76b6de68d2251aa7640f083119122c03c15e03d20c5e16043cf434918a0031b5"
     },
@@ -1855,7 +1855,7 @@
       "label": "2024-09",
       "url": "https://www.mediafire.com/file_premium/letoafh5sx8a4x8/HDD_2024_September_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2024-09.pdf",
       "sha256": "1b505e0e34ab9b7d32b7129dadf200d2793b0820be07189e839cb2e96e4c75d3"
     },
@@ -1866,7 +1866,7 @@
       "label": "2024-10",
       "url": "https://www.mediafire.com/file_premium/8exadhgxwzjttl9/HDD_2024_October_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2024-10.pdf",
       "sha256": "dea2a4e60b77c63b4b525ee38ff6b000db55d70a2563a6d4057fcf444c7ecf61"
     },
@@ -1877,7 +1877,7 @@
       "label": "2024-11",
       "url": "https://www.mediafire.com/file_premium/czsoyg5iovxleez/HDD_2024_November_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2024-11.pdf",
       "sha256": "6698fbf64d8e12e2c47fcc10b23a3b3e19d60baacc7da97fa14ff412b9f4d6f5"
     },
@@ -1899,7 +1899,7 @@
       "label": "2025-01",
       "url": "https://www.mediafire.com/file_premium/dxpmlxp4qj5h1mk/2025_January_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/hdd/2025-01.pdf",
       "sha256": "b792e96be88362f335ac66400c37517eb78b0feb84dcee7ba0be4c8cccd1f706"
     },

@@ -1,10 +1,11 @@
 import { createHash } from 'node:crypto';
+import { applyCorrections, type CorrectionsFile } from '../data/corrections';
 import { extractPages } from './extract';
 import { alphabeticalWarnings, mergeDuplicateCodes, sectionErrors } from './full-list-rules';
 import { parseFullList } from './profiles/full-list';
 import { parseMonthlyNewSongs } from './profiles/monthly-new-songs';
 import { ParsedRelease, type ParsedRow } from './schema';
-import { validateMonthlyRelease } from './validate';
+import { runWarnings, validateMonthlyRelease } from './validate';
 import type { Songbook } from '../songbooks';
 
 export interface ParseReleaseInput {
@@ -12,6 +13,8 @@ export interface ParseReleaseInput {
 	/** Expected release label: `YYYY-MM` for monthly songbooks, e.g. `full-vol-59` for a full list. */
 	label: string;
 	data: Uint8Array;
+	/** Hand-written fixes, applied after parsing and before validation. */
+	corrections?: CorrectionsFile;
 }
 
 export interface ParseReleaseResult {
@@ -25,10 +28,15 @@ export interface ParseReleaseResult {
 
 function finish(
 	input: ParseReleaseInput,
-	rows: readonly ParsedRow[],
-	profile: 'monthly-new-songs' | 'full-list'
+	parsedRows: readonly ParsedRow[],
+	profile: 'monthly-new-songs' | 'full-list',
+	errors: string[]
 ): ParsedRelease {
-	const sorted = [...rows].sort((a, b) => Number(a.code) - Number(b.code));
+	const corrected = applyCorrections(input.songbook, parsedRows, input.corrections ?? {});
+	errors.push(
+		...corrected.ambiguous.map((key) => `correction ${key} matches several rows; add ifTitle`)
+	);
+	const sorted = [...corrected.rows].sort((a, b) => Number(a.code) - Number(b.code));
 	return ParsedRelease.parse({
 		songbook: input.songbook,
 		label: input.label,
@@ -55,7 +63,7 @@ export async function parseRelease(input: ParseReleaseInput): Promise<ParseRelea
 			);
 		}
 		return {
-			release: finish(input, merged.rows, 'full-list'),
+			release: finish(input, merged.rows, 'full-list', errors),
 			columns: Math.max(...parsed.columns),
 			errors,
 			warnings: alphabeticalWarnings(parsed.entries)
@@ -67,7 +75,7 @@ export async function parseRelease(input: ParseReleaseInput): Promise<ParseRelea
 	if (parsed.label !== input.label) {
 		errors.push(`file is labelled ${input.label} but the page header says ${parsed.label}`);
 	}
-	const release = finish(input, parsed.rows, 'monthly-new-songs');
+	const release = finish(input, parsed.rows, 'monthly-new-songs', errors);
 	errors.push(...validateMonthlyRelease(release));
-	return { release, columns: parsed.columns, errors, warnings: [] };
+	return { release, columns: parsed.columns, errors, warnings: runWarnings(release) };
 }

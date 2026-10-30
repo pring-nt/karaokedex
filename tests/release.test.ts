@@ -6,11 +6,16 @@ import { eq } from 'drizzle-orm';
 import { CorrectionsFile, applyCorrections } from '../src/lib/data/corrections';
 import { loadAliases, loadCorrections } from '../src/lib/data/load';
 import { createDb } from '../src/lib/db';
-import { artists, releases, songArtists, songs } from '../src/lib/db/schema';
+import { artists, releases, songArtists, songReleases, songs } from '../src/lib/db/schema';
 import { writeRelease } from '../src/lib/db/write';
 import { lintRow } from '../src/lib/parser/lint';
 import { ParsedRelease } from '../src/lib/parser/schema';
-import { crossReleaseWarnings, validateMonthlyRelease } from '../src/lib/parser/validate';
+import {
+	codeRuns,
+	crossReleaseWarnings,
+	runWarnings,
+	validateMonthlyRelease
+} from '../src/lib/parser/validate';
 import { makeRelease, makeRow } from './factories';
 
 const dataPath = (name: string) => join(import.meta.dir, '..', 'data', name);
@@ -40,11 +45,33 @@ describe('validateMonthlyRelease', () => {
 		expect(validateMonthlyRelease(release)).toEqual([]);
 	});
 
-	test('reports gaps and duplicates', () => {
-		const gap = makeRelease('2026-03', [makeRow('41987'), makeRow('41989')]);
-		expect(validateMonthlyRelease(gap).join()).toContain('missing 41988');
+	test('reports duplicate codes as an error', () => {
 		const dup = makeRelease('2026-03', [makeRow('41987'), makeRow('41987'), makeRow('41988')]);
 		expect(validateMonthlyRelease(dup).join()).toContain('duplicate codes 41987');
+	});
+
+	test('a gap is a run report, not an error', () => {
+		const gap = makeRelease('2026-03', [makeRow('41987'), makeRow('41989')]);
+		expect(validateMonthlyRelease(gap)).toEqual([]);
+		expect(codeRuns(gap)).toEqual([
+			{ min: 41987, max: 41987, count: 1 },
+			{ min: 41989, max: 41989, count: 1 }
+		]);
+		expect(runWarnings(gap)).toEqual(['2026-03: 2 code runs: 41987-41987 (1), 41989-41989 (1)']);
+		expect(runWarnings(makeRelease('2026-03', [makeRow('41987'), makeRow('41988')]))).toEqual([]);
+	});
+
+	test('an old release mixes a new block with earlier codes; the longest run drives the lineage check', () => {
+		const old = makeRelease('2015-06', [
+			...['16860', '16861', '16862'].map((code) => makeRow(code)),
+			...['11383', '11452'].map((code) => makeRow(code))
+		]);
+		const next = makeRelease(
+			'2015-07',
+			['16863', '16864'].map((code) => makeRow(code))
+		);
+		expect(validateMonthlyRelease(old)).toEqual([]);
+		expect(crossReleaseWarnings([old, next])).toEqual([]);
 	});
 
 	test('reports a declared range that disagrees with the rows', () => {
@@ -163,12 +190,82 @@ describe('writeRelease', () => {
 		expect(db.select().from(releases).all()).toHaveLength(1);
 	});
 
-	test('rolls back the whole release when a code already exists', () => {
+	test('rolls back the whole release when a code appears twice inside it', () => {
 		const db = createDb();
 		writeRelease(db, makeRelease('2026-04', [makeRow('42057')]), aliases);
-		const clash = makeRelease('2026-05', [makeRow('42058'), makeRow('42057')]);
+		const clash = makeRelease('2026-05', [makeRow('42058'), makeRow('42059'), makeRow('42059')]);
 		expect(() => writeRelease(db, clash, aliases)).toThrow();
 		expect(db.select().from(releases).all()).toHaveLength(1);
 		expect(db.select().from(songs).all()).toHaveLength(1);
+	});
+
+	test('a code re-listed by a later release keeps its first release, takes the later spelling and is recorded', () => {
+		const db = createDb();
+		writeRelease(
+			db,
+			makeRelease('2015-01', [
+				makeRow('16417', { title: 'Break Free', creditRaw: 'Ariana Grande Feat. Zedd' })
+			]),
+			aliases
+		);
+		writeRelease(
+			db,
+			makeRelease('2015-12', [
+				makeRow('16417', { title: 'Break Free', creditRaw: 'Ariana Grande ft. Zedd' })
+			]),
+			aliases
+		);
+
+		const all = db.select().from(songs).all();
+		expect(all).toHaveLength(1);
+		expect(all.at(0)?.creditRaw).toBe('Ariana Grande ft. Zedd');
+		const first = db.select().from(releases).where(eq(releases.label, '2015-01')).all().at(0);
+		expect(all.at(0)?.releaseId).toBe(first?.id);
+		expect(db.select().from(songReleases).all()).toHaveLength(2);
+		const credits = db.select().from(songArtists).where(eq(songArtists.code, '16417')).all();
+		expect(credits).toHaveLength(2);
+	});
+});
+
+describe('applyCorrections with ifTitle and code', () => {
+	const rows = [
+		makeRow('29386', { title: 'Tagong Gugma' }),
+		makeRow('29386', { title: 'Ako Ang Namingwit' })
+	];
+
+	test('a code shared by two rows needs ifTitle', () => {
+		const { ambiguous, rows: out } = applyCorrections(
+			'hdd',
+			rows,
+			CorrectionsFile.parse({ 'hdd:29386': { code: '29369' } })
+		);
+		expect(ambiguous).toEqual(['hdd:29386']);
+		expect(out).toEqual(rows);
+	});
+
+	test('ifTitle picks the row and code replaces it', () => {
+		const { rows: out, missing } = applyCorrections(
+			'hdd',
+			rows,
+			CorrectionsFile.parse({ 'hdd:29386': { ifTitle: 'ako ang namingwit', code: '29369' } })
+		);
+		expect(missing).toEqual([]);
+		expect(out.map((row) => row.code)).toEqual(['29386', '29369']);
+	});
+
+	test('ifTitle that matches nothing is reported as missing', () => {
+		const { missing } = applyCorrections(
+			'hdd',
+			rows,
+			CorrectionsFile.parse({ 'hdd:29386': { ifTitle: 'Nope', code: '29369' } })
+		);
+		expect(missing).toEqual(['hdd:29386']);
+	});
+});
+
+describe('lintRow and capital X', () => {
+	test('a credit ending in a capital X is a name, not a dangling separator', () => {
+		expect(lintRow('Song', 'Lil Nas X')).toEqual([]);
+		expect(lintRow('Song', 'Tyga x')).toContain('dangling-credit');
 	});
 });

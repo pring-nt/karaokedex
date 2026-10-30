@@ -2,7 +2,9 @@ import type { ReviewReason } from './schema';
 
 const PAIRS: Record<string, string> = { ')': '(', ']': '[', '}': '{' };
 const OPENERS = new Set(Object.values(PAIRS));
-const DANGLING = /(?:(?:^|\s)(?:ft\.?|feat\.?|x)|[&,])\s*$/i;
+const DANGLING = /(?:(?:^|\s)(?:ft\.?|feat\.?)|[&,])\s*$/i;
+/** A lowercase `x` joins artists; a capital `X` ends names like `Lil Nas X` and `Monsta X`. */
+const DANGLING_X = /(?:^|\s)x\s*$/;
 
 function isBalanced(text: string): boolean {
 	const stack: string[] = [];
@@ -21,6 +23,6 @@ export function lintRow(title: string, creditRaw: string): ReviewReason[] {
 	const reasons: ReviewReason[] = [];
 	if (!isBalanced(title) || !isBalanced(creditRaw)) reasons.push('unbalanced-brackets');
 	if (creditRaw.trim().length === 0) reasons.push('empty-credit');
-	else if (DANGLING.test(creditRaw)) reasons.push('dangling-credit');
+	else if (DANGLING.test(creditRaw) || DANGLING_X.test(creditRaw)) reasons.push('dangling-credit');
 	return reasons;
 }

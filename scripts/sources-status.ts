@@ -3,7 +3,10 @@ import { existsSync } from 'node:fs';
 import { readdir, readFile, writeFile } from 'node:fs/promises';
 import { basename } from 'node:path';
 import { parseArgs } from 'node:util';
+import { loadCorrections } from '../src/lib/data/load';
 import { parseRelease } from '../src/lib/parser/parse-release';
+import type { ParsedRelease } from '../src/lib/parser/schema';
+import { crossReleaseWarnings } from '../src/lib/parser/validate';
 import { Songbook } from '../src/lib/songbooks';
 import { entryKey, expectedFile, SourcesFile, type SourceEntry } from '../src/lib/sources/manifest';
 
@@ -20,8 +23,10 @@ interface Row {
 	rows?: number;
 	review?: number;
 	note?: string;
+	release?: ParsedRelease;
 }
 
+const corrections = await loadCorrections('data/corrections.json');
 const file = SourcesFile.parse(JSON.parse(await readFile(values.sources, 'utf8')) as unknown);
 const selected = file.entries.filter(
 	(entry) => !values.songbook || entry.songbook === values.songbook
@@ -52,13 +57,19 @@ for (const listed of selected) {
 		continue;
 	}
 	try {
-		const result = await parseRelease({ songbook: book.data, label: listed.label, data });
+		const result = await parseRelease({
+			songbook: book.data,
+			label: listed.label,
+			data,
+			corrections
+		});
 		const flagged = result.release.rows.filter((row) => row.needsReview).length;
 		if (result.errors.length === 0) {
 			report.push({
 				entry: { ...entry, status: 'parsed' },
 				rows: result.release.rows.length,
-				review: flagged
+				review: flagged,
+				release: result.release
 			});
 		} else {
 			report.push({
@@ -91,6 +102,25 @@ for (const { entry, rows, review, note } of report) {
 const counts = new Map<string, number>();
 for (const { entry } of report) counts.set(entry.status, (counts.get(entry.status) ?? 0) + 1);
 console.log(`\n${[...counts].map(([status, count]) => `${String(count)} ${status}`).join(', ')}`);
+
+const parsedReleases = report.flatMap(({ release }) => (release ? [release] : []));
+if (parsedReleases.length > 1) {
+	const seen = new Map<string, number>();
+	for (const release of parsedReleases) {
+		for (const row of release.rows)
+			seen.set(
+				`${release.songbook}:${row.code}`,
+				(seen.get(`${release.songbook}:${row.code}`) ?? 0) + 1
+			);
+	}
+	const repeated = [...seen.values()].filter((count) => count > 1).length;
+	const lineage = crossReleaseWarnings(parsedReleases);
+	console.log(
+		`lineage: ${String(lineage.length)} releases whose main run does not follow the previous one; ${String(repeated)} codes listed by more than one release`
+	);
+	for (const warning of lineage.slice(0, 10)) console.log(`  ${warning}`);
+	if (lineage.length > 10) console.log(`  ... ${String(lineage.length - 10)} more`);
+}
 
 const listedFiles = new Set(file.entries.map(expectedFile));
 for (const songbook of Songbook.options.filter(

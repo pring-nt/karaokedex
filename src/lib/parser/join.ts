@@ -29,11 +29,13 @@ export function joinFragments(items: readonly TextItem[]): JoinedText {
 		if (previous) {
 			const sameLine = !previous.hasEOL && Math.abs(item.y - previous.y) <= SAME_LINE;
 			const gap = item.x - (previous.x + previous.width);
+			const brokenWord = previous.hasEOL && !pendingSpace && isBrokenWordTail(item.str.trim());
 			const spaced =
-				pendingSpace ||
-				previous.hasEOL ||
-				/\s$/.test(previous.str) ||
-				(sameLine && gap > SPACE_GAP * previous.fontSize);
+				!brokenWord &&
+				(pendingSpace ||
+					previous.hasEOL ||
+					/\s$/.test(previous.str) ||
+					(sameLine && gap > SPACE_GAP * previous.fontSize));
 			text += spaced ? ' ' : '';
 			if (previous.hasEOL) continuations.push(item.str.trim());
 		}
@@ -45,8 +47,9 @@ export function joinFragments(items: readonly TextItem[]): JoinedText {
 }
 
 /**
- * A continuation line that is one or two lowercase characters (`g`, `ck`) is probably the tail of
- * a word broken mid-word, which the space-joined text gets wrong. Capitalised tails (`Go`) are words.
+ * A continuation line that is one or two lowercase characters (`g`, `ck`) is the tail of a word
+ * broken mid-word, and is joined to it without a space. Every such case in the 143 HDD lists and the
+ * P-series list was a broken word. Capitalised tails (`Go`) are words. Rows with one are still flagged.
  */
 export function isBrokenWordTail(fragment: string): boolean {
 	return fragment.length <= 2 && /^\p{Ll}/u.test(fragment);

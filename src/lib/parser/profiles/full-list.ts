@@ -8,14 +8,29 @@ const CODE = /^\d{4,5}$/;
 const SECTION_HEADER = /^(?:0~9|[A-Z])$/;
 const PAGE_CHROME =
 	/^(?:platinumkaraoke\.ph|Vol\. \d+ P-series|Full Songlist|No Magic, Pure Technology)$/;
+/** Table headers, the app advert and playlist headings that older monthly lists print inside the table. */
+const TABLE_CHROME =
+	/^(?:Song Title|Code|Popularized By:?|Featured Artists|Browse, Reserve, Controls songs\.|Transform your smartphone to a|karaoke monitor\.?|Instantly hear and feel our karaoke music produced as in the original recording\.|.+ Playlist|2015 Hit Songs|130|(?:Kapampangan|Ilocano|Visayan) Songs)$/i;
 
 /** Section headers and page banners are set in much larger type than the 8-14 pt cells. */
 const LARGE_TYPE = 15;
 const CHROME_MARGIN = 12;
 const COLUMN_JUMP = 20;
 const COLUMN_TOLERANCE = 3;
+/**
+ * A title starting this far right of the previous code belongs to the next column group, whose
+ * titles begin about 85-95 pt right of the previous code; artist text ends well before that.
+ */
+const NEXT_COLUMN_OFFSET = 70;
 
 class FullListError extends Error {}
+
+export interface FullListOptions {
+	/** Monthly lists end with chrome-only pages; a full list must have codes on every page. */
+	allowEmptyPages?: boolean;
+	/** Drop in-table headers, adverts and playlist headings. Off for full lists, where a song may be titled `Code`. */
+	dropTableChrome?: boolean;
+}
 
 export interface FullListParse {
 	entries: FullListEntry[];
@@ -23,6 +38,8 @@ export interface FullListParse {
 	anchors: number;
 	/** Distinct code-column positions per page, as a layout sanity figure. */
 	columns: number[];
+	/** Pages skipped because they carry no codes. Only possible with `allowEmptyPages`. */
+	emptyPages: number[];
 }
 
 interface RowDraft {
@@ -31,6 +48,8 @@ interface RowDraft {
 	title: TextItem[];
 	code: TextItem | null;
 	credit: TextItem[];
+	/** Artist text printed above its code: a cell merged over several rows. */
+	mergedCredit: boolean;
 }
 
 function mostCommonCodeFont(page: PdfPage): string {
@@ -56,6 +75,27 @@ function countColumns(codes: readonly TextItem[]): number {
 	return columns;
 }
 
+/** Right edge of a row's code: stable across 4- and 5-digit codes, which start at different x. */
+function codeEdge(draft: RowDraft): number {
+	return draft.code ? draft.code.x + draft.code.width : -Infinity;
+}
+
+/**
+ * An artist cell merged over several rows is printed once, after the last of them. Hand its text to
+ * the directly preceding rows of the same column that have no artist of their own.
+ */
+function shareMergedCredit(drafts: RowDraft[]): void {
+	drafts.forEach((draft, index) => {
+		if (!draft.mergedCredit) return;
+		for (let back = index - 1; back >= 0; back--) {
+			const earlier = drafts.at(back);
+			if (!earlier?.code || joinFragments(earlier.credit).text !== '') break;
+			if (Math.abs(codeEdge(earlier) - codeEdge(draft)) > COLUMN_TOLERANCE) break;
+			earlier.credit = draft.credit;
+		}
+	});
+}
+
 /**
  * Parses a full songlist (Title, Code, Artist per cell, three column groups per page, sorted by
  * title under section headers). Rows are assembled in content-stream order, not by geometry:
@@ -63,13 +103,21 @@ function countColumns(codes: readonly TextItem[]): number {
  * wrapped title or artist overflows into the neighbouring row. Code anchors are taken by font,
  * never by digits alone, because titles such as `214` or `2001 C.C. Rider` are bare numbers.
  */
-export function parseFullList(pages: readonly PdfPage[]): FullListParse {
+export function parseFullList(
+	pages: readonly PdfPage[],
+	options: FullListOptions = {}
+): FullListParse {
 	const entries: FullListEntry[] = [];
 	const columns: number[] = [];
+	const emptyPages: number[] = [];
 	let anchors = 0;
 	let section = '0~9';
 
 	for (const page of pages) {
+		if (options.allowEmptyPages && !page.items.some((item) => CODE.test(item.str))) {
+			emptyPages.push(page.number);
+			continue;
+		}
 		const codeFont = mostCommonCodeFont(page);
 		const isCode = (item: TextItem) => item.font === codeFont && CODE.test(item.str);
 		const firstCode = page.items.findIndex(isCode);
@@ -81,7 +129,8 @@ export function parseFullList(pages: readonly PdfPage[]): FullListParse {
 			section,
 			title: [],
 			code: null,
-			credit: []
+			credit: [],
+			mergedCredit: false
 		});
 		let draft: RowDraft | null = null;
 
@@ -91,7 +140,7 @@ export function parseFullList(pages: readonly PdfPage[]): FullListParse {
 				if (SECTION_HEADER.test(text)) section = text;
 				continue;
 			}
-			if (PAGE_CHROME.test(text)) continue;
+			if (PAGE_CHROME.test(text) || (options.dropTableChrome && TABLE_CHROME.test(text))) continue;
 			if (index < firstCode && item.y > firstY + CHROME_MARGIN) continue;
 
 			if (isCode(item)) {
@@ -103,14 +152,17 @@ export function parseFullList(pages: readonly PdfPage[]): FullListParse {
 				}
 				draft.code = item;
 			} else if (draft?.code) {
+				const jumped = item.y > draft.code.y + COLUMN_JUMP;
 				const startsNextRow =
-					text !== '' && (item.x < draft.code.x - 1 || item.y > draft.code.y + COLUMN_JUMP);
+					text !== '' &&
+					(item.x < draft.code.x - 1 || (jumped && item.x >= draft.code.x + NEXT_COLUMN_OFFSET));
 				if (startsNextRow) {
 					drafts.push(draft);
 					draft = newDraft();
 					draft.title.push(item);
 				} else {
 					draft.credit.push(item);
+					if (jumped && text !== '') draft.mergedCredit = true;
 				}
 			} else if (text !== '' || draft) {
 				draft ??= newDraft();
@@ -118,6 +170,7 @@ export function parseFullList(pages: readonly PdfPage[]): FullListParse {
 			}
 		}
 		if (draft) drafts.push(draft);
+		shareMergedCredit(drafts);
 
 		const pageAnchors = page.items.filter(
 			(item, index) => isCode(item) && !(index < firstCode && item.y > firstY + CHROME_MARGIN)
@@ -145,5 +198,5 @@ export function parseFullList(pages: readonly PdfPage[]): FullListParse {
 			entries.push({ code: row.code.str, title, creditRaw, section: row.section, reviewReasons });
 		}
 	}
-	return { entries, anchors, columns };
+	return { entries, anchors, columns, emptyPages };
 }
