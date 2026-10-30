@@ -58,7 +58,7 @@ UI changes must be tested at phone width first (375 px), because most people use
 - **Platinum Karaoke only.** Never add another brand's catalog.
 - **Never commit songlist PDFs to `data/pdfs/`.** They are gitignored. Commit the generated `data/catalogs/` files instead.
 - **The song code is the only identity within a songbook.** Never remove a song because its title or artist matches another. Codes are strings, because leading zeros matter.
-- **Keep P-Series separate.** Its codes do not reliably match the shared numbering.
+- **Don't parse P-Series update volumes.** Their codes disagree with the shared numbering. The Vol. 59 full list is fine.
 - **Label songs from other lists.** A shared code proves the song is the same, not that a machine has it. The UI must never suggest otherwise.
 - **Parsing, search and normalization stay framework-free** so they can be tested with `bun test`.
 - **Use design tokens.** Raw colors, radii and durations belong in `src/lib/styles/tokens.css`.

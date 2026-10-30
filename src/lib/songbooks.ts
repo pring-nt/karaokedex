@@ -85,7 +85,8 @@ export const SONGBOOK_SHORT: Record<Songbook, string> = {
 
 /**
  * Lists that share one numbering, best spelling first: a code means the same song in all of them.
- * P-Series reuses some of the same numbers for other songs, so it never joins.
+ * P-Series comes from its Vol. 59 full list, whose overlapping codes match. Its later update
+ * volumes disagree, so they are never parsed.
  */
 export const SHARED_SONGBOOKS: readonly Songbook[] = [
 	'hdd',
@@ -96,7 +97,8 @@ export const SHARED_SONGBOOKS: readonly Songbook[] = [
 	'bmb-x2',
 	'hermosa',
 	'home-40',
-	'bravo'
+	'bravo',
+	'p-series'
 ];
 
 /** The songbook of a product in `sources.json`, or undefined if it is not parsed. */

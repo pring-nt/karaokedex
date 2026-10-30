@@ -365,8 +365,15 @@ describe('shared catalog', () => {
 		]);
 	});
 
-	test('P-Series never joins', () => {
-		expect(buildShared([catalog('p-series', [song('00001', 'P')])])).toBeNull();
+	test('P-Series joins last, so another list spells a shared code', () => {
+		const shared = buildShared([
+			catalog('p-series', [song('8260', 'Only P'), song('00001', 'P Spelling')]),
+			catalog('hdd', [song('00001', 'HDD Spelling')])
+		]);
+		expect(shared?.songs.map((row) => [row[0], row[1], row[4]])).toEqual([
+			['00001', 'HDD Spelling', [0, 1]],
+			['8260', 'Only P', [1]]
+		]);
 	});
 
 	test('the engine separates its own songs from those only other lists print', async () => {

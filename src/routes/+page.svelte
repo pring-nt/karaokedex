@@ -11,7 +11,7 @@
 	import { preferences } from '#lib/app/preferences.svelte';
 	import { parseParams } from '#lib/app/url';
 	import type { Song } from '#lib/catalog/schema';
-	import { SONGBOOK_SHORT } from '#lib/songbooks';
+	import { SONGBOOK_SHORT, Songbook } from '#lib/songbooks';
 	import type { SearchField } from '#lib/search/query';
 	import Button from '#lib/components/Button.svelte';
 	import EmptyState from '#lib/components/EmptyState.svelte';
@@ -34,7 +34,7 @@
 	let panel = $state<PanelHandle | null>(null);
 	let results = $state<HTMLElement | null>(null);
 	let showOthers = $state(false);
-	let otherHits = $state(0);
+	let otherSongs = $state<Song[]>([]);
 	let mounted = $state(false);
 	let lastWritten: string | undefined;
 
@@ -47,6 +47,16 @@
 	const releaseFilter = $derived(params.release);
 	const field = $derived(params.field ?? 'all');
 	const searching = $derived(debounced.trim() !== '');
+	/** Where the other-machine matches are listed, most matches first. */
+	const machines = $derived(
+		Songbook.options
+			.map((slug) => ({
+				slug,
+				count: otherSongs.filter((song) => song.lists.includes(slug)).length
+			}))
+			.filter((machine) => machine.count > 0)
+			.sort((a, b) => b.count - a.count)
+	);
 	/** Browsing is alphabetical. A search stays in best-match order until a sort is picked. */
 	const sort = $derived<SortId | undefined>(
 		params.sort ?? (debounced.trim() === '' ? 'title' : undefined)
@@ -219,7 +229,7 @@
 				}}
 			>
 				{#snippet noResults()}
-					{#if otherHits > 0}
+					{#if otherSongs.length > 0}
 						<p class="text-sm text-subtle">Not on the {SONGBOOK_SHORT[songbook]} list.</p>
 					{:else}
 						<EmptyState
@@ -270,12 +280,28 @@
 		{#if catalog.otherCount > 0 && !releaseFilter}
 			{#if searching || showOthers}
 				<section class="flex flex-col gap-3" aria-label="Songs from other machines">
-					{#if otherHits > 0}
+					{#if otherSongs.length > 0}
 						<div class="flex flex-col gap-1">
 							<h2 class="eyebrow">Also listed for other machines</h2>
 							<p class="text-xs text-subtle">
-								Not on your machine's list. Same code system, so they may still work: try the code.
+								Not on your machine's list. Platinum's lists share one code system, so they may
+								still work: try the code.
 							</p>
+							{#if searching}
+								<div class="flex flex-wrap items-center gap-2 pt-2">
+									<span class="text-xs text-subtle">Check on:</span>
+									{#each machines as machine (machine.slug)}
+										<Button
+											variant="outline"
+											onclick={() => {
+												patchSearch(page.url, { book: machine.slug });
+											}}
+										>
+											{SONGBOOK_SHORT[machine.slug]} ({machine.count})
+										</Button>
+									{/each}
+								</div>
+							{/if}
 						</div>
 					{/if}
 					<SongPanel
@@ -286,7 +312,7 @@
 						listId="other-results"
 						label="Songs listed for other machines"
 						onshown={(shown: Song[]) => {
-							otherHits = shown.length;
+							otherSongs = shown;
 						}}
 					>
 						{#snippet noResults()}{/snippet}

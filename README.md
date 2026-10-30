@@ -8,7 +8,7 @@ Printed songbooks fall behind, and Platinum's updates are scattered across hundr
 
 - **Search by code, title or artist**, or browse a whole songbook A to Z.
 - **Pick your machine.** KS Series (including the LX15 and CX15), HDD, T-X, Reyna, Flute/Piano, BMB, Hermosa, Home 40, Bravo and P-Series each have their own list.
-- **Songs listed for other machines.** Most Platinum lists share one numbering, so a song missing from your list can still be found through another one. These songs are clearly labelled, because a shared code does not prove your machine has the song.
+- **Songs listed for other machines.** Platinum's lists share one numbering, so a song missing from your list can still be found through another one. These songs are clearly labelled, because a shared code does not prove your machine has the song.
 - **Tonight's queue and favorites**, kept in your browser.
 - **Works on a phone**, with the search bar within reach of your thumb.
 - **Themes and fonts** you can choose separately.
@@ -64,7 +64,7 @@ The committed catalogs are enough to run the whole site. You only need the PDFs 
 ## Known limits
 
 - **Base catalogs are missing.** Platinum publishes update lists, and only P-Series has a published full list, so older songs on a machine may not appear here.
-- **P-Series is separate.** Its codes do not reliably match the other lists, so its songs are never mixed into them.
+- **P-Series update volumes are left out.** The site uses the Vol. 59 full list, whose codes match the other lists. Later P-Series volumes disagree with them, so they are not parsed.
 - **Codes can be wrong.** Platinum's PDFs contain typos and swapped columns. Known problems are fixed in `data/corrections.json`, and a few conflicts between lists are unresolved. The machine always has the final say.
 
 ## Contributing

@@ -9,13 +9,27 @@
 	height={size}
 	viewBox="0 0 24 24"
 	fill="none"
-	stroke="currentColor"
+	stroke="url(#brand-gradient)"
 	stroke-width="2"
 	stroke-linecap="round"
 	stroke-linejoin="round"
-	class="text-accent"
 	aria-hidden="true"
 >
+	<!-- Fixed coordinates: a gradient sized to each path would hide the straight bars. -->
+	<defs>
+		<linearGradient
+			id="brand-gradient"
+			gradientUnits="userSpaceOnUse"
+			x1="4"
+			y1="2"
+			x2="20"
+			y2="22"
+		>
+			<stop offset="0" style:stop-color="var(--accent)" />
+			<stop offset="0.5" style:stop-color="var(--accent-2)" />
+			<stop offset="1" style:stop-color="var(--accent-3)" />
+		</linearGradient>
+	</defs>
 	<path d="M12 6v7" />
 	<path d="M16 8v3" />
 	<path

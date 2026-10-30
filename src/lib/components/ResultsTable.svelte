@@ -237,9 +237,28 @@
 				goToPage(pageIndex - 1);
 			}}><CaretLeftIcon size={16} aria-hidden="true" /></Button
 		>
-		<span class="text-xs text-subtle tabular-nums">
-			Page {pageIndex + 1} of {pageCount.toLocaleString()}
-		</span>
+		<label class="flex items-center gap-2 text-xs text-subtle tabular-nums">
+			Page
+			<input
+				type="number"
+				inputmode="numeric"
+				min="1"
+				max={pageCount}
+				value={pageIndex + 1}
+				aria-label={`Page number, 1 to ${String(pageCount)}`}
+				class="min-h-11 w-16 [appearance:textfield] appearance-none rounded-md border border-highlight-med bg-highlight-low px-2 text-center text-[length:var(--text-base)] text-text md:min-h-9 md:text-sm [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+				onchange={(event) => {
+					const input = event.currentTarget;
+					const page = Number.parseInt(input.value, 10);
+					if (Number.isNaN(page)) input.value = String(pageIndex + 1);
+					else {
+						goToPage(page - 1);
+						input.value = String(Math.min(pageCount, Math.max(1, page)));
+					}
+				}}
+			/>
+			of {pageCount.toLocaleString()}
+		</label>
 		<Button
 			variant="ghost"
 			size="icon"
@@ -395,7 +414,12 @@
 							>{position < song.artists.length - 1 ? ', ' : ''}
 						{/each}
 					</span>
-					<span class="hidden truncate text-xs text-subtle tabular-nums md:order-4 md:block">
+					<span
+						class="hidden text-xs text-subtle tabular-nums md:order-4 md:block {showLists
+							? 'line-clamp-3'
+							: 'truncate'}"
+						title={showLists ? listNames(song) : undefined}
+					>
 						{showLists ? listNames(song) : song.release}
 					</span>
 					{#if onremove}

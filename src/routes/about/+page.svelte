@@ -32,10 +32,9 @@
 	<section class="flex flex-col gap-3 text-sm leading-relaxed">
 		<p>
 			KaraokeDex is a searchable songbook for Platinum Karaoke. Song codes, titles and artists are
-			read from the songlist PDFs that Platinum publishes on its own website, and nothing else. Most
-			Platinum lists share one numbering, so a code means the same song across them, and a song
-			missing from your machine's list may still be listed for another. P-Series is the exception:
-			its codes are its own.
+			read from the songlist PDFs that Platinum publishes on its own website, and nothing else.
+			Platinum's lists share one numbering, so a code means the same song across them, and a song
+			missing from your machine's list may still be listed for another.
 		</p>
 		<p class="text-subtle">
 			This is an unofficial fan project. It is not affiliated with, endorsed by or sponsored by
