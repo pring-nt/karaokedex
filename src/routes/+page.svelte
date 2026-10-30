@@ -1,12 +1,15 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { browser } from '$app/env';
+	import { afterNavigate } from '$app/navigation';
 	import { page } from '$app/state';
+	import type { SortId, TableFilters } from '#lib/app/browse';
 	import { listFor } from '#lib/app/library';
 	import { patchSearch } from '#lib/app/navigate';
 	import { preferences } from '#lib/app/preferences.svelte';
 	import { parseParams } from '#lib/app/url';
 	import type { Song } from '#lib/catalog/schema';
+	import type { SearchField } from '#lib/search/query';
 	import Button from '#lib/components/Button.svelte';
 	import EmptyState from '#lib/components/EmptyState.svelte';
 	import PageHeader from '#lib/components/PageHeader.svelte';
@@ -34,6 +37,16 @@
 	const recents = $derived(listFor(preferences.library, 'recents', songbook));
 	const artistFilter = $derived(params.artist);
 	const releaseFilter = $derived(params.release);
+	const field = $derived(params.field ?? 'all');
+	/** Browsing is alphabetical. A search stays in best-match order until a sort is picked. */
+	const sort = $derived<SortId | undefined>(
+		params.sort ?? (debounced.trim() === '' ? 'title' : undefined)
+	);
+	const filters = $derived<TableFilters>({
+		letter: params.letter,
+		year: params.year,
+		versions: params.versions === '1'
+	});
 
 	onMount(() => {
 		text = params.q ?? '';
@@ -60,10 +73,11 @@
 		patchSearch(page.url, { q: next });
 	});
 
-	$effect(() => {
-		if (!mounted || params.q === lastWritten) return;
-		lastWritten = params.q;
-		text = params.q ?? '';
+	/** Only other navigations can change the query. Ours lag behind typing and must not undo it. */
+	afterNavigate(({ type }) => {
+		if (type === 'goto') return;
+		lastWritten = parseParams(page.url.searchParams).q;
+		text = lastWritten ?? '';
 		debounced = text;
 	});
 
@@ -129,6 +143,10 @@
 			<SearchBar
 				bind:value={text}
 				bind:element={input}
+				{field}
+				onfield={(next: SearchField) => {
+					patchSearch(page.url, { field: next === 'all' ? undefined : next });
+				}}
 				listId={LIST_ID}
 				activeId={panel?.activeId()}
 				onmove={(delta: 1 | -1) => panel?.move(delta)}
@@ -167,8 +185,18 @@
 		<SongPanel
 			bind:this={panel}
 			query={debounced}
+			{field}
 			artist={artistFilter}
 			release={releaseFilter}
+			browse
+			{sort}
+			{filters}
+			onsort={(next: SortId | undefined) => {
+				patchSearch(page.url, { sort: next });
+			}}
+			onfilter={(changes: TableFilters) => {
+				patchSearch(page.url, { ...changes, versions: changes.versions ? '1' : undefined });
+			}}
 			listId={LIST_ID}
 			label="Search results"
 			onopen={() => {
@@ -179,7 +207,7 @@
 				<PageHeader
 					eyebrow="Platinum Karaoke songbook"
 					title="Find any song code, fast."
-					subhead="Type a code, a title or an artist. Press / to jump to the search box."
+					subhead="Browse the whole songbook below, or pick code, title or artist and search. Press / to jump to the search box."
 				/>
 				{#if recents.length > 0}
 					<section class="flex flex-col gap-2" aria-label="Recent searches">

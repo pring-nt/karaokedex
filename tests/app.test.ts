@@ -11,6 +11,15 @@ import {
 	toggleFavorite,
 	toggleQueued
 } from '../src/lib/app/library';
+import {
+	columnFiltersFor,
+	initial,
+	nextSort,
+	releaseYears,
+	sortingFor,
+	sortKey
+} from '../src/lib/app/browse';
+import { DEFAULT_FONT, FONTS, parseFontPreference } from '../src/lib/app/fonts';
 import { parseThemePreference, resolveTheme, THEMES, themeMode } from '../src/lib/app/themes';
 import { browserStorage, readJson, writeJson, type KeyValueStore } from '../src/lib/app/storage';
 import { buildSearch, parseParams } from '../src/lib/app/url';
@@ -126,6 +135,74 @@ describe('themes', () => {
 			expect(tokens).toContain(`[data-theme='${id}']`);
 			expect(html).toMatch(new RegExp(`'?${id}'?: '${mode}'`));
 		}
+	});
+});
+
+describe('fonts', () => {
+	test('a saved value is a known font, or the default', () => {
+		expect(parseFontPreference('editorial')).toBe('editorial');
+		expect(parseFontPreference('comic-sans')).toBe(DEFAULT_FONT);
+		expect(parseFontPreference(null)).toBe(DEFAULT_FONT);
+	});
+
+	test('every font has a token block and is known to the pre-paint script', async () => {
+		const tokens = await Bun.file('src/lib/styles/tokens.css').text();
+		const html = await Bun.file('src/app.html').text();
+		for (const { id } of FONTS) {
+			expect(tokens).toContain(`[data-font='${id}']`);
+			expect(html).toContain(`'${id}'`);
+		}
+	});
+});
+
+describe('browsing', () => {
+	test('a header click starts with the column default, then flips', () => {
+		expect(nextSort(undefined, 'title')).toBe('title');
+		expect(nextSort('title', 'title')).toBe('title-desc');
+		expect(nextSort('title-desc', 'title')).toBe('title');
+		expect(nextSort('title', 'release')).toBe('newest');
+		expect(nextSort('newest', 'release')).toBe('oldest');
+	});
+
+	test('no sort keeps the incoming order', () => {
+		expect(sortingFor(undefined)).toEqual([]);
+		expect(sortingFor('newest')).toEqual([{ id: 'release', desc: true }]);
+	});
+
+	test('letters bucket normalized text, and everything else is #', () => {
+		expect(initial(sortKey('Élan'))).toBe('e');
+		expect(initial(sortKey('214'))).toBe('#');
+		expect(initial('')).toBe('#');
+	});
+
+	test('the letter filter follows the sorted column', () => {
+		expect(columnFiltersFor({ letter: 'b' }, 'title')).toEqual([{ id: 'title', value: 'b' }]);
+		expect(columnFiltersFor({ letter: 'b' }, 'artist-desc')).toEqual([
+			{ id: 'artists', value: 'b' }
+		]);
+		expect(columnFiltersFor({ year: '2024', versions: true }, undefined)).toEqual([
+			{ id: 'release', value: '2024' },
+			{ id: 'version', value: true }
+		]);
+	});
+
+	test('only dated releases give years, newest first', () => {
+		expect(releaseYears(['2024-01', '2026-05', '2024-09', 'full-vol-59'])).toEqual([
+			'2026',
+			'2024'
+		]);
+	});
+
+	test('sort and filter params validate like the rest', () => {
+		expect(params('field=code&sort=newest&letter=a&year=2024&versions=1')).toEqual({
+			field: 'code',
+			sort: 'newest',
+			letter: 'a',
+			year: '2024',
+			versions: '1'
+		});
+		expect(params('letter=%23')).toEqual({ letter: '#' });
+		expect(params('field=lyrics&sort=x&letter=ab&year=24&versions=2')).toEqual({});
 	});
 });
 

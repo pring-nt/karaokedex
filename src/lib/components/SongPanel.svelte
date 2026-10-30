@@ -3,24 +3,35 @@
 	import { optionId } from '#lib/app/ids';
 	import { catalog } from '#lib/app/catalog.svelte';
 	import type { Song } from '#lib/catalog/schema';
+	import { releaseYears, type SortId, type TableFilters } from '#lib/app/browse';
 	import type { SearchOptions } from '#lib/search/engine';
+	import type { SearchField } from '#lib/search/query';
 	import { staggerIn } from '#lib/motion/anime';
 	import type { Songbook } from '#lib/songbooks';
+	import BrowseToolbar from './BrowseToolbar.svelte';
 	import EmptyState from './EmptyState.svelte';
+	import type { TableHandle } from './panel';
 	import ErrorState from './ErrorState.svelte';
 	import ResultsSkeleton from './ResultsSkeleton.svelte';
 	import ResultsTable from './ResultsTable.svelte';
 	import SongCard from './SongCard.svelte';
 
-	const LIMIT = 300;
+	/** The whole result set goes to the table, which sorts and filters it and only renders what is on screen. */
+	const LIMIT = Number.MAX_SAFE_INTEGER;
 	/** Skeletons only appear after this long, so quick answers do not flash. */
 	const SKELETON_DELAY_MS = 200;
 
 	let {
 		query = '',
+		field,
 		artist,
 		release,
 		codes,
+		browse = false,
+		sort,
+		filters = {},
+		onsort,
+		onfilter,
 		listId,
 		label,
 		idle,
@@ -30,13 +41,21 @@
 		onremove
 	}: {
 		query?: string;
+		field?: SearchField;
 		artist?: string;
 		release?: string;
 		/** Fixed list of codes (queue, favorites) instead of a search. */
 		codes?: string[];
+		/** List every song while nothing is searched for, with the sort and filter toolbar. */
+		browse?: boolean;
+		/** With `onsort`, the page owns the sort. Otherwise the panel keeps its own. */
+		sort?: SortId;
+		filters?: TableFilters;
+		onsort?: (sort: SortId | undefined) => void;
+		onfilter?: (changes: TableFilters) => void;
 		listId: string;
 		label: string;
-		/** Shown instead of results while there is nothing to search for. */
+		/** Shown while there is nothing to search for: above the list when browsing, else instead of it. */
 		idle?: Snippet;
 		noResults?: Snippet;
 		onopen?: (song: Song) => void;
@@ -58,12 +77,29 @@
 	let failure = $state('');
 	let activeIndex = $state(-1);
 	let selected = $state<Song | null>(null);
+	let localSort = $state<SortId | undefined>();
+	let table = $state<TableHandle | null>(null);
 	let sequence = 0;
 
-	const wanted = $derived(
+	const searching = $derived(
 		codes !== undefined || query.trim() !== '' || artist !== undefined || release !== undefined
 	);
+	const wanted = $derived(browse || searching);
 	const current = $derived(shown && shown.songbook === catalog.songbook ? shown : null);
+	const activeSort = $derived(onsort ? sort : localSort);
+	const years = $derived(browse ? releaseYears((current?.songs ?? []).map((s) => s.release)) : []);
+	const hasVersions = $derived(current?.songs.some((song) => song.versionNote !== null) ?? false);
+
+	function changeSort(next: SortId | undefined): void {
+		if (onsort) onsort(next);
+		else localSort = next;
+		activeIndex = -1;
+	}
+
+	function changeFilters(changes: TableFilters): void {
+		onfilter?.(changes);
+		activeIndex = -1;
+	}
 
 	$effect(() => {
 		const songbook = catalog.songbook;
@@ -74,7 +110,7 @@
 			return;
 		}
 		const turn = ++sequence;
-		const options: SearchOptions = { limit: LIMIT, artist, release };
+		const options: SearchOptions = { limit: LIMIT, field, artist, release };
 		const input = { query, codes: codes ? [...codes] : undefined, options };
 		pending = true;
 		failure = '';
@@ -100,7 +136,7 @@
 				if (turn !== sequence) return;
 				shown = result;
 				onshown?.(result.songs);
-				activeIndex = result.songs.length > 0 ? 0 : -1;
+				activeIndex = result.songs.length > 0 && input.query.trim() !== '' ? 0 : -1;
 				pending = false;
 				slow = false;
 			},
@@ -117,13 +153,13 @@
 	});
 
 	export function move(delta: 1 | -1): void {
-		const count = current?.songs.length ?? 0;
+		const count = table?.count() ?? 0;
 		if (count === 0) return;
 		activeIndex = Math.min(count - 1, Math.max(0, activeIndex + delta));
 	}
 
 	export function openActive(): void {
-		const song = current?.songs[activeIndex];
+		const song = table?.songAt(activeIndex);
 		if (song) open(song);
 	}
 
@@ -152,45 +188,55 @@
 				void catalog.retry();
 			}}
 		/>
-	{:else if !wanted}
-		{#if idle}{@render idle()}{/if}
-	{:else if !current}
-		{#if pending && (slow || catalog.status === 'loading')}
-			<ResultsSkeleton />
-		{/if}
-	{:else if current.songs.length === 0}
-		{#if noResults}
-			{@render noResults()}
-		{:else}
-			<EmptyState
-				eyebrow="No matches"
-				title="Nothing found"
-				subhead="Try fewer letters, another spelling, or a song code."
-			/>
-		{/if}
 	{:else}
-		<p class="text-xs text-subtle">
-			{#if current.total > current.songs.length}
-				Showing the first {current.songs.length} of {current.total} matches
+		{#if !searching && idle}{@render idle()}{/if}
+		{#if wanted}
+			{#if !current}
+				{#if pending && (slow || catalog.status === 'loading')}
+					<ResultsSkeleton />
+				{/if}
+			{:else if current.songs.length === 0}
+				{#if noResults}
+					{@render noResults()}
+				{:else}
+					<EmptyState
+						eyebrow="No matches"
+						title="Nothing found"
+						subhead="Try fewer letters, another spelling, or a different search field."
+					/>
+				{/if}
 			{:else}
-				{current.total}
-				{current.total === 1 ? 'match' : 'matches'}
+				{#if browse}
+					<BrowseToolbar
+						sort={activeSort}
+						{filters}
+						{years}
+						{hasVersions}
+						relevance={searching}
+						onsort={changeSort}
+						onfilter={changeFilters}
+					/>
+				{/if}
+				<div use:staggerIn>
+					<ResultsTable
+						bind:this={table}
+						songs={current.songs}
+						songbook={current.songbook}
+						{listId}
+						{activeIndex}
+						{label}
+						sort={activeSort}
+						{filters}
+						onsort={changeSort}
+						{onremove}
+						onopen={(song: Song, index: number) => {
+							activeIndex = index;
+							open(song);
+						}}
+					/>
+				</div>
 			{/if}
-		</p>
-		<div use:staggerIn>
-			<ResultsTable
-				songs={current.songs}
-				songbook={current.songbook}
-				{listId}
-				{activeIndex}
-				{label}
-				{onremove}
-				onopen={(song: Song, index: number) => {
-					activeIndex = index;
-					open(song);
-				}}
-			/>
-		</div>
+		{/if}
 	{/if}
 </div>
 

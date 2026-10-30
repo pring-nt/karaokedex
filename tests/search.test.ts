@@ -213,3 +213,13 @@ describe('benchmark', () => {
 		}
 	});
 });
+
+describe('search fields', () => {
+	test('a chosen field decides what the query means', () => {
+		expect(parseQuery('214', 'title')).toEqual({ mode: 'title', text: '214', terms: ['214'] });
+		expect(parseQuery('a:bini', 'title').mode).toBe('title');
+		expect(parseQuery('214', 'artist').mode).toBe('artist');
+		expect(parseQuery('214', 'code')).toEqual({ mode: 'code', digits: '214' });
+		expect(parseQuery('roxanne', 'code')).toEqual({ mode: 'empty' });
+	});
+});

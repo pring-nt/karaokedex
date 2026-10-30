@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="rose-pine" data-mode="dark">
+<html lang="en" data-theme="rose-pine" data-mode="dark" data-font="modern">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -32,6 +32,17 @@
 				}
 				document.documentElement.setAttribute('data-theme', theme);
 				document.documentElement.setAttribute('data-mode', modes[theme]);
+				// Keep in sync with FONTS in src/lib/app/fonts.ts
+				var fonts = ['modern', 'editorial', 'friendly', 'readable', 'typewriter'];
+				var font = null;
+				try {
+					font = localStorage.getItem('karaokedex:font');
+				} catch (error) {
+					font = null;
+				}
+				if (fonts.indexOf(font) !== -1) {
+					document.documentElement.setAttribute('data-font', font);
+				}
 			})();
 		</script>
 		%sveltekit.head%

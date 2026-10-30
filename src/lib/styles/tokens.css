@@ -27,8 +27,8 @@
 
 	--glass-blur: 20px;
 
-	--font-body: 'DM Mono', 'JetBrains Mono Variable', ui-monospace, monospace;
-	--font-display: 'Instrument Serif', Georgia, serif;
+	--font-body: 'Inter Variable', system-ui, sans-serif;
+	--font-display: 'Space Grotesk Variable', system-ui, sans-serif;
 	--font-code: 'JetBrains Mono Variable', ui-monospace, monospace;
 
 	--space-1: 4px;
@@ -186,6 +186,32 @@
 	--danger: #bf616a;
 }
 
+/* After the themes, so a font choice beats the defaults in the first block. Codes stay in --font-code. */
+[data-font='modern'] {
+	--font-body: 'Inter Variable', system-ui, sans-serif;
+	--font-display: 'Space Grotesk Variable', system-ui, sans-serif;
+}
+
+[data-font='editorial'] {
+	--font-body: 'DM Sans Variable', system-ui, sans-serif;
+	--font-display: 'Fraunces Variable', Georgia, serif;
+}
+
+[data-font='friendly'] {
+	--font-body: 'Nunito Variable', system-ui, sans-serif;
+	--font-display: 'Nunito Variable', system-ui, sans-serif;
+}
+
+[data-font='readable'] {
+	--font-body: 'Atkinson Hyperlegible', system-ui, sans-serif;
+	--font-display: 'Atkinson Hyperlegible', system-ui, sans-serif;
+}
+
+[data-font='typewriter'] {
+	--font-body: 'DM Mono', 'JetBrains Mono Variable', ui-monospace, monospace;
+	--font-display: 'Instrument Serif', Georgia, serif;
+}
+
 [data-mode='light'] {
 	color-scheme: light;
 
@@ -230,7 +256,7 @@
 
 	--font-sans: var(--font-body);
 	--font-mono: var(--font-code);
-	--font-display: 'Instrument Serif', Georgia, serif;
+	--font-display: 'Space Grotesk Variable', system-ui, sans-serif;
 
 	--text-micro: 0.625rem;
 	--text-xs: 0.75rem;

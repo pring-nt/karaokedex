@@ -1,7 +1,7 @@
 import type { Song } from '../catalog/schema';
 import { boundedEditDistance } from '../normalize/distance';
 import { normalize } from '../normalize/text';
-import { parseQuery } from './query';
+import { parseQuery, type SearchField } from './query';
 
 /**
  * Lower is better. Code matches come first, then title matches by how strongly the query anchors
@@ -112,12 +112,17 @@ export class SearchIndex {
 		return this.entries.length;
 	}
 
-	search(rawQuery: string, limit = 50, filter?: SongFilter): SearchResult {
-		const query = parseQuery(rawQuery);
+	search(
+		rawQuery: string,
+		limit = 50,
+		filter?: SongFilter,
+		field: SearchField = 'all'
+	): SearchResult {
+		const query = parseQuery(rawQuery, field);
 		if (query.mode === 'empty') return { hits: [], total: 0 };
 		if (query.mode === 'code') {
 			const codeResult = this.searchCode(query.digits, limit, filter);
-			if (codeResult.total > 0) return codeResult;
+			if (codeResult.total > 0 || field === 'code') return codeResult;
 			return this.searchText(normalize(query.digits), 'both', limit, filter);
 		}
 		return this.searchText(query.text, query.mode, limit, filter);
@@ -194,7 +199,6 @@ export class SearchIndex {
 		const terms = query.terms;
 		const entries = this.entries;
 		const best: { index: number; score: number }[] = [];
-		let total = 0;
 
 		for (let index = 0; index < entries.length; index++) {
 			if (filter && !filter(index)) continue;
@@ -204,27 +208,19 @@ export class SearchIndex {
 			if (!containsAll(hay, terms)) continue;
 			const score = this.score(entry, query, mode);
 			if (score < 0) continue;
-			total++;
-
-			const last = best.at(-1);
-			if (best.length === limit && last) {
-				if (score > last.score) continue;
-				if (!this.before(score, entry, last.score, entries[last.index])) continue;
-			}
-			let position = best.length;
-			while (position > 0) {
-				const previous = best[position - 1];
-				if (!this.before(score, entry, previous.score, entries[previous.index])) break;
-				position--;
-			}
-			best.splice(position, 0, { index, score });
-			if (best.length > limit) best.pop();
+			best.push({ index, score });
 		}
 
-		if (total > 0) {
+		if (best.length > 0) {
+			best.sort((a, b) => {
+				if (a.score !== b.score) return a.score - b.score;
+				return this.before(a.score, entries[a.index], b.score, entries[b.index]) ? -1 : 1;
+			});
 			return {
-				hits: best.map(({ index, score }) => ({ index, tier: Math.floor(score / SUB) })),
-				total
+				hits: best
+					.slice(0, limit)
+					.map(({ index, score }) => ({ index, tier: Math.floor(score / SUB) })),
+				total: best.length
 			};
 		}
 		return this.searchFuzzy(terms, mode, limit, filter);

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import './layout.css';
+	import MicrophoneStageIcon from 'phosphor-svelte/lib/MicrophoneStageIcon';
 	import { onMount } from 'svelte';
 	import { browser } from '$app/env';
 	import { resolve } from '$app/paths';
@@ -11,6 +12,7 @@
 	import favicon from '#lib/assets/favicon.svg';
 	import Aurora from '#lib/components/Aurora.svelte';
 	import BookBar from '#lib/components/BookBar.svelte';
+	import FontMenu from '#lib/components/FontMenu.svelte';
 	import ThemeMenu from '#lib/components/ThemeMenu.svelte';
 	import type { Songbook } from '#lib/songbooks';
 	import type { LayoutProps } from './$types';
@@ -34,7 +36,13 @@
 	});
 
 	function switchBook(next: Songbook): void {
-		patchSearch(page.url, { book: next, artist: undefined, release: undefined });
+		patchSearch(page.url, {
+			book: next,
+			artist: undefined,
+			release: undefined,
+			year: undefined,
+			versions: undefined
+		});
 	}
 
 	const links = [
@@ -57,8 +65,9 @@
 		>
 			<a
 				href={resolve(`/?book=${songbook}`)}
-				class="flex min-h-11 items-center font-display text-xl tracking-tight text-text"
+				class="flex min-h-11 items-center gap-2 font-display text-xl tracking-tight text-text"
 			>
+				<MicrophoneStageIcon size={20} weight="bold" class="text-accent" aria-hidden="true" />
 				<span class="gradient-text">KaraokeDex</span>
 			</a>
 			<nav
@@ -78,7 +87,8 @@
 					</a>
 				{/each}
 			</nav>
-			<div class="ml-auto">
+			<div class="ml-auto flex items-center">
+				<FontMenu />
 				<ThemeMenu />
 			</div>
 		</div>

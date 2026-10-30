@@ -2,6 +2,7 @@ import { Catalog, CatalogManifest, expandCatalog, type Song } from '../catalog/s
 import { artistSlug } from '../catalog/slug';
 import type { Songbook } from '../songbooks';
 import { SearchIndex, type SongFilter } from './index';
+import type { SearchField } from './query';
 
 /** Where downloaded catalogs are kept between visits, keyed by the hash in the catalog file name. */
 export interface CatalogCache {
@@ -30,6 +31,8 @@ export interface SongHit {
 
 export interface SearchOptions {
 	limit?: number;
+	/** What the query is matched against, every field by default. */
+	field?: SearchField;
 	/** Only songs credited to the artist with this slug. */
 	artist?: string;
 	/** Only songs first listed in the release with this label. */
@@ -132,8 +135,8 @@ export class SearchEngine {
 	}
 
 	/**
-	 * Ranked search. With an empty query and a filter it lists the filtered songs by code, which
-	 * is how artist and release pages are built.
+	 * Ranked search. An empty query lists every song the filter lets through (all of them without
+	 * one) in catalog order, which is how browsing and the artist and release pages are built.
 	 */
 	search(query: string, options: SearchOptions = {}): SearchResponse {
 		const index = this.index;
@@ -141,18 +144,18 @@ export class SearchEngine {
 		const limit = options.limit ?? DEFAULT_LIMIT;
 		const filter = this.filter(options);
 
-		if (query.trim() === '' && filter) {
+		if (query.trim() === '') {
 			const hits: SongHit[] = [];
 			let total = 0;
 			this.songs.forEach((song, position) => {
-				if (!filter(position)) return;
+				if (filter && !filter(position)) return;
 				total++;
 				if (hits.length < limit) hits.push({ song, tier: 0 });
 			});
 			return { hits, total };
 		}
 
-		const result = index.search(query, limit, filter);
+		const result = index.search(query, limit, filter, options.field);
 		return {
 			total: result.total,
 			hits: result.hits.map((hit) => ({ song: this.songs[hit.index], tier: hit.tier }))

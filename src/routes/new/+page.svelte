@@ -7,6 +7,7 @@
 	import { parseParams } from '#lib/app/url';
 	import PageHeader from '#lib/components/PageHeader.svelte';
 	import ResultsSkeleton from '#lib/components/ResultsSkeleton.svelte';
+	import SelectField from '#lib/components/SelectField.svelte';
 	import SongPanel from '#lib/components/SongPanel.svelte';
 	import type { ReleaseSummary } from '#lib/search/engine';
 	import { SONGBOOKS } from '#lib/songbooks';
@@ -52,23 +53,15 @@
 	/>
 
 	{#if available.length > 1}
-		<label class="flex flex-col gap-1 self-start text-xs text-subtle">
-			<span class="eyebrow">Release</span>
-			<select
-				class="min-h-11 rounded-md border border-highlight-med bg-highlight-low px-3 text-[length:var(--text-base)] text-text md:min-h-10"
-				value={selected}
-				onchange={(event) => {
-					choose(event.currentTarget.value);
-				}}
-			>
-				{#each available as release (release.label)}
-					<option value={release.label}>
-						{release.label} ({release.count}
-						{release.count === 1 ? 'song' : 'songs'})
-					</option>
-				{/each}
-			</select>
-		</label>
+		<SelectField
+			label="Release"
+			value={selected ?? ''}
+			options={available.map((release) => ({
+				value: release.label,
+				label: `${release.label} (${String(release.count)} ${release.count === 1 ? 'song' : 'songs'})`
+			}))}
+			onchange={choose}
+		/>
 	{/if}
 
 	<SongPanel release={selected} listId="new-results" label="New songs">

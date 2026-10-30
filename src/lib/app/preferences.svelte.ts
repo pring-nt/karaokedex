@@ -8,16 +8,19 @@ import {
 	toggleFavorite,
 	toggleQueued
 } from './library';
+import { DEFAULT_FONT, parseFontPreference, type FontId } from './fonts';
 import { parseThemePreference, resolveTheme, themeMode, type ThemePreference } from './themes';
 import { browserStorage, readJson, writeJson, type KeyValueStore } from './storage';
 
 const THEME_KEY = 'karaokedex:theme';
+const FONT_KEY = 'karaokedex:font';
 const SONGBOOK_KEY = 'karaokedex:songbook';
 const LIBRARY_KEY = 'karaokedex:library';
 
 /** Everything the app remembers in this browser. Call `init()` once on the client. */
 class Preferences {
 	themePreference = $state<ThemePreference>('system');
+	font = $state<FontId>(DEFAULT_FONT);
 	songbook = $state<Songbook>('hdd');
 	library = $state<Library>(emptyLibrary());
 	private store: KeyValueStore | null = null;
@@ -27,7 +30,8 @@ class Preferences {
 		this.store = browserStorage();
 		const lightQuery = window.matchMedia('(prefers-color-scheme: light)');
 		this.systemLight = lightQuery.matches;
-		this.themePreference = parseThemePreference(this.readTheme());
+		this.themePreference = parseThemePreference(this.readString(THEME_KEY));
+		this.font = parseFontPreference(this.readString(FONT_KEY));
 		lightQuery.addEventListener('change', (event) => {
 			this.systemLight = event.matches;
 			this.applyTheme();
@@ -36,11 +40,19 @@ class Preferences {
 		this.library = readJson(this.store, LIBRARY_KEY, Library, emptyLibrary());
 	}
 
-	private readTheme(): string | null {
+	private readString(key: string): string | null {
 		try {
-			return this.store?.getItem(THEME_KEY) ?? null;
+			return this.store?.getItem(key) ?? null;
 		} catch {
 			return null;
+		}
+	}
+
+	private writeString(key: string, value: string): void {
+		try {
+			this.store?.setItem(key, value);
+		} catch {
+			return;
 		}
 	}
 
@@ -53,11 +65,13 @@ class Preferences {
 	setThemePreference(preference: ThemePreference): void {
 		this.themePreference = preference;
 		this.applyTheme();
-		try {
-			this.store?.setItem(THEME_KEY, preference);
-		} catch {
-			return;
-		}
+		this.writeString(THEME_KEY, preference);
+	}
+
+	setFont(font: FontId): void {
+		this.font = font;
+		document.documentElement.setAttribute('data-font', font);
+		this.writeString(FONT_KEY, font);
 	}
 
 	setSongbook(songbook: Songbook): void {
