@@ -1,6 +1,5 @@
 <script lang="ts">
 	import './layout.css';
-	import MicrophoneStageIcon from 'phosphor-svelte/lib/MicrophoneStageIcon';
 	import { onMount } from 'svelte';
 	import { browser } from '$app/env';
 	import { asset, resolve } from '$app/paths';
@@ -12,6 +11,7 @@
 	import favicon from '#lib/assets/favicon.svg';
 	import Aurora from '#lib/components/Aurora.svelte';
 	import BookBar from '#lib/components/BookBar.svelte';
+	import BrandIcon from '#lib/components/BrandIcon.svelte';
 	import FontMenu from '#lib/components/FontMenu.svelte';
 	import ThemeMenu from '#lib/components/ThemeMenu.svelte';
 	import type { Songbook } from '#lib/songbooks';
@@ -69,7 +69,7 @@
 				href={resolve(`/?book=${songbook}`)}
 				class="flex min-h-11 items-center gap-2 font-display text-xl tracking-tight text-text"
 			>
-				<MicrophoneStageIcon size={20} weight="bold" class="text-accent" aria-hidden="true" />
+				<BrandIcon />
 				<span class="gradient-text">KaraokeDex</span>
 			</a>
 			<nav
