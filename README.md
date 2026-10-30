@@ -1,54 +1,82 @@
-# sv
+# KaraokeDex
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A fast, phone-first songbook for Platinum Karaoke. Find a song code on any Platinum machine, even when the book at the venue is out of date.
 
-## Creating a project
+Printed songbooks fall behind, and Platinum's updates are scattered across hundreds of PDFs. KaraokeDex reads those PDFs and turns them into one searchable site.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Features
 
-```sh
-# create a new project
-npx sv create my-app
+- **Search by code, title or artist**, or browse a whole songbook A to Z.
+- **Pick your machine.** KS Series (including the LX15 and CX15), HDD, T-X, Reyna, Flute/Piano, BMB, Hermosa, Home 40, Bravo and P-Series each have their own list.
+- **Songs listed for other machines.** Most Platinum lists share one numbering, so a song missing from your list can still be found through another one. These songs are clearly labelled, because a shared code does not prove your machine has the song.
+- **Tonight's queue and favorites**, kept in your browser.
+- **Works on a phone**, with the search bar within reach of your thumb.
+- **Themes and fonts** you can choose separately.
+
+## How it works
+
+There is no server or database behind the site. Song data is built ahead of time and shipped as static files.
+
+```text
+Platinum's PDFs -> parser -> temporary SQLite database -> data/catalogs/*.json -> static site
 ```
 
-To recreate this project with the same configuration:
+1. `bun run catalog:update` parses the PDFs in `data/pdfs/`, applies `data/corrections.json`, and writes one catalog per songbook to `data/catalogs/`, plus a shared catalog that records which lists print each code.
+2. The catalogs are committed. The PDFs are not, so a deploy never needs them.
+3. `bun run build` copies the catalogs to `static/` and prerenders the site.
+4. In the browser, a web worker downloads the chosen catalog, caches it, and runs every search on the device.
 
-```sh
-# recreate this project
-bun x sv@1.1.1 create --template minimal --types ts --add prettier eslint playwright="demo:yes" tailwindcss="plugins:none" sveltekit-adapter="adapter:vercel" --install bun karaokedex
+## Getting started
+
+You need [Bun](https://bun.sh). This project does not use npm, pnpm or yarn.
+
+```bash
+bun install
 ```
 
-## Adding features
-
-Add features to your project with `sv add`:
-
-```sh
-npx sv add
+```bash
+bun run dev
 ```
 
-For example, to add Tailwind CSS:
+The committed catalogs are enough to run the whole site. You only need the PDFs to change song data.
 
-```sh
-npx sv add tailwindcss
-```
+## Commands
 
-## Developing
+| Command                  | What it does                                  |
+| ------------------------ | --------------------------------------------- |
+| `bun run dev`            | Start the dev server                          |
+| `bun run build`          | Build the static site from committed catalogs |
+| `bun run verify`         | Run every check (see CONTRIBUTING.md)         |
+| `bun run test`           | Run the unit tests                            |
+| `bun run sources:check`  | Look for new songlists on Platinum's site     |
+| `bun run sources:status` | Compare the source list with your local PDFs  |
+| `bun run catalog:update` | Reparse local PDFs into `data/catalogs/`      |
+| `bun run import <pdf>`   | Parse one PDF and preview it                  |
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Adding a new songlist
 
-```sh
-npm run dev
+1. Run `bun run sources:check --write` to record new lists in `data/sources.json`.
+2. Download each new PDF to the path it lists, such as `data/pdfs/hdd/2026-12.pdf`.
+3. Run `bun run sources:status --write`.
+4. Run `bun run catalog:update`. This rebuilds from every PDF, so you need the full `data/pdfs/` folder.
+5. Commit `data/`.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## Known limits
 
-## Building
+- **Base catalogs are missing.** Platinum publishes update lists, and only P-Series has a published full list, so older songs on a machine may not appear here.
+- **P-Series is separate.** Its codes do not reliably match the other lists, so its songs are never mixed into them.
+- **Codes can be wrong.** Platinum's PDFs contain typos and swapped columns. Known problems are fixed in `data/corrections.json`, and a few conflicts between lists are unresolved. The machine always has the final say.
 
-To create a production version of your app:
+## Contributing
 
-```sh
-npm run build
-```
+Corrections are especially welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-You can preview the production build with `npm run preview`.
+## License
+
+The code is licensed under the [GNU Affero General Public License v3.0 or later](LICENSE). If you run a modified version as a public service, you must offer your source code to its users.
+
+The license covers this project's code. It gives no rights over Platinum's songlists, song titles, or trademarks.
+
+## Disclaimer
+
+KaraokeDex is an unofficial fan project. It is not affiliated with, endorsed by or sponsored by Platinum Karaoke. Song codes come from the songlists Platinum publishes on its own website.
