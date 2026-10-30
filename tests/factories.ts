@@ -6,6 +6,7 @@ export function makeRow(code: string, overrides: Partial<ParsedRow> = {}): Parse
 		code,
 		title: `Song ${code}`,
 		versionNote: null,
+		altTitles: [],
 		creditRaw: 'Artist',
 		needsReview: false,
 		reviewReasons: [],

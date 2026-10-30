@@ -167,6 +167,7 @@ export function parseMonthlyNewSongs(pages: readonly PdfPage[]): MonthlyParse {
 			code: entry.code.str,
 			title,
 			versionNote,
+			altTitles: [],
 			creditRaw,
 			needsReview: reviewReasons.length > 0,
 			reviewReasons

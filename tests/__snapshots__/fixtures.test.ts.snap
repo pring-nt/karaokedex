@@ -11,6 +11,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
     "profile": "monthly-new-songs",
     "rows": [
       {
+        "altTitles": [],
         "code": "42227",
         "creditRaw": "Adele",
         "needsReview": false,
@@ -19,6 +20,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42228",
         "creditRaw": "Charli XCX",
         "needsReview": false,
@@ -27,6 +29,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42229",
         "creditRaw": "BRUNO MARS",
         "needsReview": false,
@@ -35,6 +38,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42230",
         "creditRaw": "Bruno Mars",
         "needsReview": false,
@@ -43,6 +47,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42231",
         "creditRaw": "Bruno Mars",
         "needsReview": false,
@@ -51,6 +56,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42232",
         "creditRaw": "Tyla",
         "needsReview": false,
@@ -59,6 +65,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42233",
         "creditRaw": "Chappell Roan",
         "needsReview": false,
@@ -67,6 +74,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42234",
         "creditRaw": "Charlie Puth",
         "needsReview": false,
@@ -75,6 +83,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42235",
         "creditRaw": "Modern Talking",
         "needsReview": false,
@@ -83,6 +92,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42236",
         "creditRaw": "Elijah Woods",
         "needsReview": false,
@@ -91,6 +101,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42237",
         "creditRaw": "Dj Bobo",
         "needsReview": false,
@@ -99,6 +110,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42238",
         "creditRaw": "Josh Santana",
         "needsReview": false,
@@ -107,6 +119,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": "R&B Cover",
       },
       {
+        "altTitles": [],
         "code": "42239",
         "creditRaw": "Regine Velasquez",
         "needsReview": false,
@@ -115,6 +128,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": "R&B Cover",
       },
       {
+        "altTitles": [],
         "code": "42240",
         "creditRaw": "Gary Valenciano",
         "needsReview": false,
@@ -123,6 +137,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": "R&B Cover",
       },
       {
+        "altTitles": [],
         "code": "42241",
         "creditRaw": "Maki",
         "needsReview": false,
@@ -131,6 +146,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42242",
         "creditRaw": "Kyla",
         "needsReview": false,
@@ -139,6 +155,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": "Soul Cover",
       },
       {
+        "altTitles": [],
         "code": "42243",
         "creditRaw": "Kitchie Nadal",
         "needsReview": false,
@@ -147,6 +164,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": "R&B Cover",
       },
       {
+        "altTitles": [],
         "code": "42244",
         "creditRaw": "Carol Banawa",
         "needsReview": false,
@@ -155,6 +173,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42245",
         "creditRaw": "Ogie Alcasid",
         "needsReview": false,
@@ -163,6 +182,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42246",
         "creditRaw": "TJ Monterde",
         "needsReview": false,
@@ -171,6 +191,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42247",
         "creditRaw": "Rey Valera",
         "needsReview": false,
@@ -179,6 +200,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": "R&B Cover",
       },
       {
+        "altTitles": [],
         "code": "42248",
         "creditRaw": "BINI",
         "needsReview": false,
@@ -187,6 +209,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": "R&B Cover",
       },
       {
+        "altTitles": [],
         "code": "42249",
         "creditRaw": "Up Dharma Down",
         "needsReview": false,
@@ -195,6 +218,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": "R&B Cover",
       },
       {
+        "altTitles": [],
         "code": "42250",
         "creditRaw": "Haschak Sisters",
         "needsReview": false,
@@ -203,6 +227,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42251",
         "creditRaw": "Melanie Martinez",
         "needsReview": false,
@@ -211,6 +236,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42252",
         "creditRaw": "KZ Tandingan ft. TJ Monterde",
         "needsReview": false,
@@ -219,6 +245,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42253",
         "creditRaw": "Maurice White",
         "needsReview": false,
@@ -227,6 +254,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42254",
         "creditRaw": "Edgar Mortiz",
         "needsReview": false,
@@ -235,6 +263,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42255",
         "creditRaw": "KATSEYE",
         "needsReview": false,
@@ -243,6 +272,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42256",
         "creditRaw": "Benny Mardones",
         "needsReview": false,
@@ -251,6 +281,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42257",
         "creditRaw": "Ogie Alcasid",
         "needsReview": false,
@@ -259,6 +290,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42258",
         "creditRaw": "Claire dela Fuente",
         "needsReview": false,
@@ -267,6 +299,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42259",
         "creditRaw": "Ben&Ben",
         "needsReview": false,
@@ -275,6 +308,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42260",
         "creditRaw": "Cup of Joe",
         "needsReview": false,
@@ -283,6 +317,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42261",
         "creditRaw": "GANGGA",
         "needsReview": false,
@@ -291,6 +326,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42262",
         "creditRaw": "mmz & Mi'kel",
         "needsReview": false,
@@ -299,6 +335,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42263",
         "creditRaw": "El Manu",
         "needsReview": false,
@@ -307,6 +344,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42264",
         "creditRaw": "Janine",
         "needsReview": false,
@@ -315,6 +353,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42265",
         "creditRaw": "Eddie Peregrina",
         "needsReview": false,
@@ -323,6 +362,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42266",
         "creditRaw": "Colet Vergara, Jhoanna Robles And Juan Karlos",
         "needsReview": false,
@@ -331,6 +371,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42267",
         "creditRaw": "Jason Marvin ft. Kyla",
         "needsReview": false,
@@ -339,6 +380,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42268",
         "creditRaw": "Maki",
         "needsReview": false,
@@ -347,6 +389,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42269",
         "creditRaw": "Wilbert Ross",
         "needsReview": false,
@@ -355,6 +398,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42270",
         "creditRaw": "Mika Salamanca",
         "needsReview": false,
@@ -363,6 +407,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42271",
         "creditRaw": "Moira Dela Torre and IV of Spades",
         "needsReview": false,
@@ -371,6 +416,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42272",
         "creditRaw": "IV of Spades",
         "needsReview": false,
@@ -379,6 +425,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42273",
         "creditRaw": "Sponge Cola feat. Gigi de Lana",
         "needsReview": false,
@@ -387,6 +434,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42274",
         "creditRaw": "Sugarcane",
         "needsReview": false,
@@ -395,6 +443,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42275",
         "creditRaw": "Shaira",
         "needsReview": false,
@@ -403,6 +452,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42276",
         "creditRaw": "Bandang Lapis",
         "needsReview": false,
@@ -411,6 +461,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42277",
         "creditRaw": "ROB DENIEL",
         "needsReview": false,
@@ -419,6 +470,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42278",
         "creditRaw": "ROB DENIEL",
         "needsReview": false,
@@ -427,6 +479,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42279",
         "creditRaw": "Jan Roberts",
         "needsReview": false,
@@ -435,6 +488,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42280",
         "creditRaw": "Rochelle and Jovel",
         "needsReview": false,
@@ -443,6 +497,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42281",
         "creditRaw": "Flow G ft. Skusta Clee",
         "needsReview": false,
@@ -451,6 +506,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42282",
         "creditRaw": "Eddie Peregrina",
         "needsReview": false,
@@ -459,6 +515,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42283",
         "creditRaw": "Maris Racal",
         "needsReview": false,
@@ -467,6 +524,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42284",
         "creditRaw": "KZ Tandingan",
         "needsReview": false,
@@ -475,6 +533,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42285",
         "creditRaw": "Julie Vega",
         "needsReview": false,
@@ -483,6 +542,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42286",
         "creditRaw": "Gloc-9 ft. A",
         "needsReview": false,
@@ -491,6 +551,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42287",
         "creditRaw": "BINI",
         "needsReview": false,
@@ -499,6 +560,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42288",
         "creditRaw": "SB19",
         "needsReview": false,
@@ -507,6 +569,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42289",
         "creditRaw": "Ofenbach vs. Nick Waterhouse",
         "needsReview": false,
@@ -515,6 +578,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42290",
         "creditRaw": "Olivia Dean",
         "needsReview": false,
@@ -523,6 +587,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42291",
         "creditRaw": "Greyhoundz ft Gloc-9 and Francis M.",
         "needsReview": false,
@@ -531,6 +596,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42292",
         "creditRaw": "Jolina Magdangal",
         "needsReview": false,
@@ -539,6 +605,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42293",
         "creditRaw": "Tootsie Guevarra",
         "needsReview": false,
@@ -547,6 +614,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42294",
         "creditRaw": "The Warning",
         "needsReview": false,
@@ -555,6 +623,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42295",
         "creditRaw": "Men Oppose",
         "needsReview": false,
@@ -563,6 +632,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42296",
         "creditRaw": "Rocksteddy",
         "needsReview": false,
@@ -571,6 +641,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42297",
         "creditRaw": "Papa Roach",
         "needsReview": false,
@@ -579,6 +650,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42298",
         "creditRaw": "Rise Against",
         "needsReview": false,
@@ -587,6 +659,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42299",
         "creditRaw": "Sabrina Carpenter",
         "needsReview": false,
@@ -595,6 +668,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42300",
         "creditRaw": "Skusta Clee",
         "needsReview": false,
@@ -603,6 +677,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42301",
         "creditRaw": "Sleeping With Sirens",
         "needsReview": false,
@@ -611,6 +686,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42302",
         "creditRaw": "BTS",
         "needsReview": false,
@@ -619,6 +695,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42303",
         "creditRaw": "Taylor Swift",
         "needsReview": false,
@@ -627,6 +704,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42304",
         "creditRaw": "Sabrina Carpenter",
         "needsReview": false,
@@ -635,6 +713,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42305",
         "creditRaw": "Christopher ft. Chungha",
         "needsReview": false,
@@ -643,6 +722,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42306",
         "creditRaw": "Avicii, Sandro Cavazza",
         "needsReview": false,
@@ -662,6 +742,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
     "profile": "monthly-new-songs",
     "rows": [
       {
+        "altTitles": [],
         "code": "42307",
         "creditRaw": "8stops7",
         "needsReview": false,
@@ -670,6 +751,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42308",
         "creditRaw": "Nel",
         "needsReview": false,
@@ -678,6 +760,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42309",
         "creditRaw": "Paramore",
         "needsReview": false,
@@ -686,6 +769,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42310",
         "creditRaw": "IV Of Spades",
         "needsReview": false,
@@ -694,6 +778,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42311",
         "creditRaw": "Breaking Benjamin",
         "needsReview": false,
@@ -702,6 +787,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42312",
         "creditRaw": "Baby Dolls",
         "needsReview": false,
@@ -710,6 +796,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42313",
         "creditRaw": "The Cab",
         "needsReview": false,
@@ -718,6 +805,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42314",
         "creditRaw": "Olivia Rodrigo",
         "needsReview": false,
@@ -726,6 +814,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42315",
         "creditRaw": "P.O.D.",
         "needsReview": false,
@@ -734,6 +823,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42316",
         "creditRaw": "Over October",
         "needsReview": false,
@@ -742,6 +832,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42317",
         "creditRaw": "BoA",
         "needsReview": false,
@@ -750,6 +841,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42318",
         "creditRaw": "Eddie Peregrina",
         "needsReview": false,
@@ -758,6 +850,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42319",
         "creditRaw": "Bruno Mars",
         "needsReview": false,
@@ -766,6 +859,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42320",
         "creditRaw": "Carol Banawa",
         "needsReview": false,
@@ -774,6 +868,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42321",
         "creditRaw": "Rainbow",
         "needsReview": false,
@@ -782,6 +877,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42322",
         "creditRaw": "Celine Dion",
         "needsReview": false,
@@ -790,6 +886,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42323",
         "creditRaw": "Charlie Puth",
         "needsReview": false,
@@ -798,6 +895,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42324",
         "creditRaw": "Melanie Martinez",
         "needsReview": false,
@@ -806,6 +904,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42325",
         "creditRaw": "NIKI",
         "needsReview": false,
@@ -814,6 +913,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42326",
         "creditRaw": "Aerosmith",
         "needsReview": false,
@@ -822,6 +922,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42327",
         "creditRaw": "Rey Valera",
         "needsReview": false,
@@ -830,6 +931,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42328",
         "creditRaw": "Lilet",
         "needsReview": false,
@@ -838,6 +940,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42329",
         "creditRaw": "Amiel Sol",
         "needsReview": false,
@@ -846,6 +949,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42330",
         "creditRaw": "Olivia Dean",
         "needsReview": false,
@@ -854,6 +958,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42331",
         "creditRaw": "Nickelback",
         "needsReview": false,
@@ -862,6 +967,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42332",
         "creditRaw": "ROSE",
         "needsReview": false,
@@ -870,6 +976,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42333",
         "creditRaw": "Britney Spears",
         "needsReview": false,
@@ -878,6 +985,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42334",
         "creditRaw": "Hagibis",
         "needsReview": false,
@@ -886,6 +994,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42335",
         "creditRaw": "rerulili feat Kagamine Len",
         "needsReview": false,
@@ -894,6 +1003,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42336",
         "creditRaw": "Avril Lavigne",
         "needsReview": false,
@@ -902,6 +1012,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42337",
         "creditRaw": "Rob Deniel And Kyle Echarri",
         "needsReview": false,
@@ -910,6 +1021,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42338",
         "creditRaw": "Amiel Sol",
         "needsReview": false,
@@ -918,6 +1030,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42339",
         "creditRaw": "Roy Orbison",
         "needsReview": false,
@@ -926,6 +1039,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42340",
         "creditRaw": "Fly By Midnight",
         "needsReview": false,
@@ -934,6 +1048,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42341",
         "creditRaw": "Tate McRae",
         "needsReview": false,
@@ -942,6 +1057,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42342",
         "creditRaw": "Mark Bautista",
         "needsReview": false,
@@ -950,6 +1066,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42343",
         "creditRaw": "Laufey",
         "needsReview": false,
@@ -958,6 +1075,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42344",
         "creditRaw": "Laufey",
         "needsReview": false,
@@ -966,6 +1084,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42345",
         "creditRaw": "Modern Talking",
         "needsReview": false,
@@ -974,6 +1093,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42346",
         "creditRaw": "Sabrina Carpenter",
         "needsReview": false,
@@ -982,6 +1102,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42347",
         "creditRaw": "Jed Banzuelo",
         "needsReview": false,
@@ -990,6 +1111,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42348",
         "creditRaw": "Talking Heads",
         "needsReview": false,
@@ -998,6 +1120,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42349",
         "creditRaw": "ONE OK ROCK",
         "needsReview": false,
@@ -1006,6 +1129,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42350",
         "creditRaw": "Ozzy Osbourne",
         "needsReview": false,
@@ -1014,6 +1138,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42351",
         "creditRaw": "Shirebound",
         "needsReview": false,
@@ -1022,6 +1147,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42352",
         "creditRaw": "Ashley",
         "needsReview": false,
@@ -1030,6 +1156,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42353",
         "creditRaw": "Arthur Nery ft. Adie",
         "needsReview": false,
@@ -1038,6 +1165,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42354",
         "creditRaw": "Secondhand Serenade",
         "needsReview": false,
@@ -1046,6 +1174,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42355",
         "creditRaw": "Tyla",
         "needsReview": false,
@@ -1054,6 +1183,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42356",
         "creditRaw": "Staind",
         "needsReview": false,
@@ -1062,6 +1192,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42357",
         "creditRaw": "Limp Bizkit",
         "needsReview": false,
@@ -1070,6 +1201,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42358",
         "creditRaw": "Sabrina Carpenter",
         "needsReview": false,
@@ -1078,6 +1210,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42359",
         "creditRaw": "John Travolta",
         "needsReview": false,
@@ -1086,6 +1219,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42360",
         "creditRaw": "IV Of Spades",
         "needsReview": false,
@@ -1094,6 +1228,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42361",
         "creditRaw": "J. Brothers",
         "needsReview": false,
@@ -1102,6 +1237,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42362",
         "creditRaw": "Taylor Swift",
         "needsReview": false,
@@ -1110,6 +1246,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42363",
         "creditRaw": "Solace Out The Door",
         "needsReview": false,
@@ -1118,6 +1255,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42364",
         "creditRaw": "Sabrina Carpenter",
         "needsReview": false,
@@ -1126,6 +1264,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42365",
         "creditRaw": "Janine Berdin ft. Illest Morena, Fana",
         "needsReview": false,
@@ -1134,6 +1273,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42366",
         "creditRaw": "Andrew E. ft. Regine Velasquez",
         "needsReview": false,
@@ -1142,6 +1282,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42367",
         "creditRaw": "The Band Perry",
         "needsReview": false,
@@ -1150,6 +1291,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42368",
         "creditRaw": "Jesse McCartney & Yung Gravy",
         "needsReview": false,
@@ -1158,6 +1300,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42369",
         "creditRaw": "The Script",
         "needsReview": false,
@@ -1166,6 +1309,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42370",
         "creditRaw": "Thee Sacred Souls",
         "needsReview": false,
@@ -1174,6 +1318,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42371",
         "creditRaw": "Montell Jordan",
         "needsReview": false,
@@ -1182,6 +1327,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42372",
         "creditRaw": "EJAE",
         "needsReview": false,
@@ -1190,6 +1336,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42373",
         "creditRaw": "Swing Out Sister",
         "needsReview": false,
@@ -1198,6 +1345,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42374",
         "creditRaw": "Yellowcard",
         "needsReview": false,
@@ -1206,6 +1354,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42375",
         "creditRaw": "Nat King Cole",
         "needsReview": false,
@@ -1214,6 +1363,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42376",
         "creditRaw": "Joe Esposito",
         "needsReview": false,
@@ -1233,6 +1383,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
     "profile": "monthly-new-songs",
     "rows": [
       {
+        "altTitles": [],
         "code": "42377",
         "creditRaw": "Megan Moroney",
         "needsReview": false,
@@ -1241,6 +1392,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42378",
         "creditRaw": "P.O.D. Ft. Tatiana Shmayluk",
         "needsReview": false,
@@ -1249,6 +1401,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42379",
         "creditRaw": "Aurora",
         "needsReview": false,
@@ -1257,6 +1410,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42380",
         "creditRaw": "Avenged Sevenfold",
         "needsReview": false,
@@ -1265,6 +1419,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42381",
         "creditRaw": "George Baker Selection",
         "needsReview": false,
@@ -1273,6 +1428,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42382",
         "creditRaw": "Sheryl Cruz",
         "needsReview": false,
@@ -1281,6 +1437,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42383",
         "creditRaw": "Kristian Kostov",
         "needsReview": false,
@@ -1289,6 +1446,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42384",
         "creditRaw": "Bruno Mars",
         "needsReview": false,
@@ -1297,6 +1455,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42385",
         "creditRaw": "Roy Orbison",
         "needsReview": false,
@@ -1305,6 +1464,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42386",
         "creditRaw": "Carpenters",
         "needsReview": false,
@@ -1313,6 +1473,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42387",
         "creditRaw": "Chappell Roan",
         "needsReview": false,
@@ -1321,6 +1482,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42388",
         "creditRaw": "Ella Langley",
         "needsReview": false,
@@ -1329,6 +1491,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42389",
         "creditRaw": "Sleeping With Sirens",
         "needsReview": false,
@@ -1337,6 +1500,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42390",
         "creditRaw": "Olivia Rodrigo",
         "needsReview": false,
@@ -1345,6 +1509,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42391",
         "creditRaw": "J. Tajor",
         "needsReview": false,
@@ -1353,6 +1518,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42392",
         "creditRaw": "John Summit with Paige Cavell",
         "needsReview": false,
@@ -1361,6 +1527,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42393",
         "creditRaw": "Engelbert Humperdinck",
         "needsReview": false,
@@ -1369,6 +1536,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42394",
         "creditRaw": "Eruption",
         "needsReview": false,
@@ -1377,6 +1545,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42395",
         "creditRaw": "R.E.M.",
         "needsReview": false,
@@ -1385,6 +1554,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42396",
         "creditRaw": "flowerovlove",
         "needsReview": false,
@@ -1393,6 +1563,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42397",
         "creditRaw": "Alessia Cara",
         "needsReview": false,
@@ -1401,6 +1572,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42398",
         "creditRaw": "Aerosmith",
         "needsReview": false,
@@ -1409,6 +1581,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42399",
         "creditRaw": "Ariel Rivera",
         "needsReview": false,
@@ -1417,6 +1590,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42400",
         "creditRaw": "Kamikazee",
         "needsReview": false,
@@ -1425,6 +1599,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": "Funk Cover",
       },
       {
+        "altTitles": [],
         "code": "42401",
         "creditRaw": "Up Dharma Down",
         "needsReview": false,
@@ -1433,6 +1608,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42402",
         "creditRaw": "The Bloomfields",
         "needsReview": false,
@@ -1441,6 +1617,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": "Cover",
       },
       {
+        "altTitles": [],
         "code": "42403",
         "creditRaw": "Robledo Timido",
         "needsReview": false,
@@ -1449,6 +1626,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42404",
         "creditRaw": "Ariana Grande",
         "needsReview": false,
@@ -1457,6 +1635,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42405",
         "creditRaw": "Emmy Rossum & Gerard Butler",
         "needsReview": false,
@@ -1465,6 +1644,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42406",
         "creditRaw": "Ian Quiruz",
         "needsReview": false,
@@ -1473,6 +1653,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42407",
         "creditRaw": "Gordon Lightfoot",
         "needsReview": false,
@@ -1481,6 +1662,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42408",
         "creditRaw": "Iluna",
         "needsReview": false,
@@ -1489,6 +1671,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42409",
         "creditRaw": "Fall Out Boy",
         "needsReview": false,
@@ -1497,6 +1680,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42410",
         "creditRaw": "Incubus",
         "needsReview": false,
@@ -1505,6 +1689,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42411",
         "creditRaw": "Jessa Zaragoza",
         "needsReview": false,
@@ -1513,6 +1698,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42412",
         "creditRaw": "Sean Paul",
         "needsReview": false,
@@ -1521,6 +1707,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42413",
         "creditRaw": "Otab Inalab",
         "needsReview": false,
@@ -1529,6 +1716,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42414",
         "creditRaw": "Girlset",
         "needsReview": false,
@@ -1537,6 +1725,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42415",
         "creditRaw": "Baby Dolls",
         "needsReview": false,
@@ -1545,6 +1734,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42416",
         "creditRaw": "Conan Gray",
         "needsReview": false,
@@ -1553,6 +1743,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42417",
         "creditRaw": "Henyong Makata",
         "needsReview": false,
@@ -1561,6 +1752,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42418",
         "creditRaw": "Kristel Fulgar",
         "needsReview": false,
@@ -1569,6 +1761,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42419",
         "creditRaw": "Angela Ken",
         "needsReview": false,
@@ -1577,6 +1770,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42420",
         "creditRaw": "Lola Amour",
         "needsReview": false,
@@ -1585,6 +1779,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42421",
         "creditRaw": "The Beatles",
         "needsReview": false,
@@ -1593,6 +1788,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42422",
         "creditRaw": "The Company",
         "needsReview": false,
@@ -1601,6 +1797,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42423",
         "creditRaw": "Ace Banzuelo",
         "needsReview": false,
@@ -1609,6 +1806,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42424",
         "creditRaw": "Frank Ocean",
         "needsReview": false,
@@ -1617,6 +1815,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42425",
         "creditRaw": "Pink Floyd",
         "needsReview": false,
@@ -1625,6 +1824,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42426",
         "creditRaw": "Janet Jackson",
         "needsReview": false,
@@ -1633,6 +1833,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42427",
         "creditRaw": "Bhousz Malatek",
         "needsReview": false,
@@ -1641,6 +1842,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42428",
         "creditRaw": "Santiago Sisters",
         "needsReview": false,
@@ -1649,6 +1851,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42429",
         "creditRaw": "Seether feat. Amy Lee",
         "needsReview": false,
@@ -1657,6 +1860,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42430",
         "creditRaw": "Rob Deniel",
         "needsReview": false,
@@ -1665,6 +1869,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42431",
         "creditRaw": "SLIZ",
         "needsReview": false,
@@ -1673,6 +1878,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42432",
         "creditRaw": "J. Brothers",
         "needsReview": false,
@@ -1681,6 +1887,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42433",
         "creditRaw": "sombr",
         "needsReview": false,
@@ -1689,6 +1896,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42434",
         "creditRaw": "UNIS",
         "needsReview": false,
@@ -1697,6 +1905,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42435",
         "creditRaw": "XONARA",
         "needsReview": false,
@@ -1705,6 +1914,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42436",
         "creditRaw": "Taylor Swift",
         "needsReview": false,
@@ -1713,6 +1923,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42437",
         "creditRaw": "Carpenters",
         "needsReview": false,
@@ -1721,6 +1932,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42438",
         "creditRaw": "Olivia Rodrigo",
         "needsReview": false,
@@ -1729,6 +1941,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42439",
         "creditRaw": "Garbage",
         "needsReview": false,
@@ -1737,6 +1950,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42440",
         "creditRaw": "Koe Wetzel",
         "needsReview": false,
@@ -1745,6 +1959,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42441",
         "creditRaw": "MEOVV",
         "needsReview": false,
@@ -1753,6 +1968,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42442",
         "creditRaw": "Breaking Benjamin",
         "needsReview": false,
@@ -1761,6 +1977,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42443",
         "creditRaw": "Carly Simon",
         "needsReview": false,
@@ -1769,6 +1986,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42444",
         "creditRaw": "BRUNO MARS",
         "needsReview": false,
@@ -1777,6 +1995,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42445",
         "creditRaw": "Wilbert Ross",
         "needsReview": false,
@@ -1785,6 +2004,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42446",
         "creditRaw": "Beabadoobee",
         "needsReview": false,
@@ -1804,6 +2024,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
     "profile": "monthly-new-songs",
     "rows": [
       {
+        "altTitles": [],
         "code": "42447",
         "creditRaw": "Adie",
         "needsReview": false,
@@ -1812,6 +2033,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42448",
         "creditRaw": "Teri DeSario",
         "needsReview": false,
@@ -1820,6 +2042,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42449",
         "creditRaw": "Anson Seabra",
         "needsReview": false,
@@ -1828,6 +2051,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42450",
         "creditRaw": "Ariel Rivera",
         "needsReview": false,
@@ -1836,6 +2060,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42451",
         "creditRaw": "AJR",
         "needsReview": false,
@@ -1844,6 +2069,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42452",
         "creditRaw": "Avril Lavigne",
         "needsReview": false,
@@ -1852,6 +2078,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42453",
         "creditRaw": "Bon Jovi",
         "needsReview": false,
@@ -1860,6 +2087,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42454",
         "creditRaw": "Bravo All Stars",
         "needsReview": false,
@@ -1868,6 +2096,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42455",
         "creditRaw": "Cartoons",
         "needsReview": false,
@@ -1876,6 +2105,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42456",
         "creditRaw": "September",
         "needsReview": false,
@@ -1884,6 +2114,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42457",
         "creditRaw": "Living Colours",
         "needsReview": false,
@@ -1892,6 +2123,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42458",
         "creditRaw": "David Bowie",
         "needsReview": false,
@@ -1900,6 +2132,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42459",
         "creditRaw": "Dianne dela Fuente",
         "needsReview": false,
@@ -1908,6 +2141,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42460",
         "creditRaw": "Modern Talking",
         "needsReview": false,
@@ -1916,6 +2150,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42461",
         "creditRaw": "Alex G",
         "needsReview": false,
@@ -1924,6 +2159,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42462",
         "creditRaw": "Judas",
         "needsReview": false,
@@ -1932,6 +2168,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42463",
         "creditRaw": "Tangerine Kitty",
         "needsReview": false,
@@ -1940,6 +2177,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42464",
         "creditRaw": "Elvis Presley",
         "needsReview": false,
@@ -1948,6 +2186,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42465",
         "creditRaw": "Hambog Ng Sagpro Crew",
         "needsReview": false,
@@ -1956,6 +2195,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42466",
         "creditRaw": "Fall Out Boy",
         "needsReview": false,
@@ -1964,6 +2204,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42467",
         "creditRaw": "Figvres",
         "needsReview": false,
@@ -1972,6 +2213,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42468",
         "creditRaw": "Newsboys",
         "needsReview": false,
@@ -1980,6 +2222,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42469",
         "creditRaw": "Gracie Abrams",
         "needsReview": false,
@@ -1988,6 +2231,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42470",
         "creditRaw": "Jojo Siwa",
         "needsReview": false,
@@ -1996,6 +2240,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42471",
         "creditRaw": "Globe",
         "needsReview": false,
@@ -2004,6 +2249,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42472",
         "creditRaw": "Beenie Man",
         "needsReview": false,
@@ -2012,6 +2258,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42473",
         "creditRaw": "Reel 2 Real feat. The Mad Stuntman",
         "needsReview": false,
@@ -2020,6 +2267,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42474",
         "creditRaw": "Endor",
         "needsReview": false,
@@ -2028,6 +2276,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42475",
         "creditRaw": "The 1975",
         "needsReview": false,
@@ -2036,6 +2285,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42476",
         "creditRaw": "Jessica Simpson",
         "needsReview": false,
@@ -2044,6 +2294,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42477",
         "creditRaw": "Mitski",
         "needsReview": false,
@@ -2052,6 +2303,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42478",
         "creditRaw": "The Weeknd feat. Doja Cat",
         "needsReview": false,
@@ -2060,6 +2312,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42479",
         "creditRaw": "Jennifer Mendoza",
         "needsReview": false,
@@ -2068,6 +2321,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42480",
         "creditRaw": "Ava Max",
         "needsReview": false,
@@ -2076,6 +2330,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42481",
         "creditRaw": "Rob Deniel",
         "needsReview": false,
@@ -2084,6 +2339,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42482",
         "creditRaw": "Dindo Caraig",
         "needsReview": false,
@@ -2092,6 +2348,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42483",
         "creditRaw": "J. Brothers",
         "needsReview": false,
@@ -2100,6 +2357,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42484",
         "creditRaw": "Eagles",
         "needsReview": false,
@@ -2108,6 +2366,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42485",
         "creditRaw": "SB19",
         "needsReview": false,
@@ -2116,6 +2375,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42486",
         "creditRaw": "Lizzy McAlpine",
         "needsReview": false,
@@ -2124,6 +2384,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42487",
         "creditRaw": "The Juans",
         "needsReview": false,
@@ -2132,6 +2393,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42488",
         "creditRaw": "Naughty Boy ft. Sam Smith",
         "needsReview": false,
@@ -2140,6 +2402,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42489",
         "creditRaw": "P.O.D.",
         "needsReview": false,
@@ -2148,6 +2411,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42490",
         "creditRaw": "Tina Turner",
         "needsReview": false,
@@ -2156,6 +2420,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42491",
         "creditRaw": "Five Finger Death Punch",
         "needsReview": false,
@@ -2164,6 +2429,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42492",
         "creditRaw": "Breaking Benjamin",
         "needsReview": false,
@@ -2172,6 +2438,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42493",
         "creditRaw": "Bring Me The Horizon ft Baby Metal",
         "needsReview": false,
@@ -2180,6 +2447,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42494",
         "creditRaw": "Gloryen",
         "needsReview": false,
@@ -2188,6 +2456,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42495",
         "creditRaw": "Slipknot",
         "needsReview": false,
@@ -2196,6 +2465,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42496",
         "creditRaw": "AC/DC",
         "needsReview": false,
@@ -2204,6 +2474,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42497",
         "creditRaw": "J. Cole ft. Amber Coffman, Cults",
         "needsReview": false,
@@ -2212,6 +2483,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42498",
         "creditRaw": "Woodwalkers Music",
         "needsReview": false,
@@ -2220,6 +2492,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42499",
         "creditRaw": "PinkPantheress + Zara Larsson",
         "needsReview": false,
@@ -2228,6 +2501,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42500",
         "creditRaw": "Olivia Rodrigo",
         "needsReview": false,
@@ -2236,6 +2510,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42501",
         "creditRaw": "Gary Lewis & The Playboys",
         "needsReview": false,
@@ -2244,6 +2519,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42502",
         "creditRaw": "Tirso Cruz III",
         "needsReview": false,
@@ -2252,6 +2528,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42503",
         "creditRaw": "Tonic",
         "needsReview": false,
@@ -2260,6 +2537,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42504",
         "creditRaw": "Eddy Huntington",
         "needsReview": false,
@@ -2268,6 +2546,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42505",
         "creditRaw": "Linkin Park",
         "needsReview": false,
@@ -2276,6 +2555,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42506",
         "creditRaw": "Anne Murray",
         "needsReview": false,
@@ -2284,6 +2564,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42507",
         "creditRaw": "Bradley Cooper and Lady Gaga",
         "needsReview": false,
@@ -2292,6 +2573,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42508",
         "creditRaw": "Aurora",
         "needsReview": false,
@@ -2300,6 +2582,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42509",
         "creditRaw": "Jonas Brothers",
         "needsReview": false,
@@ -2308,6 +2591,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42510",
         "creditRaw": "APO Hiking Society",
         "needsReview": false,
@@ -2316,6 +2600,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42511",
         "creditRaw": "Donna Cruz",
         "needsReview": false,
@@ -2324,6 +2609,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42512",
         "creditRaw": "Kelly Clarkson Ariana Grande",
         "needsReview": false,
@@ -2332,6 +2618,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42513",
         "creditRaw": "Freddie Aguilar",
         "needsReview": false,
@@ -2340,6 +2627,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42514",
         "creditRaw": "Sexbomb Girls",
         "needsReview": false,
@@ -2348,6 +2636,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42515",
         "creditRaw": "Freddie Aguilar",
         "needsReview": false,
@@ -2356,6 +2645,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42516",
         "creditRaw": "Orange and Lemons",
         "needsReview": false,
@@ -2375,6 +2665,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
     "profile": "monthly-new-songs",
     "rows": [
       {
+        "altTitles": [],
         "code": "42517",
         "creditRaw": "Rachel Alejandro",
         "needsReview": false,
@@ -2383,6 +2674,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42518",
         "creditRaw": "Unique",
         "needsReview": false,
@@ -2391,6 +2683,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42519",
         "creditRaw": "Army Of Lovers",
         "needsReview": false,
@@ -2399,6 +2692,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42520",
         "creditRaw": "Matt Monro",
         "needsReview": false,
@@ -2407,6 +2701,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42521",
         "creditRaw": "Ella Langley",
         "needsReview": false,
@@ -2415,6 +2710,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42522",
         "creditRaw": "Limp Bizkit",
         "needsReview": false,
@@ -2423,6 +2719,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42523",
         "creditRaw": "Calum Scott",
         "needsReview": false,
@@ -2431,6 +2728,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42524",
         "creditRaw": "Breaking Benjamin ft Lacey Sturm",
         "needsReview": false,
@@ -2439,6 +2737,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42525",
         "creditRaw": "Buffalo Springfield",
         "needsReview": false,
@@ -2447,6 +2746,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42526",
         "creditRaw": "C.C. Catch",
         "needsReview": false,
@@ -2455,6 +2755,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42527",
         "creditRaw": "Charli xcx",
         "needsReview": false,
@@ -2463,6 +2764,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42528",
         "creditRaw": "Chris Brown ft. Bryson Tiller, Usher",
         "needsReview": false,
@@ -2471,6 +2773,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42529",
         "creditRaw": "Coldplay",
         "needsReview": false,
@@ -2479,6 +2782,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42530",
         "creditRaw": "Conan Gray",
         "needsReview": false,
@@ -2487,6 +2791,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42531",
         "creditRaw": "Charlie Puth with Kenny G",
         "needsReview": false,
@@ -2495,6 +2800,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42532",
         "creditRaw": "Jun Polistico",
         "needsReview": false,
@@ -2503,6 +2809,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42533",
         "creditRaw": "Earl Agustin",
         "needsReview": false,
@@ -2511,6 +2818,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42534",
         "creditRaw": "Rico J. Puno",
         "needsReview": false,
@@ -2519,6 +2827,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42535",
         "creditRaw": "Daniel Caesar",
         "needsReview": false,
@@ -2527,6 +2836,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42536",
         "creditRaw": "ZAYN",
         "needsReview": false,
@@ -2535,6 +2845,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42537",
         "creditRaw": "Selena",
         "needsReview": false,
@@ -2543,6 +2854,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42538",
         "creditRaw": "Clair Marlo",
         "needsReview": false,
@@ -2551,6 +2863,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42539",
         "creditRaw": "Taylor Swift",
         "needsReview": false,
@@ -2559,6 +2872,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42540",
         "creditRaw": "Loreen",
         "needsReview": false,
@@ -2567,6 +2881,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42541",
         "creditRaw": "Laid Back",
         "needsReview": false,
@@ -2575,6 +2890,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42542",
         "creditRaw": "Motley Crue",
         "needsReview": false,
@@ -2583,6 +2899,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42543",
         "creditRaw": "Taylor Swift",
         "needsReview": false,
@@ -2591,6 +2908,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42544",
         "creditRaw": "Kris Lawrence ft. Denise Laurel",
         "needsReview": false,
@@ -2599,6 +2917,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42545",
         "creditRaw": "Patch Crowe",
         "needsReview": false,
@@ -2607,6 +2926,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42546",
         "creditRaw": "Zild",
         "needsReview": false,
@@ -2615,6 +2935,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42547",
         "creditRaw": "Milky",
         "needsReview": false,
@@ -2623,6 +2944,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42548",
         "creditRaw": "Over October",
         "needsReview": false,
@@ -2631,6 +2953,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42549",
         "creditRaw": "IV Of Spades",
         "needsReview": false,
@@ -2639,6 +2962,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42550",
         "creditRaw": "Phoebe Bridgers",
         "needsReview": false,
@@ -2647,6 +2971,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42551",
         "creditRaw": "Lady Gaga",
         "needsReview": false,
@@ -2655,6 +2980,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42552",
         "creditRaw": "LANY",
         "needsReview": false,
@@ -2663,6 +2989,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42553",
         "creditRaw": "Leslie Pearl",
         "needsReview": false,
@@ -2671,6 +2998,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42554",
         "creditRaw": "J Brothers",
         "needsReview": false,
@@ -2679,6 +3007,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42555",
         "creditRaw": "Siakol",
         "needsReview": false,
@@ -2687,6 +3016,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42556",
         "creditRaw": "Maroon 5",
         "needsReview": false,
@@ -2695,6 +3025,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42557",
         "creditRaw": "Paramore",
         "needsReview": false,
@@ -2703,6 +3034,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42558",
         "creditRaw": "E.L.O.",
         "needsReview": false,
@@ -2711,6 +3043,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42559",
         "creditRaw": "My Chemical Romance",
         "needsReview": false,
@@ -2719,6 +3052,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42560",
         "creditRaw": "Sufjan Stevens",
         "needsReview": false,
@@ -2727,6 +3061,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42561",
         "creditRaw": "Curse One",
         "needsReview": false,
@@ -2735,6 +3070,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42562",
         "creditRaw": "Radiohead",
         "needsReview": false,
@@ -2743,6 +3079,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42563",
         "creditRaw": "Arctic Monkeys",
         "needsReview": false,
@@ -2751,6 +3088,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42564",
         "creditRaw": "The Weeknd, JENNIE & Lily Rose Depp",
         "needsReview": false,
@@ -2759,6 +3097,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42565",
         "creditRaw": "SunKissed Lola",
         "needsReview": false,
@@ -2767,6 +3106,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42566",
         "creditRaw": "wave to earth",
         "needsReview": false,
@@ -2775,6 +3115,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42567",
         "creditRaw": "Ariana Grande",
         "needsReview": false,
@@ -2783,6 +3124,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42568",
         "creditRaw": "Dear Evan Hansen",
         "needsReview": false,
@@ -2791,6 +3133,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42569",
         "creditRaw": "Robert Palmer",
         "needsReview": false,
@@ -2799,6 +3142,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42570",
         "creditRaw": "Sabrina Carpenter",
         "needsReview": false,
@@ -2807,6 +3151,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42571",
         "creditRaw": "Cup of Joe",
         "needsReview": false,
@@ -2815,6 +3160,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42572",
         "creditRaw": "The Outfield",
         "needsReview": false,
@@ -2823,6 +3169,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42573",
         "creditRaw": "Sleeping With Sirens",
         "needsReview": false,
@@ -2831,6 +3178,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42574",
         "creditRaw": "David Bowie",
         "needsReview": false,
@@ -2839,6 +3187,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42575",
         "creditRaw": "Celine Dion",
         "needsReview": false,
@@ -2847,6 +3196,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42576",
         "creditRaw": "Tj Monterde",
         "needsReview": false,
@@ -2855,6 +3205,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42577",
         "creditRaw": "NIKI",
         "needsReview": false,
@@ -2863,6 +3214,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42578",
         "creditRaw": "Cascades",
         "needsReview": false,
@@ -2871,6 +3223,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42579",
         "creditRaw": "The Smashing Pumpkins",
         "needsReview": false,
@@ -2879,6 +3232,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42580",
         "creditRaw": "They Might Be Giants",
         "needsReview": false,
@@ -2887,6 +3241,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42581",
         "creditRaw": "Europe",
         "needsReview": false,
@@ -2895,6 +3250,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42582",
         "creditRaw": "Paul Anka",
         "needsReview": false,
@@ -2903,6 +3259,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42583",
         "creditRaw": "Olivia Rodrigo",
         "needsReview": false,
@@ -2911,6 +3268,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42584",
         "creditRaw": "Ex Battalion",
         "needsReview": false,
@@ -2919,6 +3277,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42585",
         "creditRaw": "The Beatles",
         "needsReview": false,
@@ -2927,6 +3286,7 @@ exports[`HDD monthly fixtures snapshot of every release 1`] = `
         "versionNote": null,
       },
       {
+        "altTitles": [],
         "code": "42586",
         "creditRaw": "Zephanie",
         "needsReview": false,

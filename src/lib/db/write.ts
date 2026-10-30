@@ -4,7 +4,7 @@ import { splitCredit, type Aliases } from '../normalize/credit';
 import type { ParsedRelease } from '../parser/schema';
 import { SONGBOOKS } from '../songbooks';
 import type { Db } from './index';
-import { artists, releases, songArtists, songbooks, songs } from './schema';
+import { artists, releases, songArtists, songbooks, songs, songTitles } from './schema';
 
 export type WriteOutcome = 'written' | 'skipped';
 
@@ -76,6 +76,18 @@ export function writeRelease(db: Db, release: ParsedRelease, aliases: Aliases): 
 					needsReview: row.needsReview
 				})
 				.run();
+
+			for (const title of row.altTitles) {
+				tx.insert(songTitles)
+					.values({
+						songbook: release.songbook,
+						code: row.code,
+						title,
+						titleNorm: normalize(title)
+					})
+					.onConflictDoNothing()
+					.run();
+			}
 
 			splitCredit(row.creditRaw, aliases).forEach((artist, position) => {
 				tx.insert(songArtists)
