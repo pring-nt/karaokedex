@@ -15,6 +15,13 @@
       "when": 1793368639984,
       "tag": "0001_giant_mephisto",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1793383916662,
+      "tag": "0002_safe_jetstream",
+      "breakpoints": true
     }
   ]
 }

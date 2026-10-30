@@ -20,6 +20,9 @@
 
 	const favorite = $derived(song ? isFavorite(preferences.library, songbook, song.code) : false);
 	const queued = $derived(song ? isQueued(preferences.library, songbook, song.code) : false);
+	const otherLists = $derived(
+		(song?.lists ?? []).filter((list) => list !== songbook).map((list) => SONGBOOK_SHORT[list])
+	);
 </script>
 
 <Dialog.Root
@@ -46,12 +49,23 @@
 					</Dialog.Close>
 
 					<div class="flex flex-col gap-1 pr-10">
-						<span class="eyebrow">{SONGBOOK_SHORT[songbook]} songbook · {song.release}</span>
+						<span class="eyebrow">
+							{song.lists.includes(songbook) || song.lists.length === 0
+								? `${SONGBOOK_SHORT[songbook]} · ${song.release}`
+								: `Not on the ${SONGBOOK_SHORT[songbook]} list`}
+						</span>
 						<Dialog.Title class="sr-only">{song.title}, code {song.code}</Dialog.Title>
 						<p class="font-mono text-hero leading-none tracking-tight text-accent tabular-nums">
 							{song.code}
 						</p>
 					</div>
+
+					{#if song.lists.length > 0 && !song.lists.includes(songbook)}
+						<p class="text-xs text-warning">
+							This code is listed for other machines, so yours may or may not have it. Try it on the
+							machine.
+						</p>
+					{/if}
 
 					<Dialog.Description class="flex flex-col gap-3">
 						<span class="flex flex-wrap items-center gap-2 font-display text-2xl text-text">
@@ -78,6 +92,9 @@
 						{/if}
 						{#if song.altTitles.length > 0}
 							<span class="text-xs text-subtle">Also listed as {song.altTitles.join(', ')}</span>
+						{/if}
+						{#if otherLists.length > 0}
+							<span class="text-xs text-subtle">Also on: {otherLists.join(', ')}</span>
 						{/if}
 					</Dialog.Description>
 

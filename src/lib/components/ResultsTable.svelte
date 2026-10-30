@@ -39,7 +39,7 @@
 	import { preferences } from '#lib/app/preferences.svelte';
 	import { artistSlug } from '#lib/catalog/slug';
 	import type { Song } from '#lib/catalog/schema';
-	import type { Songbook } from '#lib/songbooks';
+	import { SONGBOOK_SHORT, type Songbook } from '#lib/songbooks';
 	import XIcon from 'phosphor-svelte/lib/XIcon';
 	import Badge from './Badge.svelte';
 	import Button from './Button.svelte';
@@ -47,6 +47,7 @@
 	import SelectField from './SelectField.svelte';
 
 	const ROW_HEIGHT = 64;
+	const LISTED_ROW_HEIGHT = 80;
 	const PAGE_SIZES = [50, 100, 250] as const;
 
 	let {
@@ -56,6 +57,7 @@
 		activeIndex = -1,
 		sort,
 		filters = {},
+		showLists = false,
 		onsort,
 		onopen,
 		onremove,
@@ -68,6 +70,8 @@
 		/** Without one, rows keep the order of `songs`. */
 		sort?: SortId;
 		filters?: TableFilters;
+		/** Show which lists print each song, in place of its release. */
+		showLists?: boolean;
 		onsort: (sort: SortId) => void;
 		onopen: (song: Song, index: number) => void;
 		/** When given, every row gets a remove button that does not open the song. */
@@ -171,6 +175,10 @@
 		top?.scrollIntoView({ block: 'start' });
 	}
 
+	function listNames(song: Song): string {
+		return song.lists.map((list) => SONGBOOK_SHORT[list]).join(', ');
+	}
+
 	/** How many rows are on this page. */
 	export function count(): number {
 		return rows.length;
@@ -186,7 +194,7 @@
 
 	const virtualizer = createWindowVirtualizer({
 		count: 0,
-		estimateSize: () => ROW_HEIGHT,
+		estimateSize: () => (showLists ? LISTED_ROW_HEIGHT : ROW_HEIGHT),
 		overscan: 8
 	});
 
@@ -365,6 +373,9 @@
 						<span class="truncate text-xs text-subtle md:hidden">
 							{song.artists.map((a) => a.name).join(', ')}
 						</span>
+						{#if showLists}
+							<span class="truncate text-micro text-warning md:hidden">{listNames(song)}</span>
+						{/if}
 					</span>
 					<span
 						class="text-right font-mono text-[length:var(--text-base)] text-accent tabular-nums md:order-1 md:text-sm"
@@ -383,7 +394,7 @@
 						{/each}
 					</span>
 					<span class="hidden truncate text-xs text-subtle tabular-nums md:order-4 md:block">
-						{song.release}
+						{showLists ? listNames(song) : song.release}
 					</span>
 					{#if onremove}
 						<span class="md:order-5">

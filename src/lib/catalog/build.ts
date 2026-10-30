@@ -2,8 +2,8 @@ import { createHash } from 'node:crypto';
 import { eq } from 'drizzle-orm';
 import type { Db } from '../db';
 import { artists, releases, songArtists, songs, songTitles } from '../db/schema';
-import { SONGBOOKS, type Songbook } from '../songbooks';
-import { Catalog, type CatalogManifest } from './schema';
+import { SHARED_SONGBOOKS, SONGBOOKS, type Songbook } from '../songbooks';
+import { Catalog, SharedCatalog, sharedKey, type CatalogManifest } from './schema';
 
 const RANGE_GAP = 100;
 
@@ -112,4 +112,55 @@ export function manifestEntry(catalog: Catalog): CatalogManifest['songbooks'][nu
 		count: catalog.songs.length,
 		codeRanges: codeRanges(catalog.songs.map((song) => song[0]))
 	};
+}
+
+/** Merges catalogs of the shared numbering by code, in `SHARED_SONGBOOKS` order, or null if none exist. */
+export function buildShared(catalogs: readonly Catalog[]): SharedCatalog | null {
+	const members = SHARED_SONGBOOKS.flatMap(
+		(slug) => catalogs.find((catalog) => catalog.songbook === slug) ?? []
+	);
+	if (members.length === 0) return null;
+
+	const artists: string[] = [];
+	const artistIndex = new Map<string, number>();
+	const localArtist = (name: string): number => {
+		const known = artistIndex.get(name);
+		if (known !== undefined) return known;
+		artists.push(name);
+		artistIndex.set(name, artists.length - 1);
+		return artists.length - 1;
+	};
+
+	const merged = new Map<string, SharedCatalog['songs'][number]>();
+	members.forEach((catalog, position) => {
+		for (const [code, title, versionNote, credits] of catalog.songs) {
+			const key = sharedKey(code);
+			const existing = merged.get(key);
+			if (existing) {
+				if (!existing[4].includes(position)) existing[4].push(position);
+				continue;
+			}
+			const local = credits.map(([artist, role]): [number, 0 | 1] => [
+				localArtist(catalog.artists[artist] ?? ''),
+				role
+			]);
+			merged.set(key, [code, title, versionNote, local, [position]]);
+		}
+	});
+
+	return SharedCatalog.parse({
+		version: members.map((catalog) => catalog.version).join(' '),
+		generatedAt: members[0].generatedAt,
+		songbooks: members.map((catalog) => catalog.songbook),
+		artists,
+		songs: [...merged.entries()].sort(([a], [b]) => a.localeCompare(b)).map(([, song]) => song)
+	});
+}
+
+export function sharedFileName(shared: SharedCatalog): string {
+	const hash = createHash('sha256')
+		.update(JSON.stringify({ ...shared, generatedAt: '' }))
+		.digest('hex')
+		.slice(0, 8);
+	return `catalog.shared.${hash}.json`;
 }

@@ -11,7 +11,7 @@ import { crossReleaseWarnings } from '../src/lib/parser/validate';
 import { splitCredit } from '../src/lib/normalize/credit';
 import { normalize } from '../src/lib/normalize/text';
 import { nearDuplicateArtists } from '../src/lib/parser/full-list-rules';
-import { SONGBOOKS, Songbook } from '../src/lib/songbooks';
+import { SONGBOOKS, sourceSongbook } from '../src/lib/songbooks';
 
 const USAGE =
 	'usage: bun run import <pdf> [--songbook hdd] [--label YYYY-MM] [--db data/karaokedex.sqlite] [--yes]';
@@ -35,9 +35,9 @@ const [input] = positionals;
 if (!input) fail(USAGE);
 const pdfPath = resolve(input);
 
-const songbook = Songbook.safeParse(values.songbook ?? basename(dirname(pdfPath)));
-if (!songbook.success) fail(`cannot infer the songbook from the path; pass --songbook\n${USAGE}`);
-const book = songbook.data;
+const book =
+	sourceSongbook(values.songbook ?? basename(dirname(pdfPath))) ??
+	fail(`cannot infer the songbook from the path; pass --songbook\n${USAGE}`);
 
 const monthly = SONGBOOKS[book].kind === 'monthly';
 const LABEL = monthly ? /^\d{4}-\d{2}$/ : /^(?:full-)?vol-\d+(?:-\d+)?$/;

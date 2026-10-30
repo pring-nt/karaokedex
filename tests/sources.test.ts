@@ -144,7 +144,7 @@ describe('toManifest and diffManifest', () => {
 		expect(diff.unknownProducts).toEqual(['NEW PLAYER']);
 	});
 
-	test('the first run adds everything: in-scope entries missing, the rest ignored', () => {
+	test('the first run adds everything, with in-scope entries missing', () => {
 		const diff = diffManifest(null, manifest, ASSET.version);
 		expect(diff.added).toHaveLength(manifest.entries.length);
 		const file = applyDiff(null, diff, manifest, ASSET, NOW, () => false);
@@ -158,7 +158,7 @@ describe('toManifest and diffManifest', () => {
 		expect(
 			file.entries
 				.filter((entry) => entry.songbook === 'bravo')
-				.every((entry) => entry.status === 'ignored')
+				.every((entry) => entry.status === 'missing')
 		).toBe(true);
 	});
 

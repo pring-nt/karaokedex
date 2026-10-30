@@ -46,9 +46,9 @@
 	}
 
 	const links = [
-		{ label: 'Search', path: '/' },
-		{ label: 'New', path: '/new' },
-		{ label: 'About', path: '/about' }
+		{ label: 'Search', path: '/', href: (book: Songbook) => resolve(`/?book=${book}`) },
+		{ label: 'New', path: '/new', href: (book: Songbook) => resolve(`/new?book=${book}`) },
+		{ label: 'About', path: '/about', href: (book: Songbook) => resolve(`/about?book=${book}`) }
 	] as const;
 </script>
 
@@ -77,7 +77,7 @@
 				{#each links as link (link.path)}
 					{@const current = page.url.pathname === resolve(link.path)}
 					<a
-						href={resolve(`${link.path}?book=${songbook}`)}
+						href={link.href(songbook)}
 						aria-current={current ? 'page' : undefined}
 						class="inline-flex min-h-11 flex-1 items-center justify-center rounded-lg px-3 text-sm transition-colors duration-(--dur-fast) hover:bg-highlight-med/50 md:min-h-9 md:flex-none {current
 							? 'text-accent'

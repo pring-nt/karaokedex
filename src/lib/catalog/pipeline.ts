@@ -4,7 +4,7 @@ import { writeRelease } from '../db/write';
 import type { Aliases } from '../normalize/credit';
 import { parseRelease } from '../parser/parse-release';
 import { SONGBOOKS, type Songbook } from '../songbooks';
-import { buildCatalog, catalogFileName, manifestEntry } from './build';
+import { buildCatalog, buildShared, catalogFileName, manifestEntry, sharedFileName } from './build';
 import { CatalogManifest, type Catalog } from './schema';
 
 export interface PdfInput {
@@ -30,6 +30,8 @@ interface BuiltCatalog {
 
 export interface PipelineResult {
 	catalogs: BuiltCatalog[];
+	/** The merged catalog of the shared numbering, as a file to write. */
+	shared: { file: string; json: string } | null;
 	manifest: CatalogManifest;
 	reports: ReleaseReport[];
 	/** Anything here means the build must fail. Releases with errors are left out of the catalogs. */
@@ -95,8 +97,11 @@ export async function buildCatalogs(
 		const catalog = buildCatalog(db, songbook, options.generatedAt);
 		return { catalog, file: catalogFileName(catalog), json: JSON.stringify(catalog) };
 	});
+	const merged = buildShared(catalogs.map(({ catalog }) => catalog));
+	const shared = merged && { file: sharedFileName(merged), json: JSON.stringify(merged) };
 	const manifest = CatalogManifest.parse({
+		shared: shared?.file,
 		songbooks: catalogs.map(({ catalog }) => manifestEntry(catalog))
 	});
-	return { catalogs, manifest, reports, errors };
+	return { catalogs, shared, manifest, reports, errors };
 }

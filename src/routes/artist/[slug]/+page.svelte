@@ -15,7 +15,7 @@
 	const slug = $derived(page.params.slug ?? '');
 	const params = $derived(browser ? parseParams(page.url.searchParams) : {});
 	const songbook = $derived(params.book ?? preferences.songbook);
-	const others = $derived(Songbook.options.filter((option) => option !== songbook));
+	const others = $derived(Songbook.options.filter((option) => option !== songbook).slice(0, 3));
 
 	let songs = $state<Song[]>([]);
 	const name = $derived(

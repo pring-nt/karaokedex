@@ -1,4 +1,4 @@
-import { Songbook } from '../songbooks';
+import { DEFAULT_SONGBOOK, Songbook } from '../songbooks';
 import {
 	clearQueue,
 	clearRecents,
@@ -21,7 +21,7 @@ const LIBRARY_KEY = 'karaokedex:library';
 class Preferences {
 	themePreference = $state<ThemePreference>('system');
 	font = $state<FontId>(DEFAULT_FONT);
-	songbook = $state<Songbook>('hdd');
+	songbook = $state<Songbook>(DEFAULT_SONGBOOK);
 	library = $state<Library>(emptyLibrary());
 	private store: KeyValueStore | null = null;
 	private systemLight = false;
@@ -36,7 +36,7 @@ class Preferences {
 			this.systemLight = event.matches;
 			this.applyTheme();
 		});
-		this.songbook = readJson(this.store, SONGBOOK_KEY, Songbook, 'hdd');
+		this.songbook = readJson(this.store, SONGBOOK_KEY, Songbook, DEFAULT_SONGBOOK);
 		this.library = readJson(this.store, LIBRARY_KEY, Library, emptyLibrary());
 	}
 

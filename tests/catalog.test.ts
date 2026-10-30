@@ -2,10 +2,11 @@ import { describe, expect, test } from 'bun:test';
 import { existsSync } from 'node:fs';
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import { catalogFileName } from '../src/lib/catalog/build';
+import { buildShared, catalogFileName } from '../src/lib/catalog/build';
 import { buildCatalogs, type PdfInput } from '../src/lib/catalog/pipeline';
 import { Catalog, CatalogManifest, expandCatalog } from '../src/lib/catalog/schema';
 import { SearchIndex } from '../src/lib/search';
+import type { Songbook } from '../src/lib/songbooks';
 import { SearchEngine, type CatalogCache } from '../src/lib/search/engine';
 
 const fixtures = join(import.meta.dir, 'fixtures');
@@ -186,6 +187,7 @@ describe('SearchEngine', () => {
 		const served = new Map<string, string>([
 			['/catalog-manifest.json', JSON.stringify(built.manifest)],
 			...built.catalogs.map(({ file, json }): [string, string] => [`/${file}`, json]),
+			...(built.shared ? ([[`/${built.shared.file}`, built.shared.json]] as const) : []),
 			...Object.entries(extra)
 		]);
 		const requested: string[] = [];
@@ -211,7 +213,7 @@ describe('SearchEngine', () => {
 			fromCache: false
 		});
 		expect(engine.search('42289').hits[0]?.song.title).toBe('Katchi');
-		expect(stats.writes).toBe(1);
+		expect(stats.writes).toBe(2);
 
 		const second = files();
 		const again = await new SearchEngine({ fetchText: second.fetchText, cache }).load('hdd');
@@ -266,7 +268,8 @@ describe('SearchEngine filters and lists', () => {
 	async function loaded() {
 		const served = new Map<string, string>([
 			['/catalog-manifest.json', JSON.stringify(built.manifest)],
-			...built.catalogs.map(({ file, json }): [string, string] => [`/${file}`, json])
+			...built.catalogs.map(({ file, json }): [string, string] => [`/${file}`, json]),
+			...(built.shared ? ([[`/${built.shared.file}`, built.shared.json]] as const) : [])
 		]);
 		const engine = new SearchEngine({
 			fetchText: (url) => {
@@ -324,5 +327,76 @@ describe.skipIf(!real)('real data @full', () => {
 		const songs = expandCatalog(result.catalogs[0]?.catalog ?? catalogFor('hdd').catalog);
 		const index = new SearchIndex(songs);
 		expect(songs[index.search('42195').hits[0]?.index ?? -1]?.title).toBe('Zero Pressure');
+	});
+});
+
+describe('shared catalog', () => {
+	const song = (code: string, title: string): Catalog['songs'][number] => [
+		code,
+		title,
+		null,
+		[[0, 0]],
+		0,
+		[]
+	];
+	const catalog = (songbook: Songbook, songs: Catalog['songs']): Catalog => ({
+		songbook,
+		version: 'v1',
+		generatedAt: NOW,
+		artists: ['Artist'],
+		releases: [['v1', '00001', '99999']],
+		songs
+	});
+
+	test('merges by code, keeps the first spelling and records every list', () => {
+		const shared = buildShared([
+			catalog('ks', [song('07388', 'KS Spelling'), song('10002', 'Only KS')]),
+			catalog('hdd', [song('7388', 'HDD Spelling')])
+		]);
+		expect(shared?.songbooks).toEqual(['hdd', 'ks']);
+		expect(shared?.songs.map((row) => [row[0], row[1], row[4]])).toEqual([
+			['7388', 'HDD Spelling', [0, 1]],
+			['10002', 'Only KS', [1]]
+		]);
+	});
+
+	test('P-Series never joins', () => {
+		expect(buildShared([catalog('p-series', [song('00001', 'P')])])).toBeNull();
+	});
+
+	test('the engine separates its own songs from those only other lists print', async () => {
+		const ks = catalog('ks', [song('10001', 'Mine')]);
+		const hdd = catalog('hdd', [song('10001', 'Mine'), song('10002', 'Elsewhere')]);
+		const shared = buildShared([ks, hdd]);
+		const texts: Record<string, string> = {
+			'/catalog-manifest.json': JSON.stringify({
+				shared: 'catalog.shared.00000000.json',
+				songbooks: [
+					{
+						slug: 'ks',
+						name: 'KS',
+						models: [],
+						file: 'catalog.ks.11111111.json',
+						version: 'v1',
+						count: 1,
+						codeRanges: []
+					}
+				]
+			}),
+			'/catalog.ks.11111111.json': JSON.stringify(ks),
+			'/catalog.shared.00000000.json': JSON.stringify(shared)
+		};
+		const engine = new SearchEngine({
+			fetchText: (url) => Promise.resolve(texts[url] ?? ''),
+			cache: { get: () => Promise.resolve(undefined), put: () => Promise.resolve() }
+		});
+		expect((await engine.load('ks')).otherCount).toBe(1);
+
+		const own = engine.search('');
+		expect(own.hits.map((hit) => hit.song.code)).toEqual(['10001']);
+		expect(own.hits[0].song.lists).toEqual(['hdd', 'ks']);
+		const others = engine.search('', { others: true });
+		expect(others.hits.map((hit) => [hit.song.code, hit.song.lists])).toEqual([['10002', ['hdd']]]);
+		expect(engine.songsByCodes(['10002']).map((found) => found.title)).toEqual(['Elsewhere']);
 	});
 });

@@ -15,7 +15,7 @@ export const releases = sqliteTable('releases', {
 	label: text('label').notNull(),
 	kind: text('kind', { enum: ['monthly', 'volume', 'full'] }).notNull(),
 	profile: text('profile').notNull(),
-	fileHash: text('file_hash').notNull().unique(),
+	fileHash: text('file_hash').notNull(),
 	codeMin: text('code_min').notNull(),
 	codeMax: text('code_max').notNull()
 });

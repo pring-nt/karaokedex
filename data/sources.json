@@ -12,7 +12,9 @@
       "label": "2018-12",
       "url": "https://www.mediafire.com/file/3bvmn612qq1pmx2/BMB_X2_2018_December_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/bmb-x2/2018-12.pdf",
+      "sha256": "6b112726566636945a8cc22497179755c7d801740a2add364104a37c1983b74d"
     },
     {
       "songbook": "bmb-x2",
@@ -21,7 +23,9 @@
       "label": "2019-01",
       "url": "https://www.mediafire.com/file/hs4jnkbj54hd0n7/HDD_2019_January_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/bmb-x2/2019-01.pdf",
+      "sha256": "1daf0020f7f3af22365e691307a26d6c97529e9f8fa8df13f1b217bee68115ad"
     },
     {
       "songbook": "bmb-x2",
@@ -30,7 +34,9 @@
       "label": "2019-02",
       "url": "https://www.mediafire.com/file/zbfkcxo0mmwhwjj/HDD_2019_February_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/bmb-x2/2019-02.pdf",
+      "sha256": "aadb8531cb436e566274dc09bbbef821b87b5b9c949b92cb684f71782f298455"
     },
     {
       "songbook": "bmb-x2",
@@ -39,7 +45,9 @@
       "label": "2019-03",
       "url": "https://www.mediafire.com/file/3wttpfmnnydhtn5/HDD_2019_March_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/bmb-x2/2019-03.pdf",
+      "sha256": "cf4902c6696eb32354ed6501fef7349b9fc9e75e11f832bf0a8c137d761855e7"
     },
     {
       "songbook": "bmb-x2",
@@ -48,7 +56,9 @@
       "label": "2019-04",
       "url": "https://www.mediafire.com/file/4akdr4aqv4zh4mu/HDD_2019_April_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/bmb-x2/2019-04.pdf",
+      "sha256": "c70d0747fd12d39533c7f6b9238943fa240b7f753964cb662a44455b7ee00fec"
     },
     {
       "songbook": "bmb-x2",
@@ -57,7 +67,9 @@
       "label": "2019-05",
       "url": "https://www.mediafire.com/file/kyxrnj6c1txapz9/HDD_2019_May_Additional_Song_List_Alpha_Major_Cello_X3.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/bmb-x2/2019-05.pdf",
+      "sha256": "7ff03fd172b01e7768891fa05ee40ae0dca90247a1f1083cea5693746aaae74b"
     },
     {
       "songbook": "bmb-x2",
@@ -66,7 +78,9 @@
       "label": "2019-06",
       "url": "https://www.mediafire.com/file/y63tgqniuqj9f0t/HDD_2019_June_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/bmb-x2/2019-06.pdf",
+      "sha256": "7d4ba52c35dde5f21b9c1a16adb38b38779eadefc76e681743eaa9b89126a5e4"
     },
     {
       "songbook": "bmb-x2",
@@ -75,7 +89,9 @@
       "label": "2019-07",
       "url": "https://www.mediafire.com/file/ia5oy76si3itsug/HDD_2019_July_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/bmb-x2/2019-07.pdf",
+      "sha256": "a8e7839695f25e011099ba148166ca2508bb480546ec0d7202586fca4d80973c"
     },
     {
       "songbook": "bmb-x2",
@@ -84,7 +100,9 @@
       "label": "2019-08",
       "url": "https://www.mediafire.com/file/m4diek6cios42la/HDD_2019_August_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/bmb-x2/2019-08.pdf",
+      "sha256": "a2c2178d0fe8abcdec6b927f8c4cef144853fdc76d3877d30eee11db7725e80e"
     },
     {
       "songbook": "bmb-x2",
@@ -93,7 +111,9 @@
       "label": "2019-09",
       "url": "https://www.mediafire.com/file/u7g89fqxyyt2i5g/HDD_2019_September_Additional_Song_List_%25282%2529.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/bmb-x2/2019-09.pdf",
+      "sha256": "b617ecaea5d7bb89e7aeef3c83811e34d5ed14fcbd121f58c5669d048eb46eee"
     },
     {
       "songbook": "bmb-x2",
@@ -102,7 +122,9 @@
       "label": "2019-10",
       "url": "https://www.mediafire.com/file/lh1tlmjpiltdy9v/HDD_2019_October_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/bmb-x2/2019-10.pdf",
+      "sha256": "a9f62f8e6360a5bc921695b0edb0350f36e7d8005e8a16124d859209a7235676"
     },
     {
       "songbook": "bmb-x2",
@@ -111,7 +133,9 @@
       "label": "2019-11",
       "url": "https://www.mediafire.com/file/yzn2nfpqr9lkzpb/HDD_2019_November_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/bmb-x2/2019-11.pdf",
+      "sha256": "38b4a4d63ad52599cf872b241005541c9d829e000b9ff66de1336f833c156704"
     },
     {
       "songbook": "bmb-x2",
@@ -120,7 +144,9 @@
       "label": "2019-12",
       "url": "https://www.mediafire.com/file/gcpl3qsj4i7wamk/HDD_2019_December_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/bmb-x2/2019-12.pdf",
+      "sha256": "43230ec4d1413e574192cbdf0fed1299d5b87f23124e57beb0a5a4915db0ef36"
     },
     {
       "songbook": "bmb-x2",
@@ -129,7 +155,9 @@
       "label": "2020-01",
       "url": "https://www.mediafire.com/file/brptxihtz369ynk/BMB_X2__2020_January_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/bmb-x2/2020-01.pdf",
+      "sha256": "3c4b1e95c76e6188bb84b3c4fc549d0c854674c4d89eb276a13eb16eabb439b2"
     },
     {
       "songbook": "bmb-x2",
@@ -138,7 +166,9 @@
       "label": "2020-02",
       "url": "https://www.mediafire.com/file/t0rsoarrf3qc3gv/BMB_X2__2020_February_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/bmb-x2/2020-02.pdf",
+      "sha256": "ebdae7fc140baabad81423c01cf7385ad1d914d3dc759b8c1f763f634b29a683"
     },
     {
       "songbook": "bmb-x2",
@@ -147,7 +177,9 @@
       "label": "2020-03",
       "url": "https://www.mediafire.com/file/b1i5pupfb1vb51k/BMB_X2__2020_March_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/bmb-x2/2020-03.pdf",
+      "sha256": "3e87ffc4ecc7af2b536afb55d140e8e16516c61142567a70cd979a742a7e72e3"
     },
     {
       "songbook": "bmb-x2",
@@ -156,7 +188,9 @@
       "label": "2020-04",
       "url": "https://www.mediafire.com/file/fga9bxcqt5lwpre/BMB_X2__2020_April_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/bmb-x2/2020-04.pdf",
+      "sha256": "30cb251176dc600d5188aa03a4e548939fd79ef62c0a18254605291508cbf800"
     },
     {
       "songbook": "bmb-x2",
@@ -165,7 +199,9 @@
       "label": "2020-05",
       "url": "https://www.mediafire.com/file/g9xb72f6w9dcqtr/HDD_2020_May_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/bmb-x2/2020-05.pdf",
+      "sha256": "9375c7212e7c13a65cb37344abbfd669ac1cc5516da09d3d6610bf8f7d791e24"
     },
     {
       "songbook": "bmb-x2",
@@ -174,7 +210,9 @@
       "label": "2020-06",
       "url": "https://www.mediafire.com/file/l1c4ptra5cpgvvd/HDD_2020_June_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/bmb-x2/2020-06.pdf",
+      "sha256": "80789d3a50036864642084f2f0111ceaf01eab16ebacdc239956737b7ba501f9"
     },
     {
       "songbook": "bmb-x2",
@@ -183,7 +221,9 @@
       "label": "2020-07",
       "url": "https://www.mediafire.com/file/rjwqwzmtsuoe78x/BMB_X2__2020_July_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/bmb-x2/2020-07.pdf",
+      "sha256": "e9573621b987e993d82f3f12535466fcb1b8dcf5ade647c2630a8a5473cc7281"
     },
     {
       "songbook": "bmb-x2",
@@ -192,7 +232,9 @@
       "label": "2020-08",
       "url": "https://www.mediafire.com/file/srtx7na0gm9boo6/BMB_X2__2020_August_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/bmb-x2/2020-08.pdf",
+      "sha256": "3642b5246a8fb8ae572573e904fb44d9edc1a22cf13ee5f5980dee20495674cc"
     },
     {
       "songbook": "bmb-x2",
@@ -201,7 +243,9 @@
       "label": "2020-09",
       "url": "https://www.mediafire.com/file/diuge1xmxocaig6/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/bmb-x2/2020-09.pdf",
+      "sha256": "72578b4fe91954943d3d6a7c2ccc27cc496caa4140c49c48aed126680e0a872b"
     },
     {
       "songbook": "bmb-x2",
@@ -210,7 +254,9 @@
       "label": "2020-10",
       "url": "https://www.mediafire.com/file/eygbjmq47pasgiz/BMB_X2_2020_October_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/bmb-x2/2020-10.pdf",
+      "sha256": "55c5f9e7e3b21afb3e5f48805fdd3a9c014b0eb1c178dadb3310186020bf7a66"
     },
     {
       "songbook": "bmb-x2",
@@ -219,7 +265,9 @@
       "label": "2020-11",
       "url": "https://www.mediafire.com/file/ez031cupanbaq3w/BMB_X2_2020_November_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/bmb-x2/2020-11.pdf",
+      "sha256": "a63b02ac32cf744e6c7945d5668b54d3431a1769152cfae91f2f207e4c4ae315"
     },
     {
       "songbook": "bmb-x2",
@@ -228,7 +276,9 @@
       "label": "2020-12",
       "url": "https://www.mediafire.com/file/0ol0xmvyb15zjrm/BMB_X2__2020_December_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/bmb-x2/2020-12.pdf",
+      "sha256": "92cb8c9bbdfaec82077cb71fe17bc3e80be848acc534ff5b4be4c54338c3ddee"
     },
     {
       "songbook": "bravo",
@@ -237,7 +287,9 @@
       "label": "vol-4",
       "url": "https://www.mediafire.com/file/kjp3norlvkg7dsa/Platinum_Bravo__-_Feb_2014_Song_Update_Volume_4.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/bravo/vol-4.pdf",
+      "sha256": "0928765876676658c296b95b4cef8ca155295176def2d470a5161561ce9215e3"
     },
     {
       "songbook": "bravo",
@@ -246,7 +298,9 @@
       "label": "vol-5",
       "url": "https://www.mediafire.com/file/9jn8kdi2r555br9/Platinum_Bravo__-_June-July_2014_Song_Update_Volume_5.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/bravo/vol-5.pdf",
+      "sha256": "006a698bffecb4d30610740cdf54b13d0153fa5241e963f7d44e19730315836d"
     },
     {
       "songbook": "bravo",
@@ -255,7 +309,9 @@
       "label": "vol-6",
       "url": "https://www.mediafire.com/file/y9svba6gypbrko7/Platinum_Bravo__-_Volume_6_Additonal_2pp_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/bravo/vol-6.pdf",
+      "sha256": "5a8287f032f190006a4d72009a719903f23b6bdf9089712dab43eeb71482af76"
     },
     {
       "songbook": "bravo",
@@ -264,7 +320,9 @@
       "label": "vol-7",
       "url": "https://www.mediafire.com/file/jvozsaoe8gtevzc/Volume_7_Platinum_Bravo.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/bravo/vol-7.pdf",
+      "sha256": "06538629ed4e699da087b9e28fc973ef92c450077ebde6641297b2434365ecb4"
     },
     {
       "songbook": "bravo",
@@ -273,7 +331,9 @@
       "label": "vol-8",
       "url": "https://www.mediafire.com/file/9pcb6892l9zmhc2/Volume_8_Platinum_Bravo.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/bravo/vol-8.pdf",
+      "sha256": "78cbce2118957a8b1865643f0511ae33a97482325442a4a60017f80356b2d586"
     },
     {
       "songbook": "bravo",
@@ -282,7 +342,9 @@
       "label": "vol-9",
       "url": "https://www.mediafire.com/file/yre96hdk77esmw9/Platinum_Bravo__-_Volume_9_Additonal_OPM_only_-_12pp_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/bravo/vol-9.pdf",
+      "sha256": "6e2c93d5e29d6a6bf04cc700b96ca076ee4053d7a5bd44097465499d51e69da3"
     },
     {
       "songbook": "flute-piano",
@@ -291,7 +353,9 @@
       "label": "vol-100",
       "url": "https://www.mediafire.com/file_premium/u6rv2frvk55urke/PianoFlute_Volume_100_Additional_List_-_pages_2.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/flute-piano/vol-100.pdf",
+      "sha256": "6248e0b0752d3c576aad4623ac93cee8a3a130cdb62feac429b0ee1dbb84a875"
     },
     {
       "songbook": "flute-piano",
@@ -300,7 +364,9 @@
       "label": "vol-101",
       "url": "https://www.mediafire.com/file_premium/9d0e8gsbc556dzk/PianoFlute_Volume_101_Additional_List_-_page_1.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/flute-piano/vol-101.pdf",
+      "sha256": "e93a337dc891573971445e8c38729f44bc3a2fb829f2da29f3a4b04d4502edc4"
     },
     {
       "songbook": "flute-piano",
@@ -309,7 +375,9 @@
       "label": "vol-102",
       "url": "https://www.mediafire.com/file_premium/irx7rn5yscl1taq/PianoFlute_Volume_102_Additional_List_-_page_1-2_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/flute-piano/vol-102.pdf",
+      "sha256": "f07e001f8eb325f22438b6666495572beb28e26ec112203b5fbeecea8849bead"
     },
     {
       "songbook": "flute-piano",
@@ -318,7 +386,9 @@
       "label": "vol-103",
       "url": "https://www.mediafire.com/file_premium/v0u92uq4x0sehcc/PianoFlute_Volume_103_Additional_List_-_pages_1-2_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/flute-piano/vol-103.pdf",
+      "sha256": "afa47e392e0ef493f2eb547fdae59e59f01beb4e4ce0f41141d69b3d467f1c8b"
     },
     {
       "songbook": "flute-piano",
@@ -327,7 +397,9 @@
       "label": "vol-104",
       "url": "https://www.mediafire.com/file_premium/njcv591io7oinmz/PianoFlute_Volume_104_Additional_List_-_pages_1-2_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/flute-piano/vol-104.pdf",
+      "sha256": "819532c37967fd93082d961447e2778f8d2a09e8fd8133464bf342549007c81d"
     },
     {
       "songbook": "flute-piano",
@@ -336,7 +408,9 @@
       "label": "vol-105",
       "url": "https://www.mediafire.com/file_premium/244s7q2b8enxlwt/PianoFlute_Volume_105_Additional_List_-_pages_1-2_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/flute-piano/vol-105.pdf",
+      "sha256": "eaa092f24f3c3e206453b0de8f3675cb737fe579a4354afdd9bdd0382f04f50b"
     },
     {
       "songbook": "flute-piano",
@@ -345,7 +419,9 @@
       "label": "vol-106",
       "url": "https://www.mediafire.com/file_premium/rfy74u2wvmor2hx/PianoFlute_Volume_106_Additional_List_-_pages_1-2_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/flute-piano/vol-106.pdf",
+      "sha256": "3bc78e666cc17458eb92e5f46c509eed832ed6e8725dfcb500d7fcade9458f77"
     },
     {
       "songbook": "flute-piano",
@@ -354,7 +430,9 @@
       "label": "vol-107",
       "url": "https://www.mediafire.com/file_premium/8d9z24h3bi0yy14/PianoFlute_Volume_107_Additional_List_%2528yellow%2529_-_pages_1-3.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/flute-piano/vol-107.pdf",
+      "sha256": "85e7ce4779927887bd3f9b14a26ec8082ef285825ab6d825b2dcb7a96a71e755"
     },
     {
       "songbook": "flute-piano",
@@ -363,7 +441,9 @@
       "label": "vol-108",
       "url": "https://www.mediafire.com/file_premium/xljonnk7bnl5zo8/PianoFlute_Volume_108_Additional_List__yellow__-_p_260923_103524.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/flute-piano/vol-108.pdf",
+      "sha256": "8dc4017cf79d2f9d4b003990fd2f273fc6dfca1775fbfe8f6d8270e51379cef1"
     },
     {
       "songbook": "flute-piano",
@@ -372,7 +452,9 @@
       "label": "vol-79",
       "url": "https://www.mediafire.com/file/z8zja7gu6719ej6/Piano-Flute_Vol_79_Additional_song_list.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/flute-piano/vol-79.pdf",
+      "sha256": "62f63ce6f55eef47f9aa094a9efabffd7bdb8c14353e46f4571def47090b810f"
     },
     {
       "songbook": "flute-piano",
@@ -381,7 +463,9 @@
       "label": "vol-80",
       "url": "https://www.mediafire.com/file/ne05vj4a1cacar1/Piano-Flute_-_Volume_80_Additional_List_-_pages_1-4_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/flute-piano/vol-80.pdf",
+      "sha256": "7f6a82f89ffc6cc6588300ccba809a3cad6c843da9a35d31f8bb7a1b87e084b7"
     },
     {
       "songbook": "flute-piano",
@@ -390,7 +474,9 @@
       "label": "vol-81",
       "url": "https://www.mediafire.com/file/vfqubjd88fkvvh7/Piano-Flute_-_Volume_81_Additional_List_-_pages_1-4_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/flute-piano/vol-81.pdf",
+      "sha256": "df8ca903f51767368b2112d982c982f9b10a8f4eed4fdca773407e0752496394"
     },
     {
       "songbook": "flute-piano",
@@ -399,7 +485,9 @@
       "label": "vol-82",
       "url": "https://www.mediafire.com/file/gco3b1e73qfb2su/Flute%2526Pianov1.5-_Volume_82_Additional_List_-_pages_1-6_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/flute-piano/vol-82.pdf",
+      "sha256": "838e433d8bc5f467567526ba3cd514c0e5af809a2d067812f6d4a51c8540f939"
     },
     {
       "songbook": "flute-piano",
@@ -408,7 +496,9 @@
       "label": "vol-83",
       "url": "https://www.mediafire.com/file/27vmnj30roblyq7/Flute%2526Pianov1.5-_Volume_83_Additional_List_-_pages_1-3_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/flute-piano/vol-83.pdf",
+      "sha256": "ef5d774cb9790bc337c41b2b1712e75ae079c1d6aeff957c9e00e1fac35f6135"
     },
     {
       "songbook": "flute-piano",
@@ -417,7 +507,9 @@
       "label": "vol-84",
       "url": "https://www.mediafire.com/file/hc7arquu5n5knwh/Flute%2526Pianov1.5_Volume_84_Additional_List_-_pages_1-6_only_%25281%2529.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/flute-piano/vol-84.pdf",
+      "sha256": "79dde189eebd3d1804dfc8e02f8f5f54b05197718c6ac582fdd072fa301d69ba"
     },
     {
       "songbook": "flute-piano",
@@ -426,7 +518,9 @@
       "label": "vol-85",
       "url": "https://www.mediafire.com/file/81eh43bxp5fcdx9/Flute%2526Pianov1.5Volume_85_Additional_List_-_pages_1-3_only_%25282%2529.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/flute-piano/vol-85.pdf",
+      "sha256": "4dacf2a591da6b90b24018fcbd7e48405e1c5ee353a906513908799a54acae9f"
     },
     {
       "songbook": "flute-piano",
@@ -435,7 +529,9 @@
       "label": "vol-86",
       "url": "https://www.mediafire.com/file/nrb23i6if860tw2/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/flute-piano/vol-86.pdf",
+      "sha256": "7574ccaae0ddf60e1b78b33c7618b316db28ec40722f0e1d5befadff36b277ca"
     },
     {
       "songbook": "flute-piano",
@@ -444,7 +540,9 @@
       "label": "vol-86-training",
       "url": "https://www.mediafire.com/file/jrtrq7xx8eznkev/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/flute-piano/vol-86-training.pdf",
+      "sha256": "fa7513b032339541feebbc90ab2f1aa1b4ba8b8593369875b38e94a1d9fc60d1"
     },
     {
       "songbook": "flute-piano",
@@ -453,7 +551,9 @@
       "label": "vol-87",
       "url": "https://www.mediafire.com/file/rb9labsedg01qor/Piano_Volume_87_Additional_List_-_pages_1-3_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/flute-piano/vol-87.pdf",
+      "sha256": "d5ca46b275701972b23e49898000c158047a1bd650fdf1c9d26122f7c78ab10a"
     },
     {
       "songbook": "flute-piano",
@@ -462,7 +562,9 @@
       "label": "vol-87-training",
       "url": "https://www.mediafire.com/file/ry3lvbmkjv1juhu/Piano_Volume_87_Training_Additional_List_-_pages_1-2_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/flute-piano/vol-87-training.pdf",
+      "sha256": "c38c9a2038159b5816ca26a43a35aebcf29fd9af15228edf26e9b26e5eb03f8f"
     },
     {
       "songbook": "flute-piano",
@@ -471,7 +573,9 @@
       "label": "vol-88",
       "url": "https://cdn.shopify.com/s/files/1/2581/7224/files/Piano_Volume_88_Additional_List_-_pages_1-4_only.pdf?v=1622698875",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/flute-piano/vol-88.pdf",
+      "sha256": "9bd59637d029eb5b3df4e125bef7649f5039522d01e4acafecf7df69f7db61a4"
     },
     {
       "songbook": "flute-piano",
@@ -480,7 +584,9 @@
       "label": "vol-89",
       "url": "https://www.mediafire.com/file/9cxx0fk2eeirs66/Piano_Volume_89_Additional_List_-_pages_1-3_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/flute-piano/vol-89.pdf",
+      "sha256": "550f68fefad64d8825acb2dc72e207fa6c245ce8f71286f2b1fbdda91d31d0f7"
     },
     {
       "songbook": "flute-piano",
@@ -489,7 +595,9 @@
       "label": "vol-90",
       "url": "https://www.mediafire.com/file/ecrsrwj4wq04pmu/PianoFlute+Volume+90+Additional+List+-+pages+1-3+only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/flute-piano/vol-90.pdf",
+      "sha256": "723369323c4d9710c641930ee753098e4307c1663021063fd59a932e593f6753"
     },
     {
       "songbook": "flute-piano",
@@ -498,7 +606,9 @@
       "label": "vol-91",
       "url": "https://www.mediafire.com/file/5g0ijysahpu1l9h/T-X,+Reyna,+Flute,+PK-10,+Piano+Series+Volume+91+Additional+List+-+pages+1-5+only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/flute-piano/vol-91.pdf",
+      "sha256": "aac4c0cd881666cfed736f06d910f08b971944a0bdac9707010b1bdce72f5120"
     },
     {
       "songbook": "flute-piano",
@@ -507,7 +617,9 @@
       "label": "vol-92",
       "url": "https://www.mediafire.com/file/1vdczjv4d1jvk2a/T-X_Series_Volume_92_Additional_List_-_pages_1-4_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/flute-piano/vol-92.pdf",
+      "sha256": "c66419373fd0787ca0435c762a15628d7cf78d88cc1a5ff3d44cc4403282ff08"
     },
     {
       "songbook": "flute-piano",
@@ -516,7 +628,9 @@
       "label": "vol-93",
       "url": "https://www.mediafire.com/file/09kz827b2012rgp/T-X_Series_Volume_93_Additional_List_-_pages_1-4_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/flute-piano/vol-93.pdf",
+      "sha256": "9f27bdbc93715ecc44ac24ade3531b658cea1c4163ec9be8ffffe8b5be3e2d39"
     },
     {
       "songbook": "flute-piano",
@@ -525,7 +639,9 @@
       "label": "vol-94",
       "url": "https://www.mediafire.com/file_premium/1ujaga9j6johquo/T-X_Series_Volume_94_Additional_List_-_pages_1-4_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/flute-piano/vol-94.pdf",
+      "sha256": "9bc1469b1a50568ae56c63198064e96874febec06cd80720cdb64c7f6a7a2404"
     },
     {
       "songbook": "flute-piano",
@@ -534,7 +650,9 @@
       "label": "vol-95",
       "url": "https://www.mediafire.com/file_premium/olqzacluu010qe1/PianoFlute_Volume_95_Additional_List_-_pages_1-3_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/flute-piano/vol-95.pdf",
+      "sha256": "4b16da762ba58e9b3e9a305cfcb5a3a98b82976bb0113807375c838d92a540e5"
     },
     {
       "songbook": "flute-piano",
@@ -543,7 +661,9 @@
       "label": "vol-96",
       "url": "https://www.mediafire.com/file_premium/kqos6ovogjf71hn/PianoFlute_Volume_96_Additional_List_-_pages_1-3_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/flute-piano/vol-96.pdf",
+      "sha256": "8e624d0e54b8110a3341e3b3d8f59cd6e6caabab33dad38e91af770f448bcf61"
     },
     {
       "songbook": "flute-piano",
@@ -552,7 +672,9 @@
       "label": "vol-97",
       "url": "https://www.mediafire.com/file_premium/b4shlvyurka0vyq/PianoFlute_Volume_97_Additional_List_-_pages_1-2_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/flute-piano/vol-97.pdf",
+      "sha256": "49d02e929e14e1033dbf169476e475fe54ef963219793612e3b85d61ba428e2f"
     },
     {
       "songbook": "flute-piano",
@@ -561,7 +683,9 @@
       "label": "vol-98",
       "url": "https://www.mediafire.com/file_premium/90l0bwsat6ik4x0/PianoFlute_Volume_98_Additional_List_-_pages_1-4_only_%25282%2529.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/flute-piano/vol-98.pdf",
+      "sha256": "6a1b1e23a69bbaf394748c217c5d8bb2d88498956af74819f34a66e869b70363"
     },
     {
       "songbook": "flute-piano",
@@ -570,7 +694,9 @@
       "label": "vol-99",
       "url": "https://www.mediafire.com/file_premium/y5trlmygoze019h/PianoFlute_Volume_99_Additional_List_-_pages_1-2_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/flute-piano/vol-99.pdf",
+      "sha256": "17b9d44b89caea09d191664a34e9968b16d828c292a34e14215aab87982d902d"
     },
     {
       "songbook": "hdd",
@@ -2152,7 +2278,9 @@
       "label": "vol-2",
       "url": "https://www.mediafire.com/file/534y9fryaxokdc9/Home_40%252B_-_Volume_2_Additional_List_-_4pp_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/hermosa/vol-2.pdf",
+      "sha256": "359b8c4b5ece6455adbfd3ae34b68bbaae63ee16286caa1ef6bbfb3b36b1338c"
     },
     {
       "songbook": "hermosa",
@@ -2161,7 +2289,9 @@
       "label": "vol-3",
       "url": "https://www.mediafire.com/file/aabd7x6quvlx73e/Home_40%252B_-_Volume_3_Additional_List_-_4pp_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/hermosa/vol-3.pdf",
+      "sha256": "acd79fee7d9fe983da3145e98a7c45040eaf0a118719e797748455490c81aa80"
     },
     {
       "songbook": "hermosa",
@@ -2170,7 +2300,9 @@
       "label": "vol-4",
       "url": "https://www.mediafire.com/file/1wkw4u1hbfjwzu2/Home_40%252B_Hermosa_-_Volume_4_Additional_List__pp_1-8_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/hermosa/vol-4.pdf",
+      "sha256": "c7a344c32df5a7f2c951c0eee448d08e2920840d23ad8a9d4db0276a07d2e46a"
     },
     {
       "songbook": "hermosa",
@@ -2179,7 +2311,9 @@
       "label": "vol-5",
       "url": "https://www.mediafire.com/file/9wk7hqvidfqdrif/Home_40%252B_Hermosa_-_Volume_5_Additional_List__pp_1-14_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/hermosa/vol-5.pdf",
+      "sha256": "2da29668ff7e64f3bc625e3eac155c2e21dc0fce5b5dfd7449482bf6ed0a644b"
     },
     {
       "songbook": "hermosa",
@@ -2188,7 +2322,9 @@
       "label": "vol-6",
       "url": "https://www.mediafire.com/file/hi47o8wio19am9v/Home_40%252B_Hermosa_-_Volume_6_Additional_List_6pp_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/hermosa/vol-6.pdf",
+      "sha256": "b46f62329bf9367259701bd22411aa6c927e5577590b40b14d5cce543e117de6"
     },
     {
       "songbook": "hermosa",
@@ -2197,7 +2333,9 @@
       "label": "vol-7-9",
       "url": "https://www.mediafire.com/file/azdldt4m5gfgkel/Hermosa_Volume_7-9_Additional_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/hermosa/vol-7-9.pdf",
+      "sha256": "bb914d4df5ab1268fe3d5a07a9cf4834b91c45ec132812c370a87ca61fe5f360"
     },
     {
       "songbook": "home-40",
@@ -2206,7 +2344,9 @@
       "label": "vol-61",
       "url": "https://www.mediafire.com/file/wa1dqn093yjdnod/Home_-_40_Volume_61.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/home-40/vol-61.pdf",
+      "sha256": "09fcf3b1b4977819c0fdf1e2383e130181878fee2a35d3b8f7df03d4c1ddd525"
     },
     {
       "songbook": "home-40",
@@ -2215,7 +2355,9 @@
       "label": "vol-63",
       "url": "https://www.mediafire.com/file/84la69t8nfiee2q/Home_-_40_Volume_63.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/home-40/vol-63.pdf",
+      "sha256": "bc6903aba2e61f9aecac79eb79dc72f9884694015e3d32ad2f019e1bed66caa0"
     },
     {
       "songbook": "home-40",
@@ -2224,7 +2366,9 @@
       "label": "vol-64",
       "url": "https://www.mediafire.com/file/1mz7v6abm7gas7p/Home-40_Volume_64_SMALL.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/home-40/vol-64.pdf",
+      "sha256": "8d89d1636617409caf3e91e254d67b19c3ba6912c27033b90d1f1630741d88d3"
     },
     {
       "songbook": "home-40",
@@ -2233,7 +2377,9 @@
       "label": "vol-67",
       "url": "https://www.mediafire.com/file/86s8j1f73tm56p6/Home-40_-_Volume_67_Additional_List_-_6pp_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/home-40/vol-67.pdf",
+      "sha256": "951c395d35cab4dc894c1a816c9027479905dab3fe8f220bc3aa9cb681d8242a"
     },
     {
       "songbook": "home-40",
@@ -2242,7 +2388,9 @@
       "label": "vol-71",
       "url": "https://www.mediafire.com/file/jz5kmfk4ag41183/Home_-_40_Volume_71.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/home-40/vol-71.pdf",
+      "sha256": "570f03a1f11deffb187aadffcd9bbc9391204c321a34915f31e8de0af0c79c61"
     },
     {
       "songbook": "home-40",
@@ -2251,7 +2399,9 @@
       "label": "vol-72-76",
       "url": "https://www.mediafire.com/file/irw075s1jxkydpe/Home-40_-_Volume_72-76_Additional_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/home-40/vol-72-76.pdf",
+      "sha256": "fb7bfb2575877897595406be50339eea84b0a17763adfe9c9bd8fb9e63720821"
     },
     {
       "songbook": "home-40",
@@ -2260,7 +2410,9 @@
       "label": "vol-77",
       "url": "https://www.mediafire.com/file/bhaezaux9cod8ab/Home40_Nano_Volume_77_Additional_List_pp_1-17_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/home-40/vol-77.pdf",
+      "sha256": "5e27072e283d4ca575bd0838e615a261f99a38a12c5051db720bc3125bcb57c3"
     },
     {
       "songbook": "ks-100",
@@ -2269,7 +2421,9 @@
       "label": "vol-18",
       "url": "https://www.mediafire.com/file/e6avj1bsrsqtyww/KS-100_Minibox_and_KS-10_Mini_SD_Vol_18_Additional_List_pp_1-9_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-100/vol-18.pdf",
+      "sha256": "b9a0ec34dd881fc642028d9f513a77ef4e3ed7c981a50ebb6c49e48f5efdb331"
     },
     {
       "songbook": "ks-100",
@@ -2278,7 +2432,9 @@
       "label": "vol-19",
       "url": "https://www.mediafire.com/file/oq50bqxqqqu1trv/KS-5,+KS-10,+KS-100,+KS-10+Mini+Vol+19+Additional+List+pp+1-7+only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-100/vol-19.pdf",
+      "sha256": "e45388367c0df718580c6c571bb304031e331735b286636036e854a66eb03c56"
     },
     {
       "songbook": "ks-100",
@@ -2287,7 +2443,9 @@
       "label": "vol-20",
       "url": "https://www.mediafire.com/file/yoz35go3bdxaeus/KS-40_-_Volume_20_Additional_pp_1-4_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-100/vol-20.pdf",
+      "sha256": "b950f787cace9276aaff18d61fdc8b8a27ecb7fd3204c2a80647cf8fc8e09f52"
     },
     {
       "songbook": "ks-100",
@@ -2296,7 +2454,9 @@
       "label": "vol-21",
       "url": "https://www.mediafire.com/file/jaai6xgcppa3vap/KS-40_-_Volume_21_Additional_pp_1-4_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-100/vol-21.pdf",
+      "sha256": "409d8d678125a802995827837c2a814c986c0afe31670a7c8742306f790eedb8"
     },
     {
       "songbook": "ks-100",
@@ -2305,7 +2465,9 @@
       "label": "vol-22",
       "url": "https://www.mediafire.com/file_premium/otmqb8dosfuk23n/KS-100_Minibox_and_KS-10_Mini_SD_Vol_22_Additional_List_pp_1-4_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-100/vol-22.pdf",
+      "sha256": "c36f7a5d917b8f0404740fc5b2b1b25e23308b7dd9c228fbc979dfbe8845a46a"
     },
     {
       "songbook": "ks-100",
@@ -2314,7 +2476,9 @@
       "label": "vol-23",
       "url": "https://www.mediafire.com/file_premium/y9peqxzu1fmoeiu/KS-100_Minibox_and_KS-10_Mini_SD_Vol_23_Additional_List_pp_1-3_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-100/vol-23.pdf",
+      "sha256": "0af6b5167db77a8dbe84a6cd9db7ef35ffe265d25d25a98978a8d9c99eb99c13"
     },
     {
       "songbook": "ks-100",
@@ -2323,7 +2487,9 @@
       "label": "vol-24",
       "url": "https://www.mediafire.com/file_premium/v7sf4l893na8t2e/KS-100_Minibox_and_KS-10_Mini_SD_Vol_24_Additional_List_pp_1-3_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-100/vol-24.pdf",
+      "sha256": "1cc09d6c485f741cd47c65a131f3ee497bc80a285b876135e1ca33a0b9a2ef73"
     },
     {
       "songbook": "ks-100",
@@ -2332,7 +2498,9 @@
       "label": "vol-25",
       "url": "https://www.mediafire.com/file_premium/kc0k1tjutr26w74/KS-100_Minibox_and_KS-10_Mini_SD_Vol_25_Additional_List_pp_1-2_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-100/vol-25.pdf",
+      "sha256": "84a6a2ce92b39209dd6f7756d030448087c5da1643681cf19b8910f0b2419cbc"
     },
     {
       "songbook": "ks-100",
@@ -2341,7 +2509,9 @@
       "label": "vol-26",
       "url": "https://www.mediafire.com/file_premium/yoomb45ywme89lk/KS-100_Minibox_and_KS-10_Mini_SD_Vol_26_Additional_List_pp_1-2_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-100/vol-26.pdf",
+      "sha256": "04f7c55d90c16c33d8d2e40e4255cddcb4b481740247609a1dd97c893e2f5bdf"
     },
     {
       "songbook": "ks-100",
@@ -2350,7 +2520,9 @@
       "label": "vol-27",
       "url": "https://www.mediafire.com/file_premium/fmu2caw69k2thb8/KS-100_Minibox_and_KS-10_Mini_SD_Vol_27_Additional_List_pp_2.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-100/vol-27.pdf",
+      "sha256": "eb60046a738101b9ab305fe0e9fad6a32271916778978a05eda965e9cd3dabd6"
     },
     {
       "songbook": "ks-100",
@@ -2359,7 +2531,9 @@
       "label": "vol-28",
       "url": "https://www.mediafire.com/file_premium/rry8knlf1aaopho/KS-100_Minibox_and_KS-10_Mini_SD_Vol_28_Additional_List_pp_1-2_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-100/vol-28.pdf",
+      "sha256": "719ad71e1bea29fd5edba0b255b4f4cec7fb146eb227f94c7a5cf5a28ecf30d8"
     },
     {
       "songbook": "ks-100",
@@ -2368,7 +2542,9 @@
       "label": "vol-29",
       "url": "https://www.mediafire.com/file_premium/jpu8u4b4tbtl34m/KS-100_Minibox_and_KS-10_Mini_SD_Vol_29_Additional_List_pp_1-2_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-100/vol-29.pdf",
+      "sha256": "9b1927ae9eb47120edeca94881ea7f0389ec79afbe43380a9f34d34739db4aee"
     },
     {
       "songbook": "ks-100",
@@ -2377,7 +2553,9 @@
       "label": "vol-30",
       "url": "https://www.mediafire.com/file_premium/xhr43dzu8yx0mfi/KS-100_Minibox_and_KS-10_Mini_SD_Vol_30_Additional_List_pp_1-2_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-100/vol-30.pdf",
+      "sha256": "3f1a23fff0041765586a94c45ae662b37749ec4efb13821b36e020850e87571a"
     },
     {
       "songbook": "ks-100",
@@ -2386,7 +2564,9 @@
       "label": "vol-31",
       "url": "https://www.mediafire.com/file_premium/hcw4s6vpjc7vl51/KS-100_Minibox_and_KS-10_Mini_SD_Vol_31_Additional_List_pp_1-2_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-100/vol-31.pdf",
+      "sha256": "937fec03bfa94561429d951fb3250c514d39fd90778c86c2730027909d046513"
     },
     {
       "songbook": "ks-100",
@@ -2395,7 +2575,9 @@
       "label": "vol-32",
       "url": "https://www.mediafire.com/file_premium/kknvmeutv10pfjx/KS-100_Minibox_and_KS-10_Mini_SD_Vol_32_Additional_List_pp_1-4_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-100/vol-32.pdf",
+      "sha256": "3a36cd806b3d3914b81b27375b62ca9c56383b8a37d3fc9fb4b55ba3bca94bad"
     },
     {
       "songbook": "ks-100",
@@ -2404,7 +2586,9 @@
       "label": "vol-33",
       "url": "https://www.mediafire.com/file_premium/4o019x0gi90hnts/KS-100_Minibox_and_KS-10_Mini_SD_Vol_33_Additional_List_pp_1-2_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-100/vol-33.pdf",
+      "sha256": "d81c24f861ab5d43f987e9e7afb9531f207d73de5917dc28a03dba964bc2ca59"
     },
     {
       "songbook": "ks-100",
@@ -2413,7 +2597,9 @@
       "label": "vol-34",
       "url": "https://www.mediafire.com/file_premium/cr577e8o81lx1gv/KS-100_Minibox_and_KS-10_Mini_SD_Vol_34_Additional_List_%2528yellow%2529_pp_1-3_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-100/vol-34.pdf",
+      "sha256": "6b01278800f3930a3c164c1c8efeafccc5856af9d04ce3d3b9e614959e9606ce"
     },
     {
       "songbook": "ks-100",
@@ -2422,7 +2608,9 @@
       "label": "vol-35",
       "url": "https://www.mediafire.com/file_premium/6emegw1mv7un63o/KS-100_Minibox_and_KS-10_Mini_SD_Vol_35_Additional_List__yellow__pp__260923_103502.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-100/vol-35.pdf",
+      "sha256": "05a8c4bf45b71f55429079ae1e3b54c9e6b450b93d377c02d21be81525c5052a"
     },
     {
       "songbook": "ks-40",
@@ -2772,7 +2960,9 @@
       "label": "vol-10",
       "url": "https://www.mediafire.com/file/ed1t390twvs3g6q/KS-5_Vol_10_Additional_List_-_6pp.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-5/vol-10.pdf",
+      "sha256": "0a32fc00370096cb0916b9e84a185c30debb1b80c285155343bed810fbbef04c"
     },
     {
       "songbook": "ks-5",
@@ -2781,7 +2971,9 @@
       "label": "vol-11",
       "url": "https://www.mediafire.com/file/qc5udv1c1x3m4ij/KS-5_and_KS-10_Vol_11_Additional_List_pp_1-4_only_%25281%2529.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-5/vol-11.pdf",
+      "sha256": "ee2611d1baf840c56706d38968b28544646ef083b2aca6ed09695de743c2fc7d"
     },
     {
       "songbook": "ks-5",
@@ -2790,7 +2982,9 @@
       "label": "vol-12",
       "url": "https://www.mediafire.com/file/mkofcnnyciekm10/KS-5_and_KS-10_Vol_12_Additional_List_pp_1-11_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-5/vol-12.pdf",
+      "sha256": "39ae3685d9a85e67ec82ede5a4873bdbd0a35dca2087a6ad35bd2f7e2201dbb8"
     },
     {
       "songbook": "ks-5",
@@ -2799,7 +2993,9 @@
       "label": "vol-14",
       "url": "https://www.mediafire.com/file/kd9eht3516l5zrs/KS-5_and_KS-10_Vol_14_Additional_List_pp_1-12_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-5/vol-14.pdf",
+      "sha256": "6d89b6591da471f606b671f7765887c1f974134ef9eb588e95f3627a8e29f236"
     },
     {
       "songbook": "ks-5",
@@ -2808,7 +3004,9 @@
       "label": "vol-15",
       "url": "https://www.mediafire.com/file/g3c2a5asvby91gn/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-5/vol-15.pdf",
+      "sha256": "a75ce3ddfc9cea06fc8cc8f9b7c9f27874f078bfa33ac271934bf97ce7ed007a"
     },
     {
       "songbook": "ks-5",
@@ -2817,7 +3015,9 @@
       "label": "vol-16",
       "url": "https://www.mediafire.com/file/jshsjr4ew43znp3/KS-5_and_KS-10_Vol_16_Additional_List_pp_1-5_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-5/vol-16.pdf",
+      "sha256": "5b46f336fd936da0b60624f88b2b42bb71705fd0d405464d0d0b930f8ffbe741"
     },
     {
       "songbook": "ks-5",
@@ -2826,7 +3026,9 @@
       "label": "vol-17",
       "url": "https://www.mediafire.com/file/f7lv4du50vposjs/KS-5_and_KS-10_Vol_17_Additional_List_pp_1-6_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-5/vol-17.pdf",
+      "sha256": "dd46cbebad600718eedf3479c800b49b1cf98bac6c89f313a2a0dd95f59329d8"
     },
     {
       "songbook": "ks-5",
@@ -2835,7 +3037,9 @@
       "label": "vol-18",
       "url": "https://www.mediafire.com/file/nwhrtp1o6nlldwx/KS-5_and_KS-10_Vol_18_Additional_List_pp_1-9_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-5/vol-18.pdf",
+      "sha256": "b9a0ec34dd881fc642028d9f513a77ef4e3ed7c981a50ebb6c49e48f5efdb331"
     },
     {
       "songbook": "ks-5",
@@ -2844,7 +3048,9 @@
       "label": "vol-19",
       "url": "https://www.mediafire.com/file/oq50bqxqqqu1trv/KS-5,+KS-10,+KS-100,+KS-10+Mini+Vol+19+Additional+List+pp+1-7+only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-5/vol-19.pdf",
+      "sha256": "e45388367c0df718580c6c571bb304031e331735b286636036e854a66eb03c56"
     },
     {
       "songbook": "ks-5",
@@ -2853,7 +3059,9 @@
       "label": "vol-2-7",
       "url": "https://www.mediafire.com/file/y7z44dc06iuzcy4/KS-5_Vol_2-7_Additional_List_-_pp_1_-16_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-5/vol-2-7.pdf",
+      "sha256": "a876121b5bc3a90e3c06f2dcf3832d3c4009f7bd17fc777f8221ec226ab474fc"
     },
     {
       "songbook": "ks-5",
@@ -2862,7 +3070,9 @@
       "label": "vol-20",
       "url": "https://www.mediafire.com/file/ratl0rxyme1laz8/KS-5_and_KS-10_Vol_20_Additional_List_pp_1-6_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-5/vol-20.pdf",
+      "sha256": "d8bea02cf5467392cc7e00955d166877b7986b751ecca699124540c5b48402dd"
     },
     {
       "songbook": "ks-5",
@@ -2871,7 +3081,9 @@
       "label": "vol-21",
       "url": "https://www.mediafire.com/file/sxbvsp641ei2kqr/KS-5_and_KS-10_Vol_21_Additional_List_pp_1-6_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-5/vol-21.pdf",
+      "sha256": "32d12f5454fbad31b5737ac0a1c60c926444d2563e279f1dd4f1b177bb3c03bd"
     },
     {
       "songbook": "ks-5",
@@ -2880,7 +3092,9 @@
       "label": "vol-22",
       "url": "https://www.mediafire.com/file_premium/4b3yq7qrnalyxiv/KS-5_and_KS-10_Vol_22_Additional_List_pp_1-5_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-5/vol-22.pdf",
+      "sha256": "7df61163b3e5c15a258b3ebacd4b8f298e8c857e51475fc4d2b1c4349452bcae"
     },
     {
       "songbook": "ks-5",
@@ -2889,7 +3103,9 @@
       "label": "vol-23",
       "url": "https://www.mediafire.com/file_premium/1yz61d6meiqonac/KS-5_and_KS-10_Vol_23_Additional_List_pp_1-3_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-5/vol-23.pdf",
+      "sha256": "0af6b5167db77a8dbe84a6cd9db7ef35ffe265d25d25a98978a8d9c99eb99c13"
     },
     {
       "songbook": "ks-5",
@@ -2898,7 +3114,9 @@
       "label": "vol-24",
       "url": "https://www.mediafire.com/file_premium/gqvpnaxb3gspv8m/KS-5_and_KS-10_Vol_24_Additional_List_pp_1-3_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-5/vol-24.pdf",
+      "sha256": "1cc09d6c485f741cd47c65a131f3ee497bc80a285b876135e1ca33a0b9a2ef73"
     },
     {
       "songbook": "ks-5",
@@ -2907,7 +3125,9 @@
       "label": "vol-25",
       "url": "https://www.mediafire.com/file_premium/1xtsd13srpzn4j5/KS-5_and_KS-10_Vol_25_Additional_List_pp_1-2_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-5/vol-25.pdf",
+      "sha256": "84a6a2ce92b39209dd6f7756d030448087c5da1643681cf19b8910f0b2419cbc"
     },
     {
       "songbook": "ks-5",
@@ -2916,7 +3136,9 @@
       "label": "vol-26",
       "url": "https://www.mediafire.com/file_premium/m51pb0vwx8n7156/KS-5_and_KS-10_Vol_26_Additional_List_pp_1-2_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-5/vol-26.pdf",
+      "sha256": "04f7c55d90c16c33d8d2e40e4255cddcb4b481740247609a1dd97c893e2f5bdf"
     },
     {
       "songbook": "ks-5",
@@ -2925,7 +3147,9 @@
       "label": "vol-27",
       "url": "https://www.mediafire.com/file_premium/iq3lveswi8x39i3/KS-5_and_KS-10_Vol_27_Additional_List_pp_1-3_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-5/vol-27.pdf",
+      "sha256": "eb60046a738101b9ab305fe0e9fad6a32271916778978a05eda965e9cd3dabd6"
     },
     {
       "songbook": "ks-5",
@@ -2934,7 +3158,9 @@
       "label": "vol-28",
       "url": "https://www.mediafire.com/file_premium/mwfemc3dgbo0jfx/KS-5_and_KS-10_Vol_28_Additional_List_pp_1-2_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-5/vol-28.pdf",
+      "sha256": "719ad71e1bea29fd5edba0b255b4f4cec7fb146eb227f94c7a5cf5a28ecf30d8"
     },
     {
       "songbook": "ks-5",
@@ -2943,7 +3169,9 @@
       "label": "vol-29",
       "url": "https://www.mediafire.com/file_premium/28vi88b7tqu81ei/KS-5_and_KS-10_Vol_29_Additional_List_pp_1-2_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-5/vol-29.pdf",
+      "sha256": "9b1927ae9eb47120edeca94881ea7f0389ec79afbe43380a9f34d34739db4aee"
     },
     {
       "songbook": "ks-5",
@@ -2952,7 +3180,9 @@
       "label": "vol-30",
       "url": "https://www.mediafire.com/file_premium/7fcwsf8a3w5mmoo/KS-5_and_KS-10_Vol_30_Additional_List_pp_1-2_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-5/vol-30.pdf",
+      "sha256": "3f1a23fff0041765586a94c45ae662b37749ec4efb13821b36e020850e87571a"
     },
     {
       "songbook": "ks-5",
@@ -2961,7 +3191,9 @@
       "label": "vol-32",
       "url": "https://www.mediafire.com/file_premium/fiqj13gt5nlf57o/KS-5_and_KS-10_Vol_32_Additional_List_pp_1-4_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-5/vol-32.pdf",
+      "sha256": "3a36cd806b3d3914b81b27375b62ca9c56383b8a37d3fc9fb4b55ba3bca94bad"
     },
     {
       "songbook": "ks-5",
@@ -2970,7 +3202,9 @@
       "label": "vol-33",
       "url": "https://www.mediafire.com/file_premium/ftukns1s4akz0kt/KS-5_and_KS-10_Vol_33_Additional_List_pp_1-2_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-5/vol-33.pdf",
+      "sha256": "d81c24f861ab5d43f987e9e7afb9531f207d73de5917dc28a03dba964bc2ca59"
     },
     {
       "songbook": "ks-5",
@@ -2979,7 +3213,9 @@
       "label": "vol-35",
       "url": "https://www.mediafire.com/file_premium/3oy2sn0fy80p8wy/KS-5_and_KS-10_Vol_35_Additional_List__yellow__pp__260923_103502.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-5/vol-35.pdf",
+      "sha256": "05a8c4bf45b71f55429079ae1e3b54c9e6b450b93d377c02d21be81525c5052a"
     },
     {
       "songbook": "ks-5",
@@ -2988,7 +3224,9 @@
       "label": "vol-8",
       "url": "https://www.mediafire.com/file/bhhzq8na3c2szgz/KS-5_Vol_8_Additional_List_-_6pp_%25282%2529.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-5/vol-8.pdf",
+      "sha256": "b312d4c4b6a1336a9099c36e44aec7aeb7fa9630c4386b9303e0e97e60eab3ad"
     },
     {
       "songbook": "ks-5",
@@ -2997,7 +3235,9 @@
       "label": "vol-9",
       "url": "https://www.mediafire.com/file/gjd0izii5ce0eea/KS-5_Vol_9_Additional_List_-_12pp_.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/ks-5/vol-9.pdf",
+      "sha256": "6f66a1561829989ce2f7fb733d2f326ca3f16bba1fa0af7523ddae6d0ad1afc9"
     },
     {
       "songbook": "p-series",
@@ -3006,8 +3246,9 @@
       "label": "vol-53-56",
       "url": "https://www.mediafire.com/file/8tzxa9sl061kfk0/P-Series_Volume_53-56_Additional_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "missing",
-      "file": "data/pdfs/p-series/vol-53-56.pdf"
+      "status": "present",
+      "file": "data/pdfs/p-series/vol-53-56.pdf",
+      "sha256": "129398f9921a50f737d4dda1ce051d2818908f0885a2f2ffaacdd03dd5818c9e"
     },
     {
       "songbook": "p-series",
@@ -3016,8 +3257,9 @@
       "label": "vol-53-59",
       "url": "https://www.mediafire.com/file/cvbu3krwbbvvq76/P-series_Volume_53_-_59_additional_list.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "missing",
-      "file": "data/pdfs/p-series/vol-53-59.pdf"
+      "status": "present",
+      "file": "data/pdfs/p-series/vol-53-59.pdf",
+      "sha256": "0304d66e9fbd1fe18b2f7126d3b27d272cf692f9800d79ebea5a544add9e1464"
     },
     {
       "songbook": "p-series",
@@ -3026,8 +3268,9 @@
       "label": "vol-61",
       "url": "https://www.mediafire.com/file/o790rq2oogrwlrm/P-Series_Volume_61_Additional_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "missing",
-      "file": "data/pdfs/p-series/vol-61.pdf"
+      "status": "present",
+      "file": "data/pdfs/p-series/vol-61.pdf",
+      "sha256": "edfadbe1ce724751f4117b4971aa4ca4e7186732ba5bba5a26d954f551a31d2d"
     },
     {
       "songbook": "p-series",
@@ -3036,8 +3279,9 @@
       "label": "vol-64",
       "url": "https://www.mediafire.com/file/5dudi4ym7qhc3xw/P-Series_Volume_64_Additional_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "missing",
-      "file": "data/pdfs/p-series/vol-64.pdf"
+      "status": "present",
+      "file": "data/pdfs/p-series/vol-64.pdf",
+      "sha256": "8c71b0bebef9a48db3bd7e5b4dc505d8087d59234ac5999bbd1960d101b1f6a5"
     },
     {
       "songbook": "p-series",
@@ -3046,8 +3290,9 @@
       "label": "vol-67",
       "url": "https://www.mediafire.com/file/3xbajpi3lrgv5em/P-Series_Volume_67_Additional_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "missing",
-      "file": "data/pdfs/p-series/vol-67.pdf"
+      "status": "present",
+      "file": "data/pdfs/p-series/vol-67.pdf",
+      "sha256": "b4711728989d3b80d1183554514b4aae1cc6472f33e061aabb4f5b124b2608d3"
     },
     {
       "songbook": "p-series",
@@ -3056,8 +3301,9 @@
       "label": "vol-69",
       "url": "https://www.mediafire.com/file/860pxyurp7p6lsc/P-Series_Volume_69_Additional_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "missing",
-      "file": "data/pdfs/p-series/vol-69.pdf"
+      "status": "present",
+      "file": "data/pdfs/p-series/vol-69.pdf",
+      "sha256": "b86331471b7dbabf4bfa6a060b80943dd1eac4f550d8becb54714167fa1a9ac1"
     },
     {
       "songbook": "p-series",
@@ -3066,8 +3312,9 @@
       "label": "vol-73",
       "url": "https://www.mediafire.com/file/2lllhcub1ac61xu/P-Series_Volume_73_Additional_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "missing",
-      "file": "data/pdfs/p-series/vol-73.pdf"
+      "status": "present",
+      "file": "data/pdfs/p-series/vol-73.pdf",
+      "sha256": "c55a78412ab2a67fe6eb0281bb21b73730a3b7f65fcb65f8f4190f139e05782f"
     },
     {
       "songbook": "p-series",
@@ -3076,8 +3323,9 @@
       "label": "vol-77",
       "url": "https://www.mediafire.com/file/oykunkr2ep72ktu/P-Series_Volume_77_Additional_List_-_pages_1-4_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "missing",
-      "file": "data/pdfs/p-series/vol-77.pdf"
+      "status": "present",
+      "file": "data/pdfs/p-series/vol-77.pdf",
+      "sha256": "e40d41a36769d5d1fc26a957ddb90ca820e14dcd3f87aff31370042e3e8f76a3"
     },
     {
       "songbook": "p-series",
@@ -3086,8 +3334,9 @@
       "label": "vol-78",
       "url": "https://www.mediafire.com/file/fyo0v2repfn0huw/P-Series_Volume_78_Additional_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "missing",
-      "file": "data/pdfs/p-series/vol-78.pdf"
+      "status": "present",
+      "file": "data/pdfs/p-series/vol-78.pdf",
+      "sha256": "bc239085747d3b3575faf764163b05d1ba93f118489b2c2b1efbe48e9ef4db53"
     },
     {
       "songbook": "reyna",
@@ -3096,7 +3345,9 @@
       "label": "vol-100",
       "url": "https://www.mediafire.com/file_premium/3axkqopav0wutg5/Reyna_Volume_100_Additional_List_-_pages_2.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-100.pdf",
+      "sha256": "6248e0b0752d3c576aad4623ac93cee8a3a130cdb62feac429b0ee1dbb84a875"
     },
     {
       "songbook": "reyna",
@@ -3105,7 +3356,9 @@
       "label": "vol-101",
       "url": "https://www.mediafire.com/file_premium/kckk76jlbl0225l/Reyna_Volume_101_Additional_List_-_page_1_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-101.pdf",
+      "sha256": "e93a337dc891573971445e8c38729f44bc3a2fb829f2da29f3a4b04d4502edc4"
     },
     {
       "songbook": "reyna",
@@ -3114,7 +3367,9 @@
       "label": "vol-102",
       "url": "https://www.mediafire.com/file_premium/yr8iydhscxlkyvz/Reyna_Volume_102_Additional_List_-_page_1-2_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-102.pdf",
+      "sha256": "f07e001f8eb325f22438b6666495572beb28e26ec112203b5fbeecea8849bead"
     },
     {
       "songbook": "reyna",
@@ -3123,7 +3378,9 @@
       "label": "vol-103",
       "url": "https://www.mediafire.com/file_premium/3ttwarokoectrct/Reyna_Volume_103_Additional_List_-_pages_1-2_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-103.pdf",
+      "sha256": "afa47e392e0ef493f2eb547fdae59e59f01beb4e4ce0f41141d69b3d467f1c8b"
     },
     {
       "songbook": "reyna",
@@ -3132,7 +3389,9 @@
       "label": "vol-104-105",
       "url": "https://www.mediafire.com/file_premium/kttezjtjoz4dnw3/Reyna_Volume_104%257E105_Additional_List_-_pages_1-3_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-104-105.pdf",
+      "sha256": "e86f2a0d658908ec5934a91f90e085aa1142311e450281913c5477adbc1a29b7"
     },
     {
       "songbook": "reyna",
@@ -3141,7 +3400,9 @@
       "label": "vol-106",
       "url": "https://www.mediafire.com/file_premium/nq12po54bum3arg/Reyna_Volume_106_Additional_List_-_pages_1-2_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-106.pdf",
+      "sha256": "3bc78e666cc17458eb92e5f46c509eed832ed6e8725dfcb500d7fcade9458f77"
     },
     {
       "songbook": "reyna",
@@ -3150,7 +3411,9 @@
       "label": "vol-108",
       "url": "https://www.mediafire.com/file_premium/xqdkzqfvo4rdzy3/Reyna_Volume_108_Additional_List__yellow__-_p_260923_103524.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-108.pdf",
+      "sha256": "8dc4017cf79d2f9d4b003990fd2f273fc6dfca1775fbfe8f6d8270e51379cef1"
     },
     {
       "songbook": "reyna",
@@ -3159,7 +3422,9 @@
       "label": "vol-62",
       "url": "https://www.mediafire.com/file/7lctu8f4akbymxk/Reyna_Volume_62_Additional_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-62.pdf",
+      "sha256": "aa0c747cd5607d2e77ff1efc9f71d242823f9a07b381088eaea4ef286c1d6183"
     },
     {
       "songbook": "reyna",
@@ -3168,7 +3433,9 @@
       "label": "vol-63",
       "url": "https://www.mediafire.com/file/8maonej7m3v27n6/Reyna_Volume_63_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-63.pdf",
+      "sha256": "e03e2e0a0f81f71282da3d8ddcf2b5d0b2940a52a5a09dbc70d581ef7f2f3e63"
     },
     {
       "songbook": "reyna",
@@ -3177,7 +3444,9 @@
       "label": "vol-64-65",
       "url": "https://www.mediafire.com/file/9a1r1y1k295ttxy/Volume_64_-_65_Reyna_Additional_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-64-65.pdf",
+      "sha256": "48f514102ae056fecdece79856eb3929c8451f3aa5ae93827ca49b88023c8367"
     },
     {
       "songbook": "reyna",
@@ -3186,7 +3455,9 @@
       "label": "vol-66",
       "url": "https://www.mediafire.com/file/t81v0wsw49s9iwq/Reyna_Volume_66_Additional_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-66.pdf",
+      "sha256": "3718700b910691c71cb0992d2e4ad2e5c4413651d957f92428d787aaa0b8b353"
     },
     {
       "songbook": "reyna",
@@ -3195,7 +3466,9 @@
       "label": "vol-67",
       "url": "https://www.mediafire.com/file/ozck2a5gj1ozfmy/Reyna_Volume_67_Additional_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-67.pdf",
+      "sha256": "c29427abd8d0889c1a50d37e7b1037fe013fa42cd690942fc2cd2ab602c87842"
     },
     {
       "songbook": "reyna",
@@ -3204,7 +3477,9 @@
       "label": "vol-68",
       "url": "https://www.mediafire.com/file/gtu7tu6ix2ot5o6/Reyna_Volume_68_Additional_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-68.pdf",
+      "sha256": "84d55ef60b5f5b0a190333b82fdd506b7510076fe05776fd80af9dc902f677a3"
     },
     {
       "songbook": "reyna",
@@ -3213,7 +3488,9 @@
       "label": "vol-69",
       "url": "https://www.mediafire.com/file/qtqce404ke1cmpq/Reyna_Volume_69_Additional_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-69.pdf",
+      "sha256": "a58956842c19765fbd0da74e540c8c6a1611aaa7b376a29f8bd67916c799f387"
     },
     {
       "songbook": "reyna",
@@ -3222,7 +3499,9 @@
       "label": "vol-70",
       "url": "https://www.mediafire.com/file/7k3a3a899qqarq8/Reyna_Volume_70_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-70.pdf",
+      "sha256": "ce72de78c0e5ee9d0754b42184f7a07be0a2c8490e805ac756971105303e6b38"
     },
     {
       "songbook": "reyna",
@@ -3231,7 +3510,9 @@
       "label": "vol-71",
       "url": "https://www.mediafire.com/file/m7h5qgxfhbo2ah7/Reyna_Volume_71_Additional_Song_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-71.pdf",
+      "sha256": "c967553de77a2be1e95795a68454a4512a88e11802b5a3287d0a0c4cab58698e"
     },
     {
       "songbook": "reyna",
@@ -3240,7 +3521,9 @@
       "label": "vol-72",
       "url": "https://www.mediafire.com/file/b4iyk94bmd121sl/Reyna_-_Volume_72_Additional_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-72.pdf",
+      "sha256": "ce66678ad891e078d1a934e55b1d5114ad8f1cc589bcaba075b5c7075570340c"
     },
     {
       "songbook": "reyna",
@@ -3249,7 +3532,9 @@
       "label": "vol-73",
       "url": "https://www.mediafire.com/file/2vgasaen0uu6216/Reyna_-_Volume_73_Additional_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-73.pdf",
+      "sha256": "3064a5aa486753206f1753865787ef3f0a5ebba6195ba539f97d6858830dcc49"
     },
     {
       "songbook": "reyna",
@@ -3258,7 +3543,9 @@
       "label": "vol-74",
       "url": "https://www.mediafire.com/file/9q40qew0f0fdwi8/Reyna_-_Volume_74_Additional_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-74.pdf",
+      "sha256": "24974a196f426c2cb032f7b0a271c2e90bdaf96f66e67244f1f2b978ed67fef9"
     },
     {
       "songbook": "reyna",
@@ -3267,7 +3554,9 @@
       "label": "vol-75",
       "url": "https://www.mediafire.com/file/ta2iddk2b2g4fva/Reyna_-_Volume_75_Additional_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-75.pdf",
+      "sha256": "0d23e0499606b0313ad33f6aef95e86ccdc2e6ab0d6cd8d40adf225da9a6c808"
     },
     {
       "songbook": "reyna",
@@ -3276,7 +3565,9 @@
       "label": "vol-76",
       "url": "https://www.mediafire.com/file/680b39pw37y970w/Reyna_-_Volume_76_Additional_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-76.pdf",
+      "sha256": "abac23b3dda0122ef28dcba02244fd9416ad67bd91f68636e7c43f6b979fb8a0"
     },
     {
       "songbook": "reyna",
@@ -3285,7 +3576,9 @@
       "label": "vol-77",
       "url": "https://www.mediafire.com/file/q5gcvcd870duqwp/Reyna_Volume_77_Additional_List_-_pages_1-4_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-77.pdf",
+      "sha256": "e40d41a36769d5d1fc26a957ddb90ca820e14dcd3f87aff31370042e3e8f76a3"
     },
     {
       "songbook": "reyna",
@@ -3294,7 +3587,9 @@
       "label": "vol-78",
       "url": "https://www.mediafire.com/file/1cx4cij58s5jkc0/T_-_X_-_Volume_78_Additional_List_-_pages_1-4_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-78.pdf",
+      "sha256": "9fb8ceac4e0cb78d595f91d14bbeb5bc6c634ca28082530d03fb256a06fa683a"
     },
     {
       "songbook": "reyna",
@@ -3303,7 +3598,9 @@
       "label": "vol-79",
       "url": "https://www.mediafire.com/file/d9ax2vyvjbm8em2/Reyna_-_Volume_79_Additional_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-79.pdf",
+      "sha256": "62f63ce6f55eef47f9aa094a9efabffd7bdb8c14353e46f4571def47090b810f"
     },
     {
       "songbook": "reyna",
@@ -3312,7 +3609,9 @@
       "label": "vol-80",
       "url": "https://www.mediafire.com/file/7e84w6rtstbcjmq/Reyna_-_Volume_80_Additional_List_-_pages_1-4_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-80.pdf",
+      "sha256": "7f6a82f89ffc6cc6588300ccba809a3cad6c843da9a35d31f8bb7a1b87e084b7"
     },
     {
       "songbook": "reyna",
@@ -3321,7 +3620,9 @@
       "label": "vol-81",
       "url": "https://www.mediafire.com/file/nbxj5mddjg8gk8l/Reyna_-_Volume_81_Additional_List_-_pages_1-4_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-81.pdf",
+      "sha256": "df8ca903f51767368b2112d982c982f9b10a8f4eed4fdca773407e0752496394"
     },
     {
       "songbook": "reyna",
@@ -3330,7 +3631,9 @@
       "label": "vol-82",
       "url": "https://www.mediafire.com/file/v2r78wv5ojd3cdt/T_-_X_-_Volume_82_Additional_List_-_pages_1-6_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-82.pdf",
+      "sha256": "838e433d8bc5f467567526ba3cd514c0e5af809a2d067812f6d4a51c8540f939"
     },
     {
       "songbook": "reyna",
@@ -3339,7 +3642,9 @@
       "label": "vol-83",
       "url": "https://www.mediafire.com/file/6p2rva1w666w9o0/T_-_X_-_Volume_83_Additional_List_-_pages_1-3_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-83.pdf",
+      "sha256": "ef5d774cb9790bc337c41b2b1712e75ae079c1d6aeff957c9e00e1fac35f6135"
     },
     {
       "songbook": "reyna",
@@ -3348,7 +3653,9 @@
       "label": "vol-84",
       "url": "https://www.mediafire.com/file/z6u470a0kotteh3/T-X_Series_Volume_84_Additional_List_-_pages_1-6_only_%25281%2529.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-84.pdf",
+      "sha256": "79dde189eebd3d1804dfc8e02f8f5f54b05197718c6ac582fdd072fa301d69ba"
     },
     {
       "songbook": "reyna",
@@ -3357,7 +3664,9 @@
       "label": "vol-85",
       "url": "https://www.mediafire.com/file/2q5kux4ljfshe1c/T-X_Series_Volume_85_Additional_List_-_pages_1-3_only_%25282%2529.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-85.pdf",
+      "sha256": "4dacf2a591da6b90b24018fcbd7e48405e1c5ee353a906513908799a54acae9f"
     },
     {
       "songbook": "reyna",
@@ -3366,7 +3675,9 @@
       "label": "vol-86",
       "url": "https://www.mediafire.com/file/nfmrles7ja6mzhd/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-86.pdf",
+      "sha256": "7574ccaae0ddf60e1b78b33c7618b316db28ec40722f0e1d5befadff36b277ca"
     },
     {
       "songbook": "reyna",
@@ -3375,7 +3686,9 @@
       "label": "vol-87",
       "url": "https://www.mediafire.com/file/6h5y1r8ad24k4i3/Reyna_Volume_87_Additional_List_-_pages_1-3_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-87.pdf",
+      "sha256": "d5ca46b275701972b23e49898000c158047a1bd650fdf1c9d26122f7c78ab10a"
     },
     {
       "songbook": "reyna",
@@ -3384,7 +3697,9 @@
       "label": "vol-88",
       "url": "https://www.mediafire.com/file/mwugu3mux86pzfo/Reyna_Volume_88_Additional_List_-_pages_1-4_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-88.pdf",
+      "sha256": "9bd59637d029eb5b3df4e125bef7649f5039522d01e4acafecf7df69f7db61a4"
     },
     {
       "songbook": "reyna",
@@ -3393,7 +3708,9 @@
       "label": "vol-89",
       "url": "https://www.mediafire.com/file/rt5wavrurgin7fe/Reyna_Volume_89_Additional_List_-_pages_1-3_only_-.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-89.pdf",
+      "sha256": "550f68fefad64d8825acb2dc72e207fa6c245ce8f71286f2b1fbdda91d31d0f7"
     },
     {
       "songbook": "reyna",
@@ -3402,7 +3719,9 @@
       "label": "vol-90",
       "url": "https://www.mediafire.com/file/onz1bp4g2o9zsjp/Reyna+Series+Volume+90+Additional+List+-+pages+1-3+only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-90.pdf",
+      "sha256": "723369323c4d9710c641930ee753098e4307c1663021063fd59a932e593f6753"
     },
     {
       "songbook": "reyna",
@@ -3411,7 +3730,9 @@
       "label": "vol-91",
       "url": "https://www.mediafire.com/file/5g0ijysahpu1l9h/T-X,+Reyna,+Flute,+PK-10,+Piano+Series+Volume+91+Additional+List+-+pages+1-5+only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-91.pdf",
+      "sha256": "aac4c0cd881666cfed736f06d910f08b971944a0bdac9707010b1bdce72f5120"
     },
     {
       "songbook": "reyna",
@@ -3420,7 +3741,9 @@
       "label": "vol-92",
       "url": "https://www.mediafire.com/file/1vdczjv4d1jvk2a/T-X_Series_Volume_92_Additional_List_-_pages_1-4_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-92.pdf",
+      "sha256": "c66419373fd0787ca0435c762a15628d7cf78d88cc1a5ff3d44cc4403282ff08"
     },
     {
       "songbook": "reyna",
@@ -3429,7 +3752,9 @@
       "label": "vol-93",
       "url": "https://www.mediafire.com/file/09kz827b2012rgp/T-X_Series_Volume_93_Additional_List_-_pages_1-4_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-93.pdf",
+      "sha256": "9f27bdbc93715ecc44ac24ade3531b658cea1c4163ec9be8ffffe8b5be3e2d39"
     },
     {
       "songbook": "reyna",
@@ -3438,7 +3763,9 @@
       "label": "vol-94",
       "url": "https://www.mediafire.com/file_premium/1ujaga9j6johquo/T-X_Series_Volume_94_Additional_List_-_pages_1-4_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-94.pdf",
+      "sha256": "9bc1469b1a50568ae56c63198064e96874febec06cd80720cdb64c7f6a7a2404"
     },
     {
       "songbook": "reyna",
@@ -3447,7 +3774,9 @@
       "label": "vol-95",
       "url": "https://www.mediafire.com/file_premium/j1dh04vacosag0w/T-X%252C_Reyna%252C_Flute%252C_PK-10%252C_Piano%252BSeries_Volume_95_Additional_List-pages_1-3_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-95.pdf",
+      "sha256": "4b16da762ba58e9b3e9a305cfcb5a3a98b82976bb0113807375c838d92a540e5"
     },
     {
       "songbook": "reyna",
@@ -3456,7 +3785,9 @@
       "label": "vol-96",
       "url": "https://www.mediafire.com/file_premium/28gxz9cg75eilr5/Reyna_Volume_96_Additional_List_-_pages_1-3_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-96.pdf",
+      "sha256": "8e624d0e54b8110a3341e3b3d8f59cd6e6caabab33dad38e91af770f448bcf61"
     },
     {
       "songbook": "reyna",
@@ -3465,7 +3796,9 @@
       "label": "vol-98",
       "url": "https://www.mediafire.com/file_premium/4miy8rbe2ypyxh5/Reyna_Volume_98_Additional_List_-_pages_1-3_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-98.pdf",
+      "sha256": "9d1aa7e3b64c046b0e5ec6f1fb14ff7144f1b60967211bde3a624ee4ca6b672f"
     },
     {
       "songbook": "reyna",
@@ -3474,7 +3807,9 @@
       "label": "vol-99",
       "url": "https://www.mediafire.com/file_premium/yrcfmpa8bnfnt32/Reyna_Volume_99_Additional_List_-_pages_1-2_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/reyna/vol-99.pdf",
+      "sha256": "e56a2a65540138f782ad9ffad646f97252841b3a488ff4813a2fcc095f8e8cba"
     },
     {
       "songbook": "t-x",
@@ -3483,7 +3818,9 @@
       "label": "vol-100",
       "url": "https://www.mediafire.com/file_premium/u5atgjlxnz780om/T-X_Series_Volume_100_Additional_List_-_pages_2.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-100.pdf",
+      "sha256": "6248e0b0752d3c576aad4623ac93cee8a3a130cdb62feac429b0ee1dbb84a875"
     },
     {
       "songbook": "t-x",
@@ -3492,7 +3829,9 @@
       "label": "vol-101",
       "url": "https://www.mediafire.com/file_premium/a1wb7zg6edtxqtl/T-X_Series_Volume_101_Additional_List_-_page_1_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-101.pdf",
+      "sha256": "e93a337dc891573971445e8c38729f44bc3a2fb829f2da29f3a4b04d4502edc4"
     },
     {
       "songbook": "t-x",
@@ -3501,7 +3840,9 @@
       "label": "vol-102",
       "url": "https://www.mediafire.com/file_premium/ble2cjad5ockpnh/T-X_Series_Volume_102_Additional_List_-_page_1-2_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-102.pdf",
+      "sha256": "f07e001f8eb325f22438b6666495572beb28e26ec112203b5fbeecea8849bead"
     },
     {
       "songbook": "t-x",
@@ -3510,7 +3851,9 @@
       "label": "vol-103",
       "url": "https://www.mediafire.com/file_premium/lvd5br6gykndw6u/T-X_Series_Volume_103_Additional_List_-_pages_1-2_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-103.pdf",
+      "sha256": "afa47e392e0ef493f2eb547fdae59e59f01beb4e4ce0f41141d69b3d467f1c8b"
     },
     {
       "songbook": "t-x",
@@ -3519,7 +3862,9 @@
       "label": "vol-104-105",
       "url": "https://www.mediafire.com/file_premium/h0uj2lanaejp5qe/T-X_Series_Volume_104%257E105_Additional_List_-_pages_1-3_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-104-105.pdf",
+      "sha256": "e86f2a0d658908ec5934a91f90e085aa1142311e450281913c5477adbc1a29b7"
     },
     {
       "songbook": "t-x",
@@ -3528,7 +3873,9 @@
       "label": "vol-106",
       "url": "https://www.mediafire.com/file_premium/o3g3w0xgkpooac5/T-X_Series_Volume_106_Additional_List_-_pages_1-2_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-106.pdf",
+      "sha256": "3bc78e666cc17458eb92e5f46c509eed832ed6e8725dfcb500d7fcade9458f77"
     },
     {
       "songbook": "t-x",
@@ -3537,7 +3884,9 @@
       "label": "vol-108",
       "url": "https://www.mediafire.com/file_premium/csib00agvrs6vah/T-X_Series_Volume_108_Additional_List__yellow__-_p_260923_103524.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-108.pdf",
+      "sha256": "8dc4017cf79d2f9d4b003990fd2f273fc6dfca1775fbfe8f6d8270e51379cef1"
     },
     {
       "songbook": "t-x",
@@ -3546,7 +3895,9 @@
       "label": "vol-58",
       "url": "https://www.mediafire.com/file/av62p9dhizw2v40/Volume_58_T_-_X_Series.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-58.pdf",
+      "sha256": "4d72a64baea84a78ea2a8c840d375c54cc093e6219c45a901843488dfc3ab587"
     },
     {
       "songbook": "t-x",
@@ -3555,7 +3906,9 @@
       "label": "vol-60",
       "url": "https://www.mediafire.com/file/etqpfw0rccr1op7/Volume_60_T_-_X_Series.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-60.pdf",
+      "sha256": "18369479252fcf0a4a819729e89b421b55a5bae08c35afb1886fd6f360595094"
     },
     {
       "songbook": "t-x",
@@ -3564,7 +3917,9 @@
       "label": "vol-61",
       "url": "https://www.mediafire.com/file/4546b2psb451ehb/Volume_61_T_-_X_Series.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-61.pdf",
+      "sha256": "9a329d491834805da5ebb4ec47d662876f2f1c975c37a2606324918e75bb7373"
     },
     {
       "songbook": "t-x",
@@ -3573,7 +3928,9 @@
       "label": "vol-62",
       "url": "https://www.mediafire.com/file/xototrkjul6v5px/Volume_62_T_-_X_Series.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-62.pdf",
+      "sha256": "f0758f4cdb49b2eea1a3636b10bca0e68d1dd2252c505cfa0b40f0ed3db92357"
     },
     {
       "songbook": "t-x",
@@ -3582,7 +3939,9 @@
       "label": "vol-63",
       "url": "https://www.mediafire.com/file/i6rrib99gsfifu7/Volume_63_T_-_X_Series.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-63.pdf",
+      "sha256": "3e8284f9c062e0beea78d3f6223bc54d81083fc075f7f2f8dca5687ae14b8c19"
     },
     {
       "songbook": "t-x",
@@ -3591,7 +3950,9 @@
       "label": "vol-64",
       "url": "https://www.mediafire.com/file/peih3l8nizu4ti3/Volume_64_T_-_X_Series.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-64.pdf",
+      "sha256": "598894e70e2ac31f1ac2e4dd8b16aa150a60e9e3203d08f5fb74bf74052a2c66"
     },
     {
       "songbook": "t-x",
@@ -3600,7 +3961,9 @@
       "label": "vol-65",
       "url": "https://www.mediafire.com/file/no9gtkrpbqhljyb/Volume_65__T_-_X_Series.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-65.pdf",
+      "sha256": "c21c49e8ea8e243a012b039f459abcc2ca86ebd7f5fa625c65945c87fe9c1f88"
     },
     {
       "songbook": "t-x",
@@ -3609,7 +3972,9 @@
       "label": "vol-66",
       "url": "https://www.mediafire.com/file/2mkk5b0fhg586a3/Volume_66_T_-_X_Series.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-66.pdf",
+      "sha256": "b60ce4854aaf710331ad322c3760dff24985560ebcefecd9ad930361f720e30d"
     },
     {
       "songbook": "t-x",
@@ -3618,7 +3983,9 @@
       "label": "vol-67",
       "url": "https://www.mediafire.com/file/2202ow2ayvr5fde/Volume_67_T_-_X_Series.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-67.pdf",
+      "sha256": "c886ed0f812d4f0b3ee012e83949525c0a8369a2c87bcdeb236b48794eccd1ab"
     },
     {
       "songbook": "t-x",
@@ -3627,7 +3994,9 @@
       "label": "vol-68",
       "url": "https://www.mediafire.com/file/vmim9i5x5ruc1yd/T_-_X_-_Volume_68_Additional_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-68.pdf",
+      "sha256": "e22cd92e5a3c385e8c30d7c5946b53a631bd031dc14ce016936c9c3cd05fb2fb"
     },
     {
       "songbook": "t-x",
@@ -3636,7 +4005,9 @@
       "label": "vol-69",
       "url": "https://www.mediafire.com/file/cgmppzqvw92l612/Volume_69_T_-_X_Series.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-69.pdf",
+      "sha256": "40e45dd6d1b9840283235034859b3f9e523e9b99f9158fdc270ff9567fb5e845"
     },
     {
       "songbook": "t-x",
@@ -3645,7 +4016,9 @@
       "label": "vol-70",
       "url": "https://www.mediafire.com/file/8oxrrio4d5o533l/Volume_70_T_-_X_Series.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-70.pdf",
+      "sha256": "77c7551ff22eb619874b2af75ac67106f584f0e2bbed869f4d542b409c705b6e"
     },
     {
       "songbook": "t-x",
@@ -3654,7 +4027,9 @@
       "label": "vol-71",
       "url": "https://www.mediafire.com/file/gaa6381lf5a2ul1/Volume_71_T_-_X_Series.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-71.pdf",
+      "sha256": "d939a44fb4cc4c4c58f7e6289520bb0c06ea4575ef77910cd02d9c2c93235494"
     },
     {
       "songbook": "t-x",
@@ -3663,7 +4038,9 @@
       "label": "vol-72",
       "url": "https://www.mediafire.com/file/4dqd2yyxxet32dy/Volume_72_T_-_X_Series.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-72.pdf",
+      "sha256": "4a0451266be4c7c24c48e0731660ae8b5cc1dc6515e1020e1bd5cbd670a89ae4"
     },
     {
       "songbook": "t-x",
@@ -3672,7 +4049,9 @@
       "label": "vol-73",
       "url": "https://www.mediafire.com/file/fund5l7xepyb8fv/Volume_73_T_-_X_Series.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-73.pdf",
+      "sha256": "5fc49199099cf0dabb1f7dbd41d532e75f35407340db55b6e87922f25dbb7fef"
     },
     {
       "songbook": "t-x",
@@ -3681,7 +4060,9 @@
       "label": "vol-74",
       "url": "https://www.mediafire.com/file/kcfwyhccc5i7530/Volume_74_T_-_X_Series.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-74.pdf",
+      "sha256": "27c0f385e084fa0c032869c1c0e258da06bef4a799fef4ff30f33c0588bfa342"
     },
     {
       "songbook": "t-x",
@@ -3690,7 +4071,9 @@
       "label": "vol-75",
       "url": "https://www.mediafire.com/file/wd4vbrc2g5baafx/T_-_X_-_Volume_75_Additional_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-75.pdf",
+      "sha256": "c72ba8d3f6a5b317c6efda8531399c5ed363f14e7262abefdb1b3feaa7dfedaf"
     },
     {
       "songbook": "t-x",
@@ -3699,7 +4082,9 @@
       "label": "vol-76",
       "url": "https://www.mediafire.com/file/c58w2mj9dhb97hx/T_-_X_-_Volume_76_Additional_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-76.pdf",
+      "sha256": "556477fff6f58a49b2b88f84e9abd4650842303c1de8415e7531be07fce008c4"
     },
     {
       "songbook": "t-x",
@@ -3708,7 +4093,9 @@
       "label": "vol-77",
       "url": "https://www.mediafire.com/file/ww5pv7j1tre5dks/T_-_X_-_Volume_77_Additional_List_-_pages_1-4_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-77.pdf",
+      "sha256": "e40d41a36769d5d1fc26a957ddb90ca820e14dcd3f87aff31370042e3e8f76a3"
     },
     {
       "songbook": "t-x",
@@ -3717,7 +4104,9 @@
       "label": "vol-78",
       "url": "https://www.mediafire.com/file/bbqlz825i5htx02/T_-_X_-_Volume_78_Additional_List_-_pages_1-4_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-78.pdf",
+      "sha256": "9fb8ceac4e0cb78d595f91d14bbeb5bc6c634ca28082530d03fb256a06fa683a"
     },
     {
       "songbook": "t-x",
@@ -3726,7 +4115,9 @@
       "label": "vol-79",
       "url": "https://www.mediafire.com/file/3o0p8985wsg9ci2/T_-_X_-_Volume_79_Additional_List_-_pages_1-6_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-79.pdf",
+      "sha256": "62f63ce6f55eef47f9aa094a9efabffd7bdb8c14353e46f4571def47090b810f"
     },
     {
       "songbook": "t-x",
@@ -3735,7 +4126,9 @@
       "label": "vol-80",
       "url": "https://www.mediafire.com/file/ms9onfpileiou58/T_-_X_-_Volume_80_Additional_List_-_pages_1-4_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-80.pdf",
+      "sha256": "7f6a82f89ffc6cc6588300ccba809a3cad6c843da9a35d31f8bb7a1b87e084b7"
     },
     {
       "songbook": "t-x",
@@ -3744,7 +4137,9 @@
       "label": "vol-81",
       "url": "https://www.mediafire.com/file/s0or51t7y5exy51/T_-_X_-_Volume_81_Additional_List_-_pages_1-4_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-81.pdf",
+      "sha256": "df8ca903f51767368b2112d982c982f9b10a8f4eed4fdca773407e0752496394"
     },
     {
       "songbook": "t-x",
@@ -3753,7 +4148,9 @@
       "label": "vol-82",
       "url": "https://www.mediafire.com/file/v2r78wv5ojd3cdt/T_-_X_-_Volume_82_Additional_List_-_pages_1-6_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-82.pdf",
+      "sha256": "838e433d8bc5f467567526ba3cd514c0e5af809a2d067812f6d4a51c8540f939"
     },
     {
       "songbook": "t-x",
@@ -3762,7 +4159,9 @@
       "label": "vol-83",
       "url": "https://www.mediafire.com/file/6p2rva1w666w9o0/T_-_X_-_Volume_83_Additional_List_-_pages_1-3_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-83.pdf",
+      "sha256": "ef5d774cb9790bc337c41b2b1712e75ae079c1d6aeff957c9e00e1fac35f6135"
     },
     {
       "songbook": "t-x",
@@ -3771,7 +4170,9 @@
       "label": "vol-84",
       "url": "https://www.mediafire.com/file/z6u470a0kotteh3/T-X_Series_Volume_84_Additional_List_-_pages_1-6_only_%25281%2529.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-84.pdf",
+      "sha256": "79dde189eebd3d1804dfc8e02f8f5f54b05197718c6ac582fdd072fa301d69ba"
     },
     {
       "songbook": "t-x",
@@ -3780,7 +4181,9 @@
       "label": "vol-85",
       "url": "https://www.mediafire.com/file/2q5kux4ljfshe1c/T-X_Series_Volume_85_Additional_List_-_pages_1-3_only_%25282%2529.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-85.pdf",
+      "sha256": "4dacf2a591da6b90b24018fcbd7e48405e1c5ee353a906513908799a54acae9f"
     },
     {
       "songbook": "t-x",
@@ -3789,7 +4192,9 @@
       "label": "vol-86",
       "url": "https://www.mediafire.com/file/nfmrles7ja6mzhd/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-86.pdf",
+      "sha256": "7574ccaae0ddf60e1b78b33c7618b316db28ec40722f0e1d5befadff36b277ca"
     },
     {
       "songbook": "t-x",
@@ -3798,7 +4203,9 @@
       "label": "vol-87",
       "url": "https://www.mediafire.com/file/9o3v8wgnyn6hfno/T-X_Series_Volume_87_Additional_List_-_pages_1-3_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-87.pdf",
+      "sha256": "d5ca46b275701972b23e49898000c158047a1bd650fdf1c9d26122f7c78ab10a"
     },
     {
       "songbook": "t-x",
@@ -3807,7 +4214,9 @@
       "label": "vol-88",
       "url": "https://www.mediafire.com/file/ydfrwhsb2btk9ri/T-X_Series_Volume_88_Additional_List_-_pages_1-4_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-88.pdf",
+      "sha256": "9bd59637d029eb5b3df4e125bef7649f5039522d01e4acafecf7df69f7db61a4"
     },
     {
       "songbook": "t-x",
@@ -3816,7 +4225,9 @@
       "label": "vol-89",
       "url": "https://www.mediafire.com/file/dtw1jmm58pkjrjk/T-X_Series_Volume_89_Additional_List_-_pages_1-3_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-89.pdf",
+      "sha256": "550f68fefad64d8825acb2dc72e207fa6c245ce8f71286f2b1fbdda91d31d0f7"
     },
     {
       "songbook": "t-x",
@@ -3825,7 +4236,9 @@
       "label": "vol-90",
       "url": "https://www.mediafire.com/file/610bvyls60m1z9p/T-X_Series_Volume_90_Additional_List_-_pages_1-3_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-90.pdf",
+      "sha256": "723369323c4d9710c641930ee753098e4307c1663021063fd59a932e593f6753"
     },
     {
       "songbook": "t-x",
@@ -3834,7 +4247,9 @@
       "label": "vol-91",
       "url": "https://www.mediafire.com/file/5g0ijysahpu1l9h/T-X,+Reyna,+Flute,+PK-10,+Piano+Series+Volume+91+Additional+List+-+pages+1-5+only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-91.pdf",
+      "sha256": "aac4c0cd881666cfed736f06d910f08b971944a0bdac9707010b1bdce72f5120"
     },
     {
       "songbook": "t-x",
@@ -3843,7 +4258,9 @@
       "label": "vol-92",
       "url": "https://www.mediafire.com/file/1vdczjv4d1jvk2a/T-X_Series_Volume_92_Additional_List_-_pages_1-4_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-92.pdf",
+      "sha256": "c66419373fd0787ca0435c762a15628d7cf78d88cc1a5ff3d44cc4403282ff08"
     },
     {
       "songbook": "t-x",
@@ -3852,7 +4269,9 @@
       "label": "vol-93",
       "url": "https://www.mediafire.com/file/09kz827b2012rgp/T-X_Series_Volume_93_Additional_List_-_pages_1-4_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-93.pdf",
+      "sha256": "9f27bdbc93715ecc44ac24ade3531b658cea1c4163ec9be8ffffe8b5be3e2d39"
     },
     {
       "songbook": "t-x",
@@ -3861,7 +4280,9 @@
       "label": "vol-94",
       "url": "https://www.mediafire.com/file_premium/1ujaga9j6johquo/T-X_Series_Volume_94_Additional_List_-_pages_1-4_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-94.pdf",
+      "sha256": "9bc1469b1a50568ae56c63198064e96874febec06cd80720cdb64c7f6a7a2404"
     },
     {
       "songbook": "t-x",
@@ -3870,7 +4291,9 @@
       "label": "vol-95",
       "url": "https://www.mediafire.com/file_premium/xu4up205nfa60mu/T-X_Series_Volume_95_Additional_List-pages_1-3_only_-_Copy.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-95.pdf",
+      "sha256": "4b16da762ba58e9b3e9a305cfcb5a3a98b82976bb0113807375c838d92a540e5"
     },
     {
       "songbook": "t-x",
@@ -3879,7 +4302,9 @@
       "label": "vol-96",
       "url": "https://www.mediafire.com/file_premium/axesro0hotteyyu/T-X_Series_Volume_96_Additional_List_-_pages_1-3_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-96.pdf",
+      "sha256": "8e624d0e54b8110a3341e3b3d8f59cd6e6caabab33dad38e91af770f448bcf61"
     },
     {
       "songbook": "t-x",
@@ -3888,7 +4313,9 @@
       "label": "vol-98",
       "url": "https://www.mediafire.com/file_premium/pyhd6ork5nsak80/T-X_Series_Volume_98_Additional_List_-_pages_1-3_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-98.pdf",
+      "sha256": "9d1aa7e3b64c046b0e5ec6f1fb14ff7144f1b60967211bde3a624ee4ca6b672f"
     },
     {
       "songbook": "t-x",
@@ -3897,7 +4324,9 @@
       "label": "vol-99",
       "url": "https://www.mediafire.com/file_premium/71s8owdoztpue56/T-X_Series_Volume_99_Additional_List_-_pages_1-2_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "ignored"
+      "status": "parsed",
+      "file": "data/pdfs/t-x/vol-99.pdf",
+      "sha256": "e56a2a65540138f782ad9ffad646f97252841b3a488ff4813a2fcc095f8e8cba"
     }
   ]
 }

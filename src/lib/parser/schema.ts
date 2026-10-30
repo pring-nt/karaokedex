@@ -24,7 +24,7 @@ export const ParsedRow = z.object({
 export type ParsedRow = z.infer<typeof ParsedRow>;
 
 const ReleaseKind = z.enum(['monthly', 'volume', 'full']);
-const ParserProfile = z.enum(['monthly-new-songs', 'full-list', 'ks-volume']);
+const ParserProfile = z.enum(['monthly-new-songs', 'full-list', 'volume-list']);
 
 export const ParsedRelease = z.object({
 	songbook: Songbook,

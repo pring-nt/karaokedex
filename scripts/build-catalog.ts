@@ -3,12 +3,12 @@ import { mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { buildCatalogs, type PdfInput } from '../src/lib/catalog/pipeline';
 import { loadAliases, loadCorrections } from '../src/lib/data/load';
-import { Songbook } from '../src/lib/songbooks';
+import { sourceSongbook, type Songbook } from '../src/lib/songbooks';
 import { SourcesFile } from '../src/lib/sources/manifest';
 
 const STATIC_DIR = 'static';
 
-/** PDFs the build uses: listed, present monthly files, plus any full list placed by hand. */
+/** PDFs the build uses: present files of every parsed list, plus any full list placed by hand. */
 async function collectInputs(): Promise<PdfInput[]> {
 	const inputs: PdfInput[] = [];
 	const seen = new Set<string>();
@@ -21,20 +21,17 @@ async function collectInputs(): Promise<PdfInput[]> {
 	if (existsSync('data/sources.json')) {
 		const sources = SourcesFile.parse(JSON.parse(await readFile('data/sources.json', 'utf8')));
 		for (const entry of sources.entries) {
-			const songbook = Songbook.safeParse(entry.songbook);
-			if (!songbook.success || entry.kind !== 'monthly' || !entry.file) continue;
-			await add(songbook.data, entry.label, entry.file);
+			const songbook = sourceSongbook(entry.songbook);
+			if (!songbook || songbook === 'p-series' || !entry.file) continue;
+			await add(songbook, entry.label, entry.file);
 		}
 	}
-	for (const songbook of Songbook.options) {
-		const dir = join('data', 'pdfs', songbook);
-		if (!existsSync(dir)) continue;
-		for (const name of await readdir(dir)) {
+	if (existsSync(join('data', 'pdfs', 'p-series'))) {
+		for (const name of await readdir(join('data', 'pdfs', 'p-series'))) {
 			const label = name.replace(/\.pdf$/i, '');
-			const parseable =
-				(songbook === 'p-series' && /^full-vol-\d+$/.test(label)) ||
-				(songbook === 'ks-40' && /^vol-\d+(?:-\d+)?$/.test(label));
-			if (parseable) await add(songbook, label, join(dir, name));
+			if (/^full-vol-\d+$/.test(label)) {
+				await add('p-series', label, join('data', 'pdfs', 'p-series', name));
+			}
 		}
 	}
 	return inputs;
@@ -71,6 +68,7 @@ for (const name of await readdir(STATIC_DIR)) {
 	}
 }
 for (const { file, json } of result.catalogs) await writeFile(join(STATIC_DIR, file), json);
+if (result.shared) await writeFile(join(STATIC_DIR, result.shared.file), result.shared.json);
 await writeFile(join(STATIC_DIR, 'catalog-manifest.json'), JSON.stringify(result.manifest));
 
 if (inputs.length === 0) {

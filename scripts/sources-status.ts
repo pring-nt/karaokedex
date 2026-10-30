@@ -7,7 +7,7 @@ import { loadCorrections } from '../src/lib/data/load';
 import { parseRelease } from '../src/lib/parser/parse-release';
 import type { ParsedRelease } from '../src/lib/parser/schema';
 import { crossReleaseWarnings } from '../src/lib/parser/validate';
-import { Songbook } from '../src/lib/songbooks';
+import { Songbook, sourceSongbook } from '../src/lib/songbooks';
 import { entryKey, expectedFile, SourcesFile, type SourceEntry } from '../src/lib/sources/manifest';
 
 const { values } = parseArgs({
@@ -51,14 +51,14 @@ for (const listed of selected) {
 		file: path,
 		sha256: createHash('sha256').update(data).digest('hex')
 	};
-	const book = Songbook.safeParse(listed.songbook);
-	if (!book.success || (listed.kind !== 'monthly' && book.data !== 'ks-40')) {
+	const book = sourceSongbook(listed.songbook);
+	if (!book || book === 'p-series') {
 		report.push({ entry, note: 'no parser profile for this volume yet' });
 		continue;
 	}
 	try {
 		const result = await parseRelease({
-			songbook: book.data,
+			songbook: book,
 			label: listed.label,
 			data,
 			corrections

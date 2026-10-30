@@ -7,7 +7,7 @@
 	import type { SearchOptions } from '#lib/search/engine';
 	import type { SearchField } from '#lib/search/query';
 	import { staggerIn } from '#lib/motion/anime';
-	import type { Songbook } from '#lib/songbooks';
+	import { DEFAULT_SONGBOOK, type Songbook } from '#lib/songbooks';
 	import BrowseToolbar from './BrowseToolbar.svelte';
 	import EmptyState from './EmptyState.svelte';
 	import type { TableHandle } from './panel';
@@ -27,6 +27,7 @@
 		artist,
 		release,
 		codes,
+		others = false,
 		browse = false,
 		sort,
 		filters = {},
@@ -46,6 +47,8 @@
 		release?: string;
 		/** Fixed list of codes (queue, favorites) instead of a search. */
 		codes?: string[];
+		/** Search songs that only other lists print, and say which ones. */
+		others?: boolean;
 		/** List every song while nothing is searched for, with the sort and filter toolbar. */
 		browse?: boolean;
 		/** With `onsort`, the page owns the sort. Otherwise the panel keeps its own. */
@@ -110,7 +113,7 @@
 			return;
 		}
 		const turn = ++sequence;
-		const options: SearchOptions = { limit: LIMIT, field, artist, release };
+		const options: SearchOptions = { limit: LIMIT, field, artist, release, others };
 		const input = { query, codes: codes ? [...codes] : undefined, options };
 		pending = true;
 		failure = '';
@@ -136,7 +139,7 @@
 				if (turn !== sequence) return;
 				shown = result;
 				onshown?.(result.songs);
-				activeIndex = result.songs.length > 0 && input.query.trim() !== '' ? 0 : -1;
+				activeIndex = result.songs.length > 0 && input.query.trim() !== '' && !others ? 0 : -1;
 				pending = false;
 				slow = false;
 			},
@@ -227,6 +230,7 @@
 						{label}
 						sort={activeSort}
 						{filters}
+						showLists={others}
 						onsort={changeSort}
 						{onremove}
 						onopen={(song: Song, index: number) => {
@@ -242,7 +246,7 @@
 
 <SongCard
 	song={selected}
-	songbook={current?.songbook ?? catalog.songbook ?? 'hdd'}
+	songbook={current?.songbook ?? catalog.songbook ?? DEFAULT_SONGBOOK}
 	onclose={() => {
 		selected = null;
 	}}

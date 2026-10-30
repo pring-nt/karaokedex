@@ -1,0 +1,1 @@
+DROP INDEX `releases_file_hash_unique`;

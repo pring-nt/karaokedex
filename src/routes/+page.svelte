@@ -4,12 +4,14 @@
 	import { afterNavigate } from '$app/navigation';
 	import { page } from '$app/state';
 	import type { SortId, TableFilters } from '#lib/app/browse';
+	import { catalog } from '#lib/app/catalog.svelte';
 	import { aboveKeyboard } from '#lib/app/keyboard';
 	import { listFor } from '#lib/app/library';
 	import { patchSearch } from '#lib/app/navigate';
 	import { preferences } from '#lib/app/preferences.svelte';
 	import { parseParams } from '#lib/app/url';
 	import type { Song } from '#lib/catalog/schema';
+	import { SONGBOOK_SHORT } from '#lib/songbooks';
 	import type { SearchField } from '#lib/search/query';
 	import Button from '#lib/components/Button.svelte';
 	import EmptyState from '#lib/components/EmptyState.svelte';
@@ -30,6 +32,8 @@
 	let input = $state<HTMLInputElement | null>(null);
 	let panel = $state<PanelHandle | null>(null);
 	let results = $state<HTMLElement | null>(null);
+	let showOthers = $state(false);
+	let otherHits = $state(0);
 	let mounted = $state(false);
 	let lastWritten: string | undefined;
 
@@ -41,6 +45,7 @@
 	const artistFilter = $derived(params.artist);
 	const releaseFilter = $derived(params.release);
 	const field = $derived(params.field ?? 'all');
+	const searching = $derived(debounced.trim() !== '');
 	/** Browsing is alphabetical. A search stays in best-match order until a sort is picked. */
 	const sort = $derived<SortId | undefined>(
 		params.sort ?? (debounced.trim() === '' ? 'title' : undefined)
@@ -215,6 +220,17 @@
 					preferences.addRecent(debounced);
 				}}
 			>
+				{#snippet noResults()}
+					{#if otherHits > 0}
+						<p class="text-sm text-subtle">Not on the {SONGBOOK_SHORT[songbook]} list.</p>
+					{:else}
+						<EmptyState
+							eyebrow="No matches"
+							title="Nothing found"
+							subhead="Try fewer letters, another spelling, or a different search field."
+						/>
+					{/if}
+				{/snippet}
 				{#snippet idle()}
 					<div class="max-md:sr-only">
 						<PageHeader
@@ -252,6 +268,43 @@
 				{/snippet}
 			</SongPanel>
 		</div>
+
+		{#if catalog.otherCount > 0 && !releaseFilter}
+			{#if searching || showOthers}
+				<section class="flex flex-col gap-3" aria-label="Songs from other machines">
+					{#if otherHits > 0}
+						<div class="flex flex-col gap-1">
+							<h2 class="eyebrow">Also listed for other machines</h2>
+							<p class="text-xs text-subtle">
+								Not on your machine's list. Same code system, so they may still work: try the code.
+							</p>
+						</div>
+					{/if}
+					<SongPanel
+						others
+						query={debounced}
+						{field}
+						artist={artistFilter}
+						listId="other-results"
+						label="Songs listed for other machines"
+						onshown={(shown: Song[]) => {
+							otherHits = shown.length;
+						}}
+					>
+						{#snippet noResults()}{/snippet}
+					</SongPanel>
+				</section>
+			{:else}
+				<Button
+					variant="outline"
+					onclick={() => {
+						showOthers = true;
+					}}
+				>
+					Show {catalog.otherCount.toLocaleString('en-US')} more from other machines
+				</Button>
+			{/if}
+		{/if}
 	{:else if view === 'queue'}
 		<div class="flex items-center justify-between">
 			<h2 class="eyebrow">Tonight's queue</h2>

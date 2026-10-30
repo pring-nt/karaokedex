@@ -3,7 +3,7 @@ import { applyCorrections, type CorrectionsFile } from '../data/corrections';
 import { extractPages } from './extract';
 import { alphabeticalWarnings, mergeDuplicateCodes, sectionErrors } from './full-list-rules';
 import { parseFullList } from './profiles/full-list';
-import { parseKsVolume } from './profiles/ks-volume';
+import { parseVolumeList } from './profiles/volume-list';
 import { parseMonthlyNewSongs } from './profiles/monthly-new-songs';
 import { ParsedRelease, type ParsedRow } from './schema';
 import { runWarnings, validateMonthlyRelease } from './validate';
@@ -60,7 +60,7 @@ function finish(
 const RELEASE_KIND = {
 	'monthly-new-songs': 'monthly',
 	'full-list': 'full',
-	'ks-volume': 'volume'
+	'volume-list': 'volume'
 } as const;
 
 /** Picks the parser profile from the songbook and parses one PDF into a validated release. */
@@ -86,11 +86,10 @@ export async function parseRelease(input: ParseReleaseInput): Promise<ParseRelea
 		};
 	}
 
-	if (input.songbook === 'ks-40') {
-		const parsed = parseKsVolume(pages);
+	if (input.songbook !== 'hdd') {
+		const parsed = parseVolumeList(pages);
 		const errors: string[] = [];
-		const { release, applied } = finish(input, parsed.rows, 'ks-volume', errors);
-		errors.push(...validateMonthlyRelease(release));
+		const { release, applied } = finish(input, parsed.rows, 'volume-list', errors);
 		return {
 			release,
 			columns: parsed.columns,

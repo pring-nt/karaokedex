@@ -7,86 +7,117 @@
     "title": "Metalingus",
     "creditRaw": "Alter Bridge"
   },
-  "ks-40:16568": {
+  "ks:16568": {
     "title": "I Wish That I Was Making Love To You Tonight"
   },
-  "ks-40:16660": {
+  "ks:16660": {
     "title": "I Didn't Know I Was Looking For Love"
   },
-  "ks-40:16925": {
+  "ks:16925": {
     "title": "I Don't Want To Live Without Your Love"
   },
-  "ks-40:16983": {
+  "ks:16983": {
     "title": "Golden Slumbers, Carry That Weight, The End"
   },
-  "ks-40:17133": {
+  "ks:17133": {
     "title": "Love Me Like You Mean It"
   },
-  "ks-40:18318": {
+  "ks:18318": {
     "title": "I'm Not Supposed To Love You Anymore"
   },
-  "ks-40:18367": {
+  "ks:18367": {
     "title": "The Adventures Of Raindance Maggie"
   },
-  "ks-40:18568": {
+  "ks:18568": {
     "title": "The Way You Do The Things You Do"
   },
-  "ks-40:16639": {
+  "ks:16639": {
     "title": "Bagong Umaga (Strawberry Lane OST)"
   },
-  "ks-40:27626": {
+  "ks:27626": {
     "title": "I Went To Your Wedding"
   },
-  "ks-40:10952": {
+  "ks:10952": {
     "title": "Bisaya Ko Irespeto Ko"
   },
-  "ks-40:27843": {
+  "ks:27843": {
     "title": "Gitik-Gitik Labyog-Labyog abyog"
   },
-  "ks-40:28772": {
+  "ks:28772": {
     "title": "Dahil Sa 'Yo Natutong Magmahal"
   },
-  "ks-40:29505": {
+  "ks:29505": {
     "title": "Let Me Reintroduce Myself"
   },
-  "ks-40:38020": {
+  "ks:38020": {
     "title": "All We Ever Find"
   },
-  "ks-40:38199": {
+  "ks:38199": {
     "title": "Nothing's Gonna Change My Love For You"
   },
-  "ks-40:40670": {
+  "ks:40670": {
     "title": "Nangako Ka, Sa Iba Mo Lang Tinupad"
   },
-  "ks-40:40687": {
+  "ks:40687": {
     "title": "Turn the Lights Back On"
   },
-  "ks-40:40729": {
+  "ks:40729": {
     "title": "My House Is Not A Home"
   },
-  "ks-40:40802": {
+  "ks:40802": {
     "title": "Nagmamahal Kahit Bawal"
   },
-  "ks-40:41636": {
+  "ks:41636": {
     "title": "Hanggang Sa Magsawa"
   },
-  "ks-40:41937": {
+  "ks:41937": {
     "title": "Grandma Calls The Boy Bad News"
   },
-  "ks-40:42243": {
+  "ks:42243": {
     "title": "Huwag Na Huwag Mong Sasabihin",
     "versionNote": "R&B Cover"
   },
-  "ks-40:42244": {
+  "ks:42244": {
     "title": "Muntik na Kitang Minahal",
     "versionNote": "R&B Cover"
   },
-  "ks-40:42352": {
+  "ks:42352": {
     "title": "Paligaw-Ligaw Tingin",
     "versionNote": "Rock Cover"
   },
-  "ks-40:40953": {
+  "ks:40953": {
     "title": "Kyrie & Luka",
     "creditRaw": "Eminem ft. 2 Chainz"
+  },
+  "ks:41995": {
+    "title": "The Red",
+    "creditRaw": "Chevelle"
+  },
+  "flute-piano:41995": {
+    "title": "The Red",
+    "creditRaw": "Chevelle"
+  },
+  "t-x:40953": {
+    "title": "Kyrie & Luka",
+    "creditRaw": "Eminem ft. 2 Chainz"
+  },
+  "reyna:40953": {
+    "title": "Kyrie & Luka",
+    "creditRaw": "Eminem ft. 2 Chainz"
+  },
+  "flute-piano:40953": {
+    "title": "Kyrie & Luka",
+    "creditRaw": "Eminem ft. 2 Chainz"
+  },
+  "t-x:16982": {
+    "title": "Metalingus",
+    "creditRaw": "Alter Bridge"
+  },
+  "reyna:16982": {
+    "title": "Metalingus",
+    "creditRaw": "Alter Bridge"
+  },
+  "ks:29012": {
+    "title": "Giving You The Best That I Got"
   }
 }

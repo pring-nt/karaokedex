@@ -9,7 +9,14 @@ export type WorkerRequest =
 	| { type: 'releases'; id: number };
 
 export type WorkerResponse =
-	| { type: 'ready'; songbook: Songbook; version: string; count: number; fromCache: boolean }
+	| {
+			type: 'ready';
+			songbook: Songbook;
+			version: string;
+			count: number;
+			otherCount: number;
+			fromCache: boolean;
+	  }
 	| { type: 'results'; id: number; total: number; hits: SongHit[] }
 	| { type: 'songs'; id: number; songs: Song[] }
 	| { type: 'releases'; id: number; releases: ReleaseSummary[] }

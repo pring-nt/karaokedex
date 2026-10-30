@@ -26,6 +26,7 @@ class CatalogClient {
 	songbook = $state<Songbook | null>(null);
 	version = $state('');
 	count = $state(0);
+	otherCount = $state(0);
 	error = $state('');
 
 	private worker: Worker | null = null;
@@ -51,6 +52,7 @@ class CatalogClient {
 			if (this.loadWaiter?.songbook === message.songbook) {
 				this.version = message.version;
 				this.count = message.count;
+				this.otherCount = message.otherCount;
 				this.status = 'ready';
 				this.loadWaiter.resolve();
 				this.loadWaiter = null;

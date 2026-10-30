@@ -18,7 +18,7 @@ export type WriteOutcome = 'written' | 'skipped';
 
 /**
  * Writes one parsed release in a single transaction. A release whose file hash is already stored
- * is skipped. The song code is the only identity within a songbook, never title or artist.
+ * for this songbook is skipped; two songbooks may share a file. The song code is the only identity within a songbook, never title or artist.
  *
  * Older monthly lists re-print codes from earlier releases. Call this in ascending label order: a
  * repeated code keeps its first release but takes the later release's spelling, and every release
@@ -30,7 +30,7 @@ export function writeRelease(db: Db, release: ParsedRelease, aliases: Aliases): 
 		const existing = tx
 			.select({ id: releases.id })
 			.from(releases)
-			.where(eq(releases.fileHash, release.fileHash))
+			.where(and(eq(releases.songbook, release.songbook), eq(releases.fileHash, release.fileHash)))
 			.get();
 		if (existing) return 'skipped';
 

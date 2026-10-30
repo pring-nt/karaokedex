@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'bun:test';
 import type { PdfPage, TextItem } from '../src/lib/parser/extract';
-import { parseKsVolume } from '../src/lib/parser/profiles/ks-volume';
+import { parseVolumeList } from '../src/lib/parser/profiles/volume-list';
 
 const TITLE_FONT = 'title';
 const CODE_FONT = 'code';
@@ -24,9 +24,9 @@ const header = [
 	item('Popularized By:', 160, 603)
 ];
 
-describe('parseKsVolume', () => {
+describe('parseVolumeList', () => {
 	test('drops the page number and footer stamps, which print before the first title', () => {
-		const { rows } = parseKsVolume([
+		const { rows } = parseVolumeList([
 			page([
 				item('2', 23, 26),
 				item('Vol. 35', 180, 16),
@@ -39,7 +39,7 @@ describe('parseKsVolume', () => {
 	});
 
 	test('keeps a song called Title and titles that start with a digit', () => {
-		const { rows } = parseKsVolume([
+		const { rows } = parseVolumeList([
 			page([
 				...header,
 				...row('Title', '17373', 'Meghan Trainor', 590),
@@ -51,7 +51,7 @@ describe('parseKsVolume', () => {
 	});
 
 	test('keeps a row printed inside the usual footer band', () => {
-		const { rows } = parseKsVolume([
+		const { rows } = parseVolumeList([
 			page([
 				...header,
 				...row('Hello', '10001', 'Adele', 590),
@@ -61,22 +61,30 @@ describe('parseKsVolume', () => {
 		expect(rows.map((song) => song.code)).toEqual(['10001', '10002']);
 	});
 
-	test('a song printed twice counts once, and a different title on one code stays visible', () => {
-		const twice = parseKsVolume([
+	test('a code printed twice keeps its first row', () => {
+		const { rows } = parseVolumeList([
 			page([
 				...header,
 				...row('Macho Na Si Santa', '28289', 'Masculados', 590),
 				...row('Macho Na Si Santa', '28289', 'Masculados', 576)
 			])
 		]);
-		expect(twice.rows).toHaveLength(1);
-		const conflict = parseKsVolume([
-			page([...header, ...row('One', '28289', 'A', 590), ...row('Two', '28289', 'B', 576)])
+		expect(rows).toHaveLength(1);
+	});
+
+	test('drops inline site links, regional headings and stamps', () => {
+		const { rows } = parseVolumeList([
+			page([
+				...header,
+				item('www.platinumkaraoke.ph', 20, 595),
+				item('Waray Songs', 20, 592),
+				...row('Hello', '10001', 'Adele', 590)
+			])
 		]);
-		expect(conflict.rows).toHaveLength(2);
+		expect(rows.map((song) => song.title)).toEqual(['Hello']);
 	});
 
 	test('a file without the New Songs signature is rejected', () => {
-		expect(() => parseKsVolume([page(row('Hello', '10001', 'Adele', 590))])).toThrow('New Songs');
+		expect(() => parseVolumeList([page(row('Hello', '10001', 'Adele', 590))])).toThrow('New Songs');
 	});
 });

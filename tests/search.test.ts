@@ -10,7 +10,8 @@ function song(code: string, title: string, artists: string[] = [], altTitles: st
 		versionNote: null,
 		altTitles,
 		artists: artists.map((name) => ({ name, role: 'primary' })),
-		release: '2026-05'
+		release: '2026-05',
+		lists: []
 	};
 }
 
