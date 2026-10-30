@@ -130,7 +130,7 @@ describe('data files', () => {
 	test('committed aliases.json and corrections.json validate', async () => {
 		const aliases = await loadAliases(dataPath('aliases.json'));
 		expect(aliases.atomic).toContain('Macklemore & Ryan Lewis');
-		expect(await loadCorrections(dataPath('corrections.json'))).toEqual({});
+		expect(Object.keys(await loadCorrections(dataPath('corrections.json')))).toEqual(['hdd:29386']);
 	});
 
 	test('alias keys that are not normalized are rejected', async () => {

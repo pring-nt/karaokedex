@@ -18,7 +18,7 @@ Both profiles share one row assembler (`profiles/full-list.ts`): rows are built 
 
 Monthly releases are not contiguous: older ones print a new block plus codes from earlier ranges, and some re-list codes from earlier releases. So `validateMonthlyRelease` only errors on duplicate codes inside one release; code runs are reported as a warning, and the lineage check uses each release's longest run. `writeRelease` must be called in ascending label order: a repeated code keeps its first release, takes the later spelling, and every listing is recorded in `song_releases`.
 
-Known blocker: `2021-03` prints code 29386 for two songs (`Tagong Gugma` and `Ako Ang Namingwit`; 29369 is the missing code). It stays an error until a correction is added to `data/corrections.json`, e.g. `{"hdd:29386": {"ifTitle": "Ako Ang Namingwit", "code": "29369"}}`; which row is wrong has not been verified.
+`2021-03` prints code 29386 for two songs (`Tagong Gugma` and `Ako Ang Namingwit`; 29369 is the missing code). `data/corrections.json` moves `Ako Ang Namingwit` to 29369. That choice is an unverified guess from the neighbouring Ilocano songs, so check it against the player if it matters.
 
 `knip.jsonc` ignores dependencies from the planned stack that no code imports yet (and `src/lib/utils.ts`, the shadcn `cn` helper); delete each entry in the phase that first uses it.
 
