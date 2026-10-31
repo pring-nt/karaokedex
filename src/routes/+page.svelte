@@ -33,7 +33,6 @@
 	let input = $state<HTMLInputElement | null>(null);
 	let panel = $state<PanelHandle | null>(null);
 	let results = $state<HTMLElement | null>(null);
-	let showOthers = $state(false);
 	let otherSongs = $state<Song[]>([]);
 	let mounted = $state(false);
 	let lastWritten: string | undefined;
@@ -277,57 +276,46 @@
 			</SongPanel>
 		</div>
 
-		{#if catalog.otherCount > 0 && !releaseFilter}
-			{#if searching || showOthers}
-				<section class="flex flex-col gap-3" aria-label="Songs from other machines">
-					{#if otherSongs.length > 0}
-						<div class="flex flex-col gap-1">
-							<h2 class="eyebrow">Also listed for other machines</h2>
-							<p class="text-xs text-subtle">
-								Not on your machine's list. Platinum's lists share one code system, so they may
-								still work: try the code.
-							</p>
-							{#if searching}
-								<div class="flex flex-wrap items-center gap-2 pt-2">
-									<span class="text-xs text-subtle">Check on:</span>
-									{#each machines as machine (machine.slug)}
-										<Button
-											variant="outline"
-											onclick={() => {
-												patchSearch(page.url, { book: machine.slug });
-											}}
-										>
-											{SONGBOOK_SHORT[machine.slug]} ({machine.count})
-										</Button>
-									{/each}
-								</div>
-							{/if}
-						</div>
-					{/if}
-					<SongPanel
-						others
-						query={debounced}
-						{field}
-						artist={artistFilter}
-						listId="other-results"
-						label="Songs listed for other machines"
-						onshown={(shown: Song[]) => {
-							otherSongs = shown;
-						}}
-					>
-						{#snippet noResults()}{/snippet}
-					</SongPanel>
-				</section>
-			{:else}
-				<Button
-					variant="outline"
-					onclick={() => {
-						showOthers = true;
+		{#if searching && catalog.otherCount > 0 && !releaseFilter}
+			<section class="flex flex-col gap-3" aria-label="Songs from other machines">
+				{#if otherSongs.length > 0}
+					<div class="flex flex-col gap-1">
+						<h2 class="eyebrow">Also listed for other machines</h2>
+						<p class="text-xs text-subtle">
+							Not on your machine's list. Platinum's lists share one code system, so they may still
+							work: try the code.
+						</p>
+						{#if searching}
+							<div class="flex flex-wrap items-center gap-2 pt-2">
+								<span class="text-xs text-subtle">Check on:</span>
+								{#each machines as machine (machine.slug)}
+									<Button
+										variant="outline"
+										onclick={() => {
+											patchSearch(page.url, { book: machine.slug });
+										}}
+									>
+										{SONGBOOK_SHORT[machine.slug]} ({machine.count})
+									</Button>
+								{/each}
+							</div>
+						{/if}
+					</div>
+				{/if}
+				<SongPanel
+					others
+					query={debounced}
+					{field}
+					artist={artistFilter}
+					listId="other-results"
+					label="Songs listed for other machines"
+					onshown={(shown: Song[]) => {
+						otherSongs = shown;
 					}}
 				>
-					Show {catalog.otherCount.toLocaleString('en-US')} more from other machines
-				</Button>
-			{/if}
+					{#snippet noResults()}{/snippet}
+				</SongPanel>
+			</section>
 		{/if}
 	{:else if view === 'queue'}
 		<div class="flex items-center justify-between">
