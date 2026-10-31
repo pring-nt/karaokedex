@@ -32,7 +32,7 @@ All lists share one numbering, including P-Series, except that P-Series Vol 78 r
 
 No songlist PDF is tracked, including `tests/fixtures/{hdd,p-series}/*.pdf`, which are local copies (HDD files come from `data/pdfs/hdd`, P-Series samples from `scripts/make-fixtures.ts`). Tests that need them skip without them, as they do in CI, so run the suite locally when changing a parser.
 
-Page metadata lives in `Seo.svelte`, which every route uses, and `src/lib/site.ts` holds the public address used by link previews, the sitemap and `robots.txt`. Change `SITE_URL` there if the domain moves. `static/og.png` and the icons are generated images, not build output.
+Page metadata lives in `Seo.svelte`, which every route uses, and `src/lib/site.ts` holds the public address used by link previews, the sitemap and `robots.txt`. Change `SITE_URL` there if the domain moves. `static/og-olivia-rodrigo.png` and the icons are generated images, not build output. Chat apps cache previews by image URL, so a changed preview needs a new file name.
 
 ## Commands
 

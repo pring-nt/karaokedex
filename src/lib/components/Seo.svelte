@@ -20,7 +20,7 @@
 		title ? `${title} | ${SITE_NAME}` : `${SITE_NAME}: Platinum Karaoke song codes`
 	);
 	const url = $derived(`${SITE_URL}${path}`);
-	const image = `${SITE_URL}/og.png`;
+	const image = `${SITE_URL}/og-olivia-rodrigo.png`;
 </script>
 
 <svelte:head>
