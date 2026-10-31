@@ -135,9 +135,11 @@ export class SearchEngine {
 			const shared = await this.fetchFile(manifest.shared);
 			const merged = expandShared(SharedCatalog.parse(JSON.parse(shared.json)));
 			const lists = new Map(merged.map((song) => [sharedKey(song.code), song.lists]));
-			for (const song of songs) song.lists = lists.get(sharedKey(song.code)) ?? [songbook];
-			const own = new Set(songs.map((song) => sharedKey(song.code)));
-			otherSongs = merged.filter((song) => !own.has(sharedKey(song.code)));
+			for (const song of songs) {
+				const listed = lists.get(sharedKey(song.code));
+				song.lists = listed?.includes(songbook) ? listed : [songbook];
+			}
+			otherSongs = merged.filter((song) => !song.lists.includes(songbook));
 		}
 
 		const counts = new Map<string, number>();

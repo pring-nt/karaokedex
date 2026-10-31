@@ -52,7 +52,7 @@ for (const listed of selected) {
 		sha256: createHash('sha256').update(data).digest('hex')
 	};
 	const book = sourceSongbook(listed.songbook);
-	if (!book || book === 'p-series') {
+	if (!book) {
 		report.push({ entry, note: 'no parser profile for this volume yet' });
 		continue;
 	}

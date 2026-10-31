@@ -367,12 +367,23 @@ describe('shared catalog', () => {
 
 	test('P-Series joins last, so another list spells a shared code', () => {
 		const shared = buildShared([
-			catalog('p-series', [song('8260', 'Only P'), song('00001', 'P Spelling')]),
-			catalog('hdd', [song('00001', 'HDD Spelling')])
+			catalog('p-series', [song('8260', 'Only P'), song('00001', 'Shared Song (Live)')]),
+			catalog('hdd', [song('00001', 'Shared Song')])
 		]);
 		expect(shared?.songs.map((row) => [row[0], row[1], row[4]])).toEqual([
-			['00001', 'HDD Spelling', [0, 1]],
+			['00001', 'Shared Song', [0, 1]],
 			['8260', 'Only P', [1]]
+		]);
+	});
+
+	test('P-Series only claims a shared code when the title matches', () => {
+		const shared = buildShared([
+			catalog('hdd', [song('18816', 'Kariton'), song('10001', 'Same Song Here')]),
+			catalog('p-series', [song('18816', '7 Rings'), song('10001', 'Same Song Here')])
+		]);
+		expect(shared?.songs.map((row) => [row[0], row[1], row[4]])).toEqual([
+			['10001', 'Same Song Here', [0, 1]],
+			['18816', 'Kariton', [0]]
 		]);
 	});
 

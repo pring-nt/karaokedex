@@ -3246,7 +3246,7 @@
       "label": "vol-53-56",
       "url": "https://www.mediafire.com/file/8tzxa9sl061kfk0/P-Series_Volume_53-56_Additional_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/p-series/vol-53-56.pdf",
       "sha256": "129398f9921a50f737d4dda1ce051d2818908f0885a2f2ffaacdd03dd5818c9e"
     },
@@ -3257,7 +3257,7 @@
       "label": "vol-53-59",
       "url": "https://www.mediafire.com/file/cvbu3krwbbvvq76/P-series_Volume_53_-_59_additional_list.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/p-series/vol-53-59.pdf",
       "sha256": "0304d66e9fbd1fe18b2f7126d3b27d272cf692f9800d79ebea5a544add9e1464"
     },
@@ -3268,7 +3268,7 @@
       "label": "vol-61",
       "url": "https://www.mediafire.com/file/o790rq2oogrwlrm/P-Series_Volume_61_Additional_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/p-series/vol-61.pdf",
       "sha256": "edfadbe1ce724751f4117b4971aa4ca4e7186732ba5bba5a26d954f551a31d2d"
     },
@@ -3279,7 +3279,7 @@
       "label": "vol-64",
       "url": "https://www.mediafire.com/file/5dudi4ym7qhc3xw/P-Series_Volume_64_Additional_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/p-series/vol-64.pdf",
       "sha256": "8c71b0bebef9a48db3bd7e5b4dc505d8087d59234ac5999bbd1960d101b1f6a5"
     },
@@ -3290,7 +3290,7 @@
       "label": "vol-67",
       "url": "https://www.mediafire.com/file/3xbajpi3lrgv5em/P-Series_Volume_67_Additional_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/p-series/vol-67.pdf",
       "sha256": "b4711728989d3b80d1183554514b4aae1cc6472f33e061aabb4f5b124b2608d3"
     },
@@ -3301,7 +3301,7 @@
       "label": "vol-69",
       "url": "https://www.mediafire.com/file/860pxyurp7p6lsc/P-Series_Volume_69_Additional_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/p-series/vol-69.pdf",
       "sha256": "b86331471b7dbabf4bfa6a060b80943dd1eac4f550d8becb54714167fa1a9ac1"
     },
@@ -3312,7 +3312,7 @@
       "label": "vol-73",
       "url": "https://www.mediafire.com/file/2lllhcub1ac61xu/P-Series_Volume_73_Additional_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/p-series/vol-73.pdf",
       "sha256": "c55a78412ab2a67fe6eb0281bb21b73730a3b7f65fcb65f8f4190f139e05782f"
     },
@@ -3323,7 +3323,7 @@
       "label": "vol-77",
       "url": "https://www.mediafire.com/file/oykunkr2ep72ktu/P-Series_Volume_77_Additional_List_-_pages_1-4_only.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/p-series/vol-77.pdf",
       "sha256": "e40d41a36769d5d1fc26a957ddb90ca820e14dcd3f87aff31370042e3e8f76a3"
     },
@@ -3334,7 +3334,7 @@
       "label": "vol-78",
       "url": "https://www.mediafire.com/file/fyo0v2repfn0huw/P-Series_Volume_78_Additional_List.pdf/file",
       "firstSeen": "2026-10-30",
-      "status": "present",
+      "status": "parsed",
       "file": "data/pdfs/p-series/vol-78.pdf",
       "sha256": "bc239085747d3b3575faf764163b05d1ba93f118489b2c2b1efbe48e9ef4db53"
     },

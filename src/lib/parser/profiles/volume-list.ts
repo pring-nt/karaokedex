@@ -11,10 +11,17 @@ const ROW_REACH = 8;
 
 /** Whole-line text printed inside the table: site links, stamps, adverts and regional headings. */
 const INLINE_CHROME =
-	/^(?:(?:www\.)?platinumkaraoke\.ph|Vol\.? ?\d+|v\.\s?\d+|recording\.|(?:Waray|Ilonggo|Ilongo|Bicol|Bicolano|Mindanao|Igorot|Pangasinan|Zambales|Tagalog Folk|Classic Male Love|New Christmas) Songs|Instantly hear and feel .*|We would like to ask you, .*|customers to try and evaluate .*|songs and let us know what .*|them\.|Please give us your feedback, .*|and suggestions along with .*|phone number at|platinumkaraokeph@yahoo\.com)$/;
+	/^(?:(?:www\.)?platinumkaraoke\.ph|Vol\.? ?\d+(?: For P-Series| T-X-R-BMB Series)?|P-SERIES VOLUME \d+|v\.\s?\d+|recording\.|(?:Waray|Ilonggo|Ilongo|Bicol|Bicolano|Mindanao|Igorot|Pangasinan|Zambales|Tagalog Folk|Classic Male Love|New Christmas) Songs|Instantly hear and feel .*|We would like to ask you, .*|customers to try and evaluate .*|songs and let us know what .*|them\.|Please give us your feedback, .*|and suggestions along with .*|phone number at|platinumkaraokeph@yahoo\.com)$/;
 const SIGNATURE = /^New (?:Training )?Songs$/;
 
+/** P-Series volumes end some titles with a lone `a` or `q`, a marker that is not part of the name. */
+const TITLE_MARKER = /\s+[aq]$/;
+
 class ProfileError extends Error {}
+
+export interface VolumeListOptions {
+	stripMarkers?: boolean;
+}
 
 export interface VolumeListParse {
 	rows: ParsedRow[];
@@ -58,7 +65,10 @@ function withoutChrome(page: PdfPage): PdfPage {
  * volume number is not checked against the file: since Vol 25 some KS files only print the matching
  * T-X volume. A code printed twice in one file keeps its first row.
  */
-export function parseVolumeList(pages: readonly PdfPage[]): VolumeListParse {
+export function parseVolumeList(
+	pages: readonly PdfPage[],
+	options: VolumeListOptions = {}
+): VolumeListParse {
 	if (!pages.some((page) => page.items.some((item) => SIGNATURE.test(item.str.trim())))) {
 		throw new ProfileError('page signature "New Songs" not found');
 	}
@@ -80,7 +90,8 @@ export function parseVolumeList(pages: readonly PdfPage[]): VolumeListParse {
 	});
 
 	const rows = unique.map((entry): ParsedRow => {
-		const { title, versionNote } = extractVersionNote(entry.title);
+		const printed = options.stripMarkers ? entry.title.replace(TITLE_MARKER, '') : entry.title;
+		const { title, versionNote } = extractVersionNote(printed);
 		return {
 			code: entry.code,
 			title,

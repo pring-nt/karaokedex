@@ -84,6 +84,12 @@ describe('parseVolumeList', () => {
 		expect(rows.map((song) => song.title)).toEqual(['Hello']);
 	});
 
+	test('strips P-Series title markers only when asked', () => {
+		const pages = [page([...header, ...row('All Of Me q', '16004', 'John Legend', 590)])];
+		expect(parseVolumeList(pages).rows[0].title).toBe('All Of Me q');
+		expect(parseVolumeList(pages, { stripMarkers: true }).rows[0].title).toBe('All Of Me');
+	});
+
 	test('a file without the New Songs signature is rejected', () => {
 		expect(() => parseVolumeList([page(row('Hello', '10001', 'Adele', 590))])).toThrow('New Songs');
 	});

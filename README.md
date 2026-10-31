@@ -64,7 +64,7 @@ The committed catalogs are enough to run the whole site. You only need the PDFs 
 ## Known limits
 
 - **Base catalogs are missing.** Platinum publishes update lists, and only P-Series has a published full list, so older songs on a machine may not appear here.
-- **P-Series update volumes are left out.** The site uses the Vol. 59 full list, whose codes match the other lists. Later P-Series volumes disagree with them, so they are not parsed.
+- **P-Series Vol 78 is kept apart.** It reuses codes 18682 to 18831 for different songs, so those songs only appear under P-Series.
 - **Codes can be wrong.** Platinum's PDFs contain typos and swapped columns. Known problems are fixed in `data/corrections.json`, and a few conflicts between lists are unresolved. The machine always has the final say.
 
 ## Contributing

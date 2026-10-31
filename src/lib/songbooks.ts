@@ -85,8 +85,8 @@ export const SONGBOOK_SHORT: Record<Songbook, string> = {
 
 /**
  * Lists that share one numbering, best spelling first: a code means the same song in all of them.
- * P-Series comes from its Vol. 59 full list, whose overlapping codes match. Its later update
- * volumes disagree, so they are never parsed.
+ * P-Series joins last and only claims a code when the title matches, because Vol 78 reuses
+ * 18682 to 18831 for other songs. Those stay in its own songbook.
  */
 export const SHARED_SONGBOOKS: readonly Songbook[] = [
 	'hdd',

@@ -5,7 +5,7 @@
 	const NOTICES: Partial<Record<Songbook, string>> = {
 		ks: 'Built from every published KS-5, KS-40 and KS-100 update. The original song list has not been published.',
 		hdd: 'Includes songs added from January 2015 onward. The older base catalog has not been published.',
-		'p-series': 'Based on the Volume 59 full list. Later volume additions are not included yet.'
+		'p-series': 'Based on the Volume 59 full list plus update volumes through 78.'
 	};
 	const UPDATES_ONLY =
 		'Built from published update lists. The original song list has not been published.';

@@ -67,7 +67,7 @@ const RELEASE_KIND = {
 export async function parseRelease(input: ParseReleaseInput): Promise<ParseReleaseResult> {
 	const pages = await extractPages(input.data);
 
-	if (input.songbook === 'p-series') {
+	if (input.songbook === 'p-series' && input.label.startsWith('full-')) {
 		const parsed = parseFullList(pages);
 		const merged = mergeDuplicateCodes(parsed.entries);
 		const errors = [...merged.errors, ...sectionErrors(parsed.entries)];
@@ -87,7 +87,7 @@ export async function parseRelease(input: ParseReleaseInput): Promise<ParseRelea
 	}
 
 	if (input.songbook !== 'hdd') {
-		const parsed = parseVolumeList(pages);
+		const parsed = parseVolumeList(pages, { stripMarkers: input.songbook === 'p-series' });
 		const errors: string[] = [];
 		const { release, applied } = finish(input, parsed.rows, 'volume-list', errors);
 		return {

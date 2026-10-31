@@ -2,10 +2,13 @@ import { createHash } from 'node:crypto';
 import { eq } from 'drizzle-orm';
 import type { Db } from '../db';
 import { artists, releases, songArtists, songs, songTitles } from '../db/schema';
+import { normalize } from '../normalize/text';
 import { SHARED_SONGBOOKS, SONGBOOKS, type Songbook } from '../songbooks';
 import { Catalog, SharedCatalog, sharedKey, type CatalogManifest } from './schema';
 
 const RANGE_GAP = 100;
+/** A shorter match than this could be two different songs. */
+const MIN_PREFIX = 8;
 
 function groupBy<T>(rows: readonly T[], key: (row: T) => string): Map<string, T[]> {
 	const groups = new Map<string, T[]>();
@@ -114,6 +117,16 @@ export function manifestEntry(catalog: Catalog): CatalogManifest['songbooks'][nu
 	};
 }
 
+/** Compares titles across lists, allowing one to be cut short, as narrow PDF columns often do. */
+function sameTitle(a: string, b: string): boolean {
+	const left = normalize(a).replaceAll(' ', '');
+	const right = normalize(b).replaceAll(' ', '');
+	const length = Math.min(left.length, right.length);
+	return (
+		left === right || (length >= MIN_PREFIX && left.slice(0, length) === right.slice(0, length))
+	);
+}
+
 /** Merges catalogs of the shared numbering by code, in `SHARED_SONGBOOKS` order, or null if none exist. */
 export function buildShared(catalogs: readonly Catalog[]): SharedCatalog | null {
 	const members = SHARED_SONGBOOKS.flatMap(
@@ -137,7 +150,8 @@ export function buildShared(catalogs: readonly Catalog[]): SharedCatalog | null 
 			const key = sharedKey(code);
 			const existing = merged.get(key);
 			if (existing) {
-				if (!existing[4].includes(position)) existing[4].push(position);
+				const onList = catalog.songbook !== 'p-series' || sameTitle(existing[1], title);
+				if (onList && !existing[4].includes(position)) existing[4].push(position);
 				continue;
 			}
 			const local = credits.map(([artist, role]): [number, 0 | 1] => [

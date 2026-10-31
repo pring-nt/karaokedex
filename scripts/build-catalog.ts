@@ -23,7 +23,7 @@ async function collectInputs(): Promise<PdfInput[]> {
 		const sources = SourcesFile.parse(JSON.parse(await readFile('data/sources.json', 'utf8')));
 		for (const entry of sources.entries) {
 			const songbook = sourceSongbook(entry.songbook);
-			if (!songbook || songbook === 'p-series' || !entry.file) continue;
+			if (!songbook || !entry.file) continue;
 			await add(songbook, entry.label, entry.file);
 		}
 	}
